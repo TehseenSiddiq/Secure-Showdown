@@ -1,0 +1,797 @@
+fileFormatVersion: 2
+guid: a51d32b76784bf54db90e9ee665e34a6
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -7796864351666666146
+    second: FrontHead
+  - first:
+      213: 5141848466958252020
+    second: Back_Hea
+  - first:
+      213: -1194269119152116161
+    second: Side_Head
+  - first:
+      213: -7617465119821360035
+    second: Front_RightArm
+  - first:
+      213: -2629228920159622929
+    second: Front_Chest
+  - first:
+      213: -3384089599737658304
+    second: Front_LeftArms
+  - first:
+      213: 4744135588361831966
+    second: Back_RightArm
+  - first:
+      213: 8527921419009816326
+    second: Back_chest
+  - first:
+      213: -2808515484202441912
+    second: Back_ArmLeft
+  - first:
+      213: 832674653383587108
+    second: Side_ArmRight
+  - first:
+      213: 7507199819067711138
+    second: Side_Chest
+  - first:
+      213: -5431306961262908680
+    second: Side_ArmLeft
+  - first:
+      213: -8499165150363707036
+    second: Front_han
+  - first:
+      213: -3342544898121693911
+    second: Front_RightArms
+  - first:
+      213: -7379173632674379396
+    second: Front_LeftArm
+  - first:
+      213: -101981307235454081
+    second: Front_hand
+  - first:
+      213: 3671317027329944214
+    second: Human_16
+  - first:
+      213: 4278286359684935208
+    second: Back_LegRight
+  - first:
+      213: -1512960349811478853
+    second: Back_LeftLeg
+  - first:
+      213: 4906288664873055718
+    second: Human_19
+  - first:
+      213: -5730181740535576751
+    second: Side_Hand
+  - first:
+      213: -6114843749950319043
+    second: Side_RightLeg
+  - first:
+      213: 2705394952172798406
+    second: Side_LeftLEg
+  - first:
+      213: 1105081845959627674
+    second: Side_hand
+  - first:
+      213: -8014759444816866833
+    second: Human_24
+  - first:
+      213: -785756458510644902
+    second: Human_25
+  - first:
+      213: 4010805959466422829
+    second: Human_26
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: FrontHead
+      rect:
+        serializedVersion: 2
+        x: 129
+        y: 382
+        width: 221
+        height: 255
+      alignment: 9
+      pivot: {x: 0.49179995, y: 0.05583101}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e5580058e29fbc390800000000000000
+      internalID: -7796864351666666146
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Back_Hea
+      rect:
+        serializedVersion: 2
+        x: 611
+        y: 382
+        width: 219
+        height: 255
+      alignment: 9
+      pivot: {x: 0.50827485, y: 0.048724245}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4f7fee120f38b5740800000000000000
+      internalID: 5141848466958252020
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Side_Head
+      rect:
+        serializedVersion: 2
+        x: 1087
+        y: 382
+        width: 223
+        height: 257
+      alignment: 9
+      pivot: {x: 0.47562042, y: 0.055761907}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f3e28ba409a1d6fe0800000000000000
+      internalID: -1194269119152116161
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Front_RightArm
+      rect:
+        serializedVersion: 2
+        x: 94
+        y: 186
+        width: 47
+        height: 102
+      alignment: 9
+      pivot: {x: 0.5771152, y: 0.8642186}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d549e1425d3594690800000000000000
+      internalID: -7617465119821360035
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Front_Chest
+      rect:
+        serializedVersion: 2
+        x: 183
+        y: 179
+        width: 112
+        height: 109
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fe8a3b43a3a138bd0800000000000000
+      internalID: -2629228920159622929
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Front_LeftArms
+      rect:
+        serializedVersion: 2
+        x: 338
+        y: 186
+        width: 47
+        height: 102
+      alignment: 9
+      pivot: {x: 0.48072067, y: 0.8553353}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0440b8f407c4901d0800000000000000
+      internalID: -3384089599737658304
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Back_RightArm
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 186
+        width: 47
+        height: 101
+      alignment: 9
+      pivot: {x: 0.48072067, y: 0.85885346}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e16889e9e2e86d140800000000000000
+      internalID: 4744135588361831966
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Back_chest
+      rect:
+        serializedVersion: 2
+        x: 665
+        y: 179
+        width: 112
+        height: 108
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 60776840953495670800000000000000
+      internalID: 8527921419009816326
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Back_ArmLeft
+      rect:
+        serializedVersion: 2
+        x: 819
+        y: 186
+        width: 47
+        height: 101
+      alignment: 9
+      pivot: {x: 0.46144265, y: 0.876796}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 843ede91c062609d0800000000000000
+      internalID: -2808515484202441912
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Side_ArmRight
+      rect:
+        serializedVersion: 2
+        x: 1063
+        y: 186
+        width: 46
+        height: 100
+      alignment: 9
+      pivot: {x: 0.36211362, y: 0.85338074}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 42576608f214e8b00800000000000000
+      internalID: 832674653383587108
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Side_Chest
+      rect:
+        serializedVersion: 2
+        x: 1160
+        y: 178
+        width: 80
+        height: 110
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2ae5869e57eee2860800000000000000
+      internalID: 7507199819067711138
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Side_ArmLeft
+      rect:
+        serializedVersion: 2
+        x: 1302
+        y: 186
+        width: 46
+        height: 100
+      alignment: 9
+      pivot: {x: 0.38181207, y: 0.8352588}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8fa61d3581f10a4b0800000000000000
+      internalID: -5431306961262908680
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Front_han
+      rect:
+        serializedVersion: 2
+        x: 98
+        y: 98
+        width: 44
+        height: 44
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 46911358356ec0a80800000000000000
+      internalID: -8499165150363707036
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Front_RightArms
+      rect:
+        serializedVersion: 2
+        x: 176
+        y: 37
+        width: 49
+        height: 87
+      alignment: 9
+      pivot: {x: 0.46301612, y: 0.84369487}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 92589adef15ec91d0800000000000000
+      internalID: -3342544898121693911
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Front_LeftArm
+      rect:
+        serializedVersion: 2
+        x: 254
+        y: 37
+        width: 49
+        height: 87
+      alignment: 9
+      pivot: {x: 0.48150823, y: 0.86452484}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c79c3887da8e79990800000000000000
+      internalID: -7379173632674379396
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Front_hand
+      rect:
+        serializedVersion: 2
+        x: 337
+        y: 98
+        width: 44
+        height: 44
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f7330889a80b59ef0800000000000000
+      internalID: -101981307235454081
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Human_16
+      rect:
+        serializedVersion: 2
+        x: 579
+        y: 98
+        width: 44
+        height: 44
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 69a28d7826323f230800000000000000
+      internalID: 3671317027329944214
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Back_LegRight
+      rect:
+        serializedVersion: 2
+        x: 657
+        y: 38
+        width: 49
+        height: 85
+      alignment: 9
+      pivot: {x: 0.51849115, y: 0.86244184}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 82e6b6cd6c68f5b30800000000000000
+      internalID: 4278286359684935208
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Back_LeftLeg
+      rect:
+        serializedVersion: 2
+        x: 735
+        y: 38
+        width: 49
+        height: 85
+      alignment: 9
+      pivot: {x: 0.44452402, y: 0.8517818}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bbe6c3ee392e00be0800000000000000
+      internalID: -1512960349811478853
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Human_19
+      rect:
+        serializedVersion: 2
+        x: 818
+        y: 98
+        width: 44
+        height: 44
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6e5b84bcb83a61440800000000000000
+      internalID: 4906288664873055718
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Side_Hand
+      rect:
+        serializedVersion: 2
+        x: 1057
+        y: 98
+        width: 44
+        height: 44
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 15782f8111e4a70b0800000000000000
+      internalID: -5730181740535576751
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Side_RightLeg
+      rect:
+        serializedVersion: 2
+        x: 1136
+        y: 35
+        width: 48
+        height: 85
+      alignment: 9
+      pivot: {x: 0.48112234, y: 0.841122}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d36913bd106b32ba0800000000000000
+      internalID: -6114843749950319043
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Side_LeftLEg
+      rect:
+        serializedVersion: 2
+        x: 1217
+        y: 35
+        width: 48
+        height: 85
+      alignment: 9
+      pivot: {x: 0.46224466, y: 0.841122}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6c1056d006e7b8520800000000000000
+      internalID: 2705394952172798406
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Side_hand
+      rect:
+        serializedVersion: 2
+        x: 1296
+        y: 98
+        width: 44
+        height: 44
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a93182c751a065f00800000000000000
+      internalID: 1105081845959627674
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Human_24
+      rect:
+        serializedVersion: 2
+        x: 578
+        y: 26
+        width: 38
+        height: 27
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fe1db7bbfbad5c090800000000000000
+      internalID: -8014759444816866833
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Human_25
+      rect:
+        serializedVersion: 2
+        x: 825
+        y: 26
+        width: 38
+        height: 27
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a5901820aae6815f0800000000000000
+      internalID: -785756458510644902
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Human_26
+      rect:
+        serializedVersion: 2
+        x: 1064
+        y: 26
+        width: 38
+        height: 27
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d22140d15ce39a730800000000000000
+      internalID: 4010805959466422829
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      Side_Chest: 7507199819067711138
+      Front_RightArm: -7617465119821360035
+      Back_LegRight: 4278286359684935208
+      Front_RightArms: -3342544898121693911
+      Front_Chest: -2629228920159622929
+      Side_ArmRight: 832674653383587108
+      Back_LeftLeg: -1512960349811478853
+      Human_25: -785756458510644902
+      Side_RightLeg: -6114843749950319043
+      Human_19: 4906288664873055718
+      Back_ArmLeft: -2808515484202441912
+      Side_hand: 1105081845959627674
+      Human_16: 3671317027329944214
+      Front_LeftArms: -3384089599737658304
+      Front_han: -8499165150363707036
+      Side_ArmLeft: -5431306961262908680
+      Back_RightArm: 4744135588361831966
+      Side_LeftLEg: 2705394952172798406
+      Human_24: -8014759444816866833
+      Front_LeftArm: -7379173632674379396
+      Front_hand: -101981307235454081
+      Back_chest: 8527921419009816326
+      Side_Head: -1194269119152116161
+      FrontHead: -7796864351666666146
+      Back_Hea: 5141848466958252020
+      Human_26: 4010805959466422829
+      Side_Hand: -5730181740535576751
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
