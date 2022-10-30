@@ -30,14 +30,12 @@ MonoBehaviour:
     serializationDepthLimit: 64
     assemblyNames:
     - Assembly-CSharp
-    - AstarPathfindingProject
     - Assembly-CSharp-firstpass
     - NavMeshComponents
+    - V_Animation
     - PsdPlugin
-    - AstarPathfindingProjectEditor
     - PPv2URPConverters
     - NavMeshComponentsEditor
-    - PackageToolsEditor
     showAdvancedSettings: 0
   addMgrToSceneAutomatically: 0
   autoUpdateReferences: 1
