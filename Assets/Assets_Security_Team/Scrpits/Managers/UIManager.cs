@@ -14,11 +14,11 @@ public class UIManager : MonoBehaviour
         }
         else
             Destroy(gameObject);
-        DontDestroyOnLoad(this);
+       
     }
 
     public void PlayGame()
     {
-        SceneManager.LoadScene(1);
+        SceneManager.LoadScene("Levels");
     }
 }

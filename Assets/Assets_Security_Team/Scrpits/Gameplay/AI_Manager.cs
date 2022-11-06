@@ -6,12 +6,28 @@ public class AI_Manager : MonoBehaviour
 {
     public List<GameObject> target;
     public float speed;
+    public GameObject targetObject;
     public float distance;
     public int targetIndex=0;
-
+    public bool AI;
+    public static AI_Manager instance;
+    private void Awake()
+    {
+        if (instance == null)
+        {
+            instance = this;
+        }
+        else
+            Destroy(gameObject);
+    }
+    private void Start()
+    {
+        AI = true;
+    }
     private void Update()
     {
-       
+        if (!AI)
+            return;
         if (targetIndex < target.Count)
         {
             GotoTarget();
@@ -23,6 +39,8 @@ public class AI_Manager : MonoBehaviour
         if (targetIndex+1==target.Count && distance < 1.5f)
         {
             targetIndex++;
+            targetObject.SetActive(false);
+            GameplayManager.instance.Lose();
             return;
         }
         else if(distance<0.5f)
