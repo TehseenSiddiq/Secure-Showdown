@@ -1,0 +1,22 @@
+fileFormatVersion: 2
+guid: 9646e73d25b6ca240b5c341cb8556b3a
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontNames:
+  - Doctor Soos Bold
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: 32984e8fc4a6b5e47a17c28257cef635, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

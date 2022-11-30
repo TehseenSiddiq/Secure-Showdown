@@ -20,7 +20,6 @@ public class Shop : MonoBehaviour
     public GameObject btnPrefab;
     public Sprite lockSprite;
     public GameObject ShopPanel;
-    public GameObject shopObj;
     public Vector2 hideShopPos;
     public Vector2 showShopPos;
 
@@ -61,13 +60,5 @@ public class Shop : MonoBehaviour
         }else
             StateManager.instance.GS = GameState.PlayMode;
     }
-    public void OpenShopObj() 
-    {
-         ShopPanel.GetComponent<RectTransform>().DOAnchorPos(showShopPos, 0.3f, false);
   
-    }
-    public void HideShopObj()
-    {
-        ShopPanel.GetComponent<RectTransform>().DOAnchorPos(hideShopPos, .3f, false);
-    }
 }

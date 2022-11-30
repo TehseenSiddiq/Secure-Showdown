@@ -1,0 +1,10 @@
+####################################################
+       2D Line Of Sight Detection System
+        Copyright © 2020 - Leo Bergmann
+             info@leo-bergmann.de
+####################################################
+
+Version 1.0
+~~~~~~~~~~~
+Initial release
+====================

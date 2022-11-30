@@ -8,6 +8,7 @@ TagManager:
   - Exit
   - Target
   - Waypoint
+  - NPC
   layers:
   - Default
   - TransparentFX
@@ -18,8 +19,8 @@ TagManager:
   - Targets
   - Obstacles
   - Walls
-  - 
-  - 
+  - Detectable
+  - Undetectable
   - 
   - 
   - 

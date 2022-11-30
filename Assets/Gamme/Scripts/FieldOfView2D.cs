@@ -1,6 +1,6 @@
-using System.Collections;
-using System.Collections.Generic;
+using DG.Tweening;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class FieldOfView2D : MonoBehaviour
 {
@@ -10,11 +10,12 @@ public class FieldOfView2D : MonoBehaviour
     [SerializeField] float maxAngle;
     [SerializeField] float maxRadius;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    [Range(0, 3)]
+    public float transitionSpeed = 1.25f;
+
+    public Image normal, danagerSignal;
+
+
     private void Update()
     {
         researchTimer -= Time.deltaTime;
@@ -36,8 +37,8 @@ public class FieldOfView2D : MonoBehaviour
         Gizmos.DrawRay(transform.position, fovLine1);
         Gizmos.DrawRay(transform.position, fovLine2);
 
-      //  Gizmos.color = Color.red;
-       // Gizmos.DrawRay(transform.position, (target.position - transform.position).normalized * maxRadius);
+       // Gizmos.color = Color.red;
+        //Gizmos.DrawRay(transform.position, (target.position - transform.position).normalized * maxRadius);
 
         Gizmos.color = Color.black;
         Gizmos.DrawRay(transform.position, transform.up * maxRadius);
@@ -57,18 +58,21 @@ public class FieldOfView2D : MonoBehaviour
                     AI = overlaps[i];
                     Vector3 directionBetween = (target.position - checkingObject.position).normalized;
                     directionBetween.z *= 0;
-                    
+
+                    Gizmos.DrawRay(transform.position, (target.position - transform.position).normalized * maxRadius);
                     float angle = Vector3.Angle(checkingObject.up, directionBetween);
-               //     Debug.Log(angle);
+                    Debug.Log(angle);
                     if (angle <= maxAngle)
                     {
-                      
                         Ray2D ray = new Ray2D(checkingObject.position, target.position - checkingObject.position);
                         RaycastHit2D hit = Physics2D.Raycast(transform.position, -Vector2.up); ;
-
+                        Debug.Log(hit.collider.name);
                         if(hit.collider !=null)
                         {
-                            Debug.Log(AI);
+                            Debug.Log("<color=red>Player equals to </color>" + AI);
+                            normal.DOFade(0, transitionSpeed / 2);
+                            this.Wait(transitionSpeed / 2, () => danagerSignal.DOFade(1, transitionSpeed / 2));
+                            Debug.Log("<color=red>Player equals to </color>"+AI);
                             //Ref AI here
                         }
                     }
@@ -76,6 +80,10 @@ public class FieldOfView2D : MonoBehaviour
                     {
                         //Ref AI here
                     }
+                }
+                else
+                {
+                    AI = null;
                 }
             }
         }
