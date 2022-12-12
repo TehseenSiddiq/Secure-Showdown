@@ -295,7 +295,7 @@ Canvas:
   m_OverridePixelPerfect: 0
   m_SortingBucketNormalizedSize: 0
   m_AdditionalShaderChannelsFlag: 0
-  m_SortingLayerID: 0
+  m_SortingLayerID: 592283123
   m_SortingOrder: 0
   m_TargetDisplay: 0
 --- !u!114 &43004883387940647
@@ -425,7 +425,9 @@ GameObject:
   m_Component:
   - component: {fileID: 43004884536675603}
   - component: {fileID: 43004884536675613}
-  - component: {fileID: 255605950}
+  - component: {fileID: 1852027062}
+  - component: {fileID: 1852027054}
+  - component: {fileID: 1852027058}
   m_Layer: 6
   m_Name: Player 1
   m_TagString: Bot
@@ -471,8 +473,8 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
---- !u!61 &255605950
-BoxCollider2D:
+--- !u!60 &1852027062
+PolygonCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -484,7 +486,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.024215698, y: 0.6477699}
+  m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -494,9 +496,49 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 0.9757843, y: 2.2955399}
-  m_EdgeRadius: 0
+  m_Points:
+    m_Paths:
+    - - {x: 0.5417385, y: 1.5905666}
+      - {x: 0.008467674, y: 1.8975639}
+      - {x: -0.50748444, y: 1.662735}
+      - {x: -0.4262619, y: 0.77137756}
+      - {x: -0.41759878, y: 0.33441904}
+      - {x: -0.18980831, y: -0.06386936}
+      - {x: 0.16440547, y: -0.106206656}
+      - {x: 0.44300175, y: 0.32595247}
+--- !u!114 &1852027054
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 43004884536675610}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56457ccb63be14c428ba75a71bcabf04, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 10
+  waypoints: {fileID: 0}
+  wayPointIndex: 0
+  target: {fileID: 0}
+  delayTime: 3
+--- !u!114 &1852027058
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 43004884536675610}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3aef6d071e4b0964c9fc962625e1a95e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxLoot: 50
+  looted: 0
+  lootSlider: {fileID: 43004883265437398}
+  lootBar: {fileID: 43004884133385463}
 --- !u!1 &43004884596707912
 GameObject:
   m_ObjectHideFlags: 0
@@ -585,7 +627,6 @@ GameObject:
   - component: {fileID: 38446953960422359}
   - component: {fileID: 128969557026175585}
   - component: {fileID: 177028032919421891}
-  - component: {fileID: 886067634046299662}
   m_Layer: 6
   m_Name: Human
   m_TagString: Untagged
@@ -623,7 +664,7 @@ Animator:
   m_GameObject: {fileID: 43645747852926441}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: c0fbc9a82051e94429aa17cc4b2f48e5, type: 2}
+  m_Controller: {fileID: 0}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -644,22 +685,6 @@ SortingGroup:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 200
---- !u!70 &886067634046299662
-CapsuleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 43645747852926441}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 6200000, guid: 6af73fc5a1adf3c4881101975d6f9a51, type: 2}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0.84}
-  m_Size: {x: 1.12, y: 2.2}
-  m_Direction: 0
 --- !u!1 &43656608715287401
 GameObject:
   m_ObjectHideFlags: 0

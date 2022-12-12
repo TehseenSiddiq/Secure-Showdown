@@ -20,7 +20,7 @@ public class CameraButton : MonoBehaviour
     }
     public void AddListener()
     {
-        this.GetComponent<Button>().onClick.AddListener(()=> FindObjectOfType<StoreManager>().SetStats(index));
+        this.GetComponent<Button>().onClick.AddListener(()=> FindObjectOfType<GarageManager>().SetStats(index));
     }
   
 }

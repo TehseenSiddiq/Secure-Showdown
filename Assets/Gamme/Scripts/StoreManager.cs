@@ -7,56 +7,52 @@ using UnityEngine.UI;
 public class StoreManager : MonoBehaviour
 {
     public CameraProperties[] cameras;
+    public List<GameObject> items;
     public GameObject prefab;
     public Transform content;
-
-    public Image energySlider;
-    public TMP_Text energyText;
-    public Image radiusSlider;
-    public TMP_Text radiusText;
-    public Image rangeSlider;
-    public TMP_Text rangeText;
-    public Image clearnessSlider;
-    public TMP_Text clearnessText;
-    public Image CameraImage;
-    public TMP_Text cameraNameText;
 
     private void Start()
     {
         SetShop();
-        SetStats(0);
+        if (ES3.KeyExists("Cameras"))
+        {
+            cameras = ES3.Load("Cameras", cameras);
+        }
+        else
+            ES3.Save("Cameras", cameras);
+       // SetStats(0);
     }
+
     public void SetShop()
     {
-        foreach(CameraProperties camera in cameras)
+        foreach (Transform child in content.transform)
+        {
+            GameObject.Destroy(child.gameObject);
+        }
+        foreach (CameraProperties camera in cameras)
         {
             GameObject obj = Instantiate(prefab, content);
-            obj.GetComponent<CameraButton>().SetButton(camera.image, camera.name,camera.index);
-            obj.GetComponent<CameraButton>().AddListener();
-            
+
+            obj.GetComponent<CameraUIObject>().SetObject(camera.name, camera.price,camera.image,camera.unlocked,camera.index);
+            obj.GetComponent<CameraUIObject>().AddListener();
+           // items.Add(obj);
         }
     }
     public void SetStats(int index)
     {
-        cameraNameText.text = cameras[index].name;
-        CameraImage.sprite = cameras[index].image;
+       if(Game.instance.GetCash() >= cameras[index].price)
+        {
+            Game.instance.SetCash(Game.instance.GetCash() - cameras[index].price);
+            cameras[index].unlocked = true;
+            cameras = FindObjectOfType<StoreManager>().cameras;
+            Debug.Log("Camera " + cameras[index].name + " Purchased.");
 
-       // energySlider.maxValue = cameras[index].energyPerSeondMax;
-        energySlider.fillAmount = cameras[index].energyPerSeond/ cameras[index].energyPerSeondMax;
-        Debug.Log(cameras[index].energyPerSeond+", "+ cameras[index].energyPerSeondMax+ " Result "+ cameras[index].energyPerSeond / cameras[index].energyPerSeondMax);
-        energyText.text = cameras[index].energyPerSeond + "/" + cameras[index].energyPerSeondMax;
-
-        //radiusSlider.maxValue = cameras[index].radiusMax;
-        radiusSlider.fillAmount = cameras[index].radius/ cameras[index].radiusMax;
-        radiusText.text = cameras[index].radius + "/" + cameras[index].radiusMax;
-
-       // rangeSlider.maxValue = cameras[index].rangeMax;
-        rangeSlider.fillAmount = cameras[index].range/ cameras[index].rangeMax;
-        rangeText.text = cameras[index].range + "/" + cameras[index].rangeMax;
-
-       // clearnessSlider.maxValue = cameras[index].clearnessMax;
-        clearnessSlider.fillAmount = cameras[index].clearness/ cameras[index].clearnessMax;
-        clearnessText.text = cameras[index].clearness + "/" + cameras[index].clearnessMax;
+        }
 
     }
+    private void OnApplicationQuit()
+    {
+        ES3.Save("Cameras", cameras);
+    }
+
 }

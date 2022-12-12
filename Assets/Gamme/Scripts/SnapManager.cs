@@ -12,4 +12,8 @@ public class SnapManager : MonoBehaviour
     {
         instance = this;
     }
+    public void AddPoint(Transform point)
+    {
+        points.Add(point);
+    }
 }

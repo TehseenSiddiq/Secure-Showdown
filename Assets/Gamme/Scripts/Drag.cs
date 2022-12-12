@@ -8,9 +8,11 @@ public class Drag : MonoBehaviour
     public Camera cam;
     Vector3 mouse;
     GameObject camraObject;
-    public bool canDrag = false;
+    private bool canDrag = false;
+    private bool snaped = false;
     public Button setBtn, RotateBtn, cancelBtn;
-
+    public GameObject btnHolder;
+    [SerializeField]float canDragDelay = 1.5f;
     private void OnEnable()
     {
         cam = FindObjectOfType<Camera>();
@@ -18,8 +20,7 @@ public class Drag : MonoBehaviour
     }
 
     private void OnMouseDrag()
-    {
-        
+    { 
         mouse = Input.mousePosition;
         Ray ray = cam.ScreenPointToRay(mouse);
         RaycastHit hit;
@@ -29,40 +30,65 @@ public class Drag : MonoBehaviour
             {
                 if (hit.transform.tag == "Player")// if it is a shape
                 {
+               
+                    if(canDragDelay> 0)
+                    {
+                        canDragDelay -= Time.deltaTime;
+                    }
                   
-                    canDrag = true;
-                    StateManager.instance.GS = GameState.Planning;
                     // shape = hit.transform.gameObject;
                     // shape.transform.position = Input.mousePosition;// move it to the mouse position
                 }
-               
             }
         }
         if (canDrag)
         {
             this.gameObject.transform.position = new Vector3(Camera.main.ScreenToWorldPoint(Input.mousePosition).x, Camera.main.ScreenToWorldPoint(Input.mousePosition).y, 0);
-
         }
-
+        
 
     }
     private void OnMouseUp()
     {
-        StateManager.instance.GS = GameState.PlayMode;
+        canDragDelay = 1.5f;
+        
     }
     private void Update()
     {
-        if (canDrag)
+        btnHolder.transform.rotation = Quaternion.Euler(0, 0, 0);
+        btnHolder.transform.position = Vector3.zero;
+        if (canDragDelay <= 0)
         {
-            setBtn.gameObject.SetActive(true);
-            RotateBtn.gameObject.SetActive(true);
-            cancelBtn.gameObject.SetActive(true);
+            canDrag = true;
         }
         else
         {
+            canDrag = false;
+        }
+        if (canDrag)
+        {
+
+            StateManager.instance.GS = GameState.Planning;
+        }
+        else
+        {
+            // FindObjectOfType<Camera>().GetComponent<PanZoom>().Follow(transform);
+            StateManager.instance.GS = GameState.PlayMode;
+
+        }
+        if (snaped)
+        {
+           // FindObjectOfType<Camera>().GetComponent<PanZoom>().Follow(transform);
             setBtn.gameObject.SetActive(false);
             RotateBtn.gameObject.SetActive(false);
             cancelBtn.gameObject.SetActive(false);
+        }
+        else
+        {
+            
+            setBtn.gameObject.SetActive(true);
+            RotateBtn.gameObject.SetActive(true);
+            cancelBtn.gameObject.SetActive(true);
         }
         foreach (Transform pos in SnapManager.instance.points)
         {
@@ -86,10 +112,27 @@ public class Drag : MonoBehaviour
             if (Vector2.Distance(gameObject.transform.position, pos.position) < 2)
             {
                 transform.position = pos.position;
+                snaped = true;
             }
         }
-        canDrag = false;
+       // canDrag = false;
     }
-    
+    public void Rotate()
+    {
+        transform.eulerAngles = new Vector3(0, 0, transform.eulerAngles.z + 45); 
+    }
+    void OnMouseOver()
+    {
+        //If your mouse hovers over the GameObject with the script attached, output this message
+        Debug.Log("Mouse is over GameObject.");
+        
+    }
+
+    void OnMouseExit()
+    {
+        //The mouse is no longer hovering over the GameObject so output this message each frame
+        Debug.Log("Mouse is no longer on GameObject.");
+    }
+
 }
 

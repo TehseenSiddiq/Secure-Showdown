@@ -54,11 +54,7 @@ public class Shop : MonoBehaviour
     }
     private void LateUpdate()
     {
-        if (ShopPanel.activeSelf)
-        {
-            StateManager.instance.GS = GameState.Planning;
-        }else
-            StateManager.instance.GS = GameState.PlayMode;
+      
     }
   
 }

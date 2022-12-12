@@ -8,7 +8,8 @@ TagManager:
   - Exit
   - Target
   - Waypoint
-  - NPC
+  - Missile
+  - CircuitPoints
   layers:
   - Default
   - TransparentFX
@@ -48,6 +49,9 @@ TagManager:
     locked: 0
   - name: Graphics
     uniqueID: 2317468119
+    locked: 0
+  - name: Ceiling
+    uniqueID: 2790883499
     locked: 0
   - name: Wire&Setting
     uniqueID: 436820495

@@ -11,14 +11,14 @@ public class CameraProperties
     public bool unlocked = false;
 
 
-    public int energyPerSeond;
-    public int energyPerSeondMax;
-    public float radius;
-    public float radiusMax;
-    public float range;
-    public float rangeMax;
-    public float clearness;
-    public float clearnessMax;
+    public float[] energyPerSeond;
+    public int energyIndex = 0;
+    public float[] radius;
+    public int radiusIndex;
+    public float[] angle;
+    public int angleIndex;
+    public float[] clearness;
+    public int clearnessIndex;
     public int index;
 
 }
