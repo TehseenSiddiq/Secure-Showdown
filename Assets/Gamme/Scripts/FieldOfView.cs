@@ -58,6 +58,7 @@ public class FieldOfView : MonoBehaviour
         }
         else
         {
+
 			//fieldOfViewImage.DOFade(0, transitionSpeed / 2);
 			fieldOfViewImage.DOColor(colors[1], transitionSpeed);
 		}
@@ -76,7 +77,12 @@ public class FieldOfView : MonoBehaviour
 				float distanceToTarget = Vector2.Distance(transform.position, target.position);
 				
 				if (!Physics2D.Raycast(transform.position, target.position, distanceToTarget, obstacleMask))
+                {
 					CanSeelPlayer = true;
+					target.GetComponent<LootController>().StressManage(2f);
+					Debug.Log("Found.");
+				}
+					
 				else 
 					CanSeelPlayer = false;
 			}

@@ -6,9 +6,9 @@ public class CharacterMovement : MonoBehaviour
 {
     public float speed = 10;
 
-    public Waypoints waypoints;
-    public int wayPointIndex = 0;
-    public Transform target;
+    private Waypoints waypoints;
+    private int wayPointIndex = 0;
+    private Transform target;
     private LootController lootController;
     private bool isReturning = false;
 
@@ -54,21 +54,21 @@ public class CharacterMovement : MonoBehaviour
         }
 
     }
-    public float delayTime = 3;
+    
     void CheckDistance()
     {
         if (Vector2.Distance(transform.position, target.position) <= 3f)
         {
             if (target.GetComponent<Waypoint>().isLocked)
             {
-                if(delayTime <= 0)
+                if(target.GetComponent<Waypoint>().lockDelay <= 0)
                 {
                     target.GetComponent<Waypoint>().isLocked = false;
                     Debug.Log("Door Unlocked"); 
                 }
                 else
                 {
-                    delayTime -= .1f;
+                    target.GetComponent<Waypoint>().lockDelay -= .1f;
                     return;
                 }
             }
@@ -102,6 +102,6 @@ public class CharacterMovement : MonoBehaviour
             wayPointIndex++;
         }
         target = waypoints.waypoints[wayPointIndex];
-        delayTime = 3;
+
     }
 }
