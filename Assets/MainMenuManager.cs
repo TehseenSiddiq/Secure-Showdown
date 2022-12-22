@@ -5,8 +5,10 @@ using UnityEngine.SceneManagement;
 
 public class MainMenuManager : MonoBehaviour
 {
-    public void LoadScene(int index)
+    
+    public static void LoadScene(int index)
     {
+        Debug.LogWarning("Level" + index);
         SceneManager.LoadScene(index);
     }
 }
