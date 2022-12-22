@@ -9,6 +9,7 @@ public class CameraProperties
     public Sprite image;
     public int price;
     public bool unlocked = false;
+    public GameObject prefab;
 
 
     public float[] energyPerSeond;

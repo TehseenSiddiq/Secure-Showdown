@@ -6,8 +6,8 @@ using DG.Tweening;
 public class InGameStore : MonoBehaviour
 {
     public CameraProperties[] cameras;
-    public StoreItem[] storeItem;
     public Transform content;
+    public GameObject panel;
 
     public Ease ease = Ease.InBack;
 
@@ -17,11 +17,11 @@ public class InGameStore : MonoBehaviour
     }
     public void BuyItem(int index)
     {
-        if(Game.instance.GetCash() >= storeItem[index].price)
+        if(Game.instance.GetCash() >= cameras[index].price)
         {
-            var a =  Instantiate(storeItem[index].prefab, transform.position,Quaternion.identity);
+            var a =  Instantiate(cameras[index].prefab, transform.position,Quaternion.identity);
             a.GetComponent<FieldOfView>().Setter(cameras[index].radius[cameras[index].radiusIndex], cameras[index].angle[cameras[index].angleIndex]);
-            transform.DOScale(0, 0.5f).SetEase(ease);
+            panel.GetComponent<FadeInOut>().Hide();
         }
     }
 }
