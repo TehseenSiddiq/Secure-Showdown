@@ -41,13 +41,12 @@ public class StoreManager : MonoBehaviour
     public void SetStats(int index)
     {
        if(Game.instance.GetCash() >= cameras[index].price)
-        {
+       {
             Game.instance.SetCash(Game.instance.GetCash() - cameras[index].price);
             cameras[index].unlocked = true;
             cameras = FindObjectOfType<StoreManager>().cameras;
             Debug.Log("Camera " + cameras[index].name + " Purchased.");
-
-        }
+       }
 
     }
     private void OnApplicationQuit()

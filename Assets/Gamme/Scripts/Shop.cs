@@ -26,9 +26,9 @@ public class Shop : MonoBehaviour
 
     public void CameraBuyButton(int index)
     {
-        if(UI_Manager.instance.currentEnergy < itemSlots[index].price)
+        if(LevelManager.instance.currentEnergy < itemSlots[index].price)
         {
-            UI_Manager.instance.currentEnergy -= itemSlots[index].price;
+            LevelManager.instance.currentEnergy -= itemSlots[index].price;
             GameObject a = Instantiate(itemSlots[index].gameObject, Content);
         }
         else

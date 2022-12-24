@@ -23,6 +23,8 @@ public class BotSpawner : MonoBehaviour
     public float timeBetweenWaves = 5f;
     public float waveCountdown;
 
+    public Transform[] spawnPoints;
+
     private float searchCountDown = 1;
 
     public SpawnState state = SpawnState.Counting;
@@ -33,10 +35,7 @@ public class BotSpawner : MonoBehaviour
     }
     private void Update()
     {
-        if(StateManager.instance.GS != GameState.PlayMode)
-        {
-            return;
-        }
+
         if(state == SpawnState.Waiting)
         {
             if (!EnemyIsAlive())
@@ -94,7 +93,8 @@ public class BotSpawner : MonoBehaviour
             nextWave = 0;
            // Debug.Log("All waves completed");
         }
-        nextWave++;
+        else
+            nextWave++;
     }
 
     IEnumerator SpawnWave(Wave _wave)
@@ -112,8 +112,15 @@ public class BotSpawner : MonoBehaviour
     }
     void SpawnEnemy(Transform _enemy)
     {
+        if(spawnPoints.Length <= 0)
+        {
+            Debug.Log("<color=red>No Transform Avaible for spawn</color>");
+            return;
+        }
+
+        Transform sp = spawnPoints[Random.Range(0, spawnPoints.Length)];
         Debug.Log("Spawin Enemy");
-        Instantiate(_enemy, Vector3.zero, Quaternion.identity);
+        Instantiate(_enemy, sp.position, Quaternion.identity);
        
     }
 }

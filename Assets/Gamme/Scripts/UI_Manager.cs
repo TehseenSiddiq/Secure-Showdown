@@ -3,41 +3,26 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
+using DG.Tweening;
 
 public class UI_Manager : MonoBehaviour
 {
-    public static UI_Manager instance;
+    public static UI_Manager instance { get; private set; }
+    public Ease ease = Ease.InBounce;
 
-  //  public float energy;
-    public Slider energySlider;
-    public Sprite Image;
-    public GameObject prefab;
-    public float totalLoot;
-
-    //Values
-    public float currentEnergy;
-    public int maxEnergy;
-
-
-    public TextMeshProUGUI timerText;
     private void Awake()
     {
-        instance = this;
+        if (instance != null && instance != this)
+        {
+            Destroy(this);
+        }
+        else
+        {
+            instance = this;
+        }
     }
 
-    private void Start()
-    {
-        maxEnergy = Game.instance.GetLevel() * 30;
-        currentEnergy = maxEnergy;
-        energySlider.maxValue = maxEnergy;
-
-    }
-    private void LateUpdate()
-    {
-     
-       timerText.text = FormatTime(FindObjectOfType<initiator>().timer);
-        energySlider.value = currentEnergy;
-    }
+ 
     public void CreateShop()
     {
         Shop shop = new Shop();
@@ -53,5 +38,22 @@ public class UI_Manager : MonoBehaviour
         int minutes = Mathf.FloorToInt(time / 60);
         int seconds = Mathf.FloorToInt(time % 60);
         return string.Format("{0:00}:{1:00}", minutes, seconds);
+    }
+    bool big = false;
+    public void BumpAnimation(RectTransform transform)
+    {
+        Debug.Log("Being Called : " + big);
+        if(big)
+        {
+            big = false;
+            transform.DOScale(1.05f, 0.2f).SetEase(ease);
+
+        }
+        else
+        {
+            big = true;
+            transform.DOScale(0.95f, 0.2f).SetEase(ease);
+        }
+           
     }
 }

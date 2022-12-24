@@ -231,7 +231,7 @@ MonoBehaviour:
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 0
-  m_FillAmount: 1
+  m_FillAmount: 0
   m_FillClockwise: 1
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
@@ -518,11 +518,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 56457ccb63be14c428ba75a71bcabf04, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 10
-  waypoints: {fileID: 0}
-  wayPointIndex: 0
-  target: {fileID: 0}
-  delayTime: 3
+  speed: 5
+  faces:
+  - {fileID: 1988227635961832914}
+  - {fileID: 1823364420741365100}
+  - {fileID: 3728833877188058437}
+  - {fileID: 8011201116903166708}
 --- !u!114 &1852027058
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -537,6 +538,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxLoot: 50
   looted: 0
+  maxStress: 5
+  stressSlider: {fileID: 43004883267794691}
+  stressObj: {fileID: 43004884596707912}
   lootSlider: {fileID: 43004883265437398}
   lootBar: {fileID: 43004884133385463}
 --- !u!1 &43004884596707912
@@ -684,7 +688,7 @@ SortingGroup:
   m_Enabled: 1
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 200
+  m_SortingOrder: 80
 --- !u!1 &43656608715287401
 GameObject:
   m_ObjectHideFlags: 0

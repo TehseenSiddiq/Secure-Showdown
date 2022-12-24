@@ -13,7 +13,7 @@ public class InGameStore : MonoBehaviour
 
     private void Start()
     {
-        cameras = ES3.Load("Cameras", cameras);
+        cameras = GameManager.instance.cameras;
     }
     public void BuyItem(int index)
     {
@@ -25,10 +25,4 @@ public class InGameStore : MonoBehaviour
         }
     }
 }
-[System.Serializable]
-public class StoreItem
-{
-    public string name;
-    public int price;
-    public GameObject prefab;
-}
+

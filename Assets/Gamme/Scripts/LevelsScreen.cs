@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using DG.Tweening;
 
 public class LevelsScreen : MonoBehaviour
 {
@@ -10,6 +11,7 @@ public class LevelsScreen : MonoBehaviour
     private int i = 0;
     public Button leftButton;
     public Button rightButton;
+    public Ease ease = Ease.InElastic;
 
     private void Start()
     {
@@ -31,11 +33,15 @@ public class LevelsScreen : MonoBehaviour
 
     public void ChangeLevel(int index)
     {
-        foreach (GameObject levelScreen in levelsScreen)
-            levelScreen.SetActive(false);
-
-        i += index;
-        levelsScreen[i].SetActive(true);
+        levelsScreen[i].GetComponent<RectTransform>().DOAnchorPosX(-3000, 0.15f).SetEase(ease);
+        this.Wait(0.05f, () => {
+            foreach (GameObject levelScreen in levelsScreen)
+                levelScreen.SetActive(false);
+            i += index;
+            levelsScreen[i].SetActive(true);
+        });
+        
+       
     }
     private void LateUpdate()
     {

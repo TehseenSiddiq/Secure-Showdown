@@ -4,15 +4,29 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    public static GameManager instance { get; private set; }
 
-    // Update is called once per frame
-    void Update()
+    public StoreManager StoreManager { get; private set; }
+    public MainMenuManager MainMenuManager { get; private set; }
+    public CameraProperties[] cameras;
+
+    public float idleTime = 30;
+
+    private void Awake()
     {
-        
+        DontDestroyOnLoad(gameObject);
+        if (instance != null && instance != this)
+        {
+            Destroy(this);
+        }
+        else
+        {
+            instance = this;
+        }
+    }
+    private void Start()
+    {
+        StoreManager = FindObjectOfType<StoreManager>();
+        cameras = StoreManager.cameras;
     }
 }

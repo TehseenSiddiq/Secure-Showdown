@@ -2,15 +2,17 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+public enum Type { Camera, Wire, Lock };
 [System.Serializable]
 public class CameraProperties
 {
+   
     public string name;
     public Sprite image;
     public int price;
     public bool unlocked = false;
     public GameObject prefab;
-
+    public Type type = Type.Camera;
 
     public float[] energyPerSeond;
     public int energyIndex = 0;
