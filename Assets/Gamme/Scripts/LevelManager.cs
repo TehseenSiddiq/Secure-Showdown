@@ -18,7 +18,9 @@ public class LevelManager : MonoBehaviour
     public Slider energySlider;
     public Sprite Image;
     public GameObject prefab;
+    public Slider lootSlider;
     public float totalLoot;
+    public float remainingLoot;
     public TextMeshProUGUI timerText;
 
     //Values
@@ -42,10 +44,21 @@ public class LevelManager : MonoBehaviour
     private void Start()
     {
         idleTime = GameManager.instance.idleTime;
+        Waypoints[] wp = FindObjectsOfType<Waypoints>();
+        for (int i = 0; i < wp.Length; i++)
+        {
+            for(int j = 0; j < wp[i].waypoints.Length; j++)
+            {
+                totalLoot += wp[i].waypoints[j].GetComponent<Waypoint>().lootAmount;
+            }
+        }
+        lootSlider.maxValue = totalLoot;
+        InvokeRepeating("UpdateLoot", 0.3f, 0.3f);
     }
     float delay = 0.3f;
     private void LateUpdate()
     {
+    
         if (idleTime > 0)
         {
             start = false;
@@ -63,6 +76,22 @@ public class LevelManager : MonoBehaviour
             LessTimeEffect(matchTime);
         }
     }
+    void UpdateLoot()
+    {
+        Waypoints[] wp = FindObjectsOfType<Waypoints>();
+        float temp = 0;
+        for (int i = 0; i < wp.Length; i++)
+        {
+            for (int j = 0; j < wp[i].waypoints.Length; j++)
+            {
+                temp += wp[i].waypoints[j].GetComponent<Waypoint>().lootAmount;
+               
+            }
+        }
+        remainingLoot = (totalLoot- temp);
+        lootSlider.value = remainingLoot;
+    } 
+
     void LessTimeEffect(float value)
     {
         if (value < 10)

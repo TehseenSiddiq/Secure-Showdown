@@ -19,8 +19,10 @@ public class WireTraps : MonoBehaviour
 
         RaycastHit2D hit = Physics2D.Raycast(points[0].position, -dir, Vector2.Distance(points[0].position, points[1].position));
         Debug.Log(hit.collider);
+     
         if (Vector2.Distance(points[0].position, points[1].position) > range)
         {
+            Debug.Log("Distance: " + Vector2.Distance(points[0].position, points[1].position));
             isSetable = false;
             lr.colorGradient = warningColor;
             return;
@@ -29,11 +31,12 @@ public class WireTraps : MonoBehaviour
             isSetable = true;
         if (hit.collider == null)
         {
-            lr.colorGradient = workingColor;
+            Debug.Log("Being Called");
+            lr.colorGradient = caughtColor;
             Debug.DrawLine(points[0].position, hit.point, Color.magenta);
             Debug.DrawRay(points[1].position, -dir, Color.red);
         }
         else
-            lr.colorGradient = caughtColor;
+            lr.colorGradient = workingColor;
     }
 }

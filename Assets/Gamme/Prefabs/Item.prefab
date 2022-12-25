@@ -154,14 +154,16 @@ MonoBehaviour:
     image: {fileID: 0}
     price: 0
     unlocked: 0
-    energyPerSeond: 0
-    energyPerSeondMax: 0
-    radius: 0
-    radiusMax: 0
-    range: 0
-    rangeMax: 0
-    clearness: 0
-    clearnessMax: 0
+    prefab: {fileID: 0}
+    type: 0
+    energyPerSeond: []
+    energyIndex: 0
+    radius: []
+    radiusIndex: 0
+    angle: []
+    angleIndex: 0
+    clearness: []
+    clearnessIndex: 0
     index: 0
   nameText: {fileID: 970800403657688995}
   priceText: {fileID: 970800403518073990}
@@ -205,7 +207,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
   m_AnchoredPosition: {x: 61.38, y: 122.94}
-  m_SizeDelta: {x: 206.68, y: 75.19}
+  m_SizeDelta: {x: 0, y: 75.19}
   m_Pivot: {x: 0.5, y: 0}
 --- !u!222 &970800403518073989
 CanvasRenderer:

@@ -42,7 +42,7 @@ public class UI_Manager : MonoBehaviour
     bool big = false;
     public void BumpAnimation(RectTransform transform)
     {
-        Debug.Log("Being Called : " + big);
+      
         if(big)
         {
             big = false;

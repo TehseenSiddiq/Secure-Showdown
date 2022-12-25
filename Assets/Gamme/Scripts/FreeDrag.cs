@@ -40,7 +40,7 @@ public class FreeDrag : MonoBehaviour
 
         setBtn.interactable = wireTraps.isSetable ? true : false;
 
-
+      
         if (act == 0)
             backBtn.interactable = false;
         else
@@ -53,7 +53,12 @@ public class FreeDrag : MonoBehaviour
         if (act != 1)
             act = 1;
         else
-            btnHolder.SetActive(false);    
+        {
+            Debug.Log("Working : " + act);
+            btnHolder.SetActive(false);
+            canDragDelay = 1.5f;
+            act = 0;
+        }
     }
     public void Back()
     {

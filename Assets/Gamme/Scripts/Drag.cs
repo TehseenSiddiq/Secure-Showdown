@@ -12,6 +12,7 @@ public class Drag : MonoBehaviour
     private bool snaped = false;
     public Button setBtn, RotateBtn, cancelBtn;
     public GameObject btnHolder;
+    public RectTransform canvas;
     [SerializeField]float canDragDelay = 1.5f;
     private void OnEnable()
     {
@@ -41,6 +42,8 @@ public class Drag : MonoBehaviour
     }
     private void Update()
     {
+        if (canDrag)
+            snaped = false;
         btnHolder.transform.rotation = Quaternion.Euler(0, 0, 0);
         btnHolder.transform.position = Vector3.zero;
 
@@ -58,7 +61,10 @@ public class Drag : MonoBehaviour
             }
             else
                 setBtn.interactable = false;
+
         }
+        if (canvas.gameObject.activeSelf)
+            canvas.anchoredPosition = transform.position;
     }
     public void Set()
     {

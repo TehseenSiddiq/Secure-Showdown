@@ -22,6 +22,11 @@ public class InGameStore : MonoBehaviour
             var a =  Instantiate(cameras[index].prefab, transform.position,Quaternion.identity);
             a.GetComponent<FieldOfView>().Setter(cameras[index].radius[cameras[index].radiusIndex], cameras[index].angle[cameras[index].angleIndex]);
             panel.GetComponent<FadeInOut>().Hide();
+            Debug.Log("Purchased: "+cameras[index].name);
+        }
+        else
+        {
+            Debug.Log("Not enough Cash!");
         }
     }
 }

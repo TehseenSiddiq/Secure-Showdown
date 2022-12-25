@@ -6,7 +6,8 @@ public class CharacterMovement : MonoBehaviour
 {
     public float speed = 10;
 
-    private Waypoints waypoints;
+    private Waypoints[] waypoints;
+    private Waypoints waypoint;
     private int wayPointIndex = 0;
     private Transform target;
     private LootController lootController;
@@ -16,9 +17,10 @@ public class CharacterMovement : MonoBehaviour
 
     private void Start()
     {
-        waypoints = FindObjectOfType<Waypoints>();
+        waypoints = FindObjectsOfType<Waypoints>();
+        waypoint = waypoints[Random.Range(0, waypoints.Length)];
         lootController = GetComponent<LootController>();
-        target = waypoints.waypoints[0];
+        target = waypoint.waypoints[0];
         InvokeRepeating("CheckDistance", 0.1f, 0.1f);
     }
     private void Update()
@@ -32,7 +34,7 @@ public class CharacterMovement : MonoBehaviour
         }
         if(Mathf.Abs(dir.y) > Mathf.Abs(dir.x))
         {
-            if(dir.y > 1)
+            if(dir.y >= 1)
             {
                 faces[1].SetActive(true);
             }
@@ -43,7 +45,7 @@ public class CharacterMovement : MonoBehaviour
         }
         if (Mathf.Abs(dir.x) > Mathf.Abs(dir.y))
         {
-            if (dir.x > 1)
+            if (dir.x >= 1)
             {
                 faces[2].SetActive(true);
             }
@@ -89,19 +91,30 @@ public class CharacterMovement : MonoBehaviour
     }
     void GetNewWayPoint()
     { 
-        if (lootController.looted >= lootController.maxLoot)
+        if (lootController.looted >= lootController.maxLoot || waypoint.waypoints[waypoint.waypoints.Length-1].GetComponent<Waypoint>().lootAmount <= 0)
         {
             if (wayPointIndex < 0)
-                Destroy(gameObject);
+            {
+                if (lootController.looted < lootController.maxLoot)
+                {
+                    while (waypoint.waypoints[waypoint.waypoints.Length - 1].GetComponent<Waypoint>().lootAmount <= 0)
+                    {
+                        waypoint = waypoint = waypoints[Random.Range(0, waypoints.Length)];
+                    }
+                    wayPointIndex++;
+                }else
+                    Destroy(gameObject);
+            }
+               
             wayPointIndex--;
            // Debug.Log("It worked: " + wayPointIndex);
         }
         else
         {
-          if(wayPointIndex < waypoints.waypoints.Length-1)
+          if(wayPointIndex < waypoint.waypoints.Length-1)
             wayPointIndex++;
         }
-        target = waypoints.waypoints[wayPointIndex];
+        target = waypoint.waypoints[wayPointIndex];
 
     }
 }

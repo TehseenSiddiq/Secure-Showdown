@@ -35,6 +35,8 @@ public class BotSpawner : MonoBehaviour
     }
     private void Update()
     {
+        if (LevelManager.instance.idleTime > 0)
+            return;
 
         if(state == SpawnState.Waiting)
         {
@@ -55,7 +57,6 @@ public class BotSpawner : MonoBehaviour
                 // Start Spawnin wave
                 StartCoroutine(SpawnWave(waves[nextWave]));
             }
-
         }
         else
         {

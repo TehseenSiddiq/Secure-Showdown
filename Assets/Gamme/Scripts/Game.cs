@@ -4,17 +4,25 @@ using UnityEngine;
 
 public class Game : MonoBehaviour
 {
-    public static Game instance;
+    public static Game instance { get; private set; }
 
     private int cash = 1000;
     private int level = 1;
 
     private void Awake()
     {
-        instance = this;
+        DontDestroyOnLoad(gameObject);
+        if (instance != null && instance != this)
+        {
+            Destroy(this);
+        }
+        else
+        {
+            instance = this;
+        }
     }
     #region Setter & Getters
-    public void SetCash(int cash)
+    public  void SetCash(int cash)
     {
         this.cash = cash;
     }
