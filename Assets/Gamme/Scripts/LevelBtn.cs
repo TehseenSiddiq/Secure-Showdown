@@ -14,7 +14,7 @@ public class LevelBtn : MonoBehaviour
 
     private void OnEnable()
     {
-        InvokeRepeating("StarNO",0.5f,0.5f);
+        InvokeRepeating("StarNO",0.3f,0.3f);
         btn =GetComponent<Button>();
     }
     void StarNO() => starBox.SetActive(!block.activeSelf);

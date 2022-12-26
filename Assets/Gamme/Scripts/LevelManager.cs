@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class LevelManager : MonoBehaviour
@@ -28,7 +29,7 @@ public class LevelManager : MonoBehaviour
     public float currentEnergy;
     public int maxEnergy;
 
-
+    public static bool allwavesCompleted = false;
     private void Awake()
     {
         if (instance != null && instance != this)
@@ -74,6 +75,11 @@ public class LevelManager : MonoBehaviour
             matchTime -= Time.deltaTime;
             timerText.text = UI_Manager.instance.FormatTime(matchTime);
             LessTimeEffect(matchTime);
+        }
+        if((allwavesCompleted && (remainingLoot*0.9) > totalLoot) ||  matchTime <= 0)
+        {
+            // Complete;
+            ES3.Save("LevelAt", SceneManager.GetActiveScene().buildIndex + 1);
         }
     }
     void UpdateLoot()

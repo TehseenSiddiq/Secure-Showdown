@@ -90,7 +90,8 @@ public class CharacterMovement : MonoBehaviour
             lootController.lootBar.SetActive(false);
     }
     void GetNewWayPoint()
-    { 
+    {
+        int max = waypoints.Length;
         if (lootController.looted >= lootController.maxLoot || waypoint.waypoints[waypoint.waypoints.Length-1].GetComponent<Waypoint>().lootAmount <= 0)
         {
             if (wayPointIndex < 0)
@@ -99,7 +100,10 @@ public class CharacterMovement : MonoBehaviour
                 {
                     while (waypoint.waypoints[waypoint.waypoints.Length - 1].GetComponent<Waypoint>().lootAmount <= 0)
                     {
+                        max--;
                         waypoint = waypoint = waypoints[Random.Range(0, waypoints.Length)];
+                        if (max < 1)
+                            Destroy(gameObject);
                     }
                     wayPointIndex++;
                 }else

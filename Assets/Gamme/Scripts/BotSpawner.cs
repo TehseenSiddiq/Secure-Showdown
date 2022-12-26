@@ -91,8 +91,9 @@ public class BotSpawner : MonoBehaviour
 
         if(nextWave +1 > waves.Length - 1)
         {
-            nextWave = 0;
-           // Debug.Log("All waves completed");
+            // nextWave = 0;
+            // Debug.Log("All waves completed");
+            LevelManager.allwavesCompleted = true;
         }
         else
             nextWave++;

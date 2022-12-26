@@ -18,6 +18,8 @@ public class LootController : MonoBehaviour
     public Image lootSlider;
     public GameObject lootBar;
 
+
+ 
     private void LateUpdate()
     {
         if (stress > 0)
