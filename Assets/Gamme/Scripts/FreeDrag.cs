@@ -38,7 +38,7 @@ public class FreeDrag : MonoBehaviour
         canDrag = canDragDelay <= 0 ? true : false;
         StateManager.instance.GS = canDrag ?GameState.Planning: GameState.PlayMode;
 
-        setBtn.interactable = wireTraps.isSetable ? true : false;
+        setBtn.interactable = (wireTraps.isSetable) ? true : false;
 
       
         if (act == 0)

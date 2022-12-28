@@ -20,7 +20,12 @@ public class InGameStore : MonoBehaviour
         if(Game.instance.GetCash() >= cameras[index].price)
         {
             var a =  Instantiate(cameras[index].prefab, transform.position,Quaternion.identity);
-            a.GetComponent<FieldOfView>().Setter(cameras[index].radius[cameras[index].radiusIndex], cameras[index].angle[cameras[index].angleIndex]);
+            if (cameras[index].type == Type.Camera)
+                a.GetComponent<FieldOfView>().Setter(cameras[index].radius[cameras[index].radiusIndex], cameras[index].angle[cameras[index].angleIndex]);
+            else if (cameras[index].type == Type.Wire)
+                a.GetComponent<WireTraps>().range = cameras[index].ranges[cameras[index].rangeIndex];
+            else if (cameras[index].type == Type.Lock)
+                a.GetComponent<WireTraps>().range = cameras[index].delays[cameras[index].DelayIndex];
             panel.GetComponent<FadeInOut>().Hide();
             Debug.Log("Purchased: "+cameras[index].name);
         }

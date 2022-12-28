@@ -22,6 +22,10 @@ public class CameraProperties
     public int angleIndex;
     public float[] clearness;
     public int clearnessIndex;
+    public float[] ranges;
+    public int rangeIndex;
+    public float[] delays;
+    public int DelayIndex;
     public int index;
 
 }

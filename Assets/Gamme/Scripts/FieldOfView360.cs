@@ -16,6 +16,7 @@ public class FieldOfView360 : MonoBehaviour
 	public float transitionSpeed = 1.25f;
 	public Image fieldOfViewImage;
 	public Color[] colors;
+	public float clearness;
 	public bool CanSeelPlayer { get; private set; }
 
 	void Start()
@@ -28,6 +29,7 @@ public class FieldOfView360 : MonoBehaviour
 	public void Setter(float _radius, float _energy = 8, float _clearness = 2)
 	{
 		radius = _radius;
+		clearness = _clearness;
 	}
 	IEnumerator FindTargetsWithDelay(float delay)
 	{
@@ -68,7 +70,7 @@ public class FieldOfView360 : MonoBehaviour
 			if (!Physics2D.Raycast(transform.position, target.position, distanceToTarget, obstacleMask))
 			{
 				CanSeelPlayer = true;
-				target.GetComponent<LootController>().StressManage(2f);
+				target.GetComponent<LootController>().StressManage(clearness);
 				Debug.Log("Found.");
 			}
 			else

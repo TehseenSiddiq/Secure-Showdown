@@ -19,6 +19,8 @@ public class FieldOfView : MonoBehaviour
 	public float transitionSpeed = 1.25f;
 	public Image fieldOfViewImage;
 	public Color[] colors;
+
+	private float clearness;
 	public bool CanSeelPlayer { get; private set; }
 
 	void Start()
@@ -32,6 +34,7 @@ public class FieldOfView : MonoBehaviour
     {
 		radius = _radius;
 		viewAngle = _viewAngle;
+		clearness = _clearness;
     }
 	void Visual()
     {
@@ -79,7 +82,7 @@ public class FieldOfView : MonoBehaviour
 				if (!Physics2D.Raycast(transform.position, target.position, distanceToTarget, obstacleMask))
                 {
 					CanSeelPlayer = true;
-					target.GetComponent<LootController>().StressManage(2f);
+					target.GetComponent<LootController>().StressManage(clearness);
 					Debug.Log("Found.");
 				}
 					

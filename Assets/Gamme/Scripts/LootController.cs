@@ -53,7 +53,7 @@ public class LootController : MonoBehaviour
         }
         else
         {
-            Debug.Log("Surrender");
+            Debug.Log("Surrendered");
         }
     }
 }

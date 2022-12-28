@@ -6,7 +6,7 @@ public class Game : MonoBehaviour
 {
     public static Game instance { get; private set; }
 
-    private int cash = 1000;
+    private int cash = 10000;
     private int level = 1;
 
     private void Awake()
@@ -20,6 +20,10 @@ public class Game : MonoBehaviour
         {
             instance = this;
         }
+    }
+    private void Start()
+    {
+        LoadGame();
     }
     #region Setter & Getters
     public  void SetCash(int cash)
@@ -42,10 +46,12 @@ public class Game : MonoBehaviour
 
     public void SaveGame()
     {
-        Debug.Log("Saving");
+        ES3.Save("Level", GetLevel());
+        ES3.Save("Cash", GetCash());
     }
     public void LoadGame()
     {
-        Debug.Log("Loading");
+        cash = ES3.Load("Cash",GetCash());
+        level = ES3.Load("Level", GetLevel());
     }
 }

@@ -9,6 +9,12 @@ public class WireTraps : MonoBehaviour
     public Gradient caughtColor, warningColor,workingColor;
     public float range = 5;
     public bool isSetable = true;
+    private FreeDrag freeDrag;
+
+    private void Start()
+    {
+        freeDrag = GetComponent<FreeDrag>();
+    }
 
     public void Update()
     {
@@ -20,7 +26,8 @@ public class WireTraps : MonoBehaviour
         RaycastHit2D hit = Physics2D.Raycast(points[0].position, -dir, Vector2.Distance(points[0].position, points[1].position));
         Debug.Log(hit.collider);
      
-        if (Vector2.Distance(points[0].position, points[1].position) > range)
+        if(freeDrag.act > 0) { 
+        if (Vector2.Distance(points[0].position, points[1].position) > range )
         {
             Debug.Log("Distance: " + Vector2.Distance(points[0].position, points[1].position));
             isSetable = false;
@@ -29,6 +36,7 @@ public class WireTraps : MonoBehaviour
         }
         else
             isSetable = true;
+        }
         if (hit.collider == null)
         {
             Debug.Log("Being Called");
@@ -37,6 +45,10 @@ public class WireTraps : MonoBehaviour
             Debug.DrawRay(points[1].position, -dir, Color.red);
         }
         else
+        {
             lr.colorGradient = workingColor;
+            hit.collider.GetComponent<LootController>().StressManage(50);
+        }
+      
     }
 }
