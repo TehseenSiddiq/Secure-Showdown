@@ -12,7 +12,8 @@ public class CharacterMovement : MonoBehaviour
     private Transform target;
     private LootController lootController;
     private bool isReturning = false;
-
+    bool playSound = true;
+    private AudioSource audioSource;
     public GameObject[] faces;
 
     private void Start()
@@ -22,6 +23,7 @@ public class CharacterMovement : MonoBehaviour
         lootController = GetComponent<LootController>();
         target = waypoint.waypoints[0];
         InvokeRepeating("CheckDistance", 0.1f, 0.1f);
+        audioSource = GetComponent<AudioSource>();
     }
     private void Update()
     {
@@ -70,20 +72,23 @@ public class CharacterMovement : MonoBehaviour
                 }
                 else
                 {
+                    playSound = false;
                     target.GetComponent<Waypoint>().lockDelay -= .1f;
                     return;
                 }
             }
-            if (target.GetComponent<Waypoint>().lootAmount > 0)
+            else if (target.GetComponent<Waypoint>().lootAmount > 0)
             {
                 Debug.Log("Its Working.");
                 lootController.lootBar.SetActive(true);
+                if (target.GetComponent<Waypoint>().lootAmount > 0 && lootController.looted < lootController.maxLoot)
+                {
+                    playSound = false;
+                    lootController.loot(target.GetComponent<Waypoint>());
+                    return;
+                }
             }
-            if (target.GetComponent<Waypoint>().lootAmount > 0 && lootController.looted < lootController.maxLoot)
-            {
-                lootController.loot(target.GetComponent<Waypoint>());
-                return;
-            }
+            playSound = true;
             GetNewWayPoint();
         }
         else
@@ -94,23 +99,29 @@ public class CharacterMovement : MonoBehaviour
         int max = waypoints.Length;
         if (lootController.looted >= lootController.maxLoot || waypoint.waypoints[waypoint.waypoints.Length-1].GetComponent<Waypoint>().lootAmount <= 0)
         {
-            if (wayPointIndex < 0)
+            if (wayPointIndex == 0)
             {
                 if (lootController.looted < lootController.maxLoot)
                 {
                     while (waypoint.waypoints[waypoint.waypoints.Length - 1].GetComponent<Waypoint>().lootAmount <= 0)
                     {
                         max--;
-                        waypoint = waypoint = waypoints[Random.Range(0, waypoints.Length)];
+                        waypoint = waypoints[Random.Range(0, waypoints.Length)];
                         if (max < 1)
+                        {
                             Destroy(gameObject);
+                            break;
+                        }
+                           
                     }
                     wayPointIndex++;
                 }else
                     Destroy(gameObject);
             }
-               
-            wayPointIndex--;
+            else if (wayPointIndex > 0)
+                wayPointIndex--;
+            else
+                Destroy(gameObject);
            // Debug.Log("It worked: " + wayPointIndex);
         }
         else
@@ -118,7 +129,8 @@ public class CharacterMovement : MonoBehaviour
           if(wayPointIndex < waypoint.waypoints.Length-1)
             wayPointIndex++;
         }
-        target = waypoint.waypoints[wayPointIndex];
+  
+         target = waypoint.waypoints[wayPointIndex];
 
     }
 }

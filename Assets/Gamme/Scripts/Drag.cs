@@ -79,7 +79,11 @@ public class Drag : MonoBehaviour
         }
        // canDrag = false;
     }
-    public void Rotate() => transform.eulerAngles = new Vector3(0, 0, transform.eulerAngles.z + 45);
+    public void Rotate()
+    {
+        transform.eulerAngles = new Vector3(0, 0, GetComponent<Rotation>().initPos + 45);
+        GetComponent<Rotation>().SetInitPosition();
+    }
 
 
 }

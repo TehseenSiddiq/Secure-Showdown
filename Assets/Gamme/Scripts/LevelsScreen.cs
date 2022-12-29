@@ -15,13 +15,15 @@ public class LevelsScreen : MonoBehaviour
 
     private void Start()
     {
-        int levelAt = ES3.Load("LevelAt", 2);
+    
+        int levelAt = ES3.Load("LevelAt", 1);
+        Debug.Log("Level: " + levelAt);
 
         for (int i = 0; i < levelBtns.Length; i++)
         {
             levelBtns[i].levelText.text = (i + 1).ToString();
             levelBtns[i].SetListener(i+1);
-            if (i + 2 > levelAt)
+            if (i + 1 > levelAt)
                 levelBtns[i].SetLevel(true);
         }
 

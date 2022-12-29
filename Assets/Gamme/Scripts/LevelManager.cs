@@ -76,10 +76,18 @@ public class LevelManager : MonoBehaviour
             timerText.text = UI_Manager.instance.FormatTime(matchTime);
             LessTimeEffect(matchTime);
         }
-        if((allwavesCompleted && (remainingLoot*0.9) > totalLoot) ||  matchTime <= 0)
+        Debug.Log("Loot 90%: " + (remainingLoot/totalLoot)*100);
+        if(allwavesCompleted && ((totalLoot*0.9) > remainingLoot) ||  matchTime <= 0)
         {
+            Debug.Log("Complete");
             // Complete;
+            UI_Manager.instance.Victory();
             ES3.Save("LevelAt", SceneManager.GetActiveScene().buildIndex + 1);
+        }
+        else if(allwavesCompleted && ((totalLoot * 0.9) < remainingLoot) && matchTime >= 0)
+        {
+            Debug.Log("Lost");
+            UI_Manager.instance.Lost();
         }
     }
     void UpdateLoot()
@@ -91,7 +99,6 @@ public class LevelManager : MonoBehaviour
             for (int j = 0; j < wp[i].waypoints.Length; j++)
             {
                 temp += wp[i].waypoints[j].GetComponent<Waypoint>().lootAmount;
-               
             }
         }
         remainingLoot = (totalLoot- temp);

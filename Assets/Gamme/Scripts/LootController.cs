@@ -17,7 +17,7 @@ public class LootController : MonoBehaviour
     public GameObject stressObj;
     public Image lootSlider;
     public GameObject lootBar;
-
+    public Animator anim;
 
  
     private void LateUpdate()
@@ -53,6 +53,7 @@ public class LootController : MonoBehaviour
         }
         else
         {
+            anim.SetTrigger("Surrender");
             Debug.Log("Surrendered");
         }
     }

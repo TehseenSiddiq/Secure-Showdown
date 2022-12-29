@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class BotSpawner : MonoBehaviour
 {
-    public enum SpawnState { Spawing,Waiting,Counting}
+    public enum SpawnState { Spawing,Waiting,Counting,End}
 
     [System.Serializable]
     public class Wave
@@ -52,7 +52,7 @@ public class BotSpawner : MonoBehaviour
         }
         if(waveCountdown <= 0)
         {
-            if(state != SpawnState.Spawing)
+            if(state != SpawnState.Spawing && state != SpawnState.End)
             {
                 // Start Spawnin wave
                 StartCoroutine(SpawnWave(waves[nextWave]));
@@ -93,6 +93,7 @@ public class BotSpawner : MonoBehaviour
         {
             // nextWave = 0;
             // Debug.Log("All waves completed");
+            state = SpawnState.End;
             LevelManager.allwavesCompleted = true;
         }
         else
