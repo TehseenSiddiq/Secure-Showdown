@@ -53,7 +53,8 @@ public class LootController : MonoBehaviour
         }
         else
         {
-            anim.SetTrigger("Surrender");
+            anim.SetBool("Surrender",true);
+            GetComponent<CharacterMovement>().canWalk = false;
             Debug.Log("Surrendered");
         }
     }

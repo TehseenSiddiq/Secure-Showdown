@@ -12,9 +12,10 @@ public class CharacterMovement : MonoBehaviour
     private Transform target;
     private LootController lootController;
     private bool isReturning = false;
-    bool playSound = true;
+    public bool canWalk = true;
     private AudioSource audioSource;
     public GameObject[] faces;
+    public Animator anim;
 
     private void Start()
     {
@@ -28,7 +29,8 @@ public class CharacterMovement : MonoBehaviour
     private void Update()
     {
         Vector2 dir =  target.position - transform.position;
-        transform.Translate(dir.normalized * speed * Time.deltaTime,Space.World);
+        if(canWalk)
+           transform.Translate(dir.normalized * speed * Time.deltaTime,Space.World);
 
         foreach(GameObject face in faces)
         {
@@ -56,12 +58,12 @@ public class CharacterMovement : MonoBehaviour
                 faces[3].SetActive(true);
             }
         }
-
+        anim.SetBool("Walk", canWalk);
     }
     
     void CheckDistance()
     {
-        if (Vector2.Distance(transform.position, target.position) <= 3f)
+        if (Vector2.Distance(transform.position, target.position) <= 1f)
         {
             if (target.GetComponent<Waypoint>().isLocked)
             {
@@ -72,7 +74,7 @@ public class CharacterMovement : MonoBehaviour
                 }
                 else
                 {
-                    playSound = false;
+                    canWalk = false;
                     target.GetComponent<Waypoint>().lockDelay -= .1f;
                     return;
                 }
@@ -83,12 +85,12 @@ public class CharacterMovement : MonoBehaviour
                 lootController.lootBar.SetActive(true);
                 if (target.GetComponent<Waypoint>().lootAmount > 0 && lootController.looted < lootController.maxLoot)
                 {
-                    playSound = false;
+                    canWalk = false;
                     lootController.loot(target.GetComponent<Waypoint>());
                     return;
                 }
             }
-            playSound = true;
+            canWalk = true;
             GetNewWayPoint();
         }
         else

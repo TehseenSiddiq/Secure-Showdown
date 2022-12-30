@@ -76,7 +76,7 @@ public class LevelManager : MonoBehaviour
             timerText.text = UI_Manager.instance.FormatTime(matchTime);
             LessTimeEffect(matchTime);
         }
-        Debug.Log("Loot 90%: " + (remainingLoot/totalLoot)*100);
+  
         if(allwavesCompleted && ((totalLoot*0.9) > remainingLoot) ||  matchTime <= 0)
         {
             Debug.Log("Complete");

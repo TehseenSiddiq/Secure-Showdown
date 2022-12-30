@@ -81,7 +81,12 @@ public class Drag : MonoBehaviour
     }
     public void Rotate()
     {
-        transform.eulerAngles = new Vector3(0, 0, GetComponent<Rotation>().initPos + 45);
+        if(GetComponent<Rotation>() != null)
+        {
+            transform.eulerAngles = new Vector3(0, 0, GetComponent<Rotation>().initPos + 45);
+        }
+       else
+            transform.eulerAngles = new Vector3(0, 0, transform.eulerAngles.z + 45);
         GetComponent<Rotation>().SetInitPosition();
     }
 

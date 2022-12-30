@@ -4,8 +4,9 @@ using UnityEngine;
 
 public class PlayerAnimationController : MonoBehaviour
 {
+    public GameObject parent;
      public void Surrender()
     {
-        Destroy(GetComponentInParent<Transform>().gameObject);
+        Destroy(parent);
     }
 }

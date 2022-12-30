@@ -520,6 +520,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 5
+  canWalk: 1
   faces:
   - {fileID: 1988227635961832914}
   - {fileID: 1823364420741365100}
@@ -544,7 +545,7 @@ MonoBehaviour:
   stressObj: {fileID: 43004884596707912}
   lootSlider: {fileID: 43004883265437398}
   lootBar: {fileID: 43004884133385463}
-  anim: {fileID: 0}
+  anim: {fileID: 128969557026175585}
 --- !u!82 &5588744070393845614
 AudioSource:
   m_ObjectHideFlags: 0
@@ -800,6 +801,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 47877cd960e7e5648a44e12cfc99ea95, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  parent: {fileID: 43004884536675610}
 --- !u!1 &43656608715287401
 GameObject:
   m_ObjectHideFlags: 0
