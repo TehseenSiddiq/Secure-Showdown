@@ -17,12 +17,13 @@ public class FieldOfView360 : MonoBehaviour
 	public Image fieldOfViewImage;
 	public Color[] colors;
 	public float clearness;
+	public AudioSource alertSound;
 	public bool CanSeelPlayer { get; private set; }
 
 	void Start()
 	{
 		playerRef = GameObject.FindGameObjectWithTag("Bot");
-
+		alertSound = GetComponent<AudioSource>();
 		StartCoroutine("FindTargetsWithDelay", .2f);
 		InvokeRepeating("Visual", 0.1f, 1);
 	}
@@ -47,10 +48,11 @@ public class FieldOfView360 : MonoBehaviour
 		{
 			//fieldOfViewImage.DOFade(0, transitionSpeed / 2);
 			fieldOfViewImage.DOColor(colors[0], transitionSpeed);
+			alertSound.Play();
 		}
 		else
 		{
-
+			alertSound.Stop();
 			//fieldOfViewImage.DOFade(0, transitionSpeed / 2);
 			fieldOfViewImage.DOColor(colors[1], transitionSpeed);
 		}
@@ -84,7 +86,7 @@ public class FieldOfView360 : MonoBehaviour
 	{
 		Gizmos.color = Color.yellow;
 		Gizmos.DrawWireSphere(transform.position, radius);
-		UnityEditor.Handles.DrawWireDisc(transform.position, Vector3.forward, radius);
+		//UnityEditor.Handles.DrawWireDisc(transform.position, Vector3.forward, radius);
 		//	Vector3 fovLine1 = DirectionFromAngle
 		// Gizmos.color = Color.red;
 		//Gizmos.DrawRay(transform.position, (target.position - transform.position).normalized * maxRadius);

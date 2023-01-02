@@ -19,6 +19,7 @@ public class FieldOfView : MonoBehaviour
 	public float transitionSpeed = 1.25f;
 	public Image fieldOfViewImage;
 	public Color[] colors;
+	public AudioSource alertSound;
 
 	private float clearness;
 	public bool CanSeelPlayer { get; private set; }
@@ -26,7 +27,7 @@ public class FieldOfView : MonoBehaviour
 	void Start()
 	{
 		playerRef = GameObject.FindGameObjectWithTag("Bot");
-
+		alertSound = GetComponent<AudioSource>();
 		StartCoroutine("FindTargetsWithDelay", .2f);
 		InvokeRepeating("Visual", 0.1f, 1);
 	}
@@ -58,10 +59,11 @@ public class FieldOfView : MonoBehaviour
         {
 			//fieldOfViewImage.DOFade(0, transitionSpeed / 2);
 			fieldOfViewImage.DOColor(colors[0], transitionSpeed);
+			alertSound.Play();
         }
         else
         {
-
+			alertSound.Stop();
 			//fieldOfViewImage.DOFade(0, transitionSpeed / 2);
 			fieldOfViewImage.DOColor(colors[1], transitionSpeed);
 		}
@@ -83,7 +85,6 @@ public class FieldOfView : MonoBehaviour
                 {
 					CanSeelPlayer = true;
 					target.GetComponent<LootController>().StressManage(clearness);
-					Debug.Log("Found.");
 				}
 					
 				else 
@@ -100,7 +101,7 @@ public class FieldOfView : MonoBehaviour
 	{
 		Gizmos.color = Color.yellow;
 		Gizmos.DrawWireSphere(transform.position, radius);
-		UnityEditor.Handles.DrawWireDisc(transform.position,Vector3.forward,radius);
+	//	UnityEditor.Handles.DrawWireDisc(transform.position,Vector3.forward,radius);
 
 		Vector2 fovLine1 = Quaternion.AngleAxis(viewAngle, transform.forward) * transform.up * radius;
 		Vector2 fovLine2 = Quaternion.AngleAxis(-viewAngle, transform.forward) * transform.up * radius;

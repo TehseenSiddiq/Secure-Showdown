@@ -89,6 +89,7 @@ public class Drag : MonoBehaviour
             transform.eulerAngles = new Vector3(0, 0, transform.eulerAngles.z + 45);
         GetComponent<Rotation>().SetInitPosition();
     }
+    public void Delete() => Destroy(gameObject);
 
 
 }

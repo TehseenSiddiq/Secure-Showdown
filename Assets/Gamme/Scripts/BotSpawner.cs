@@ -19,7 +19,8 @@ public class BotSpawner : MonoBehaviour
     private Transform spawnPos;
 
     public Wave[] waves;
-    private int nextWave = 0;
+    [HideInInspector]
+    public int nextWave = 0;
     public float timeBetweenWaves = 5f;
     public float waveCountdown;
 
@@ -94,7 +95,7 @@ public class BotSpawner : MonoBehaviour
             // nextWave = 0;
             // Debug.Log("All waves completed");
             state = SpawnState.End;
-            LevelManager.allwavesCompleted = true;
+            LevelManager.instance.allwavesCompleted = true;
         }
         else
             nextWave++;

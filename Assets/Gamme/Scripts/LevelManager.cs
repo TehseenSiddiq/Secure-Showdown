@@ -29,7 +29,7 @@ public class LevelManager : MonoBehaviour
     public float currentEnergy;
     public int maxEnergy;
 
-    public static bool allwavesCompleted = false;
+    public bool allwavesCompleted = false;
     private void Awake()
     {
         if (instance != null && instance != this)
