@@ -1940,7 +1940,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 82e6126d4e96b4cf0bfdc7c291692dbf, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 71293cbec44274043b74e14b528a6448, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -7467,6 +7467,7 @@ GameObject:
   - component: {fileID: 975804674}
   - component: {fileID: 975804673}
   - component: {fileID: 975804675}
+  - component: {fileID: 975804676}
   m_Layer: 5
   m_Name: Lost_Panel
   m_TagString: Untagged
@@ -7550,6 +7551,20 @@ MonoBehaviour:
   easeIn: 26
   easeOut: 27
   duration: 0.3
+--- !u!114 &975804676
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 975804671}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fdbfc67d9e10a4c4ea615811b282d4af, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lootSafedText: {fileID: 1070592508}
+  thiefsText: {fileID: 1032273923}
 --- !u!1 &990490355
 GameObject:
   m_ObjectHideFlags: 0
