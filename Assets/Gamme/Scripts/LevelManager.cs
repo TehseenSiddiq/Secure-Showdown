@@ -28,6 +28,7 @@ public class LevelManager : MonoBehaviour
     [Header("Values")]
     public float currentEnergy;
     public int maxEnergy;
+    public int thiefCaught = 0;
 
     public bool allwavesCompleted = false;
     private void Awake()

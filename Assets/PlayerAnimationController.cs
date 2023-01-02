@@ -8,6 +8,7 @@ public class PlayerAnimationController : MonoBehaviour
     public GameObject effect;
      public void Surrender()
     {
+        FindObjectOfType<LevelManager>().thiefCaught++;
         var a = Instantiate(effect, transform.parent.position, Quaternion.identity);
         Destroy(a, 2);
         Destroy(parent);

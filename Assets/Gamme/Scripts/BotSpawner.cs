@@ -28,11 +28,18 @@ public class BotSpawner : MonoBehaviour
 
     private float searchCountDown = 1;
 
+    public float totalThiefs = 0;
+
     public SpawnState state = SpawnState.Counting;
 
     private void Start()
     {
         waveCountdown = timeBetweenWaves;
+
+        for (int i = 0; i < waves.Length; i++)
+        {
+            totalThiefs += waves[i].count;
+        }
     }
     private void Update()
     {

@@ -60,6 +60,7 @@ public class UI_Manager : MonoBehaviour
 
     public void Victory()
     {
+
         victoryScreen.SetActive(true);
        // Time.timeScale = 0;
     }
