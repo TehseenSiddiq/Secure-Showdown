@@ -61,10 +61,18 @@ struct List_1_t0F431735EE2492DB58BB352E0D782E86838A86AA;
 struct List_1_t165FB4E999832DC2AF037261806500DB52B11CE8;
 // System.Collections.Generic.List`1<System.Object>
 struct List_1_tA239CB83DE5615F348BB0507E45F490F4F7C9A8D;
+// Unity.Collections.LowLevel.Unsafe.UnsafeList`1<Unity.Entities.ArchetypeChunk>
+struct UnsafeList_1_tD72E86D22D12AC8243BAACBB2C3D1894438DB165;
 // Unity.Collections.LowLevel.Unsafe.UnsafeList`1<System.Char>
 struct UnsafeList_1_t823260CC648D4FAB5E8934C1D8E387F44BD66497;
+// Unity.Collections.LowLevel.Unsafe.UnsafeList`1<System.Int32>
+struct UnsafeList_1_t6C5E84D303190B625F3759C244502E1735453718;
+// Unity.Collections.LowLevel.Unsafe.UnsafeList`1<System.IntPtr>
+struct UnsafeList_1_t7F37B06177929AC50704A82689AED5BBFE830613;
 // Unity.Collections.LowLevel.Unsafe.UnsafeList`1<Unity.Serialization.Json.JsonWriter/Unsafe/State>
 struct UnsafeList_1_tD2C58E6D29AED9DA6BD7AFF4770B6C6F96AFDBEA;
+// Unity.Collections.LowLevel.Unsafe.UnsafePtrList`1<Unity.Entities.Chunk>
+struct UnsafePtrList_1_tFA875B144BC706609B338A64162558F038FB0AAF;
 // System.Byte[]
 struct ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031;
 // System.Char[]
@@ -85,6 +93,12 @@ struct SByteU5BU5D_t88116DA68378C3333DB73E7D36C1A06AFAA91913;
 struct StackTraceU5BU5D_t32FBCB20930EAF5BAE3F450FF75228E5450DA0DF;
 // System.Type[]
 struct TypeU5BU5D_t97234E1129B564EB38B8D85CAC2AD8B5B9522FFB;
+// Unity.Entities.Archetype
+struct Archetype_t96EB5691CCC58A7A4E29CA4F9EA62A25E4C14582;
+// Unity.Entities.ArchetypeChunk
+struct ArchetypeChunk_tF9C2266ECFAB3A9C58EADE74121F80C845F0CCC5;
+// Unity.Entities.ArchetypeQuery
+struct ArchetypeQuery_t45938EA78C5B9A37BBD17621D4A2DACAB98BFCEA;
 // Unity.Serialization.Json.BinaryToken
 struct BinaryToken_t040D42F1326051BD104F491D8B080B61030A3794;
 // System.Reflection.Binder
@@ -93,8 +107,22 @@ struct Binder_t91BFCE95A7057FADF4D8A1A342AFE52872246235;
 struct BlobAssetBatch_tE7DAEECF09D38F983FE3F829F7774B40F4FD6B46;
 // System.Byte
 struct Byte_t94D9231AC217BE4D2E004C4CD32DF6D099EA41A3;
+// Unity.Entities.ComponentDependencyManager
+struct ComponentDependencyManager_t88715270EBD172A299D4F6DB471143B7E0BCDB47;
+// Unity.Entities.ComponentType
+struct ComponentType_t0CB4E9723924AAC17CE8F38A0080018ED412DBDA;
 // Unity.Entities.EntityCommandBufferData
 struct EntityCommandBufferData_t88C8EFD5BBEF42F8008AF73FA2C27B60E5A31DC2;
+// Unity.Entities.EntityComponentStore
+struct EntityComponentStore_tA85E100ECD667365B260A68DFD9DF9B7C04D037F;
+// Unity.Entities.EntityDataAccess
+struct EntityDataAccess_t98E1CF6F73892A92AA3FF870A4BD941364E9CD36;
+// Unity.Entities.EntityInChunk
+struct EntityInChunk_t9C018862802ABC36E70290747CBFBF57FC0FC9FB;
+// Unity.Entities.EntityName
+struct EntityName_t08A13405B792D0AE39612E76BA3A5CBEAC68BD87;
+// Unity.Entities.EntityQueryData
+struct EntityQueryData_t20DB32E7BB3F8732C371E45E8A8CEBCE62B61C26;
 // Unity.Entities.EntityQueryImpl
 struct EntityQueryImpl_t3E7DD11B3ECD6D708BF02ACF2C07B42A913F7574;
 // System.Exception
@@ -113,6 +141,12 @@ struct IJsonAdapter_t65F5339A41A71DCCB717A4B17E6A3AC24052212F;
 struct IJsonMigration_tDA7E3CE2E13313A14B0422AE46E79789FCB68430;
 // Unity.Properties.IProperty
 struct IProperty_t88BDB9BB07BFAD063DAE34D0914745E46D230375;
+// System.Int32
+struct Int32_t680FF22E76F6EFAD4375103CBBFFA0421349384C;
+// System.IntPtr
+struct IntPtr_t;
+// Unity.Jobs.JobHandle
+struct JobHandle_t5DF5F99902FED3C801A81C05205CEA6CE039EF08;
 // Unity.Serialization.Json.Adapters.JsonAdapter
 struct JsonAdapter_tD8BF0D9578CCA237FBB1E700D0E89E4871BFC05B;
 // Unity.Serialization.Json.JsonPropertyReader
@@ -129,12 +163,30 @@ struct SerializedReferences_t262118CDA70C466A515C42D386FA471981165248;
 struct String_t;
 // System.Type
 struct Type_t;
+// System.UInt16
+struct UInt16_tF4C148C876015C212FD72652D0B6ED8CC247A455;
+// System.UInt32
+struct UInt32_t1833D51FFA667B18A5AA4B8D34DE284F8495D29B;
+// System.UInt64
+struct UInt64_t8F12534CC8FC4B5860F2A2CD1EE79D322E7A41AF;
+// Unity.Collections.LowLevel.Unsafe.UnsafeParallelHashMapData
+struct UnsafeParallelHashMapData_t43CAB3170FBB624A9CCB6F30C0EC1BB820D57926;
 // System.Void
 struct Void_t4861ACF8F4594C3437BB48B6E56783494B843915;
+// Unity.Entities.WorldAllocator
+struct WorldAllocator_t86FB5E0B0505249BDACAE980021C8EBADEE8A62B;
+// Unity.Entities.WorldUnmanagedImpl
+struct WorldUnmanagedImpl_tB98600E1E80A2ABD0C6F29D8C55829750507D830;
+// Unity.Entities.ComponentDependencyManager/DependencyHandle
+struct DependencyHandle_t73038501598DF9B7E83BF8486D87B9DED6200B15;
 // Unity.Serialization.Json.JsonPropertyReader/SerializedTypeProvider
 struct SerializedTypeProvider_tBA6A3A679D26EB5B4C276D3E1B876715C5A094A1;
 // Unity.Serialization.Json.JsonStringBuffer/Data
 struct Data_t5B79D224476FFF0DC16117A659EB33DC59C99AA9;
+// Unity.Entities.TypeManager/EntityOffsetInfo
+struct EntityOffsetInfo_tAA68D1FC74ADF57FB76987377354ED848C7CC9D1;
+// Unity.Entities.TypeManager/TypeInfo
+struct TypeInfo_tD43B08A8D19156EEC98399693A96161F02139654;
 // Unity.Serialization.Json.JsonWriter/Unsafe/Data
 struct Data_t949055BB6B2EA179BFB70EB8377036B102B9BEF1;
 
@@ -151,6 +203,8 @@ IL2CPP_EXTERN_C const RuntimeMethod* Enumerator_MoveNext_mB6B820C3A2A9B725E4D4B4
 IL2CPP_EXTERN_C const RuntimeMethod* Enumerator_MoveNext_mD32E175ACDF4E4C0BB071AFEB558CBEA4DA95CFD_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* Enumerator_get_Current_m570E477B5093C2373491C06CFFA2DFA502D6E6AD_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* Enumerator_get_Current_m909F06D6E9699946347152DF0BFA6839221279A7_RuntimeMethod_var;
+IL2CPP_EXTERN_C const RuntimeMethod* IJobBurstSchedulableExtensions_Run_TisPrefilterForJobEntityBatchWithIndex_tE030BB096AD0E53B43B7D5E98E3C05E3AC26CCAB_m4BA645F349CDEEBD58CC8D16C9AC3B2BD51F16DB_RuntimeMethod_var;
+IL2CPP_EXTERN_C const RuntimeMethod* IJobBurstSchedulableExtensions_Schedule_TisPrefilterForJobEntityBatchWithIndex_tE030BB096AD0E53B43B7D5E98E3C05E3AC26CCAB_m66D73EEFE570A4424ADCA368251111B4D918C2C1_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* JsonMigrationCollection_TryMigrate_TisBlobAssetOwner_t48F662D0AF49A5BBFD013EF59C8BD9C335A854AD_m376D3DB090E63214FDE122F51FD4C760C00D506A_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* JsonMigrationCollection_TryMigrate_TisBoundsInt_t4E757DE5EFF9FCB42000F173360DDC63B5585485_mA57BC41807BF756672F950CFCE0EE8E7CB1DC6A3_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* JsonMigrationCollection_TryMigrate_TisBounds_t367E830C64BBF235ED8C3B2F8CF6254FDCAD39C3_m10240DD2287D65DCEBD06D8CE38B08CAA5C472DA_RuntimeMethod_var;
@@ -161,16 +215,18 @@ IL2CPP_EXTERN_C const RuntimeMethod* JsonMigrationCollection_TryMigrate_TisEntit
 IL2CPP_EXTERN_C const RuntimeMethod* JsonMigrationCollection_TryMigrate_TisGameObjectSceneData_tCEFD22C9224DFA29848641AD7CDCDC6E9EDD2278_m748AE1FD5507F787A0BD3D1040C8F960D98630F3_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* JsonMigrationCollection_TryMigrate_TisHash128_t2EA8F45F10BC2DF40B0CE9AE04F222072EB1345B_m07B10AED10A8B9BD94C3E566A5F57DBC0E2D10B0_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* JsonMigrationCollection_TryMigrate_TisKeyValuePair_2_tFC32D2507216293851350D29B64D79F950B55230_mC9F603B29368E77A5471D09AD58940E651EBD137_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* JsonMigrationCollection_TryMigrate_TisKeyframe_tB9C67DCBFE10C0AE9C52CB5C66E944255C9254F0_mB7658BDD224A010C381EB2C9DC7627A324066A01_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* JsonMigrationCollection_TryMigrate_TisPropertyWrapper_1_tEF6D743438FC36D1F7962AEDB3F8FD1EA80C745F_m7FBB4B84BF9990842A022DA5933CD4F45C216F0A_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* List_1_Add_m9F4108E5934BFB244CD36C7D2FAE5969BB4B8098_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* List_1_GetEnumerator_m33CFD11AFB868BA89027FFC860FA2C3FB572CCA0_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* List_1_GetEnumerator_mD9A8816D33811BF10941592C2452B0DFD29D8D1F_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* List_1_get_Count_m5591A98B36B32BA425622AAE076343D6AF23B5AA_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* List_1_get_Count_m871C8E6EF2049EF7E845A6E0F960039A07404C63_RuntimeMethod_var;
+IL2CPP_EXTERN_C const RuntimeMethod* SharedStatic_1_get_Data_m6B971FC25FA15EF3646DC3DE9FFA1D910AE67EA1_RuntimeMethod_var;
 struct Data_t949055BB6B2EA179BFB70EB8377036B102B9BEF1;
+struct DependencyHandle_t73038501598DF9B7E83BF8486D87B9DED6200B15;
 struct Exception_t_marshaled_com;
 struct Exception_t_marshaled_pinvoke;
+struct JobHandle_t5DF5F99902FED3C801A81C05205CEA6CE039EF08;
 
 struct DeserializationEventU5BU5D_t5D58FE40B1E6427FEA9A62C3608047757FF27FC4;
 
@@ -351,6 +407,53 @@ struct ValueType_t6D9B272BD21782F0A9A14F2E41F85A50E97A986F_marshaled_com
 {
 };
 
+// Unity.Entities.ComponentTypeHandle`1<Unity.Transforms.LocalToWorld>
+struct ComponentTypeHandle_1_tEEE2A5C7BC9EBACD051B2BC1B43C739F75FEA206 
+{
+	// System.Int32 Unity.Entities.ComponentTypeHandle`1::m_TypeIndex
+	int32_t ___m_TypeIndex_0;
+	// System.Int32 Unity.Entities.ComponentTypeHandle`1::m_SizeInChunk
+	int32_t ___m_SizeInChunk_1;
+	// System.UInt32 Unity.Entities.ComponentTypeHandle`1::m_GlobalSystemVersion
+	uint32_t ___m_GlobalSystemVersion_2;
+	// System.Boolean Unity.Entities.ComponentTypeHandle`1::m_IsReadOnly
+	bool ___m_IsReadOnly_3;
+	// System.Boolean Unity.Entities.ComponentTypeHandle`1::m_IsZeroSized
+	bool ___m_IsZeroSized_4;
+	// System.Int16 Unity.Entities.ComponentTypeHandle`1::m_LookupCache
+	int16_t ___m_LookupCache_5;
+	// System.Int32 Unity.Entities.ComponentTypeHandle`1::m_Length
+	int32_t ___m_Length_6;
+};
+// Native definition for P/Invoke marshalling of Unity.Entities.ComponentTypeHandle`1
+#ifndef ComponentTypeHandle_1_tA87C85034206BFA47C0596E8C9B012DC4C2C8606_marshaled_pinvoke_define
+#define ComponentTypeHandle_1_tA87C85034206BFA47C0596E8C9B012DC4C2C8606_marshaled_pinvoke_define
+struct ComponentTypeHandle_1_tA87C85034206BFA47C0596E8C9B012DC4C2C8606_marshaled_pinvoke
+{
+	int32_t ___m_TypeIndex_0;
+	int32_t ___m_SizeInChunk_1;
+	uint32_t ___m_GlobalSystemVersion_2;
+	int32_t ___m_IsReadOnly_3;
+	int32_t ___m_IsZeroSized_4;
+	int16_t ___m_LookupCache_5;
+	int32_t ___m_Length_6;
+};
+#endif
+// Native definition for COM marshalling of Unity.Entities.ComponentTypeHandle`1
+#ifndef ComponentTypeHandle_1_tA87C85034206BFA47C0596E8C9B012DC4C2C8606_marshaled_com_define
+#define ComponentTypeHandle_1_tA87C85034206BFA47C0596E8C9B012DC4C2C8606_marshaled_com_define
+struct ComponentTypeHandle_1_tA87C85034206BFA47C0596E8C9B012DC4C2C8606_marshaled_com
+{
+	int32_t ___m_TypeIndex_0;
+	int32_t ___m_SizeInChunk_1;
+	uint32_t ___m_GlobalSystemVersion_2;
+	int32_t ___m_IsReadOnly_3;
+	int32_t ___m_IsZeroSized_4;
+	int16_t ___m_LookupCache_5;
+	int32_t ___m_Length_6;
+};
+#endif
+
 // System.Collections.Generic.List`1/Enumerator<Unity.Serialization.Json.Adapters.IJsonAdapter>
 struct Enumerator_t92F52A3A90AA5503A5053FC671466B6D3DDA8191 
 {
@@ -399,11 +502,43 @@ struct KeyValuePair_2_tFC32D2507216293851350D29B64D79F950B55230
 	RuntimeObject* ___value_1;
 };
 
+// Unity.Collections.NativeArray`1<Unity.Transforms.CopyTransformFromGameObjectSystem/TransformStash>
+struct NativeArray_1_t2B5E39A5A122745B62C2EB1D255C569CA770BC52 
+{
+	// System.Void* Unity.Collections.NativeArray`1::m_Buffer
+	void* ___m_Buffer_0;
+	// System.Int32 Unity.Collections.NativeArray`1::m_Length
+	int32_t ___m_Length_1;
+	// Unity.Collections.Allocator Unity.Collections.NativeArray`1::m_AllocatorLabel
+	int32_t ___m_AllocatorLabel_2;
+};
+
 // Unity.Properties.Internal.PropertyWrapper`1<System.Object>
 struct PropertyWrapper_1_tEF6D743438FC36D1F7962AEDB3F8FD1EA80C745F 
 {
 	// T Unity.Properties.Internal.PropertyWrapper`1::Value
 	RuntimeObject* ___Value_0;
+};
+
+// Unity.Burst.SharedStatic`1<System.IntPtr>
+struct SharedStatic_1_t0A9894CA2483CA9491C550F8D66FBA5213718E9F 
+{
+	// System.Void* Unity.Burst.SharedStatic`1::_buffer
+	void* ____buffer_0;
+};
+
+// Unity.Burst.SharedStatic`1<System.UInt64>
+struct SharedStatic_1_tB042D7198B3BD170F6B8D07127F90A916DCE64B5 
+{
+	// System.Void* Unity.Burst.SharedStatic`1::_buffer
+	void* ____buffer_0;
+};
+
+// Unity.Burst.SharedStatic`1<Unity.Entities.EntityComponentStore/ChunkStore>
+struct SharedStatic_1_t06174270CC879833E66A2A61C363018B785C3CC7 
+{
+	// System.Void* Unity.Burst.SharedStatic`1::_buffer
+	void* ____buffer_0;
 };
 
 // Unity.Entities.BlobAssetOwner
@@ -508,6 +643,15 @@ struct Char_t521A6F19B456D956AF452D926C32709DC03D6B17_StaticFields
 	ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* ___s_categoryForLatin1_3;
 };
 
+// Unity.Entities.ComponentType
+struct ComponentType_t0CB4E9723924AAC17CE8F38A0080018ED412DBDA 
+{
+	// System.Int32 Unity.Entities.ComponentType::TypeIndex
+	int32_t ___TypeIndex_0;
+	// Unity.Entities.ComponentType/AccessMode Unity.Entities.ComponentType::AccessModeType
+	int32_t ___AccessModeType_1;
+};
+
 // Unity.Serialization.Json.DeserializationEvent
 struct DeserializationEvent_t2239A02D0C2B02D1E2F8FB330FCC1C42051F62AE 
 {
@@ -559,6 +703,13 @@ struct Entity_t56176FC78C475061A82383D9E0CEE352C6C52ABD
 	int32_t ___Version_1;
 };
 
+// Unity.Entities.EntityArchetype
+struct EntityArchetype_tE1D293B55B4783642BB593531A57460AB7709354 
+{
+	// Unity.Entities.Archetype* Unity.Entities.EntityArchetype::Archetype
+	Archetype_t96EB5691CCC58A7A4E29CA4F9EA62A25E4C14582* ___Archetype_0;
+};
+
 // Unity.Entities.EntityQuery
 struct EntityQuery_t23B7A11FAA475D860E94409BFD4CF7E4B337CF90 
 {
@@ -566,6 +717,17 @@ struct EntityQuery_t23B7A11FAA475D860E94409BFD4CF7E4B337CF90
 	EntityQueryImpl_t3E7DD11B3ECD6D708BF02ACF2C07B42A913F7574* _____impl_0;
 	// System.UInt64 Unity.Entities.EntityQuery::__seqno
 	uint64_t _____seqno_1;
+};
+
+// Unity.Entities.EntityQueryMask
+struct EntityQueryMask_tA3298547B0A6701B30F8E223B5346B40E68DDEEF 
+{
+	// System.Byte Unity.Entities.EntityQueryMask::Index
+	uint8_t ___Index_0;
+	// System.Byte Unity.Entities.EntityQueryMask::Mask
+	uint8_t ___Mask_1;
+	// Unity.Entities.EntityComponentStore* Unity.Entities.EntityQueryMask::EntityComponentStore
+	EntityComponentStore_tA85E100ECD667365B260A68DFD9DF9B7C04D037F* ___EntityComponentStore_2;
 };
 
 // Unity.Entities.EntityTypeHandle
@@ -735,6 +897,13 @@ struct Single_t4530F2FF86FCB0DC29F35385CA1BD21BE294761C
 	float ___m_value_0;
 };
 
+// Unity.Collections.Spinner
+struct Spinner_t9606E334089E448EA313C31DC5EFC9345A58BCEB 
+{
+	// System.Int32 Unity.Collections.Spinner::m_value
+	int32_t ___m_value_0;
+};
+
 // Unity.Entities.SystemHandleUntyped
 struct SystemHandleUntyped_tBAD0B60C6C5C844C4F755E8D4C06369262C99697 
 {
@@ -758,6 +927,28 @@ struct UInt64_t8F12534CC8FC4B5860F2A2CD1EE79D322E7A41AF
 {
 	// System.UInt64 System.UInt64::m_value
 	uint64_t ___m_value_0;
+};
+
+// Unity.Entities.UnsafeCachedChunkList
+struct UnsafeCachedChunkList_t48CE8479B1EEA20F34D6EB59806214668DB204A3 
+{
+	// Unity.Collections.LowLevel.Unsafe.UnsafePtrList`1<Unity.Entities.Chunk>* Unity.Entities.UnsafeCachedChunkList::MatchingChunks
+	UnsafePtrList_1_tFA875B144BC706609B338A64162558F038FB0AAF* ___MatchingChunks_0;
+	// Unity.Collections.LowLevel.Unsafe.UnsafeList`1<System.Int32>* Unity.Entities.UnsafeCachedChunkList::PerChunkMatchingArchetypeIndex
+	UnsafeList_1_t6C5E84D303190B625F3759C244502E1735453718* ___PerChunkMatchingArchetypeIndex_1;
+	// Unity.Entities.EntityComponentStore* Unity.Entities.UnsafeCachedChunkList::EntityComponentStore
+	EntityComponentStore_tA85E100ECD667365B260A68DFD9DF9B7C04D037F* ___EntityComponentStore_2;
+	// System.Int32 Unity.Entities.UnsafeCachedChunkList::CacheValid
+	int32_t ___CacheValid_3;
+};
+
+// Unity.Entities.UnsafeMatchingArchetypePtrList
+struct UnsafeMatchingArchetypePtrList_t7BE58FA0D1C0757782B0CA05207B0E07690ED566 
+{
+	// Unity.Collections.LowLevel.Unsafe.UnsafeList`1<System.IntPtr>* Unity.Entities.UnsafeMatchingArchetypePtrList::ListData
+	UnsafeList_1_t7F37B06177929AC50704A82689AED5BBFE830613* ___ListData_0;
+	// Unity.Entities.EntityComponentStore* Unity.Entities.UnsafeMatchingArchetypePtrList::entityComponentStore
+	EntityComponentStore_tA85E100ECD667365B260A68DFD9DF9B7C04D037F* ___entityComponentStore_1;
 };
 
 // UnityEngine.Vector3
@@ -866,6 +1057,13 @@ struct AllocatorHandle_t3CA09720B1F89F91A8DDBA95E74C28A1EC3E3148
 	uint16_t ___Version_1;
 };
 
+// Unity.Entities.EntityComponentStore/ChunkListChanges
+struct ChunkListChanges_tC57E06E14D1D6D3D87675D05619E0539A86564D8 
+{
+	// Unity.Entities.Archetype* Unity.Entities.EntityComponentStore/ChunkListChanges::ArchetypeTrackingHead
+	Archetype_t96EB5691CCC58A7A4E29CA4F9EA62A25E4C14582* ___ArchetypeTrackingHead_0;
+};
+
 // Unity.Serialization.Json.JsonPropertyReader/SerializedContainerMetadata
 struct SerializedContainerMetadata_t5CCD2AD33CE2755161834EBD4EDE623397786E0E 
 {
@@ -903,6 +1101,75 @@ struct SerializedContainerMetadata_t5CCD2AD33CE2755161834EBD4EDE623397786E0E_mar
 	int32_t ___SerializedId_5;
 };
 
+// Unity.Entities.EntityQueryFilter/ChangedFilter/<IndexInEntityQuery>e__FixedBuffer
+struct U3CIndexInEntityQueryU3Ee__FixedBuffer_t16145BD96786E58BD62F3D7542DA41E279C0E65A 
+{
+	union
+	{
+		struct
+		{
+			// System.Int32 Unity.Entities.EntityQueryFilter/ChangedFilter/<IndexInEntityQuery>e__FixedBuffer::FixedElementField
+			int32_t ___FixedElementField_0;
+		};
+		uint8_t U3CIndexInEntityQueryU3Ee__FixedBuffer_t16145BD96786E58BD62F3D7542DA41E279C0E65A__padding[8];
+	};
+};
+
+// Unity.Entities.EntityQueryFilter/SharedComponentData/<IndexInEntityQuery>e__FixedBuffer
+struct U3CIndexInEntityQueryU3Ee__FixedBuffer_tF74E8C082C63D1F5EC4A529909287F360012EDD9 
+{
+	union
+	{
+		struct
+		{
+			// System.Int32 Unity.Entities.EntityQueryFilter/SharedComponentData/<IndexInEntityQuery>e__FixedBuffer::FixedElementField
+			int32_t ___FixedElementField_0;
+		};
+		uint8_t U3CIndexInEntityQueryU3Ee__FixedBuffer_tF74E8C082C63D1F5EC4A529909287F360012EDD9__padding[8];
+	};
+};
+
+// Unity.Entities.EntityQueryFilter/SharedComponentData/<SharedComponentIndex>e__FixedBuffer
+struct U3CSharedComponentIndexU3Ee__FixedBuffer_t6678D7BCFF071F01975BEAE7FF8C6FA532C1FDA0 
+{
+	union
+	{
+		struct
+		{
+			// System.Int32 Unity.Entities.EntityQueryFilter/SharedComponentData/<SharedComponentIndex>e__FixedBuffer::FixedElementField
+			int32_t ___FixedElementField_0;
+		};
+		uint8_t U3CSharedComponentIndexU3Ee__FixedBuffer_t6678D7BCFF071F01975BEAE7FF8C6FA532C1FDA0__padding[8];
+	};
+};
+
+// Unity.Collections.AllocatorHelper`1<Unity.Entities.WorldAllocator>
+struct AllocatorHelper_1_tF5199BDF73082E3D4CF3F2ACFD1A9F3B92C104A9 
+{
+	// T* Unity.Collections.AllocatorHelper`1::m_allocator
+	WorldAllocator_t86FB5E0B0505249BDACAE980021C8EBADEE8A62B* ___m_allocator_0;
+	// Unity.Collections.AllocatorManager/AllocatorHandle Unity.Collections.AllocatorHelper`1::m_backingAllocator
+	AllocatorHandle_t3CA09720B1F89F91A8DDBA95E74C28A1EC3E3148 ___m_backingAllocator_1;
+};
+
+// Unity.Entities.JobEntityBatchIndexExtensions/JobEntityBatchIndexProducer`1<Unity.Transforms.CopyTransformFromGameObjectSystem/CopyTransforms>
+struct JobEntityBatchIndexProducer_1_t005A1661D632E19AF445F625B27F3E140B04BF0E 
+{
+	union
+	{
+		struct
+		{
+		};
+		uint8_t JobEntityBatchIndexProducer_1_t88261EE58D812AE1B34991B7A7649ADB6F1DD585__padding[1];
+	};
+};
+
+struct JobEntityBatchIndexProducer_1_t005A1661D632E19AF445F625B27F3E140B04BF0E_StaticFields
+{
+	// Unity.Burst.SharedStatic`1<System.IntPtr> Unity.Entities.JobEntityBatchIndexExtensions/JobEntityBatchIndexProducer`1::reflectionData
+	SharedStatic_1_t0A9894CA2483CA9491C550F8D66FBA5213718E9F ___reflectionData_0;
+};
+
 // Unity.Collections.NativeList`1<System.Char>
 struct NativeList_1_t02979B0A0A691EACBC37CD045D33C72C1904C5B6 
 {
@@ -921,6 +1188,119 @@ struct NativeList_1_t0244D4C5F9FC5C387043B613A66F2B1DB6013ED1
 	AllocatorHandle_t3CA09720B1F89F91A8DDBA95E74C28A1EC3E3148 ___m_DeprecatedAllocator_1;
 };
 
+// Unity.Collections.UnmanagedArray`1<Unity.Collections.RewindableAllocator/MemoryBlock>
+struct UnmanagedArray_1_t7A336330780E05C924BB57ED337DDD2A66701FAB 
+{
+	// System.IntPtr Unity.Collections.UnmanagedArray`1::m_pointer
+	intptr_t ___m_pointer_0;
+	// System.Int32 Unity.Collections.UnmanagedArray`1::m_length
+	int32_t ___m_length_1;
+	// Unity.Collections.AllocatorManager/AllocatorHandle Unity.Collections.UnmanagedArray`1::m_allocator
+	AllocatorHandle_t3CA09720B1F89F91A8DDBA95E74C28A1EC3E3148 ___m_allocator_2;
+};
+
+// Unity.Collections.LowLevel.Unsafe.UnsafeList`1<Unity.Entities.ArchetypeChunk>
+struct UnsafeList_1_tD72E86D22D12AC8243BAACBB2C3D1894438DB165 
+{
+	// T* Unity.Collections.LowLevel.Unsafe.UnsafeList`1::Ptr
+	ArchetypeChunk_tF9C2266ECFAB3A9C58EADE74121F80C845F0CCC5* ___Ptr_0;
+	// System.Int32 Unity.Collections.LowLevel.Unsafe.UnsafeList`1::m_length
+	int32_t ___m_length_1;
+	// System.Int32 Unity.Collections.LowLevel.Unsafe.UnsafeList`1::m_capacity
+	int32_t ___m_capacity_2;
+	// Unity.Collections.AllocatorManager/AllocatorHandle Unity.Collections.LowLevel.Unsafe.UnsafeList`1::Allocator
+	AllocatorHandle_t3CA09720B1F89F91A8DDBA95E74C28A1EC3E3148 ___Allocator_3;
+	// System.Int32 Unity.Collections.LowLevel.Unsafe.UnsafeList`1::length
+	int32_t ___length_4;
+	// System.Int32 Unity.Collections.LowLevel.Unsafe.UnsafeList`1::capacity
+	int32_t ___capacity_5;
+};
+
+// Unity.Collections.LowLevel.Unsafe.UnsafeList`1<System.Int32>
+struct UnsafeList_1_t6C5E84D303190B625F3759C244502E1735453718 
+{
+	// T* Unity.Collections.LowLevel.Unsafe.UnsafeList`1::Ptr
+	int32_t* ___Ptr_0;
+	// System.Int32 Unity.Collections.LowLevel.Unsafe.UnsafeList`1::m_length
+	int32_t ___m_length_1;
+	// System.Int32 Unity.Collections.LowLevel.Unsafe.UnsafeList`1::m_capacity
+	int32_t ___m_capacity_2;
+	// Unity.Collections.AllocatorManager/AllocatorHandle Unity.Collections.LowLevel.Unsafe.UnsafeList`1::Allocator
+	AllocatorHandle_t3CA09720B1F89F91A8DDBA95E74C28A1EC3E3148 ___Allocator_3;
+	// System.Int32 Unity.Collections.LowLevel.Unsafe.UnsafeList`1::length
+	int32_t ___length_4;
+	// System.Int32 Unity.Collections.LowLevel.Unsafe.UnsafeList`1::capacity
+	int32_t ___capacity_5;
+};
+
+// Unity.Collections.LowLevel.Unsafe.UnsafeList`1<System.IntPtr>
+struct UnsafeList_1_t7F37B06177929AC50704A82689AED5BBFE830613 
+{
+	// T* Unity.Collections.LowLevel.Unsafe.UnsafeList`1::Ptr
+	intptr_t* ___Ptr_0;
+	// System.Int32 Unity.Collections.LowLevel.Unsafe.UnsafeList`1::m_length
+	int32_t ___m_length_1;
+	// System.Int32 Unity.Collections.LowLevel.Unsafe.UnsafeList`1::m_capacity
+	int32_t ___m_capacity_2;
+	// Unity.Collections.AllocatorManager/AllocatorHandle Unity.Collections.LowLevel.Unsafe.UnsafeList`1::Allocator
+	AllocatorHandle_t3CA09720B1F89F91A8DDBA95E74C28A1EC3E3148 ___Allocator_3;
+	// System.Int32 Unity.Collections.LowLevel.Unsafe.UnsafeList`1::length
+	int32_t ___length_4;
+	// System.Int32 Unity.Collections.LowLevel.Unsafe.UnsafeList`1::capacity
+	int32_t ___capacity_5;
+};
+
+// Unity.Collections.LowLevel.Unsafe.UnsafeList`1<System.UInt32>
+struct UnsafeList_1_tA2B6A040C4F2656D88ABB4345257ADE8F2F30F35 
+{
+	// T* Unity.Collections.LowLevel.Unsafe.UnsafeList`1::Ptr
+	uint32_t* ___Ptr_0;
+	// System.Int32 Unity.Collections.LowLevel.Unsafe.UnsafeList`1::m_length
+	int32_t ___m_length_1;
+	// System.Int32 Unity.Collections.LowLevel.Unsafe.UnsafeList`1::m_capacity
+	int32_t ___m_capacity_2;
+	// Unity.Collections.AllocatorManager/AllocatorHandle Unity.Collections.LowLevel.Unsafe.UnsafeList`1::Allocator
+	AllocatorHandle_t3CA09720B1F89F91A8DDBA95E74C28A1EC3E3148 ___Allocator_3;
+	// System.Int32 Unity.Collections.LowLevel.Unsafe.UnsafeList`1::length
+	int32_t ___length_4;
+	// System.Int32 Unity.Collections.LowLevel.Unsafe.UnsafeList`1::capacity
+	int32_t ___capacity_5;
+};
+
+// Unity.Collections.LowLevel.Unsafe.UnsafePtrList`1<Unity.Entities.Archetype>
+struct UnsafePtrList_1_t3BA56CBE50A217517D1FA78C345C0AF8242F8088 
+{
+	// T** Unity.Collections.LowLevel.Unsafe.UnsafePtrList`1::Ptr
+	Archetype_t96EB5691CCC58A7A4E29CA4F9EA62A25E4C14582** ___Ptr_0;
+	// System.Int32 Unity.Collections.LowLevel.Unsafe.UnsafePtrList`1::m_length
+	int32_t ___m_length_1;
+	// System.Int32 Unity.Collections.LowLevel.Unsafe.UnsafePtrList`1::m_capacity
+	int32_t ___m_capacity_2;
+	// Unity.Collections.AllocatorManager/AllocatorHandle Unity.Collections.LowLevel.Unsafe.UnsafePtrList`1::Allocator
+	AllocatorHandle_t3CA09720B1F89F91A8DDBA95E74C28A1EC3E3148 ___Allocator_3;
+	// System.Int32 Unity.Collections.LowLevel.Unsafe.UnsafePtrList`1::length
+	int32_t ___length_4;
+	// System.Int32 Unity.Collections.LowLevel.Unsafe.UnsafePtrList`1::capacity
+	int32_t ___capacity_5;
+};
+
+// Unity.Collections.LowLevel.Unsafe.UnsafePtrList`1<Unity.Entities.EntityQueryData>
+struct UnsafePtrList_1_t9303472093C8513F7E98E3EFE8C3560679C4CAA6 
+{
+	// T** Unity.Collections.LowLevel.Unsafe.UnsafePtrList`1::Ptr
+	EntityQueryData_t20DB32E7BB3F8732C371E45E8A8CEBCE62B61C26** ___Ptr_0;
+	// System.Int32 Unity.Collections.LowLevel.Unsafe.UnsafePtrList`1::m_length
+	int32_t ___m_length_1;
+	// System.Int32 Unity.Collections.LowLevel.Unsafe.UnsafePtrList`1::m_capacity
+	int32_t ___m_capacity_2;
+	// Unity.Collections.AllocatorManager/AllocatorHandle Unity.Collections.LowLevel.Unsafe.UnsafePtrList`1::Allocator
+	AllocatorHandle_t3CA09720B1F89F91A8DDBA95E74C28A1EC3E3148 ___Allocator_3;
+	// System.Int32 Unity.Collections.LowLevel.Unsafe.UnsafePtrList`1::length
+	int32_t ___length_4;
+	// System.Int32 Unity.Collections.LowLevel.Unsafe.UnsafePtrList`1::capacity
+	int32_t ___capacity_5;
+};
+
 // UnityEngine.Bounds
 struct Bounds_t367E830C64BBF235ED8C3B2F8CF6254FDCAD39C3 
 {
@@ -937,6 +1317,37 @@ struct BoundsInt_t4E757DE5EFF9FCB42000F173360DDC63B5585485
 	Vector3Int_t65CB06F557251D18A37BD71F3655BA836A357376 ___m_Position_0;
 	// UnityEngine.Vector3Int UnityEngine.BoundsInt::m_Size
 	Vector3Int_t65CB06F557251D18A37BD71F3655BA836A357376 ___m_Size_1;
+};
+
+// Unity.Entities.EntityQueryData
+struct EntityQueryData_t20DB32E7BB3F8732C371E45E8A8CEBCE62B61C26 
+{
+	// Unity.Entities.ComponentType* Unity.Entities.EntityQueryData::RequiredComponents
+	ComponentType_t0CB4E9723924AAC17CE8F38A0080018ED412DBDA* ___RequiredComponents_0;
+	// System.Int32 Unity.Entities.EntityQueryData::RequiredComponentsCount
+	int32_t ___RequiredComponentsCount_1;
+	// System.Int32* Unity.Entities.EntityQueryData::ReaderTypes
+	int32_t* ___ReaderTypes_2;
+	// System.Int32 Unity.Entities.EntityQueryData::ReaderTypesCount
+	int32_t ___ReaderTypesCount_3;
+	// System.Int32* Unity.Entities.EntityQueryData::WriterTypes
+	int32_t* ___WriterTypes_4;
+	// System.Int32 Unity.Entities.EntityQueryData::WriterTypesCount
+	int32_t ___WriterTypesCount_5;
+	// System.Int32 Unity.Entities.EntityQueryData::EnableableComponentsCountAll
+	int32_t ___EnableableComponentsCountAll_6;
+	// System.Int32 Unity.Entities.EntityQueryData::EnableableComponentsCountNone
+	int32_t ___EnableableComponentsCountNone_7;
+	// Unity.Entities.ArchetypeQuery* Unity.Entities.EntityQueryData::ArchetypeQuery
+	ArchetypeQuery_t45938EA78C5B9A37BBD17621D4A2DACAB98BFCEA* ___ArchetypeQuery_8;
+	// System.Int32 Unity.Entities.EntityQueryData::ArchetypeQueryCount
+	int32_t ___ArchetypeQueryCount_9;
+	// Unity.Entities.EntityQueryMask Unity.Entities.EntityQueryData::EntityQueryMask
+	EntityQueryMask_tA3298547B0A6701B30F8E223B5346B40E68DDEEF ___EntityQueryMask_10;
+	// Unity.Entities.UnsafeMatchingArchetypePtrList Unity.Entities.EntityQueryData::MatchingArchetypes
+	UnsafeMatchingArchetypePtrList_t7BE58FA0D1C0757782B0CA05207B0E07690ED566 ___MatchingArchetypes_11;
+	// Unity.Entities.UnsafeCachedChunkList Unity.Entities.EntityQueryData::MatchingChunkCache
+	UnsafeCachedChunkList_t48CE8479B1EEA20F34D6EB59806214668DB204A3 ___MatchingChunkCache_12;
 };
 
 // System.Exception
@@ -1022,6 +1433,13 @@ struct Exception_t_marshaled_com
 	int32_t ___caught_in_unmanaged_16;
 };
 
+// System.Runtime.InteropServices.GCHandle
+struct GCHandle_tC44F6F72EE68BD4CFABA24309DA7A179D41127DC 
+{
+	// System.IntPtr System.Runtime.InteropServices.GCHandle::handle
+	intptr_t ___handle_0;
+};
+
 // Unity.Scenes.GameObjectSceneData
 struct GameObjectSceneData_tCEFD22C9224DFA29848641AD7CDCDC6E9EDD2278 
 {
@@ -1096,6 +1514,32 @@ struct SerializedValueView_t132982877F69EB6A5B24A9B8EB004A6B80D087DC
 	Handle_t734A63706EDE11FF0429B53F7756AE2873E1F665 ___m_Handle_1;
 };
 
+// Unity.Collections.LowLevel.Unsafe.UnsafeAppendBuffer
+struct UnsafeAppendBuffer_t9EC160EA10485CD9DD96EDCBCEA06C7BCEF81500 
+{
+	// System.Byte* Unity.Collections.LowLevel.Unsafe.UnsafeAppendBuffer::Ptr
+	uint8_t* ___Ptr_0;
+	// System.Int32 Unity.Collections.LowLevel.Unsafe.UnsafeAppendBuffer::Length
+	int32_t ___Length_1;
+	// System.Int32 Unity.Collections.LowLevel.Unsafe.UnsafeAppendBuffer::Capacity
+	int32_t ___Capacity_2;
+	// Unity.Collections.AllocatorManager/AllocatorHandle Unity.Collections.LowLevel.Unsafe.UnsafeAppendBuffer::Allocator
+	AllocatorHandle_t3CA09720B1F89F91A8DDBA95E74C28A1EC3E3148 ___Allocator_3;
+	// System.Int32 Unity.Collections.LowLevel.Unsafe.UnsafeAppendBuffer::Alignment
+	int32_t ___Alignment_4;
+};
+
+// Unity.Collections.LowLevel.Unsafe.UnsafeBitArray
+struct UnsafeBitArray_t74DFECCCA980372B6F29B9AA508ACC77A3D6B8D4 
+{
+	// System.UInt64* Unity.Collections.LowLevel.Unsafe.UnsafeBitArray::Ptr
+	uint64_t* ___Ptr_0;
+	// System.Int32 Unity.Collections.LowLevel.Unsafe.UnsafeBitArray::Length
+	int32_t ___Length_1;
+	// Unity.Collections.AllocatorManager/AllocatorHandle Unity.Collections.LowLevel.Unsafe.UnsafeBitArray::Allocator
+	AllocatorHandle_t3CA09720B1F89F91A8DDBA95E74C28A1EC3E3148 ___Allocator_2;
+};
+
 // Unity.Serialization.Json.UnsafePackedBinaryStream
 struct UnsafePackedBinaryStream_tA167AA778E63332B246152289D19AED3846C8DFE 
 {
@@ -1105,6 +1549,93 @@ struct UnsafePackedBinaryStream_tA167AA778E63332B246152289D19AED3846C8DFE
 	BinaryToken_t040D42F1326051BD104F491D8B080B61030A3794* ___m_Tokens_1;
 	// System.Byte* Unity.Serialization.Json.UnsafePackedBinaryStream::m_Buffer
 	uint8_t* ___m_Buffer_2;
+};
+
+// Unity.Collections.LowLevel.Unsafe.UntypedUnsafeParallelHashMap
+struct UntypedUnsafeParallelHashMap_t926EFEEE26C4DE4FE2FA5A27FEA1D83CDD4B1B17 
+{
+	// Unity.Collections.LowLevel.Unsafe.UnsafeParallelHashMapData* Unity.Collections.LowLevel.Unsafe.UntypedUnsafeParallelHashMap::m_Buffer
+	UnsafeParallelHashMapData_t43CAB3170FBB624A9CCB6F30C0EC1BB820D57926* ___m_Buffer_0;
+	// Unity.Collections.AllocatorManager/AllocatorHandle Unity.Collections.LowLevel.Unsafe.UntypedUnsafeParallelHashMap::m_AllocatorLabel
+	AllocatorHandle_t3CA09720B1F89F91A8DDBA95E74C28A1EC3E3148 ___m_AllocatorLabel_1;
+};
+
+// Unity.Transforms.CopyTransformFromGameObjectSystem/CopyTransforms
+struct CopyTransforms_t8B0E6095FF30CAC5E663F7A42028E304909C447F 
+{
+	// Unity.Collections.NativeArray`1<Unity.Transforms.CopyTransformFromGameObjectSystem/TransformStash> Unity.Transforms.CopyTransformFromGameObjectSystem/CopyTransforms::transformStashes
+	NativeArray_1_t2B5E39A5A122745B62C2EB1D255C569CA770BC52 ___transformStashes_0;
+	// Unity.Entities.ComponentTypeHandle`1<Unity.Transforms.LocalToWorld> Unity.Transforms.CopyTransformFromGameObjectSystem/CopyTransforms::__LocalToWorldTypeHandle
+	ComponentTypeHandle_1_tEEE2A5C7BC9EBACD051B2BC1B43C739F75FEA206 _____LocalToWorldTypeHandle_1;
+};
+// Native definition for P/Invoke marshalling of Unity.Transforms.CopyTransformFromGameObjectSystem/CopyTransforms
+struct CopyTransforms_t8B0E6095FF30CAC5E663F7A42028E304909C447F_marshaled_pinvoke
+{
+	NativeArray_1_t2B5E39A5A122745B62C2EB1D255C569CA770BC52 ___transformStashes_0;
+	ComponentTypeHandle_1_tEEE2A5C7BC9EBACD051B2BC1B43C739F75FEA206 _____LocalToWorldTypeHandle_1;
+};
+// Native definition for COM marshalling of Unity.Transforms.CopyTransformFromGameObjectSystem/CopyTransforms
+struct CopyTransforms_t8B0E6095FF30CAC5E663F7A42028E304909C447F_marshaled_com
+{
+	NativeArray_1_t2B5E39A5A122745B62C2EB1D255C569CA770BC52 ___transformStashes_0;
+	ComponentTypeHandle_1_tEEE2A5C7BC9EBACD051B2BC1B43C739F75FEA206 _____LocalToWorldTypeHandle_1;
+};
+
+// Unity.Entities.EntityQueryFilter/ChangedFilter
+struct ChangedFilter_t55DB3F02469E53626DA400F9A19ABE3183B485EE 
+{
+	// System.Int32 Unity.Entities.EntityQueryFilter/ChangedFilter::Count
+	int32_t ___Count_1;
+	// Unity.Entities.EntityQueryFilter/ChangedFilter/<IndexInEntityQuery>e__FixedBuffer Unity.Entities.EntityQueryFilter/ChangedFilter::IndexInEntityQuery
+	U3CIndexInEntityQueryU3Ee__FixedBuffer_t16145BD96786E58BD62F3D7542DA41E279C0E65A ___IndexInEntityQuery_2;
+};
+
+// Unity.Entities.EntityQueryFilter/SharedComponentData
+struct SharedComponentData_tCB3DB8493786CFDD25A66AE32E2C053EECE862C8 
+{
+	// System.Int32 Unity.Entities.EntityQueryFilter/SharedComponentData::Count
+	int32_t ___Count_1;
+	// Unity.Entities.EntityQueryFilter/SharedComponentData/<IndexInEntityQuery>e__FixedBuffer Unity.Entities.EntityQueryFilter/SharedComponentData::IndexInEntityQuery
+	U3CIndexInEntityQueryU3Ee__FixedBuffer_tF74E8C082C63D1F5EC4A529909287F360012EDD9 ___IndexInEntityQuery_2;
+	// Unity.Entities.EntityQueryFilter/SharedComponentData/<SharedComponentIndex>e__FixedBuffer Unity.Entities.EntityQueryFilter/SharedComponentData::SharedComponentIndex
+	U3CSharedComponentIndexU3Ee__FixedBuffer_t6678D7BCFF071F01975BEAE7FF8C6FA532C1FDA0 ___SharedComponentIndex_3;
+};
+
+// Unity.Entities.JobEntityBatchIndexExtensions/JobEntityBatchIndexWrapper`1<Unity.Transforms.CopyTransformFromGameObjectSystem/CopyTransforms>
+struct JobEntityBatchIndexWrapper_1_t24BB1FE17A999CA7170E7F15C19D28EEDE54354E 
+{
+	// T Unity.Entities.JobEntityBatchIndexExtensions/JobEntityBatchIndexWrapper`1::JobData
+	CopyTransforms_t8B0E6095FF30CAC5E663F7A42028E304909C447F ___JobData_0;
+	// System.Void* Unity.Entities.JobEntityBatchIndexExtensions/JobEntityBatchIndexWrapper`1::PrefilterData
+	void* ___PrefilterData_1;
+	// System.Int32 Unity.Entities.JobEntityBatchIndexExtensions/JobEntityBatchIndexWrapper`1::IsParallel
+	int32_t ___IsParallel_2;
+};
+
+// Unity.Entities.ArchetypeListMap
+struct ArchetypeListMap_t9B5C7F814630CC95D11AE3A6D713646CDE4A33AD 
+{
+	// Unity.Collections.LowLevel.Unsafe.UnsafeList`1<System.UInt32> Unity.Entities.ArchetypeListMap::hashes
+	UnsafeList_1_tA2B6A040C4F2656D88ABB4345257ADE8F2F30F35 ___hashes_2;
+	// Unity.Collections.LowLevel.Unsafe.UnsafePtrList`1<Unity.Entities.Archetype> Unity.Entities.ArchetypeListMap::archetypes
+	UnsafePtrList_1_t3BA56CBE50A217517D1FA78C345C0AF8242F8088 ___archetypes_3;
+	// System.Int32 Unity.Entities.ArchetypeListMap::emptyNodes
+	int32_t ___emptyNodes_4;
+	// System.Int32 Unity.Entities.ArchetypeListMap::skipNodes
+	int32_t ___skipNodes_5;
+};
+
+// Unity.Entities.BufferAllocatorHeap
+struct BufferAllocatorHeap_t8B23AEAD3FF0104ED854068D0451346730DAC3AE 
+{
+	// Unity.Collections.LowLevel.Unsafe.UnsafeList`1<System.IntPtr> Unity.Entities.BufferAllocatorHeap::Buffers
+	UnsafeList_1_t7F37B06177929AC50704A82689AED5BBFE830613 ___Buffers_0;
+	// Unity.Collections.LowLevel.Unsafe.UnsafeBitArray Unity.Entities.BufferAllocatorHeap::FreeList
+	UnsafeBitArray_t74DFECCCA980372B6F29B9AA508ACC77A3D6B8D4 ___FreeList_1;
+	// Unity.Collections.AllocatorManager/AllocatorHandle Unity.Entities.BufferAllocatorHeap::Handle
+	AllocatorHandle_t3CA09720B1F89F91A8DDBA95E74C28A1EC3E3148 ___Handle_2;
+	// System.Int32 Unity.Entities.BufferAllocatorHeap::BufferSizeInBytes
+	int32_t ___BufferSizeInBytes_3;
 };
 
 // Unity.Entities.EntityCommandBuffer
@@ -1124,6 +1655,34 @@ struct EntityCommandBuffer_tFFB6458BC7FB90A6CF406831009EA1F9FC0CD008_StaticField
 	int32_t ___ms_CommandBufferIDAllocator_4;
 	// Unity.Profiling.ProfilerMarker Unity.Entities.EntityCommandBuffer::k_ProfileEcbPlayback
 	ProfilerMarker_tA256E18DA86EDBC5528CE066FC91C96EE86501AD ___k_ProfileEcbPlayback_5;
+};
+
+// Unity.Entities.EntityManager
+struct EntityManager_t245CC8C15DD62AF5BA0B385CF94EA7CD0B3F4C91 
+{
+	// Unity.Entities.EntityDataAccess* Unity.Entities.EntityManager::m_EntityDataAccess
+	EntityDataAccess_t98E1CF6F73892A92AA3FF870A4BD941364E9CD36* ___m_EntityDataAccess_2;
+};
+
+struct EntityManager_t245CC8C15DD62AF5BA0B385CF94EA7CD0B3F4C91_StaticFields
+{
+	// Unity.Profiling.ProfilerMarker Unity.Entities.EntityManager::k_ProfileMoveSharedComponents
+	ProfilerMarker_tA256E18DA86EDBC5528CE066FC91C96EE86501AD ___k_ProfileMoveSharedComponents_0;
+	// Unity.Profiling.ProfilerMarker Unity.Entities.EntityManager::k_ProfileMoveManagedComponents
+	ProfilerMarker_tA256E18DA86EDBC5528CE066FC91C96EE86501AD ___k_ProfileMoveManagedComponents_1;
+};
+
+// Unity.Entities.EntityQueryFilter
+struct EntityQueryFilter_t4A9651CB7DA59AFE8AAF946C19EC6B0D1ACA2F8B 
+{
+	// System.UInt32 Unity.Entities.EntityQueryFilter::RequiredChangeVersion
+	uint32_t ___RequiredChangeVersion_0;
+	// Unity.Entities.EntityQueryFilter/SharedComponentData Unity.Entities.EntityQueryFilter::Shared
+	SharedComponentData_tCB3DB8493786CFDD25A66AE32E2C053EECE862C8 ___Shared_1;
+	// Unity.Entities.EntityQueryFilter/ChangedFilter Unity.Entities.EntityQueryFilter::Changed
+	ChangedFilter_t55DB3F02469E53626DA400F9A19ABE3183B485EE ___Changed_2;
+	// System.UInt32 Unity.Entities.EntityQueryFilter::_UseOrderFiltering
+	uint32_t ____UseOrderFiltering_3;
 };
 
 // Unity.Serialization.Json.Adapters.JsonMigrationContext
@@ -1157,6 +1716,54 @@ struct JsonMigrationContext_tE4D4BF64FD371E85EB8AB9CB06B6574F9F178260_marshaled_
 	Type_t* ___SerializedType_2;
 	Il2CppIUnknown* ___UserData_3;
 	JsonPropertyReader_t8B4B535106EE2E4B7BE370CDA741E56D4CA1CF0B* ___m_Visitor_4;
+};
+
+// Unity.Entities.ManagedDeferredCommands
+struct ManagedDeferredCommands_t3585F563AFB19DC3B6EB9250562B62FC78A0E9A1 
+{
+	// Unity.Collections.LowLevel.Unsafe.UnsafeAppendBuffer Unity.Entities.ManagedDeferredCommands::CommandBuffer
+	UnsafeAppendBuffer_t9EC160EA10485CD9DD96EDCBCEA06C7BCEF81500 ___CommandBuffer_0;
+};
+
+// Unity.Collections.RewindableAllocator
+struct RewindableAllocator_tB18F8ADC8F2EE36E1F51FCCCFF0AC093108EF254 
+{
+	// Unity.Collections.Spinner Unity.Collections.RewindableAllocator::m_spinner
+	Spinner_t9606E334089E448EA313C31DC5EFC9345A58BCEB ___m_spinner_0;
+	// Unity.Collections.AllocatorManager/AllocatorHandle Unity.Collections.RewindableAllocator::m_handle
+	AllocatorHandle_t3CA09720B1F89F91A8DDBA95E74C28A1EC3E3148 ___m_handle_1;
+	// Unity.Collections.UnmanagedArray`1<Unity.Collections.RewindableAllocator/MemoryBlock> Unity.Collections.RewindableAllocator::m_block
+	UnmanagedArray_1_t7A336330780E05C924BB57ED337DDD2A66701FAB ___m_block_2;
+	// System.Int32 Unity.Collections.RewindableAllocator::m_best
+	int32_t ___m_best_3;
+	// System.Int32 Unity.Collections.RewindableAllocator::m_last
+	int32_t ___m_last_4;
+	// System.Int32 Unity.Collections.RewindableAllocator::m_used
+	int32_t ___m_used_5;
+	// System.Boolean Unity.Collections.RewindableAllocator::m_enableBlockFree
+	bool ___m_enableBlockFree_6;
+};
+// Native definition for P/Invoke marshalling of Unity.Collections.RewindableAllocator
+struct RewindableAllocator_tB18F8ADC8F2EE36E1F51FCCCFF0AC093108EF254_marshaled_pinvoke
+{
+	Spinner_t9606E334089E448EA313C31DC5EFC9345A58BCEB ___m_spinner_0;
+	AllocatorHandle_t3CA09720B1F89F91A8DDBA95E74C28A1EC3E3148 ___m_handle_1;
+	UnmanagedArray_1_t7A336330780E05C924BB57ED337DDD2A66701FAB ___m_block_2;
+	int32_t ___m_best_3;
+	int32_t ___m_last_4;
+	int32_t ___m_used_5;
+	int32_t ___m_enableBlockFree_6;
+};
+// Native definition for COM marshalling of Unity.Collections.RewindableAllocator
+struct RewindableAllocator_tB18F8ADC8F2EE36E1F51FCCCFF0AC093108EF254_marshaled_com
+{
+	Spinner_t9606E334089E448EA313C31DC5EFC9345A58BCEB ___m_spinner_0;
+	AllocatorHandle_t3CA09720B1F89F91A8DDBA95E74C28A1EC3E3148 ___m_handle_1;
+	UnmanagedArray_1_t7A336330780E05C924BB57ED337DDD2A66701FAB ___m_block_2;
+	int32_t ___m_best_3;
+	int32_t ___m_last_4;
+	int32_t ___m_used_5;
+	int32_t ___m_enableBlockFree_6;
 };
 
 // System.Type
@@ -1202,6 +1809,19 @@ struct UnsafeValueView_tCD606B53AEB275B5AC69CB248B949E3EE5A5BB6A
 	int32_t ___m_TokenIndex_1;
 };
 
+// Unity.Jobs.LowLevel.Unsafe.JobsUtility/JobScheduleParameters
+struct JobScheduleParameters_tBA5415DA68E52ABC80373CD13D66C9AFAF8F542B 
+{
+	// Unity.Jobs.JobHandle Unity.Jobs.LowLevel.Unsafe.JobsUtility/JobScheduleParameters::Dependency
+	JobHandle_t5DF5F99902FED3C801A81C05205CEA6CE039EF08 ___Dependency_0;
+	// System.Int32 Unity.Jobs.LowLevel.Unsafe.JobsUtility/JobScheduleParameters::ScheduleMode
+	int32_t ___ScheduleMode_1;
+	// System.IntPtr Unity.Jobs.LowLevel.Unsafe.JobsUtility/JobScheduleParameters::ReflectionData
+	intptr_t ___ReflectionData_2;
+	// System.IntPtr Unity.Jobs.LowLevel.Unsafe.JobsUtility/JobScheduleParameters::JobDataPtr
+	intptr_t ___JobDataPtr_3;
+};
+
 // Unity.Serialization.Json.JsonWriter/Unsafe
 struct Unsafe_tE1FCDFA6786E53B583BD90455A4C034433B85A7B 
 {
@@ -1233,6 +1853,36 @@ struct Unsafe_tE1FCDFA6786E53B583BD90455A4C034433B85A7B_marshaled_com
 	NativeList_1_t02979B0A0A691EACBC37CD045D33C72C1904C5B6 ___m_Buffer_10;
 	NativeList_1_t0244D4C5F9FC5C387043B613A66F2B1DB6013ED1 ___m_Stack_11;
 	JsonWriterOptions_tA75E7CB7B5E7AD449682E09BB291E907E5E4A195_marshaled_com ___m_Options_12;
+};
+
+// Unity.Entities.BufferAllocator
+struct BufferAllocator_tBE0961382918F823D26ED519F45D281AA06494D4 
+{
+	// Unity.Entities.BufferAllocatorHeap Unity.Entities.BufferAllocator::Allocator
+	BufferAllocatorHeap_t8B23AEAD3FF0104ED854068D0451346730DAC3AE ___Allocator_0;
+};
+
+// Unity.Entities.EntityQueryImpl
+struct EntityQueryImpl_t3E7DD11B3ECD6D708BF02ACF2C07B42A913F7574 
+{
+	// Unity.Entities.EntityDataAccess* Unity.Entities.EntityQueryImpl::_Access
+	EntityDataAccess_t98E1CF6F73892A92AA3FF870A4BD941364E9CD36* ____Access_1;
+	// Unity.Entities.EntityQueryData* Unity.Entities.EntityQueryImpl::_QueryData
+	EntityQueryData_t20DB32E7BB3F8732C371E45E8A8CEBCE62B61C26* ____QueryData_2;
+	// Unity.Entities.EntityQueryFilter Unity.Entities.EntityQueryImpl::_Filter
+	EntityQueryFilter_t4A9651CB7DA59AFE8AAF946C19EC6B0D1ACA2F8B ____Filter_3;
+	// System.UInt64 Unity.Entities.EntityQueryImpl::_SeqNo
+	uint64_t ____SeqNo_4;
+	// System.Runtime.InteropServices.GCHandle Unity.Entities.EntityQueryImpl::_CachedState
+	GCHandle_tC44F6F72EE68BD4CFABA24309DA7A179D41127DC ____CachedState_5;
+};
+
+struct EntityQueryImpl_t3E7DD11B3ECD6D708BF02ACF2C07B42A913F7574_StaticFields
+{
+	// Unity.Burst.SharedStatic`1<System.IntPtr> Unity.Entities.EntityQueryImpl::_bfp_ResetFilter
+	SharedStatic_1_t0A9894CA2483CA9491C550F8D66FBA5213718E9F ____bfp_ResetFilter_6;
+	// Unity.Burst.SharedStatic`1<System.IntPtr> Unity.Entities.EntityQueryImpl::_bfp_FreeCachedState
+	SharedStatic_1_t0A9894CA2483CA9491C550F8D66FBA5213718E9F ____bfp_FreeCachedState_7;
 };
 
 // Unity.Serialization.Json.JsonPropertyReader
@@ -1274,6 +1924,281 @@ struct JsonWriter_tAD644F358C50E0CEBFACDF027D775880AD3A7016_marshaled_com
 {
 	Unsafe_tE1FCDFA6786E53B583BD90455A4C034433B85A7B_marshaled_com ___m_Impl_0;
 };
+
+// Unity.Entities.PrefilterForJobEntityBatchWithIndex
+struct PrefilterForJobEntityBatchWithIndex_tE030BB096AD0E53B43B7D5E98E3C05E3AC26CCAB 
+{
+	// Unity.Entities.UnsafeCachedChunkList Unity.Entities.PrefilterForJobEntityBatchWithIndex::ChunkList
+	UnsafeCachedChunkList_t48CE8479B1EEA20F34D6EB59806214668DB204A3 ___ChunkList_0;
+	// Unity.Entities.UnsafeMatchingArchetypePtrList Unity.Entities.PrefilterForJobEntityBatchWithIndex::MatchingArchetypes
+	UnsafeMatchingArchetypePtrList_t7BE58FA0D1C0757782B0CA05207B0E07690ED566 ___MatchingArchetypes_1;
+	// Unity.Entities.EntityComponentStore* Unity.Entities.PrefilterForJobEntityBatchWithIndex::EntityComponentStore
+	EntityComponentStore_tA85E100ECD667365B260A68DFD9DF9B7C04D037F* ___EntityComponentStore_2;
+	// Unity.Collections.LowLevel.Unsafe.UnsafeList`1<Unity.Entities.ArchetypeChunk>* Unity.Entities.PrefilterForJobEntityBatchWithIndex::OutPrefilteredBatches
+	UnsafeList_1_tD72E86D22D12AC8243BAACBB2C3D1894438DB165* ___OutPrefilteredBatches_3;
+	// Unity.Collections.LowLevel.Unsafe.UnsafeList`1<System.Int32>* Unity.Entities.PrefilterForJobEntityBatchWithIndex::OutPrefilteredBatchEntityIndices
+	UnsafeList_1_t6C5E84D303190B625F3759C244502E1735453718* ___OutPrefilteredBatchEntityIndices_4;
+	// Unity.Entities.EntityQueryFilter Unity.Entities.PrefilterForJobEntityBatchWithIndex::Filter
+	EntityQueryFilter_t4A9651CB7DA59AFE8AAF946C19EC6B0D1ACA2F8B ___Filter_5;
+	// System.Int32 Unity.Entities.PrefilterForJobEntityBatchWithIndex::SkipSubChunkBatching
+	int32_t ___SkipSubChunkBatching_6;
+};
+
+// Unity.Entities.WorldUnmanaged
+struct WorldUnmanaged_t7B736084B2D4749A9CE36AD9A7F9D930DAA9F88F 
+{
+	// Unity.Collections.AllocatorManager/AllocatorHandle Unity.Entities.WorldUnmanaged::m_AllocatorHandle
+	AllocatorHandle_t3CA09720B1F89F91A8DDBA95E74C28A1EC3E3148 ___m_AllocatorHandle_0;
+	// Unity.Entities.WorldUnmanagedImpl* Unity.Entities.WorldUnmanaged::m_Impl
+	WorldUnmanagedImpl_tB98600E1E80A2ABD0C6F29D8C55829750507D830* ___m_Impl_1;
+	// Unity.Entities.EntityManager Unity.Entities.WorldUnmanaged::m_EntityManager
+	EntityManager_t245CC8C15DD62AF5BA0B385CF94EA7CD0B3F4C91 ___m_EntityManager_2;
+	// Unity.Collections.AllocatorHelper`1<Unity.Entities.WorldAllocator> Unity.Entities.WorldUnmanaged::m_WorldAllocatorHelper
+	AllocatorHelper_1_tF5199BDF73082E3D4CF3F2ACFD1A9F3B92C104A9 ___m_WorldAllocatorHelper_4;
+};
+
+struct WorldUnmanaged_t7B736084B2D4749A9CE36AD9A7F9D930DAA9F88F_StaticFields
+{
+	// Unity.Burst.SharedStatic`1<System.UInt64> Unity.Entities.WorldUnmanaged::ms_NextSequenceNumber
+	SharedStatic_1_tB042D7198B3BD170F6B8D07127F90A916DCE64B5 ___ms_NextSequenceNumber_3;
+};
+
+// Unity.Entities.BlockAllocator
+struct BlockAllocator_tE609150FFA2B257EBBBEEEFDF795FB7073A4E7AE 
+{
+	// Unity.Entities.BufferAllocator Unity.Entities.BlockAllocator::m_bufferAllocator
+	BufferAllocator_tBE0961382918F823D26ED519F45D281AA06494D4 ___m_bufferAllocator_0;
+	// Unity.Collections.LowLevel.Unsafe.UnsafeList`1<System.Int32> Unity.Entities.BlockAllocator::m_allocations
+	UnsafeList_1_t6C5E84D303190B625F3759C244502E1735453718 ___m_allocations_1;
+	// System.Int32 Unity.Entities.BlockAllocator::m_currentBlockIndex
+	int32_t ___m_currentBlockIndex_2;
+	// System.UInt64 Unity.Entities.BlockAllocator::m_nextPtr
+	uint64_t ___m_nextPtr_3;
+};
+
+// Unity.Entities.ComponentDependencyManager
+struct ComponentDependencyManager_t88715270EBD172A299D4F6DB471143B7E0BCDB47 
+{
+	// Unity.Jobs.JobHandle* Unity.Entities.ComponentDependencyManager::m_JobDependencyCombineBuffer
+	JobHandle_t5DF5F99902FED3C801A81C05205CEA6CE039EF08* ___m_JobDependencyCombineBuffer_2;
+	// System.Int32 Unity.Entities.ComponentDependencyManager::m_JobDependencyCombineBufferCount
+	int32_t ___m_JobDependencyCombineBufferCount_3;
+	// System.UInt16* Unity.Entities.ComponentDependencyManager::m_TypeArrayIndices
+	uint16_t* ___m_TypeArrayIndices_4;
+	// Unity.Entities.ComponentDependencyManager/DependencyHandle* Unity.Entities.ComponentDependencyManager::m_DependencyHandles
+	DependencyHandle_t73038501598DF9B7E83BF8486D87B9DED6200B15* ___m_DependencyHandles_5;
+	// System.UInt16 Unity.Entities.ComponentDependencyManager::m_DependencyHandlesCount
+	uint16_t ___m_DependencyHandlesCount_6;
+	// Unity.Jobs.JobHandle* Unity.Entities.ComponentDependencyManager::m_ReadJobFences
+	JobHandle_t5DF5F99902FED3C801A81C05205CEA6CE039EF08* ___m_ReadJobFences_7;
+	// Unity.Jobs.JobHandle Unity.Entities.ComponentDependencyManager::m_ExclusiveTransactionDependency
+	JobHandle_t5DF5F99902FED3C801A81C05205CEA6CE039EF08 ___m_ExclusiveTransactionDependency_10;
+	// System.Boolean Unity.Entities.ComponentDependencyManager::_IsInTransaction
+	bool ____IsInTransaction_11;
+	// Unity.Profiling.ProfilerMarker Unity.Entities.ComponentDependencyManager::m_Marker
+	ProfilerMarker_tA256E18DA86EDBC5528CE066FC91C96EE86501AD ___m_Marker_12;
+	// Unity.Entities.WorldUnmanaged Unity.Entities.ComponentDependencyManager::m_World
+	WorldUnmanaged_t7B736084B2D4749A9CE36AD9A7F9D930DAA9F88F ___m_World_13;
+	// System.Int32 Unity.Entities.ComponentDependencyManager::IsInForEachDisallowStructuralChange
+	int32_t ___IsInForEachDisallowStructuralChange_14;
+};
+// Native definition for P/Invoke marshalling of Unity.Entities.ComponentDependencyManager
+struct ComponentDependencyManager_t88715270EBD172A299D4F6DB471143B7E0BCDB47_marshaled_pinvoke
+{
+	JobHandle_t5DF5F99902FED3C801A81C05205CEA6CE039EF08* ___m_JobDependencyCombineBuffer_2;
+	int32_t ___m_JobDependencyCombineBufferCount_3;
+	uint16_t* ___m_TypeArrayIndices_4;
+	DependencyHandle_t73038501598DF9B7E83BF8486D87B9DED6200B15* ___m_DependencyHandles_5;
+	uint16_t ___m_DependencyHandlesCount_6;
+	JobHandle_t5DF5F99902FED3C801A81C05205CEA6CE039EF08* ___m_ReadJobFences_7;
+	JobHandle_t5DF5F99902FED3C801A81C05205CEA6CE039EF08 ___m_ExclusiveTransactionDependency_10;
+	int32_t ____IsInTransaction_11;
+	ProfilerMarker_tA256E18DA86EDBC5528CE066FC91C96EE86501AD ___m_Marker_12;
+	WorldUnmanaged_t7B736084B2D4749A9CE36AD9A7F9D930DAA9F88F ___m_World_13;
+	int32_t ___IsInForEachDisallowStructuralChange_14;
+};
+// Native definition for COM marshalling of Unity.Entities.ComponentDependencyManager
+struct ComponentDependencyManager_t88715270EBD172A299D4F6DB471143B7E0BCDB47_marshaled_com
+{
+	JobHandle_t5DF5F99902FED3C801A81C05205CEA6CE039EF08* ___m_JobDependencyCombineBuffer_2;
+	int32_t ___m_JobDependencyCombineBufferCount_3;
+	uint16_t* ___m_TypeArrayIndices_4;
+	DependencyHandle_t73038501598DF9B7E83BF8486D87B9DED6200B15* ___m_DependencyHandles_5;
+	uint16_t ___m_DependencyHandlesCount_6;
+	JobHandle_t5DF5F99902FED3C801A81C05205CEA6CE039EF08* ___m_ReadJobFences_7;
+	JobHandle_t5DF5F99902FED3C801A81C05205CEA6CE039EF08 ___m_ExclusiveTransactionDependency_10;
+	int32_t ____IsInTransaction_11;
+	ProfilerMarker_tA256E18DA86EDBC5528CE066FC91C96EE86501AD ___m_Marker_12;
+	WorldUnmanaged_t7B736084B2D4749A9CE36AD9A7F9D930DAA9F88F ___m_World_13;
+	int32_t ___IsInForEachDisallowStructuralChange_14;
+};
+
+// Unity.Entities.EntityComponentStore
+struct EntityComponentStore_tA85E100ECD667365B260A68DFD9DF9B7C04D037F 
+{
+	// System.Int32* Unity.Entities.EntityComponentStore::m_VersionByEntity
+	int32_t* ___m_VersionByEntity_0;
+	// Unity.Entities.Archetype** Unity.Entities.EntityComponentStore::m_ArchetypeByEntity
+	Archetype_t96EB5691CCC58A7A4E29CA4F9EA62A25E4C14582** ___m_ArchetypeByEntity_1;
+	// Unity.Entities.EntityInChunk* Unity.Entities.EntityComponentStore::m_EntityInChunkByEntity
+	EntityInChunk_t9C018862802ABC36E70290747CBFBF57FC0FC9FB* ___m_EntityInChunkByEntity_2;
+	// System.Int32* Unity.Entities.EntityComponentStore::m_ComponentTypeOrderVersion
+	int32_t* ___m_ComponentTypeOrderVersion_3;
+	// Unity.Entities.BlockAllocator Unity.Entities.EntityComponentStore::m_ArchetypeChunkAllocator
+	BlockAllocator_tE609150FFA2B257EBBBEEEFDF795FB7073A4E7AE ___m_ArchetypeChunkAllocator_4;
+	// Unity.Collections.LowLevel.Unsafe.UnsafePtrList`1<Unity.Entities.Archetype> Unity.Entities.EntityComponentStore::m_Archetypes
+	UnsafePtrList_1_t3BA56CBE50A217517D1FA78C345C0AF8242F8088 ___m_Archetypes_5;
+	// Unity.Entities.ArchetypeListMap Unity.Entities.EntityComponentStore::m_TypeLookup
+	ArchetypeListMap_t9B5C7F814630CC95D11AE3A6D713646CDE4A33AD ___m_TypeLookup_6;
+	// System.Int32 Unity.Entities.EntityComponentStore::m_ManagedComponentIndex
+	int32_t ___m_ManagedComponentIndex_7;
+	// System.Int32 Unity.Entities.EntityComponentStore::m_ManagedComponentIndexCapacity
+	int32_t ___m_ManagedComponentIndexCapacity_8;
+	// Unity.Collections.LowLevel.Unsafe.UnsafeAppendBuffer Unity.Entities.EntityComponentStore::m_ManagedComponentFreeIndex
+	UnsafeAppendBuffer_t9EC160EA10485CD9DD96EDCBCEA06C7BCEF81500 ___m_ManagedComponentFreeIndex_9;
+	// Unity.Entities.ManagedDeferredCommands Unity.Entities.EntityComponentStore::ManagedChangesTracker
+	ManagedDeferredCommands_t3585F563AFB19DC3B6EB9250562B62FC78A0E9A1 ___ManagedChangesTracker_10;
+	// Unity.Entities.EntityComponentStore/ChunkListChanges Unity.Entities.EntityComponentStore::m_ChunkListChangesTracker
+	ChunkListChanges_tC57E06E14D1D6D3D87675D05619E0539A86564D8 ___m_ChunkListChangesTracker_11;
+	// System.UInt64 Unity.Entities.EntityComponentStore::m_NextChunkSequenceNumber
+	uint64_t ___m_NextChunkSequenceNumber_12;
+	// System.Int32 Unity.Entities.EntityComponentStore::m_NextFreeEntityIndex
+	int32_t ___m_NextFreeEntityIndex_13;
+	// System.Int32 Unity.Entities.EntityComponentStore::m_EntityCreateDestroyVersion
+	int32_t ___m_EntityCreateDestroyVersion_14;
+	// System.UInt32 Unity.Entities.EntityComponentStore::m_GlobalSystemVersion
+	uint32_t ___m_GlobalSystemVersion_15;
+	// System.Int32 Unity.Entities.EntityComponentStore::m_EntitiesCapacity
+	int32_t ___m_EntitiesCapacity_16;
+	// System.Int32 Unity.Entities.EntityComponentStore::m_IntentionallyInconsistent
+	int32_t ___m_IntentionallyInconsistent_17;
+	// System.UInt32 Unity.Entities.EntityComponentStore::m_ArchetypeTrackingVersion
+	uint32_t ___m_ArchetypeTrackingVersion_18;
+	// System.Int32 Unity.Entities.EntityComponentStore::m_LinkedGroupType
+	int32_t ___m_LinkedGroupType_19;
+	// System.Int32 Unity.Entities.EntityComponentStore::m_ChunkHeaderType
+	int32_t ___m_ChunkHeaderType_20;
+	// System.Int32 Unity.Entities.EntityComponentStore::m_PrefabType
+	int32_t ___m_PrefabType_21;
+	// System.Int32 Unity.Entities.EntityComponentStore::m_CleanupEntityType
+	int32_t ___m_CleanupEntityType_22;
+	// System.Int32 Unity.Entities.EntityComponentStore::m_DisabledType
+	int32_t ___m_DisabledType_23;
+	// System.Int32 Unity.Entities.EntityComponentStore::m_EntityType
+	int32_t ___m_EntityType_24;
+	// Unity.Entities.ComponentType Unity.Entities.EntityComponentStore::m_ChunkHeaderComponentType
+	ComponentType_t0CB4E9723924AAC17CE8F38A0080018ED412DBDA ___m_ChunkHeaderComponentType_25;
+	// Unity.Entities.ComponentType Unity.Entities.EntityComponentStore::m_EntityComponentType
+	ComponentType_t0CB4E9723924AAC17CE8F38A0080018ED412DBDA ___m_EntityComponentType_26;
+	// Unity.Entities.TypeManager/TypeInfo* Unity.Entities.EntityComponentStore::m_TypeInfos
+	TypeInfo_tD43B08A8D19156EEC98399693A96161F02139654* ___m_TypeInfos_27;
+	// Unity.Entities.TypeManager/EntityOffsetInfo* Unity.Entities.EntityComponentStore::m_EntityOffsetInfos
+	EntityOffsetInfo_tAA68D1FC74ADF57FB76987377354ED848C7CC9D1* ___m_EntityOffsetInfos_28;
+	// System.Byte Unity.Entities.EntityComponentStore::memoryInitPattern
+	uint8_t ___memoryInitPattern_29;
+	// System.Byte Unity.Entities.EntityComponentStore::useMemoryInitPattern
+	uint8_t ___useMemoryInitPattern_30;
+	// Unity.Entities.EntityName* Unity.Entities.EntityComponentStore::m_NameByEntity
+	EntityName_t08A13405B792D0AE39612E76BA3A5CBEAC68BD87* ___m_NameByEntity_36;
+	// System.UInt64 Unity.Entities.EntityComponentStore::m_NameChangeBitsSequenceNum
+	uint64_t ___m_NameChangeBitsSequenceNum_38;
+	// Unity.Collections.LowLevel.Unsafe.UnsafeBitArray Unity.Entities.EntityComponentStore::m_NameChangeBitsByEntity
+	UnsafeBitArray_t74DFECCCA980372B6F29B9AA508ACC77A3D6B8D4 ___m_NameChangeBitsByEntity_39;
+};
+
+struct EntityComponentStore_tA85E100ECD667365B260A68DFD9DF9B7C04D037F_StaticFields
+{
+	// Unity.Burst.SharedStatic`1<System.UInt64> Unity.Entities.EntityComponentStore::s_TotalChunkAddressSpaceInBytes
+	SharedStatic_1_tB042D7198B3BD170F6B8D07127F90A916DCE64B5 ___s_TotalChunkAddressSpaceInBytes_34;
+	// System.UInt64 Unity.Entities.EntityComponentStore::DefaultChunkAddressSpaceInBytes
+	uint64_t ___DefaultChunkAddressSpaceInBytes_35;
+	// Unity.Burst.SharedStatic`1<Unity.Entities.EntityComponentStore/ChunkStore> Unity.Entities.EntityComponentStore::s_chunkStore
+	SharedStatic_1_t06174270CC879833E66A2A61C363018B785C3CC7 ___s_chunkStore_42;
+};
+
+// Unity.Entities.EntityQueryManager
+struct EntityQueryManager_tCD6CFC49CDD19B4E639F214958CC0B81011ACD0A 
+{
+	// Unity.Entities.ComponentDependencyManager* Unity.Entities.EntityQueryManager::m_DependencyManager
+	ComponentDependencyManager_t88715270EBD172A299D4F6DB471143B7E0BCDB47* ___m_DependencyManager_0;
+	// Unity.Entities.BlockAllocator Unity.Entities.EntityQueryManager::m_GroupDataChunkAllocator
+	BlockAllocator_tE609150FFA2B257EBBBEEEFDF795FB7073A4E7AE ___m_GroupDataChunkAllocator_1;
+	// Unity.Collections.LowLevel.Unsafe.UnsafePtrList`1<Unity.Entities.EntityQueryData> Unity.Entities.EntityQueryManager::m_EntityGroupDatas
+	UnsafePtrList_1_t9303472093C8513F7E98E3EFE8C3560679C4CAA6 ___m_EntityGroupDatas_2;
+	// Unity.Collections.LowLevel.Unsafe.UntypedUnsafeParallelHashMap Unity.Entities.EntityQueryManager::m_EntityGroupDataCacheUntyped
+	UntypedUnsafeParallelHashMap_t926EFEEE26C4DE4FE2FA5A27FEA1D83CDD4B1B17 ___m_EntityGroupDataCacheUntyped_3;
+	// System.Int32 Unity.Entities.EntityQueryManager::m_EntityQueryMasksAllocated
+	int32_t ___m_EntityQueryMasksAllocated_4;
+};
+
+// Unity.Entities.EntityDataAccess
+struct EntityDataAccess_t98E1CF6F73892A92AA3FF870A4BD941364E9CD36 
+{
+	// Unity.Entities.EntityComponentStore Unity.Entities.EntityDataAccess::m_EntityComponentStore
+	EntityComponentStore_tA85E100ECD667365B260A68DFD9DF9B7C04D037F ___m_EntityComponentStore_4;
+	// Unity.Entities.EntityQueryManager Unity.Entities.EntityDataAccess::m_EntityQueryManager
+	EntityQueryManager_tCD6CFC49CDD19B4E639F214958CC0B81011ACD0A ___m_EntityQueryManager_5;
+	// Unity.Entities.ComponentDependencyManager Unity.Entities.EntityDataAccess::m_DependencyManager
+	ComponentDependencyManager_t88715270EBD172A299D4F6DB471143B7E0BCDB47 ___m_DependencyManager_6;
+	// Unity.Collections.LowLevel.Unsafe.UnsafeList`1<System.Int32> Unity.Entities.EntityDataAccess::m_ManagedReferenceIndexList
+	UnsafeList_1_t6C5E84D303190B625F3759C244502E1735453718 ___m_ManagedReferenceIndexList_7;
+	// Unity.Entities.EntityQuery Unity.Entities.EntityDataAccess::m_UniversalQuery
+	EntityQuery_t23B7A11FAA475D860E94409BFD4CF7E4B337CF90 ___m_UniversalQuery_8;
+	// Unity.Entities.EntityQuery Unity.Entities.EntityDataAccess::m_UniversalQueryWithChunks
+	EntityQuery_t23B7A11FAA475D860E94409BFD4CF7E4B337CF90 ___m_UniversalQueryWithChunks_9;
+	// Unity.Entities.EntityQuery Unity.Entities.EntityDataAccess::m_EntityGuidQuery
+	EntityQuery_t23B7A11FAA475D860E94409BFD4CF7E4B337CF90 ___m_EntityGuidQuery_10;
+	// Unity.Entities.WorldUnmanaged Unity.Entities.EntityDataAccess::m_WorldUnmanaged
+	WorldUnmanaged_t7B736084B2D4749A9CE36AD9A7F9D930DAA9F88F ___m_WorldUnmanaged_11;
+	// System.Int32 Unity.Entities.EntityDataAccess::m_ManagedAccessHandle
+	int32_t ___m_ManagedAccessHandle_13;
+	// Unity.Entities.EntityArchetype Unity.Entities.EntityDataAccess::m_EntityOnlyArchetype
+	EntityArchetype_tE1D293B55B4783642BB593531A57460AB7709354 ___m_EntityOnlyArchetype_14;
+	// Unity.Collections.LowLevel.Unsafe.UntypedUnsafeParallelHashMap Unity.Entities.EntityDataAccess::m_AliveEntityQueries
+	UntypedUnsafeParallelHashMap_t926EFEEE26C4DE4FE2FA5A27FEA1D83CDD4B1B17 ___m_AliveEntityQueries_15;
+};
+
+struct EntityDataAccess_t98E1CF6F73892A92AA3FF870A4BD941364E9CD36_StaticFields
+{
+	// System.Int32 Unity.Entities.EntityDataAccess::FASTER_TO_BATCH_THRESHOLD
+	int32_t ___FASTER_TO_BATCH_THRESHOLD_0;
+	// System.Int32 Unity.Entities.EntityDataAccess::MANAGED_REFERENCES_DEFAULT
+	int32_t ___MANAGED_REFERENCES_DEFAULT_1;
+	// Unity.Burst.SharedStatic`1<System.IntPtr> Unity.Entities.EntityDataAccess::s_ManagedPlaybackTrampoline
+	SharedStatic_1_t0A9894CA2483CA9491C550F8D66FBA5213718E9F ___s_ManagedPlaybackTrampoline_2;
+	// System.Object Unity.Entities.EntityDataAccess::s_DelegateGCPrevention
+	RuntimeObject* ___s_DelegateGCPrevention_3;
+};
+// Native definition for P/Invoke marshalling of Unity.Entities.EntityDataAccess
+struct EntityDataAccess_t98E1CF6F73892A92AA3FF870A4BD941364E9CD36_marshaled_pinvoke
+{
+	EntityComponentStore_tA85E100ECD667365B260A68DFD9DF9B7C04D037F ___m_EntityComponentStore_4;
+	EntityQueryManager_tCD6CFC49CDD19B4E639F214958CC0B81011ACD0A ___m_EntityQueryManager_5;
+	ComponentDependencyManager_t88715270EBD172A299D4F6DB471143B7E0BCDB47_marshaled_pinvoke ___m_DependencyManager_6;
+	UnsafeList_1_t6C5E84D303190B625F3759C244502E1735453718 ___m_ManagedReferenceIndexList_7;
+	EntityQuery_t23B7A11FAA475D860E94409BFD4CF7E4B337CF90 ___m_UniversalQuery_8;
+	EntityQuery_t23B7A11FAA475D860E94409BFD4CF7E4B337CF90 ___m_UniversalQueryWithChunks_9;
+	EntityQuery_t23B7A11FAA475D860E94409BFD4CF7E4B337CF90 ___m_EntityGuidQuery_10;
+	WorldUnmanaged_t7B736084B2D4749A9CE36AD9A7F9D930DAA9F88F ___m_WorldUnmanaged_11;
+	int32_t ___m_ManagedAccessHandle_13;
+	EntityArchetype_tE1D293B55B4783642BB593531A57460AB7709354 ___m_EntityOnlyArchetype_14;
+	UntypedUnsafeParallelHashMap_t926EFEEE26C4DE4FE2FA5A27FEA1D83CDD4B1B17 ___m_AliveEntityQueries_15;
+};
+// Native definition for COM marshalling of Unity.Entities.EntityDataAccess
+struct EntityDataAccess_t98E1CF6F73892A92AA3FF870A4BD941364E9CD36_marshaled_com
+{
+	EntityComponentStore_tA85E100ECD667365B260A68DFD9DF9B7C04D037F ___m_EntityComponentStore_4;
+	EntityQueryManager_tCD6CFC49CDD19B4E639F214958CC0B81011ACD0A ___m_EntityQueryManager_5;
+	ComponentDependencyManager_t88715270EBD172A299D4F6DB471143B7E0BCDB47_marshaled_com ___m_DependencyManager_6;
+	UnsafeList_1_t6C5E84D303190B625F3759C244502E1735453718 ___m_ManagedReferenceIndexList_7;
+	EntityQuery_t23B7A11FAA475D860E94409BFD4CF7E4B337CF90 ___m_UniversalQuery_8;
+	EntityQuery_t23B7A11FAA475D860E94409BFD4CF7E4B337CF90 ___m_UniversalQueryWithChunks_9;
+	EntityQuery_t23B7A11FAA475D860E94409BFD4CF7E4B337CF90 ___m_EntityGuidQuery_10;
+	WorldUnmanaged_t7B736084B2D4749A9CE36AD9A7F9D930DAA9F88F ___m_WorldUnmanaged_11;
+	int32_t ___m_ManagedAccessHandle_13;
+	EntityArchetype_tE1D293B55B4783642BB593531A57460AB7709354 ___m_EntityOnlyArchetype_14;
+	UntypedUnsafeParallelHashMap_t926EFEEE26C4DE4FE2FA5A27FEA1D83CDD4B1B17 ___m_AliveEntityQueries_15;
+};
 #ifdef __clang__
 #pragma clang diagnostic pop
 #endif
@@ -1314,6 +2239,12 @@ struct DeserializationEventU5BU5D_t5D58FE40B1E6427FEA9A62C3608047757FF27FC4  : p
 };
 
 
+// Unity.Jobs.JobHandle Unity.Jobs.IJobBurstSchedulableExtensions::Schedule<Unity.Entities.PrefilterForJobEntityBatchWithIndex>(T,Unity.Jobs.JobHandle)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR JobHandle_t5DF5F99902FED3C801A81C05205CEA6CE039EF08 IJobBurstSchedulableExtensions_Schedule_TisPrefilterForJobEntityBatchWithIndex_tE030BB096AD0E53B43B7D5E98E3C05E3AC26CCAB_m66D73EEFE570A4424ADCA368251111B4D918C2C1_gshared (PrefilterForJobEntityBatchWithIndex_tE030BB096AD0E53B43B7D5E98E3C05E3AC26CCAB ___jobData0, JobHandle_t5DF5F99902FED3C801A81C05205CEA6CE039EF08 ___dependsOn1, const RuntimeMethod* method) ;
+// System.Void Unity.Jobs.IJobBurstSchedulableExtensions::Run<Unity.Entities.PrefilterForJobEntityBatchWithIndex>(T)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void IJobBurstSchedulableExtensions_Run_TisPrefilterForJobEntityBatchWithIndex_tE030BB096AD0E53B43B7D5E98E3C05E3AC26CCAB_m4BA645F349CDEEBD58CC8D16C9AC3B2BD51F16DB_gshared (PrefilterForJobEntityBatchWithIndex_tE030BB096AD0E53B43B7D5E98E3C05E3AC26CCAB ___jobData0, const RuntimeMethod* method) ;
+// T& Unity.Burst.SharedStatic`1<System.IntPtr>::get_Data()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR intptr_t* SharedStatic_1_get_Data_m6B971FC25FA15EF3646DC3DE9FFA1D910AE67EA1_gshared (SharedStatic_1_t0A9894CA2483CA9491C550F8D66FBA5213718E9F* __this, const RuntimeMethod* method) ;
 // System.Int32 System.Collections.Generic.List`1<System.Object>::get_Count()
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR int32_t List_1_get_Count_m4407E4C389F22B8CEC282C15D56516658746C383_gshared_inline (List_1_tA239CB83DE5615F348BB0507E45F490F4F7C9A8D* __this, const RuntimeMethod* method) ;
 // System.Collections.Generic.List`1/Enumerator<T> System.Collections.Generic.List`1<System.Object>::GetEnumerator()
@@ -1504,9 +2435,42 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool JsonMigrationCollection_TryMigrate_TisEn
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool JsonMigrationCollection_TryMigrate_TisGameObjectSceneData_tCEFD22C9224DFA29848641AD7CDCDC6E9EDD2278_m748AE1FD5507F787A0BD3D1040C8F960D98630F3_gshared (JsonMigrationCollection_t8434FE4B610875B830B594EE7CD88C19B1F6279A* __this, UnsafeObjectView_tDD17C91E065E37B8955F18CB553A17F82EE76254 ___view0, GameObjectSceneData_tCEFD22C9224DFA29848641AD7CDCDC6E9EDD2278* ___value1, JsonPropertyReader_t8B4B535106EE2E4B7BE370CDA741E56D4CA1CF0B* ___reader2, List_1_tF6569F82810E13CBD9F2E55455C088EC63B69967* ___events3, const RuntimeMethod* method) ;
 // System.Boolean Unity.Serialization.Json.Adapters.JsonMigrationCollection::TryMigrate<Unity.Entities.Hash128>(Unity.Serialization.Json.Unsafe.UnsafeObjectView,TValue&,Unity.Serialization.Json.JsonPropertyReader,System.Collections.Generic.List`1<Unity.Serialization.Json.DeserializationEvent>)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool JsonMigrationCollection_TryMigrate_TisHash128_t2EA8F45F10BC2DF40B0CE9AE04F222072EB1345B_m07B10AED10A8B9BD94C3E566A5F57DBC0E2D10B0_gshared (JsonMigrationCollection_t8434FE4B610875B830B594EE7CD88C19B1F6279A* __this, UnsafeObjectView_tDD17C91E065E37B8955F18CB553A17F82EE76254 ___view0, Hash128_t2EA8F45F10BC2DF40B0CE9AE04F222072EB1345B* ___value1, JsonPropertyReader_t8B4B535106EE2E4B7BE370CDA741E56D4CA1CF0B* ___reader2, List_1_tF6569F82810E13CBD9F2E55455C088EC63B69967* ___events3, const RuntimeMethod* method) ;
-// System.Boolean Unity.Serialization.Json.Adapters.JsonMigrationCollection::TryMigrate<UnityEngine.Keyframe>(Unity.Serialization.Json.Unsafe.UnsafeObjectView,TValue&,Unity.Serialization.Json.JsonPropertyReader,System.Collections.Generic.List`1<Unity.Serialization.Json.DeserializationEvent>)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool JsonMigrationCollection_TryMigrate_TisKeyframe_tB9C67DCBFE10C0AE9C52CB5C66E944255C9254F0_mB7658BDD224A010C381EB2C9DC7627A324066A01_gshared (JsonMigrationCollection_t8434FE4B610875B830B594EE7CD88C19B1F6279A* __this, UnsafeObjectView_tDD17C91E065E37B8955F18CB553A17F82EE76254 ___view0, Keyframe_tB9C67DCBFE10C0AE9C52CB5C66E944255C9254F0* ___value1, JsonPropertyReader_t8B4B535106EE2E4B7BE370CDA741E56D4CA1CF0B* ___reader2, List_1_tF6569F82810E13CBD9F2E55455C088EC63B69967* ___events3, const RuntimeMethod* method) ;
 
+// Unity.Entities.EntityQueryImpl* Unity.Entities.EntityQuery::_GetImpl()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR EntityQueryImpl_t3E7DD11B3ECD6D708BF02ACF2C07B42A913F7574* EntityQuery__GetImpl_m3E1EC62BB22FA905262DB3199F289864B47AA7AE (EntityQuery_t23B7A11FAA475D860E94409BFD4CF7E4B337CF90* __this, const RuntimeMethod* method) ;
+// Unity.Collections.RewindableAllocator& Unity.Entities.WorldUnmanaged::get_UpdateAllocator()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RewindableAllocator_tB18F8ADC8F2EE36E1F51FCCCFF0AC093108EF254* WorldUnmanaged_get_UpdateAllocator_mB49A943F3083A1EF11FC621080D169CC3E11F7C9 (WorldUnmanaged_t7B736084B2D4749A9CE36AD9A7F9D930DAA9F88F* __this, const RuntimeMethod* method) ;
+// Unity.Collections.Allocator Unity.Collections.RewindableAllocator::get_ToAllocator()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t RewindableAllocator_get_ToAllocator_m497B5D16417A19E29F7F3AF43ED92EA8813A2648 (RewindableAllocator_tB18F8ADC8F2EE36E1F51FCCCFF0AC093108EF254* __this, const RuntimeMethod* method) ;
+// System.Int32 Unity.Entities.EntityQuery::CalculateChunkCount()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t EntityQuery_CalculateChunkCount_m5B68046396874B5AB7B5919338C9CDD674E86249 (EntityQuery_t23B7A11FAA475D860E94409BFD4CF7E4B337CF90* __this, const RuntimeMethod* method) ;
+// System.Void* Unity.Entities.JobEntityBatchIndexExtensions::AllocatePrefilterData(System.Int32,Unity.Collections.Allocator,Unity.Collections.LowLevel.Unsafe.UnsafeList`1<Unity.Entities.ArchetypeChunk>*&,Unity.Collections.LowLevel.Unsafe.UnsafeList`1<System.Int32>*&)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void* JobEntityBatchIndexExtensions_AllocatePrefilterData_m1EE6E06A594A728C49401138F4806BF47C7B2113 (int32_t ___expectedBatchCount0, int32_t ___allocator1, UnsafeList_1_tD72E86D22D12AC8243BAACBB2C3D1894438DB165** ___outBatchList2, UnsafeList_1_t6C5E84D303190B625F3759C244502E1735453718** ___outIndexList3, const RuntimeMethod* method) ;
+// Unity.Entities.UnsafeCachedChunkList Unity.Entities.EntityQueryData::GetMatchingChunkCache()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR UnsafeCachedChunkList_t48CE8479B1EEA20F34D6EB59806214668DB204A3 EntityQueryData_GetMatchingChunkCache_mE98F4FC1F9B2C7729C2AA005F3B2BFA5DE77BA95 (EntityQueryData_t20DB32E7BB3F8732C371E45E8A8CEBCE62B61C26* __this, const RuntimeMethod* method) ;
+// Unity.Entities.EntityComponentStore* Unity.Entities.EntityDataAccess::get_EntityComponentStore()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR EntityComponentStore_tA85E100ECD667365B260A68DFD9DF9B7C04D037F* EntityDataAccess_get_EntityComponentStore_m326C3B90484B39F30DF478BCC5C586FDFACB3054 (EntityDataAccess_t98E1CF6F73892A92AA3FF870A4BD941364E9CD36* __this, const RuntimeMethod* method) ;
+// Unity.Jobs.JobHandle Unity.Jobs.IJobBurstSchedulableExtensions::Schedule<Unity.Entities.PrefilterForJobEntityBatchWithIndex>(T,Unity.Jobs.JobHandle)
+inline JobHandle_t5DF5F99902FED3C801A81C05205CEA6CE039EF08 IJobBurstSchedulableExtensions_Schedule_TisPrefilterForJobEntityBatchWithIndex_tE030BB096AD0E53B43B7D5E98E3C05E3AC26CCAB_m66D73EEFE570A4424ADCA368251111B4D918C2C1 (PrefilterForJobEntityBatchWithIndex_tE030BB096AD0E53B43B7D5E98E3C05E3AC26CCAB ___jobData0, JobHandle_t5DF5F99902FED3C801A81C05205CEA6CE039EF08 ___dependsOn1, const RuntimeMethod* method)
+{
+	return ((  JobHandle_t5DF5F99902FED3C801A81C05205CEA6CE039EF08 (*) (PrefilterForJobEntityBatchWithIndex_tE030BB096AD0E53B43B7D5E98E3C05E3AC26CCAB, JobHandle_t5DF5F99902FED3C801A81C05205CEA6CE039EF08, const RuntimeMethod*))IJobBurstSchedulableExtensions_Schedule_TisPrefilterForJobEntityBatchWithIndex_tE030BB096AD0E53B43B7D5E98E3C05E3AC26CCAB_m66D73EEFE570A4424ADCA368251111B4D918C2C1_gshared)(___jobData0, ___dependsOn1, method);
+}
+// System.Void Unity.Jobs.IJobBurstSchedulableExtensions::Run<Unity.Entities.PrefilterForJobEntityBatchWithIndex>(T)
+inline void IJobBurstSchedulableExtensions_Run_TisPrefilterForJobEntityBatchWithIndex_tE030BB096AD0E53B43B7D5E98E3C05E3AC26CCAB_m4BA645F349CDEEBD58CC8D16C9AC3B2BD51F16DB (PrefilterForJobEntityBatchWithIndex_tE030BB096AD0E53B43B7D5E98E3C05E3AC26CCAB ___jobData0, const RuntimeMethod* method)
+{
+	((  void (*) (PrefilterForJobEntityBatchWithIndex_tE030BB096AD0E53B43B7D5E98E3C05E3AC26CCAB, const RuntimeMethod*))IJobBurstSchedulableExtensions_Run_TisPrefilterForJobEntityBatchWithIndex_tE030BB096AD0E53B43B7D5E98E3C05E3AC26CCAB_m4BA645F349CDEEBD58CC8D16C9AC3B2BD51F16DB_gshared)(___jobData0, method);
+}
+// T& Unity.Burst.SharedStatic`1<System.IntPtr>::get_Data()
+inline intptr_t* SharedStatic_1_get_Data_m6B971FC25FA15EF3646DC3DE9FFA1D910AE67EA1 (SharedStatic_1_t0A9894CA2483CA9491C550F8D66FBA5213718E9F* __this, const RuntimeMethod* method)
+{
+	return ((  intptr_t* (*) (SharedStatic_1_t0A9894CA2483CA9491C550F8D66FBA5213718E9F*, const RuntimeMethod*))SharedStatic_1_get_Data_m6B971FC25FA15EF3646DC3DE9FFA1D910AE67EA1_gshared)(__this, method);
+}
+// System.Void Unity.Jobs.LowLevel.Unsafe.JobsUtility/JobScheduleParameters::.ctor(System.Void*,System.IntPtr,Unity.Jobs.JobHandle,Unity.Jobs.LowLevel.Unsafe.ScheduleMode)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void JobScheduleParameters__ctor_m5FFED3B28A1FA2C3EC7D1C50A7D7E788C411CE04 (JobScheduleParameters_tBA5415DA68E52ABC80373CD13D66C9AFAF8F542B* __this, void* ___i_jobData0, intptr_t ___i_reflectionData1, JobHandle_t5DF5F99902FED3C801A81C05205CEA6CE039EF08 ___i_dependency2, int32_t ___i_scheduleMode3, const RuntimeMethod* method) ;
+// System.Void Unity.Entities.JobEntityBatchIndexExtensions::FinalizeScheduleChecked(System.Boolean,Unity.Jobs.JobHandle,System.Void*,Unity.Jobs.LowLevel.Unsafe.JobsUtility/JobScheduleParameters&,System.Boolean&,Unity.Jobs.JobHandle&)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void JobEntityBatchIndexExtensions_FinalizeScheduleChecked_m371643F6D9419CFFBBCF93A193AF3C34D4BBC9F3 (bool ___isParallel0, JobHandle_t5DF5F99902FED3C801A81C05205CEA6CE039EF08 ___prefilterHandle1, void* ___prefilterData2, JobScheduleParameters_tBA5415DA68E52ABC80373CD13D66C9AFAF8F542B* ___scheduleParams3, bool* ___executed4, JobHandle_t5DF5F99902FED3C801A81C05205CEA6CE039EF08* ___result5, const RuntimeMethod* method) ;
+// Unity.Jobs.JobHandle Unity.Entities.JobEntityBatchIndexExtensions::FinalizeScheduleNoExceptions(System.Boolean,System.Void*,Unity.Jobs.LowLevel.Unsafe.JobsUtility/JobScheduleParameters&)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR JobHandle_t5DF5F99902FED3C801A81C05205CEA6CE039EF08 JobEntityBatchIndexExtensions_FinalizeScheduleNoExceptions_m2CDE527010D77B826B0BA2A00BDAE1B72E3F1166 (bool ___isParallel0, void* ___prefilterData1, JobScheduleParameters_tBA5415DA68E52ABC80373CD13D66C9AFAF8F542B* ___scheduleParams2, const RuntimeMethod* method) ;
 // System.Int32 System.Collections.Generic.List`1<Unity.Serialization.Json.Adapters.IJsonAdapter>::get_Count()
 inline int32_t List_1_get_Count_m5591A98B36B32BA425622AAE076343D6AF23B5AA_inline (List_1_t0F431735EE2492DB58BB352E0D782E86838A86AA* __this, const RuntimeMethod* method)
 {
@@ -2043,10 +3007,292 @@ inline bool JsonMigrationCollection_TryMigrate_TisHash128_t2EA8F45F10BC2DF40B0CE
 {
 	return ((  bool (*) (JsonMigrationCollection_t8434FE4B610875B830B594EE7CD88C19B1F6279A*, UnsafeObjectView_tDD17C91E065E37B8955F18CB553A17F82EE76254, Hash128_t2EA8F45F10BC2DF40B0CE9AE04F222072EB1345B*, JsonPropertyReader_t8B4B535106EE2E4B7BE370CDA741E56D4CA1CF0B*, List_1_tF6569F82810E13CBD9F2E55455C088EC63B69967*, const RuntimeMethod*))JsonMigrationCollection_TryMigrate_TisHash128_t2EA8F45F10BC2DF40B0CE9AE04F222072EB1345B_m07B10AED10A8B9BD94C3E566A5F57DBC0E2D10B0_gshared)(__this, ___view0, ___value1, ___reader2, ___events3, method);
 }
-// System.Boolean Unity.Serialization.Json.Adapters.JsonMigrationCollection::TryMigrate<UnityEngine.Keyframe>(Unity.Serialization.Json.Unsafe.UnsafeObjectView,TValue&,Unity.Serialization.Json.JsonPropertyReader,System.Collections.Generic.List`1<Unity.Serialization.Json.DeserializationEvent>)
-inline bool JsonMigrationCollection_TryMigrate_TisKeyframe_tB9C67DCBFE10C0AE9C52CB5C66E944255C9254F0_mB7658BDD224A010C381EB2C9DC7627A324066A01 (JsonMigrationCollection_t8434FE4B610875B830B594EE7CD88C19B1F6279A* __this, UnsafeObjectView_tDD17C91E065E37B8955F18CB553A17F82EE76254 ___view0, Keyframe_tB9C67DCBFE10C0AE9C52CB5C66E944255C9254F0* ___value1, JsonPropertyReader_t8B4B535106EE2E4B7BE370CDA741E56D4CA1CF0B* ___reader2, List_1_tF6569F82810E13CBD9F2E55455C088EC63B69967* ___events3, const RuntimeMethod* method)
+// Unity.Jobs.JobHandle Unity.Entities.JobEntityBatchIndexExtensions::ScheduleInternal<Unity.Transforms.CopyTransformFromGameObjectSystem/CopyTransforms>(T&,Unity.Entities.EntityQuery,Unity.Jobs.JobHandle,Unity.Jobs.LowLevel.Unsafe.ScheduleMode,System.Boolean)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR JobHandle_t5DF5F99902FED3C801A81C05205CEA6CE039EF08 JobEntityBatchIndexExtensions_ScheduleInternal_TisCopyTransforms_t8B0E6095FF30CAC5E663F7A42028E304909C447F_m3C154EC5A3A52C65182D27CA202BDCE67C26CB83_gshared (CopyTransforms_t8B0E6095FF30CAC5E663F7A42028E304909C447F* ___jobData0, EntityQuery_t23B7A11FAA475D860E94409BFD4CF7E4B337CF90 ___query1, JobHandle_t5DF5F99902FED3C801A81C05205CEA6CE039EF08 ___dependsOn2, int32_t ___mode3, bool ___isParallel4, const RuntimeMethod* method) 
 {
-	return ((  bool (*) (JsonMigrationCollection_t8434FE4B610875B830B594EE7CD88C19B1F6279A*, UnsafeObjectView_tDD17C91E065E37B8955F18CB553A17F82EE76254, Keyframe_tB9C67DCBFE10C0AE9C52CB5C66E944255C9254F0*, JsonPropertyReader_t8B4B535106EE2E4B7BE370CDA741E56D4CA1CF0B*, List_1_tF6569F82810E13CBD9F2E55455C088EC63B69967*, const RuntimeMethod*))JsonMigrationCollection_TryMigrate_TisKeyframe_tB9C67DCBFE10C0AE9C52CB5C66E944255C9254F0_mB7658BDD224A010C381EB2C9DC7627A324066A01_gshared)(__this, ___view0, ___value1, ___reader2, ___events3, method);
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&IJobBurstSchedulableExtensions_Run_TisPrefilterForJobEntityBatchWithIndex_tE030BB096AD0E53B43B7D5E98E3C05E3AC26CCAB_m4BA645F349CDEEBD58CC8D16C9AC3B2BD51F16DB_RuntimeMethod_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&IJobBurstSchedulableExtensions_Schedule_TisPrefilterForJobEntityBatchWithIndex_tE030BB096AD0E53B43B7D5E98E3C05E3AC26CCAB_m66D73EEFE570A4424ADCA368251111B4D918C2C1_RuntimeMethod_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&SharedStatic_1_get_Data_m6B971FC25FA15EF3646DC3DE9FFA1D910AE67EA1_RuntimeMethod_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	EntityQueryImpl_t3E7DD11B3ECD6D708BF02ACF2C07B42A913F7574* V_0 = NULL;
+	EntityQueryData_t20DB32E7BB3F8732C371E45E8A8CEBCE62B61C26* V_1 = NULL;
+	int32_t V_2 = 0;
+	int32_t V_3 = 0;
+	int32_t V_4 = 0;
+	void* V_5 = NULL;
+	UnsafeList_1_tD72E86D22D12AC8243BAACBB2C3D1894438DB165* V_6 = NULL;
+	UnsafeList_1_t6C5E84D303190B625F3759C244502E1735453718* V_7 = NULL;
+	JobHandle_t5DF5F99902FED3C801A81C05205CEA6CE039EF08 V_8;
+	memset((&V_8), 0, sizeof(V_8));
+	PrefilterForJobEntityBatchWithIndex_tE030BB096AD0E53B43B7D5E98E3C05E3AC26CCAB V_9;
+	memset((&V_9), 0, sizeof(V_9));
+	JobEntityBatchIndexWrapper_1_t24BB1FE17A999CA7170E7F15C19D28EEDE54354E V_10;
+	memset((&V_10), 0, sizeof(V_10));
+	intptr_t V_11;
+	memset((&V_11), 0, sizeof(V_11));
+	JobScheduleParameters_tBA5415DA68E52ABC80373CD13D66C9AFAF8F542B V_12;
+	memset((&V_12), 0, sizeof(V_12));
+	bool V_13 = false;
+	JobHandle_t5DF5F99902FED3C801A81C05205CEA6CE039EF08 V_14;
+	memset((&V_14), 0, sizeof(V_14));
+	PrefilterForJobEntityBatchWithIndex_tE030BB096AD0E53B43B7D5E98E3C05E3AC26CCAB V_15;
+	memset((&V_15), 0, sizeof(V_15));
+	bool V_16 = false;
+	JobEntityBatchIndexWrapper_1_t24BB1FE17A999CA7170E7F15C19D28EEDE54354E V_17;
+	memset((&V_17), 0, sizeof(V_17));
+	bool V_18 = false;
+	JobHandle_t5DF5F99902FED3C801A81C05205CEA6CE039EF08 V_19;
+	memset((&V_19), 0, sizeof(V_19));
+	PrefilterForJobEntityBatchWithIndex_tE030BB096AD0E53B43B7D5E98E3C05E3AC26CCAB* G_B2_0 = NULL;
+	PrefilterForJobEntityBatchWithIndex_tE030BB096AD0E53B43B7D5E98E3C05E3AC26CCAB* G_B1_0 = NULL;
+	PrefilterForJobEntityBatchWithIndex_tE030BB096AD0E53B43B7D5E98E3C05E3AC26CCAB* G_B3_0 = NULL;
+	int32_t G_B4_0 = 0;
+	PrefilterForJobEntityBatchWithIndex_tE030BB096AD0E53B43B7D5E98E3C05E3AC26CCAB* G_B4_1 = NULL;
+	JobEntityBatchIndexWrapper_1_t24BB1FE17A999CA7170E7F15C19D28EEDE54354E* G_B9_0 = NULL;
+	JobEntityBatchIndexWrapper_1_t24BB1FE17A999CA7170E7F15C19D28EEDE54354E* G_B8_0 = NULL;
+	int32_t G_B10_0 = 0;
+	JobEntityBatchIndexWrapper_1_t24BB1FE17A999CA7170E7F15C19D28EEDE54354E* G_B10_1 = NULL;
+	{
+		// var queryImpl = query._GetImpl();
+		EntityQueryImpl_t3E7DD11B3ECD6D708BF02ACF2C07B42A913F7574* L_0;
+		L_0 = EntityQuery__GetImpl_m3E1EC62BB22FA905262DB3199F289864B47AA7AE((&___query1), NULL);
+		V_0 = L_0;
+		// var queryData = queryImpl->_QueryData;
+		EntityQueryImpl_t3E7DD11B3ECD6D708BF02ACF2C07B42A913F7574* L_1 = V_0;
+		NullCheck(L_1);
+		EntityQueryData_t20DB32E7BB3F8732C371E45E8A8CEBCE62B61C26* L_2 = (EntityQueryData_t20DB32E7BB3F8732C371E45E8A8CEBCE62B61C26*)L_1->____QueryData_2;
+		V_1 = L_2;
+		// var worldUpdateAllocator = queryImpl->_Access->m_WorldUnmanaged.UpdateAllocator.ToAllocator;
+		EntityQueryImpl_t3E7DD11B3ECD6D708BF02ACF2C07B42A913F7574* L_3 = V_0;
+		NullCheck(L_3);
+		EntityDataAccess_t98E1CF6F73892A92AA3FF870A4BD941364E9CD36* L_4 = (EntityDataAccess_t98E1CF6F73892A92AA3FF870A4BD941364E9CD36*)L_3->____Access_1;
+		NullCheck(L_4);
+		WorldUnmanaged_t7B736084B2D4749A9CE36AD9A7F9D930DAA9F88F* L_5 = (WorldUnmanaged_t7B736084B2D4749A9CE36AD9A7F9D930DAA9F88F*)(&L_4->___m_WorldUnmanaged_11);
+		RewindableAllocator_tB18F8ADC8F2EE36E1F51FCCCFF0AC093108EF254* L_6;
+		L_6 = WorldUnmanaged_get_UpdateAllocator_mB49A943F3083A1EF11FC621080D169CC3E11F7C9(L_5, NULL);
+		int32_t L_7;
+		L_7 = RewindableAllocator_get_ToAllocator_m497B5D16417A19E29F7F3AF43ED92EA8813A2648(L_6, NULL);
+		V_2 = L_7;
+		// var expectedBatchCount = query.CalculateChunkCount();
+		int32_t L_8;
+		L_8 = EntityQuery_CalculateChunkCount_m5B68046396874B5AB7B5919338C9CDD674E86249((&___query1), NULL);
+		V_3 = L_8;
+		// var sizeOfArrayHeaders = sizeof(UnsafeList<int>) * 2;
+		uint32_t L_9 = sizeof(UnsafeList_1_t6C5E84D303190B625F3759C244502E1735453718);
+		V_4 = ((int32_t)il2cpp_codegen_multiply((int32_t)L_9, 2));
+		// var prefilterDataPtr = AllocatePrefilterData(expectedBatchCount, worldUpdateAllocator, out var batchList, out var indexList);
+		int32_t L_10 = V_3;
+		int32_t L_11 = V_2;
+		void* L_12;
+		L_12 = JobEntityBatchIndexExtensions_AllocatePrefilterData_m1EE6E06A594A728C49401138F4806BF47C7B2113(L_10, L_11, (&V_6), (&V_7), NULL);
+		V_5 = L_12;
+		// var prefilterHandle = dependsOn;
+		JobHandle_t5DF5F99902FED3C801A81C05205CEA6CE039EF08 L_13 = ___dependsOn2;
+		V_8 = L_13;
+		// var prefilterJob = new PrefilterForJobEntityBatchWithIndex
+		// {
+		//     ChunkList = queryData->GetMatchingChunkCache(),
+		//     MatchingArchetypes = queryData->MatchingArchetypes,
+		//     Filter = queryImpl->_Filter,
+		//     EntityComponentStore = queryImpl->_Access->EntityComponentStore,
+		//     OutPrefilteredBatches = batchList,
+		//     OutPrefilteredBatchEntityIndices = indexList,
+		//     SkipSubChunkBatching = queryData->EnableableComponentsCountAll == 0 && queryData->EnableableComponentsCountNone == 0 ? 1 : 0
+		// };
+		il2cpp_codegen_initobj((&V_15), sizeof(PrefilterForJobEntityBatchWithIndex_tE030BB096AD0E53B43B7D5E98E3C05E3AC26CCAB));
+		EntityQueryData_t20DB32E7BB3F8732C371E45E8A8CEBCE62B61C26* L_14 = V_1;
+		UnsafeCachedChunkList_t48CE8479B1EEA20F34D6EB59806214668DB204A3 L_15;
+		L_15 = EntityQueryData_GetMatchingChunkCache_mE98F4FC1F9B2C7729C2AA005F3B2BFA5DE77BA95((EntityQueryData_t20DB32E7BB3F8732C371E45E8A8CEBCE62B61C26*)L_14, NULL);
+		(&V_15)->___ChunkList_0 = L_15;
+		EntityQueryData_t20DB32E7BB3F8732C371E45E8A8CEBCE62B61C26* L_16 = V_1;
+		NullCheck(L_16);
+		UnsafeMatchingArchetypePtrList_t7BE58FA0D1C0757782B0CA05207B0E07690ED566 L_17 = (UnsafeMatchingArchetypePtrList_t7BE58FA0D1C0757782B0CA05207B0E07690ED566)L_16->___MatchingArchetypes_11;
+		(&V_15)->___MatchingArchetypes_1 = L_17;
+		EntityQueryImpl_t3E7DD11B3ECD6D708BF02ACF2C07B42A913F7574* L_18 = V_0;
+		NullCheck(L_18);
+		EntityQueryFilter_t4A9651CB7DA59AFE8AAF946C19EC6B0D1ACA2F8B L_19 = (EntityQueryFilter_t4A9651CB7DA59AFE8AAF946C19EC6B0D1ACA2F8B)L_18->____Filter_3;
+		(&V_15)->___Filter_5 = L_19;
+		EntityQueryImpl_t3E7DD11B3ECD6D708BF02ACF2C07B42A913F7574* L_20 = V_0;
+		NullCheck(L_20);
+		EntityDataAccess_t98E1CF6F73892A92AA3FF870A4BD941364E9CD36* L_21 = (EntityDataAccess_t98E1CF6F73892A92AA3FF870A4BD941364E9CD36*)L_20->____Access_1;
+		EntityComponentStore_tA85E100ECD667365B260A68DFD9DF9B7C04D037F* L_22;
+		L_22 = EntityDataAccess_get_EntityComponentStore_m326C3B90484B39F30DF478BCC5C586FDFACB3054((EntityDataAccess_t98E1CF6F73892A92AA3FF870A4BD941364E9CD36*)L_21, NULL);
+		(&V_15)->___EntityComponentStore_2 = L_22;
+		UnsafeList_1_tD72E86D22D12AC8243BAACBB2C3D1894438DB165* L_23 = V_6;
+		(&V_15)->___OutPrefilteredBatches_3 = L_23;
+		UnsafeList_1_t6C5E84D303190B625F3759C244502E1735453718* L_24 = V_7;
+		(&V_15)->___OutPrefilteredBatchEntityIndices_4 = L_24;
+		EntityQueryData_t20DB32E7BB3F8732C371E45E8A8CEBCE62B61C26* L_25 = V_1;
+		NullCheck(L_25);
+		int32_t L_26 = (int32_t)L_25->___EnableableComponentsCountAll_6;
+		G_B1_0 = (&V_15);
+		if (L_26)
+		{
+			G_B2_0 = (&V_15);
+			goto IL_00ad;
+		}
+	}
+	{
+		EntityQueryData_t20DB32E7BB3F8732C371E45E8A8CEBCE62B61C26* L_27 = V_1;
+		NullCheck(L_27);
+		int32_t L_28 = (int32_t)L_27->___EnableableComponentsCountNone_7;
+		G_B2_0 = G_B1_0;
+		if (!L_28)
+		{
+			G_B3_0 = G_B1_0;
+			goto IL_00b0;
+		}
+	}
+
+IL_00ad:
+	{
+		G_B4_0 = 0;
+		G_B4_1 = G_B2_0;
+		goto IL_00b1;
+	}
+
+IL_00b0:
+	{
+		G_B4_0 = 1;
+		G_B4_1 = G_B3_0;
+	}
+
+IL_00b1:
+	{
+		G_B4_1->___SkipSubChunkBatching_6 = G_B4_0;
+		PrefilterForJobEntityBatchWithIndex_tE030BB096AD0E53B43B7D5E98E3C05E3AC26CCAB L_29 = V_15;
+		V_9 = L_29;
+		// if (mode != ScheduleMode.Run)
+		int32_t L_30 = ___mode3;
+		V_16 = (bool)((!(((uint32_t)L_30) <= ((uint32_t)0)))? 1 : 0);
+		bool L_31 = V_16;
+		if (!L_31)
+		{
+			goto IL_00d0;
+		}
+	}
+	{
+		// prefilterHandle = prefilterJob.Schedule(dependsOn);
+		PrefilterForJobEntityBatchWithIndex_tE030BB096AD0E53B43B7D5E98E3C05E3AC26CCAB L_32 = V_9;
+		JobHandle_t5DF5F99902FED3C801A81C05205CEA6CE039EF08 L_33 = ___dependsOn2;
+		JobHandle_t5DF5F99902FED3C801A81C05205CEA6CE039EF08 L_34;
+		L_34 = IJobBurstSchedulableExtensions_Schedule_TisPrefilterForJobEntityBatchWithIndex_tE030BB096AD0E53B43B7D5E98E3C05E3AC26CCAB_m66D73EEFE570A4424ADCA368251111B4D918C2C1(L_32, L_33, IJobBurstSchedulableExtensions_Schedule_TisPrefilterForJobEntityBatchWithIndex_tE030BB096AD0E53B43B7D5E98E3C05E3AC26CCAB_m66D73EEFE570A4424ADCA368251111B4D918C2C1_RuntimeMethod_var);
+		V_8 = L_34;
+		goto IL_00d8;
+	}
+
+IL_00d0:
+	{
+		// prefilterJob.Run();
+		PrefilterForJobEntityBatchWithIndex_tE030BB096AD0E53B43B7D5E98E3C05E3AC26CCAB L_35 = V_9;
+		IJobBurstSchedulableExtensions_Run_TisPrefilterForJobEntityBatchWithIndex_tE030BB096AD0E53B43B7D5E98E3C05E3AC26CCAB_m4BA645F349CDEEBD58CC8D16C9AC3B2BD51F16DB(L_35, IJobBurstSchedulableExtensions_Run_TisPrefilterForJobEntityBatchWithIndex_tE030BB096AD0E53B43B7D5E98E3C05E3AC26CCAB_m4BA645F349CDEEBD58CC8D16C9AC3B2BD51F16DB_RuntimeMethod_var);
+	}
+
+IL_00d8:
+	{
+		//             JobEntityBatchIndexWrapper<T> jobEntityBatchIndexWrapper = new JobEntityBatchIndexWrapper<T>
+		//             {
+		// #if ENABLE_UNITY_COLLECTIONS_CHECKS
+		//                 // All IJobEntityBatchWithIndex jobs have a EntityManager safety handle to ensure that BeforeStructuralChange throws an error if
+		//                 // jobs without any other safety handles are still running (haven't been synced).
+		//                 safety = new EntitySafetyHandle {m_Safety = queryImpl->SafetyHandles->GetEntityManagerSafetyHandle()},
+		// #endif
+		// 
+		//                 JobData = jobData,
+		//                 PrefilterData = prefilterDataPtr,
+		// 
+		//                 IsParallel = isParallel ? 1 : 0
+		//             };
+		il2cpp_codegen_initobj((&V_17), sizeof(JobEntityBatchIndexWrapper_1_t24BB1FE17A999CA7170E7F15C19D28EEDE54354E));
+		CopyTransforms_t8B0E6095FF30CAC5E663F7A42028E304909C447F* L_36 = ___jobData0;
+		CopyTransforms_t8B0E6095FF30CAC5E663F7A42028E304909C447F L_37 = (*(CopyTransforms_t8B0E6095FF30CAC5E663F7A42028E304909C447F*)L_36);
+		(&V_17)->___JobData_0 = L_37;
+		void* L_38 = V_5;
+		(&V_17)->___PrefilterData_1 = L_38;
+		bool L_39 = ___isParallel4;
+		G_B8_0 = (&V_17);
+		if (L_39)
+		{
+			G_B9_0 = (&V_17);
+			goto IL_00ff;
+		}
+	}
+	{
+		G_B10_0 = 0;
+		G_B10_1 = G_B8_0;
+		goto IL_0100;
+	}
+
+IL_00ff:
+	{
+		G_B10_0 = 1;
+		G_B10_1 = G_B9_0;
+	}
+
+IL_0100:
+	{
+		G_B10_1->___IsParallel_2 = G_B10_0;
+		JobEntityBatchIndexWrapper_1_t24BB1FE17A999CA7170E7F15C19D28EEDE54354E L_40 = V_17;
+		V_10 = L_40;
+		// var reflectionData = JobEntityBatchIndexProducer<T>.reflectionData.Data;
+		il2cpp_codegen_runtime_class_init_inline(il2cpp_rgctx_data(method->rgctx_data, 0));
+		intptr_t* L_41;
+		L_41 = SharedStatic_1_get_Data_m6B971FC25FA15EF3646DC3DE9FFA1D910AE67EA1((&((JobEntityBatchIndexProducer_1_t005A1661D632E19AF445F625B27F3E140B04BF0E_StaticFields*)il2cpp_codegen_static_fields_for(il2cpp_rgctx_data(method->rgctx_data, 0)))->___reflectionData_0), SharedStatic_1_get_Data_m6B971FC25FA15EF3646DC3DE9FFA1D910AE67EA1_RuntimeMethod_var);
+		V_11 = ((*(L_41)));
+		// var scheduleParams = new JobsUtility.JobScheduleParameters(UnsafeUtility.AddressOf(ref jobEntityBatchIndexWrapper),
+		//     reflectionData, prefilterHandle, mode);
+		void* L_42;
+		L_42 = il2cpp_codegen_unsafe_cast((&V_10));
+		intptr_t L_43 = V_11;
+		JobHandle_t5DF5F99902FED3C801A81C05205CEA6CE039EF08 L_44 = V_8;
+		int32_t L_45 = ___mode3;
+		JobScheduleParameters__ctor_m5FFED3B28A1FA2C3EC7D1C50A7D7E788C411CE04((&V_12), L_42, L_43, L_44, L_45, NULL);
+		// bool executedManaged = false;
+		V_13 = (bool)0;
+		// JobHandle result = default;
+		il2cpp_codegen_initobj((&V_14), sizeof(JobHandle_t5DF5F99902FED3C801A81C05205CEA6CE039EF08));
+		// FinalizeScheduleChecked(isParallel, prefilterHandle, prefilterDataPtr, ref scheduleParams, ref executedManaged, ref result);
+		bool L_46 = ___isParallel4;
+		JobHandle_t5DF5F99902FED3C801A81C05205CEA6CE039EF08 L_47 = V_8;
+		void* L_48 = V_5;
+		JobEntityBatchIndexExtensions_FinalizeScheduleChecked_m371643F6D9419CFFBBCF93A193AF3C34D4BBC9F3(L_46, L_47, L_48, (&V_12), (&V_13), (&V_14), NULL);
+		// if (executedManaged)
+		bool L_49 = V_13;
+		V_18 = L_49;
+		bool L_50 = V_18;
+		if (!L_50)
+		{
+			goto IL_0154;
+		}
+	}
+	{
+		// return result;
+		JobHandle_t5DF5F99902FED3C801A81C05205CEA6CE039EF08 L_51 = V_14;
+		V_19 = L_51;
+		goto IL_0163;
+	}
+
+IL_0154:
+	{
+		// return FinalizeScheduleNoExceptions(isParallel, prefilterDataPtr, ref scheduleParams);
+		bool L_52 = ___isParallel4;
+		void* L_53 = V_5;
+		JobHandle_t5DF5F99902FED3C801A81C05205CEA6CE039EF08 L_54;
+		L_54 = JobEntityBatchIndexExtensions_FinalizeScheduleNoExceptions_m2CDE527010D77B826B0BA2A00BDAE1B72E3F1166(L_52, L_53, (&V_12), NULL);
+		V_19 = L_54;
+		goto IL_0163;
+	}
+
+IL_0163:
+	{
+		// }
+		JobHandle_t5DF5F99902FED3C801A81C05205CEA6CE039EF08 L_55 = V_19;
+		return L_55;
+	}
 }
 // Unity.Jobs.JobHandle Unity.Entities.JobEntityBatchIndexExtensions::ScheduleParallel<Unity.Entities.GatherComponentDataJob>(T,Unity.Entities.EntityQuery,Unity.Jobs.JobHandle)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR JobHandle_t5DF5F99902FED3C801A81C05205CEA6CE039EF08 JobEntityBatchIndexExtensions_ScheduleParallel_TisGatherComponentDataJob_t3E2B702A3DBDF7B0F27FE4256FFEB4808C1E0C1A_mF6BFF12FDD4507FDB327A32008F7105A808B990B_gshared (GatherComponentDataJob_t3E2B702A3DBDF7B0F27FE4256FFEB4808C1E0C1A ___jobData0, EntityQuery_t23B7A11FAA475D860E94409BFD4CF7E4B337CF90 ___query1, JobHandle_t5DF5F99902FED3C801A81C05205CEA6CE039EF08 ___dependsOn2, const RuntimeMethod* method) 
@@ -28645,246 +29891,6 @@ IL2CPP_EXTERN_C  bool JsonMigrationCollection_TryMigrate_TisHash128_t2EA8F45F10B
 	_thisAdjusted = reinterpret_cast<JsonMigrationCollection_t8434FE4B610875B830B594EE7CD88C19B1F6279A*>(__this + _offset);
 	bool _returnValue;
 	_returnValue = JsonMigrationCollection_TryMigrate_TisHash128_t2EA8F45F10BC2DF40B0CE9AE04F222072EB1345B_m07B10AED10A8B9BD94C3E566A5F57DBC0E2D10B0(_thisAdjusted, ___view0, ___value1, ___reader2, ___events3, method);
-	return _returnValue;
-}
-// System.Boolean Unity.Serialization.Json.Adapters.JsonMigrationCollection::TryMigrate<UnityEngine.Keyframe>(Unity.Serialization.Json.Unsafe.UnsafeObjectView,TValue&,Unity.Serialization.Json.JsonPropertyReader,System.Collections.Generic.List`1<Unity.Serialization.Json.DeserializationEvent>)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool JsonMigrationCollection_TryMigrate_TisKeyframe_tB9C67DCBFE10C0AE9C52CB5C66E944255C9254F0_mB7658BDD224A010C381EB2C9DC7627A324066A01_gshared (JsonMigrationCollection_t8434FE4B610875B830B594EE7CD88C19B1F6279A* __this, UnsafeObjectView_tDD17C91E065E37B8955F18CB553A17F82EE76254 ___view0, Keyframe_tB9C67DCBFE10C0AE9C52CB5C66E944255C9254F0* ___value1, JsonPropertyReader_t8B4B535106EE2E4B7BE370CDA741E56D4CA1CF0B* ___reader2, List_1_tF6569F82810E13CBD9F2E55455C088EC63B69967* ___events3, const RuntimeMethod* method) 
-{
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
-	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Exception_t_il2cpp_TypeInfo_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&List_1_Add_m9F4108E5934BFB244CD36C7D2FAE5969BB4B8098_RuntimeMethod_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Type_t_il2cpp_TypeInfo_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteral07E15CE902B2DDDF6C7C264F0B8E38178EA51C38);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteral905C19B06B73ED521816E0DF60DCCC59B36B47F5);
-		s_Il2CppMethodInitialized = true;
-	}
-	RuntimeObject* V_0 = NULL;
-	int32_t V_1 = 0;
-	int32_t V_2 = 0;
-	UnsafeValueView_tCD606B53AEB275B5AC69CB248B949E3EE5A5BB6A V_3;
-	memset((&V_3), 0, sizeof(V_3));
-	JsonMigrationContext_tE4D4BF64FD371E85EB8AB9CB06B6574F9F178260 V_4;
-	memset((&V_4), 0, sizeof(V_4));
-	bool V_5 = false;
-	bool V_6 = false;
-	bool V_7 = false;
-	bool V_8 = false;
-	bool V_9 = false;
-	RuntimeObject* V_10 = NULL;
-	RuntimeObject* V_11 = NULL;
-	RuntimeObject* V_12 = NULL;
-	RuntimeObject* V_13 = NULL;
-	{
-		// var migration = GetMigrationForType<TValue>(out var version);
-		RuntimeObject* L_0;
-		L_0 = JsonMigrationCollection_GetMigrationForType_TisKeyframe_tB9C67DCBFE10C0AE9C52CB5C66E944255C9254F0_m9390F43F2BE85620BC11E0C676DAB861D1993A8D(__this, (&V_1), il2cpp_rgctx_method(method->rgctx_data, 0));
-		V_0 = L_0;
-		// if (null == migration)
-		RuntimeObject* L_1 = V_0;
-		V_5 = (bool)((((RuntimeObject*)(RuntimeObject*)L_1) == ((RuntimeObject*)(RuntimeObject*)NULL))? 1 : 0);
-		bool L_2 = V_5;
-		if (!L_2)
-		{
-			goto IL_0024;
-		}
-	}
-	{
-		// value = default;
-		Keyframe_tB9C67DCBFE10C0AE9C52CB5C66E944255C9254F0* L_3 = ___value1;
-		il2cpp_codegen_initobj(L_3, sizeof(Keyframe_tB9C67DCBFE10C0AE9C52CB5C66E944255C9254F0));
-		// return false;
-		V_6 = (bool)0;
-		goto IL_0128;
-	}
-
-IL_0024:
-	{
-		// var serializedVersion = 0;
-		V_2 = 0;
-		// if (view.TryGetValue(JsonPropertyVisitor.k_SerializedVersionKey, out var serializedVersionView))
-		bool L_4;
-		L_4 = UnsafeObjectView_TryGetValue_m796B68ED5649AEDB696E6CE081E73C67B26BC8A2((&___view0), _stringLiteral905C19B06B73ED521816E0DF60DCCC59B36B47F5, (&V_3), NULL);
-		V_7 = L_4;
-		bool L_5 = V_7;
-		if (!L_5)
-		{
-			goto IL_00aa;
-		}
-	}
-	{
-		// if (serializedVersionView.Type != TokenType.Primitive)
-		int32_t L_6;
-		L_6 = UnsafeValueView_get_Type_m6522F37423D33F14BE68F64C4729FC1C6ABF5B2B((&V_3), NULL);
-		V_8 = (bool)((((int32_t)((((int32_t)L_6) == ((int32_t)4))? 1 : 0)) == ((int32_t)0))? 1 : 0);
-		bool L_7 = V_8;
-		if (!L_7)
-		{
-			goto IL_008a;
-		}
-	}
-	{
-		// events.Add(new DeserializationEvent(EventType.Exception, new Exception($"An error occured while deserializing Type=[{typeof(TValue)}]. Property=[{JsonPropertyVisitor.k_SerializedVersionKey}] is expected to be an int value.")));
-		List_1_tF6569F82810E13CBD9F2E55455C088EC63B69967* L_8 = ___events3;
-		RuntimeTypeHandle_t332A452B8B6179E4469B69525D0FE82A88030F7B L_9 = { reinterpret_cast<intptr_t> (il2cpp_rgctx_type(method->rgctx_data, 1)) };
-		il2cpp_codegen_runtime_class_init_inline(Type_t_il2cpp_TypeInfo_var);
-		Type_t* L_10;
-		L_10 = Type_GetTypeFromHandle_m6062B81682F79A4D6DF2640692EE6D9987858C57(L_9, NULL);
-		String_t* L_11;
-		L_11 = String_Format_mFB7DA489BD99F4670881FF50EC017BFB0A5C0987(_stringLiteral07E15CE902B2DDDF6C7C264F0B8E38178EA51C38, (RuntimeObject*)L_10, (RuntimeObject*)_stringLiteral905C19B06B73ED521816E0DF60DCCC59B36B47F5, NULL);
-		Exception_t* L_12 = (Exception_t*)il2cpp_codegen_object_new(Exception_t_il2cpp_TypeInfo_var);
-		NullCheck(L_12);
-		Exception__ctor_m9B2BD92CD68916245A75109105D9071C9D430E7F(L_12, L_11, NULL);
-		DeserializationEvent_t2239A02D0C2B02D1E2F8FB330FCC1C42051F62AE L_13;
-		memset((&L_13), 0, sizeof(L_13));
-		DeserializationEvent__ctor_m73603EEC03C91814E6B7929394257D88BD77C0E7((&L_13), (int32_t)4, (RuntimeObject*)L_12, /*hidden argument*/NULL);
-		NullCheck(L_8);
-		List_1_Add_m9F4108E5934BFB244CD36C7D2FAE5969BB4B8098_inline(L_8, L_13, List_1_Add_m9F4108E5934BFB244CD36C7D2FAE5969BB4B8098_RuntimeMethod_var);
-		// value = default;
-		Keyframe_tB9C67DCBFE10C0AE9C52CB5C66E944255C9254F0* L_14 = ___value1;
-		il2cpp_codegen_initobj(L_14, sizeof(Keyframe_tB9C67DCBFE10C0AE9C52CB5C66E944255C9254F0));
-		// return false;
-		V_6 = (bool)0;
-		goto IL_0128;
-	}
-
-IL_008a:
-	{
-		// serializedVersion = serializedVersionView.AsInt32();
-		int32_t L_15;
-		L_15 = UnsafeValueView_AsInt32_mC3274DF2736D47C3FA89971C61309AA4B421C7A1((&V_3), NULL);
-		V_2 = L_15;
-		// if (version == serializedVersion)
-		int32_t L_16 = V_1;
-		int32_t L_17 = V_2;
-		V_9 = (bool)((((int32_t)L_16) == ((int32_t)L_17))? 1 : 0);
-		bool L_18 = V_9;
-		if (!L_18)
-		{
-			goto IL_00a9;
-		}
-	}
-	{
-		// value = default;
-		Keyframe_tB9C67DCBFE10C0AE9C52CB5C66E944255C9254F0* L_19 = ___value1;
-		il2cpp_codegen_initobj(L_19, sizeof(Keyframe_tB9C67DCBFE10C0AE9C52CB5C66E944255C9254F0));
-		// return false;
-		V_6 = (bool)0;
-		goto IL_0128;
-	}
-
-IL_00a9:
-	{
-	}
-
-IL_00aa:
-	{
-		// var context = new JsonMigrationContext(serializedVersion, view.AsSafe(), typeof(TValue), UserData, reader);
-		int32_t L_20 = V_2;
-		SerializedObjectView_t3371CA1D296BF0161DBD7A002673B96D76927561 L_21;
-		L_21 = UnsafeObjectView_AsSafe_mC9C07559823A565AB9B231447DDDC2638D6428D4((&___view0), NULL);
-		RuntimeTypeHandle_t332A452B8B6179E4469B69525D0FE82A88030F7B L_22 = { reinterpret_cast<intptr_t> (il2cpp_rgctx_type(method->rgctx_data, 1)) };
-		il2cpp_codegen_runtime_class_init_inline(Type_t_il2cpp_TypeInfo_var);
-		Type_t* L_23;
-		L_23 = Type_GetTypeFromHandle_m6062B81682F79A4D6DF2640692EE6D9987858C57(L_22, NULL);
-		RuntimeObject* L_24 = (RuntimeObject*)__this->___UserData_2;
-		JsonPropertyReader_t8B4B535106EE2E4B7BE370CDA741E56D4CA1CF0B* L_25 = ___reader2;
-		JsonMigrationContext__ctor_m8D3DB4056BD13FCC93550459548B9C0285423C27((&V_4), L_20, L_21, L_23, L_24, L_25, NULL);
-		// switch (migration)
-		RuntimeObject* L_26 = V_0;
-		V_13 = L_26;
-		RuntimeObject* L_27 = V_13;
-		V_12 = L_27;
-		RuntimeObject* L_28 = V_12;
-		V_10 = ((RuntimeObject*)IsInst((RuntimeObject*)L_28, il2cpp_rgctx_data(method->rgctx_data, 2)));
-		RuntimeObject* L_29 = V_10;
-		if (L_29)
-		{
-			goto IL_00ed;
-		}
-	}
-	{
-		RuntimeObject* L_30 = V_12;
-		V_11 = ((RuntimeObject*)IsInst((RuntimeObject*)L_30, il2cpp_rgctx_data(method->rgctx_data, 3)));
-		RuntimeObject* L_31 = V_11;
-		if (L_31)
-		{
-			goto IL_0100;
-		}
-	}
-	{
-		goto IL_0118;
-	}
-
-IL_00ed:
-	{
-		goto IL_00ef;
-	}
-
-IL_00ef:
-	{
-		// value = typed.Migrate(context);
-		Keyframe_tB9C67DCBFE10C0AE9C52CB5C66E944255C9254F0* L_32 = ___value1;
-		RuntimeObject* L_33 = V_10;
-		JsonMigrationContext_tE4D4BF64FD371E85EB8AB9CB06B6574F9F178260 L_34 = V_4;
-		NullCheck(L_33);
-		Keyframe_tB9C67DCBFE10C0AE9C52CB5C66E944255C9254F0 L_35;
-		L_35 = InterfaceFuncInvoker1< Keyframe_tB9C67DCBFE10C0AE9C52CB5C66E944255C9254F0, JsonMigrationContext_tE4D4BF64FD371E85EB8AB9CB06B6574F9F178260 >::Invoke(1 /* TValue Unity.Serialization.Json.Adapters.IJsonMigration`1<UnityEngine.Keyframe>::Migrate(Unity.Serialization.Json.Adapters.JsonMigrationContext) */, il2cpp_rgctx_data(method->rgctx_data, 2), L_33, L_34);
-		*(Keyframe_tB9C67DCBFE10C0AE9C52CB5C66E944255C9254F0*)L_32 = L_35;
-		// break;
-		goto IL_0123;
-	}
-
-IL_0100:
-	{
-		goto IL_0102;
-	}
-
-IL_0102:
-	{
-		// value = (TValue) typedContravariant.Migrate(context);
-		Keyframe_tB9C67DCBFE10C0AE9C52CB5C66E944255C9254F0* L_36 = ___value1;
-		RuntimeObject* L_37 = V_11;
-		JsonMigrationContext_tE4D4BF64FD371E85EB8AB9CB06B6574F9F178260 L_38 = V_4;
-		NullCheck(L_37);
-		RuntimeObject* L_39;
-		L_39 = InterfaceFuncInvoker1< RuntimeObject*, JsonMigrationContext_tE4D4BF64FD371E85EB8AB9CB06B6574F9F178260 >::Invoke(1 /* System.Object Unity.Serialization.Json.Adapters.Contravariant.IJsonMigration`1<UnityEngine.Keyframe>::Migrate(Unity.Serialization.Json.Adapters.JsonMigrationContext) */, il2cpp_rgctx_data(method->rgctx_data, 3), L_37, L_38);
-		*(Keyframe_tB9C67DCBFE10C0AE9C52CB5C66E944255C9254F0*)L_36 = ((*(Keyframe_tB9C67DCBFE10C0AE9C52CB5C66E944255C9254F0*)((Keyframe_tB9C67DCBFE10C0AE9C52CB5C66E944255C9254F0*)(Keyframe_tB9C67DCBFE10C0AE9C52CB5C66E944255C9254F0*)UnBox(L_39, il2cpp_rgctx_data(method->rgctx_data, 6)))));
-		// break;
-		goto IL_0123;
-	}
-
-IL_0118:
-	{
-		// throw new Exception("An internal error has occured.");
-		Exception_t* L_40 = (Exception_t*)il2cpp_codegen_object_new(((RuntimeClass*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&Exception_t_il2cpp_TypeInfo_var)));
-		NullCheck(L_40);
-		Exception__ctor_m9B2BD92CD68916245A75109105D9071C9D430E7F(L_40, ((String_t*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&_stringLiteralD60C95D35235DF5D72870F14994C45B97EDA0434)), NULL);
-		IL2CPP_RAISE_MANAGED_EXCEPTION(L_40, ((RuntimeMethod*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&JsonMigrationCollection_TryMigrate_TisKeyframe_tB9C67DCBFE10C0AE9C52CB5C66E944255C9254F0_mB7658BDD224A010C381EB2C9DC7627A324066A01_RuntimeMethod_var)));
-	}
-
-IL_0123:
-	{
-		// return true;
-		V_6 = (bool)1;
-		goto IL_0128;
-	}
-
-IL_0128:
-	{
-		// }
-		bool L_41 = V_6;
-		return L_41;
-	}
-}
-IL2CPP_EXTERN_C  bool JsonMigrationCollection_TryMigrate_TisKeyframe_tB9C67DCBFE10C0AE9C52CB5C66E944255C9254F0_mB7658BDD224A010C381EB2C9DC7627A324066A01_AdjustorThunk (RuntimeObject* __this, UnsafeObjectView_tDD17C91E065E37B8955F18CB553A17F82EE76254 ___view0, Keyframe_tB9C67DCBFE10C0AE9C52CB5C66E944255C9254F0* ___value1, JsonPropertyReader_t8B4B535106EE2E4B7BE370CDA741E56D4CA1CF0B* ___reader2, List_1_tF6569F82810E13CBD9F2E55455C088EC63B69967* ___events3, const RuntimeMethod* method)
-{
-	JsonMigrationCollection_t8434FE4B610875B830B594EE7CD88C19B1F6279A* _thisAdjusted;
-	int32_t _offset = 1;
-	_thisAdjusted = reinterpret_cast<JsonMigrationCollection_t8434FE4B610875B830B594EE7CD88C19B1F6279A*>(__this + _offset);
-	bool _returnValue;
-	_returnValue = JsonMigrationCollection_TryMigrate_TisKeyframe_tB9C67DCBFE10C0AE9C52CB5C66E944255C9254F0_mB7658BDD224A010C381EB2C9DC7627A324066A01(_thisAdjusted, ___view0, ___value1, ___reader2, ___events3, method);
 	return _returnValue;
 }
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Unsafe_tE1FCDFA6786E53B583BD90455A4C034433B85A7B JsonWriter_AsUnsafe_m9A91B10243E7782227A5C52BF3517B97811914E8_inline (JsonWriter_tAD644F358C50E0CEBFACDF027D775880AD3A7016* __this, const RuntimeMethod* method) 

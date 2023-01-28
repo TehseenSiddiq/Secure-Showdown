@@ -21,6 +21,10 @@ public class FieldOfView : MonoBehaviour
 	public Color[] colors;
 	public AudioSource alertSound;
 
+	public float energy;
+	public bool isWorking = false;
+	
+
 	private float clearness;
 	public bool CanSeelPlayer { get; private set; }
 
@@ -36,12 +40,14 @@ public class FieldOfView : MonoBehaviour
 		radius = _radius;
 		viewAngle = _viewAngle;
 		clearness = _clearness;
+		energy = _energy;
     }
 	void Visual()
     {
 		fieldOfViewImage.fillAmount = viewAngle / 180;
 		fieldOfViewImage.transform.eulerAngles = new Vector3(0, 0,  transform.eulerAngles.z+ viewAngle);
-	
+		fieldOfViewImage.GetComponent<RectTransform>().SetSizeWithCurrentAnchors(RectTransform.Axis.Horizontal, radius * 2);
+		fieldOfViewImage.GetComponent<RectTransform>().SetSizeWithCurrentAnchors(RectTransform.Axis.Vertical, radius * 2);
     }
 	IEnumerator FindTargetsWithDelay(float delay)
 	{
@@ -71,30 +77,34 @@ public class FieldOfView : MonoBehaviour
 	[SerializeField] Collider2D[] targetsInViewRadius;
 	void FindVisibleTargets()
 	{
-		targetsInViewRadius = Physics2D.OverlapCircleAll(transform.position, radius, targetMask);
-
-		if(targetsInViewRadius.Length > 0)
+        if (isWorking)
         {
-			Transform target = targetsInViewRadius[0].transform;
-			Vector2 directionToTarget = (target.position - transform.position).normalized;
-			if (Vector2.Angle(transform.up, directionToTarget) < viewAngle)
+			targetsInViewRadius = Physics2D.OverlapCircleAll(transform.position, radius, targetMask);
+
+			if (targetsInViewRadius.Length > 0)
 			{
-				float distanceToTarget = Vector2.Distance(transform.position, target.position);
-				
-				if (!Physics2D.Raycast(transform.position, target.position, distanceToTarget, obstacleMask))
-                {
-					CanSeelPlayer = true;
-					target.GetComponent<LootController>().StressManage(clearness);
+				Transform target = targetsInViewRadius[0].transform;
+				Vector2 directionToTarget = (target.position - transform.position).normalized;
+				if (Vector2.Angle(transform.up, directionToTarget) < viewAngle)
+				{
+					float distanceToTarget = Vector2.Distance(transform.position, target.position);
+
+					if (!Physics2D.Raycast(transform.position, target.position, distanceToTarget, obstacleMask))
+					{
+						CanSeelPlayer = true;
+						target.GetComponent<LootController>().StressManage(clearness);
+					}
+
+					else
+						CanSeelPlayer = false;
 				}
-					
-				else 
+				else if (CanSeelPlayer)
 					CanSeelPlayer = false;
 			}
-			else if (CanSeelPlayer)
+			else
 				CanSeelPlayer = false;
-        }
-		else 
-			CanSeelPlayer = false;
+		}
+		
 	}
 
 	private void OnDrawGizmos()

@@ -22302,7 +22302,6 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ResolveSceneReferenceSystem_ResolveScene
 	Hash128_t2EA8F45F10BC2DF40B0CE9AE04F222072EB1345B V_0;
 	memset((&V_0), 0, sizeof(V_0));
 	{
-		// SceneHeaderUtility.ScheduleHeaderLoadOnEntity(EntityManager, sceneEntity, scene.SceneGUID, requestSceneLoaded, default, _sceneSystem.SceneLoadDir);
 		EntityManager_t245CC8C15DD62AF5BA0B385CF94EA7CD0B3F4C91 L_0;
 		L_0 = ComponentSystemBase_get_EntityManager_mB0505034AB04061030BABADB8A1F6C3112AFEB3A(__this, NULL);
 		Entity_t56176FC78C475061A82383D9E0CEE352C6C52ABD L_1 = ___sceneEntity0;
@@ -22317,7 +22316,6 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ResolveSceneReferenceSystem_ResolveScene
 		String_t* L_8;
 		L_8 = SceneSystem_get_SceneLoadDir_mBFE007A7485E06A140F9F993D38ECF79198AD15C_inline(L_7, NULL);
 		SceneHeaderUtility_ScheduleHeaderLoadOnEntity_m85E2D2B31C9B1C9E92E56ED0C474C927A1DA9BD2(L_0, L_1, L_3, L_5, L_6, L_8, NULL);
-		// }
 		return;
 	}
 }
@@ -22336,24 +22334,18 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ResolveSceneReferenceSystem_ResolveScene
 	ResolveSceneReferenceSystem_LambdaJob_0_Job_tB3217B63EF8C3D520D4947B3B94374FB1E290020 V_1;
 	memset((&V_1), 0, sizeof(V_1));
 	{
-		// __Unity_Entities_SceneReference_RW_ComponentTypeHandle.Update(this);
 		ComponentTypeHandle_1_tC5944E483D140B7A9AF7F194BCD1578B56A7B321* L_0 = (&__this->_____Unity_Entities_SceneReference_RW_ComponentTypeHandle_6);
 		ComponentTypeHandle_1_Update_mD3C9FD597458F348FFCB257DCDB3D6143D98BBBD(L_0, __this, ComponentTypeHandle_1_Update_mD3C9FD597458F348FFCB257DCDB3D6143D98BBBD_RuntimeMethod_var);
-		// __Unity_Entities_RequestSceneLoaded_RW_ComponentTypeHandle.Update(this);
 		ComponentTypeHandle_1_tFB915DACF0F12E281856E33A8AFECAA845D72E3F* L_1 = (&__this->_____Unity_Entities_RequestSceneLoaded_RW_ComponentTypeHandle_7);
 		ComponentTypeHandle_1_Update_mAD817E48C772095E40B8CF04485D30C2509BF000(L_1, __this, ComponentTypeHandle_1_Update_mAD817E48C772095E40B8CF04485D30C2509BF000_RuntimeMethod_var);
-		// var __job = new ResolveSceneReferenceSystem_LambdaJob_0_Job{__this = this};
 		il2cpp_codegen_initobj((&V_1), sizeof(ResolveSceneReferenceSystem_LambdaJob_0_Job_tB3217B63EF8C3D520D4947B3B94374FB1E290020));
 		(&V_1)->_____this_0 = __this;
 		Il2CppCodeGenWriteBarrier((void**)(&(&V_1)->_____this_0), (void*)__this);
 		ResolveSceneReferenceSystem_LambdaJob_0_Job_tB3217B63EF8C3D520D4947B3B94374FB1E290020 L_2 = V_1;
 		V_0 = L_2;
-		// CompleteDependency();
 		SystemBase_CompleteDependency_m6A50401D4D48AA0F64ABC1F99A8ABA0F34EB7BB6(__this, NULL);
-		// __job.RunWithStructuralChange(ResolveSceneReferenceSystem_LambdaJob_0_Query);
 		EntityQuery_t23B7A11FAA475D860E94409BFD4CF7E4B337CF90 L_3 = __this->___ResolveSceneReferenceSystem_LambdaJob_0_Query_4;
 		ResolveSceneReferenceSystem_LambdaJob_0_Job_RunWithStructuralChange_m4E05EC4BC9B3718C92CA311B58B7AFB94346A299((&V_0), L_3, NULL);
-		// }
 		return;
 	}
 }
@@ -22378,7 +22370,6 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ResolveSceneReferenceSystem_ResolveScene
 	BlobAssetReference_1_tD5149596D95DFDE07586D2F21EBDCE9F21C30A24 V_5;
 	memset((&V_5), 0, sizeof(V_5));
 	{
-		// if (!requestHeader.IsCompleted)
 		RequestSceneHeader_tFB164D8BD279642D1C1FF039036393F4C8A31AC6* L_0 = ___requestHeader1;
 		bool L_1;
 		L_1 = RequestSceneHeader_get_IsCompleted_mB5F205C10D5E699F1696CC9D68A92A0621FDDE6B(L_0, NULL);
@@ -22390,7 +22381,6 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ResolveSceneReferenceSystem_ResolveScene
 		}
 	}
 	{
-		// if ((requestSceneLoaded.LoadFlags & SceneLoadFlags.BlockOnImport) == 0)
 		RequestSceneLoaded_t84D63EB24CFB758BF46A3B4DDB00140B84E2F9B4* L_3 = ___requestSceneLoaded4;
 		int32_t L_4 = L_3->___LoadFlags_0;
 		V_1 = (bool)((((int32_t)((int32_t)((int32_t)L_4&2))) == ((int32_t)0))? 1 : 0);
@@ -22401,20 +22391,17 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ResolveSceneReferenceSystem_ResolveScene
 		}
 	}
 	{
-		// return;
 		goto IL_00e3;
 	}
 
 IL_0024:
 	{
-		// requestHeader.Complete();
 		RequestSceneHeader_tFB164D8BD279642D1C1FF039036393F4C8A31AC6* L_6 = ___requestHeader1;
 		RequestSceneHeader_Complete_m315976AA40330C2F909F48461710999F832B98CA(L_6, NULL);
 	}
 
 IL_002c:
 	{
-		// using (var headerLoadResult = SceneHeaderUtility.FinishHeaderLoad(requestHeader, scene.SceneGUID, _sceneSystem.SceneLoadDir))
 		RequestSceneHeader_tFB164D8BD279642D1C1FF039036393F4C8A31AC6* L_7 = ___requestHeader1;
 		RequestSceneHeader_tFB164D8BD279642D1C1FF039036393F4C8A31AC6 L_8 = (*(RequestSceneHeader_tFB164D8BD279642D1C1FF039036393F4C8A31AC6*)L_7);
 		SceneReference_t2807450F0E3141AA80D97BE5CDC40D70965940B5* L_9 = ___scene2;
@@ -22440,7 +22427,6 @@ FINALLY_00bc:
 		try
 		{// begin try (depth: 1)
 			{
-				// if (!headerLoadResult.Success)
 				bool L_14;
 				L_14 = HeaderLoadResult_get_Success_mDB85AB68B71645BA6A6A7B805D253227AB0B3AE0((&V_2), NULL);
 				V_3 = (bool)((((int32_t)L_14) == ((int32_t)0))? 1 : 0);
@@ -22451,30 +22437,25 @@ FINALLY_00bc:
 				}
 			}
 			{
-				// requestHeader.Dispose();
 				RequestSceneHeader_tFB164D8BD279642D1C1FF039036393F4C8A31AC6* L_16 = ___requestHeader1;
 				RequestSceneHeader_Dispose_mBD6A5E9320F286C0CA0A1FFA8C656F1EDCDFBA8C(L_16, NULL);
-				// EntityManager.AddBuffer<ResolvedSectionEntity>(sceneEntity);
 				EntityManager_t245CC8C15DD62AF5BA0B385CF94EA7CD0B3F4C91 L_17;
 				L_17 = ComponentSystemBase_get_EntityManager_mB0505034AB04061030BABADB8A1F6C3112AFEB3A(__this, NULL);
 				V_4 = L_17;
 				Entity_t56176FC78C475061A82383D9E0CEE352C6C52ABD L_18 = ___sceneEntity0;
 				DynamicBuffer_1_t65C3ECDB9F8725D1D6088487339C6DAF0D8F5F3C L_19;
 				L_19 = EntityManager_AddBuffer_TisResolvedSectionEntity_tD18069CE6AD2FA61A39B747F346310DD10B77CEE_m4313C8EC08F5ABAFD3594DB204D2F18D1142B096((&V_4), L_18, EntityManager_AddBuffer_TisResolvedSectionEntity_tD18069CE6AD2FA61A39B747F346310DD10B77CEE_m4313C8EC08F5ABAFD3594DB204D2F18D1142B096_RuntimeMethod_var);
-				// EntityManager.RemoveComponent<RequestSceneHeader>(sceneEntity);
 				EntityManager_t245CC8C15DD62AF5BA0B385CF94EA7CD0B3F4C91 L_20;
 				L_20 = ComponentSystemBase_get_EntityManager_mB0505034AB04061030BABADB8A1F6C3112AFEB3A(__this, NULL);
 				V_4 = L_20;
 				Entity_t56176FC78C475061A82383D9E0CEE352C6C52ABD L_21 = ___sceneEntity0;
 				bool L_22;
 				L_22 = EntityManager_RemoveComponent_TisRequestSceneHeader_tFB164D8BD279642D1C1FF039036393F4C8A31AC6_m742E1CED0E18B6B42839D7DA10937D8496EF23B6((&V_4), L_21, EntityManager_RemoveComponent_TisRequestSceneHeader_tFB164D8BD279642D1C1FF039036393F4C8A31AC6_m742E1CED0E18B6B42839D7DA10937D8496EF23B6_RuntimeMethod_var);
-				// return;
 				goto IL_00e3;
 			}
 
 IL_0084_1:
 			{
-				// ResolveSceneSectionUtility.ResolveSceneSections(EntityManager, sceneEntity, requestSceneLoaded, ref headerLoadResult.SceneMetaData.Value, m_ResolveSceneSectionArchetypes, headerLoadResult.SectionPaths, headerLoadResult.HeaderBlobOwner);
 				EntityManager_t245CC8C15DD62AF5BA0B385CF94EA7CD0B3F4C91 L_23;
 				L_23 = ComponentSystemBase_get_EntityManager_mB0505034AB04061030BABADB8A1F6C3112AFEB3A(__this, NULL);
 				Entity_t56176FC78C475061A82383D9E0CEE352C6C52ABD L_24 = ___sceneEntity0;
@@ -22503,10 +22484,8 @@ IL_0084_1:
 
 IL_00cb:
 	{
-		// requestHeader.Dispose();
 		RequestSceneHeader_tFB164D8BD279642D1C1FF039036393F4C8A31AC6* L_36 = ___requestHeader1;
 		RequestSceneHeader_Dispose_mBD6A5E9320F286C0CA0A1FFA8C656F1EDCDFBA8C(L_36, NULL);
-		// EntityManager.RemoveComponent<RequestSceneHeader>(sceneEntity);
 		EntityManager_t245CC8C15DD62AF5BA0B385CF94EA7CD0B3F4C91 L_37;
 		L_37 = ComponentSystemBase_get_EntityManager_mB0505034AB04061030BABADB8A1F6C3112AFEB3A(__this, NULL);
 		V_4 = L_37;
@@ -22517,7 +22496,6 @@ IL_00cb:
 
 IL_00e3:
 	{
-		// }
 		return;
 	}
 }
@@ -22538,30 +22516,22 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ResolveSceneReferenceSystem_ResolveScene
 	ResolveSceneReferenceSystem_LambdaJob_1_Job_t1387848050D05200A33B9DB68DB466C23CFCC04F V_1;
 	memset((&V_1), 0, sizeof(V_1));
 	{
-		// __Unity_Scenes_RequestSceneHeader_RW_ComponentTypeHandle.Update(this);
 		ComponentTypeHandle_1_t559A7B76198A54383FF98A95188AA82936623D37* L_0 = (&__this->_____Unity_Scenes_RequestSceneHeader_RW_ComponentTypeHandle_8);
 		ComponentTypeHandle_1_Update_m505F57C1B0E18B38D313C47D1F85BAB75332C0CA(L_0, __this, ComponentTypeHandle_1_Update_m505F57C1B0E18B38D313C47D1F85BAB75332C0CA_RuntimeMethod_var);
-		// __Unity_Entities_SceneReference_RW_ComponentTypeHandle.Update(this);
 		ComponentTypeHandle_1_tC5944E483D140B7A9AF7F194BCD1578B56A7B321* L_1 = (&__this->_____Unity_Entities_SceneReference_RW_ComponentTypeHandle_6);
 		ComponentTypeHandle_1_Update_mD3C9FD597458F348FFCB257DCDB3D6143D98BBBD(L_1, __this, ComponentTypeHandle_1_Update_mD3C9FD597458F348FFCB257DCDB3D6143D98BBBD_RuntimeMethod_var);
-		// __Unity_Scenes_ResolvedSceneHash_RW_ComponentTypeHandle.Update(this);
 		ComponentTypeHandle_1_t64BFF54A9A9415372851493CED7B0A7D94F62E99* L_2 = (&__this->_____Unity_Scenes_ResolvedSceneHash_RW_ComponentTypeHandle_9);
 		ComponentTypeHandle_1_Update_m5EE766A585B328D5E5F66823E410C019778A5780(L_2, __this, ComponentTypeHandle_1_Update_m5EE766A585B328D5E5F66823E410C019778A5780_RuntimeMethod_var);
-		// __Unity_Entities_RequestSceneLoaded_RW_ComponentTypeHandle.Update(this);
 		ComponentTypeHandle_1_tFB915DACF0F12E281856E33A8AFECAA845D72E3F* L_3 = (&__this->_____Unity_Entities_RequestSceneLoaded_RW_ComponentTypeHandle_7);
 		ComponentTypeHandle_1_Update_mAD817E48C772095E40B8CF04485D30C2509BF000(L_3, __this, ComponentTypeHandle_1_Update_mAD817E48C772095E40B8CF04485D30C2509BF000_RuntimeMethod_var);
-		// var __job = new ResolveSceneReferenceSystem_LambdaJob_1_Job{__this = this};
 		il2cpp_codegen_initobj((&V_1), sizeof(ResolveSceneReferenceSystem_LambdaJob_1_Job_t1387848050D05200A33B9DB68DB466C23CFCC04F));
 		(&V_1)->_____this_0 = __this;
 		Il2CppCodeGenWriteBarrier((void**)(&(&V_1)->_____this_0), (void*)__this);
 		ResolveSceneReferenceSystem_LambdaJob_1_Job_t1387848050D05200A33B9DB68DB466C23CFCC04F L_4 = V_1;
 		V_0 = L_4;
-		// CompleteDependency();
 		SystemBase_CompleteDependency_m6A50401D4D48AA0F64ABC1F99A8ABA0F34EB7BB6(__this, NULL);
-		// __job.RunWithStructuralChange(ResolveSceneReferenceSystem_LambdaJob_1_Query);
 		EntityQuery_t23B7A11FAA475D860E94409BFD4CF7E4B337CF90 L_5 = __this->___ResolveSceneReferenceSystem_LambdaJob_1_Query_5;
 		ResolveSceneReferenceSystem_LambdaJob_1_Job_RunWithStructuralChange_mD073AF14D4F08831B8870BF4480A6B6BF7D94E91((&V_0), L_5, NULL);
-		// }
 		return;
 	}
 }
@@ -22589,9 +22559,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ResolveSceneReferenceSystem_OnCreateForC
 	}
 	EntityQueryDesc_tF763EF854EFC4D825A92A5E4DADFCF5B0750C9A1* V_0 = NULL;
 	{
-		// base.OnCreateForCompiler();
 		ComponentSystemBase_OnCreateForCompiler_mE0B70EDF4B717B5AB04C77DC20ED957C2D69D089(__this, NULL);
-		// ResolveSceneReferenceSystem_LambdaJob_0_Query = GetEntityQuery(new Unity.Entities.EntityQueryDesc{All = new Unity.Entities.ComponentType[]{Unity.Entities.ComponentType.ReadWrite<Unity.Entities.SceneReference>(), Unity.Entities.ComponentType.ReadWrite<Unity.Entities.RequestSceneLoaded>()}, Any = new Unity.Entities.ComponentType[]{}, None = new Unity.Entities.ComponentType[]{Unity.Entities.ComponentType.ReadOnly<Unity.Scenes.DisableSceneResolveAndLoad>(), Unity.Entities.ComponentType.ReadOnly<Unity.Scenes.ResolvedSectionEntity>(), Unity.Entities.ComponentType.ReadOnly<Unity.Scenes.RequestSceneHeader>()}, Options = Unity.Entities.EntityQueryOptions.Default});
 		EntityQueryDescU5BU5D_tDAC463E207ADB3A0620DEAC74FAE23AB46A1F43B* L_0 = (EntityQueryDescU5BU5D_tDAC463E207ADB3A0620DEAC74FAE23AB46A1F43B*)(EntityQueryDescU5BU5D_tDAC463E207ADB3A0620DEAC74FAE23AB46A1F43B*)SZArrayNew(EntityQueryDescU5BU5D_tDAC463E207ADB3A0620DEAC74FAE23AB46A1F43B_il2cpp_TypeInfo_var, (uint32_t)1);
 		EntityQueryDescU5BU5D_tDAC463E207ADB3A0620DEAC74FAE23AB46A1F43B* L_1 = L_0;
 		EntityQueryDesc_tF763EF854EFC4D825A92A5E4DADFCF5B0750C9A1* L_2 = (EntityQueryDesc_tF763EF854EFC4D825A92A5E4DADFCF5B0750C9A1*)il2cpp_codegen_object_new(EntityQueryDesc_tF763EF854EFC4D825A92A5E4DADFCF5B0750C9A1_il2cpp_TypeInfo_var);
@@ -22648,7 +22616,6 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ResolveSceneReferenceSystem_OnCreateForC
 		EntityQuery_t23B7A11FAA475D860E94409BFD4CF7E4B337CF90 L_21;
 		L_21 = ComponentSystemBase_GetEntityQuery_m2DDDDFD060F9D52C3FF4904D1711C5C4F662CC3B(__this, L_1, NULL);
 		__this->___ResolveSceneReferenceSystem_LambdaJob_0_Query_4 = L_21;
-		// ResolveSceneReferenceSystem_LambdaJob_1_Query = GetEntityQuery(new Unity.Entities.EntityQueryDesc{All = new Unity.Entities.ComponentType[]{Unity.Entities.ComponentType.ReadWrite<Unity.Scenes.RequestSceneHeader>(), Unity.Entities.ComponentType.ReadWrite<Unity.Entities.SceneReference>(), Unity.Entities.ComponentType.ReadWrite<Unity.Scenes.ResolvedSceneHash>(), Unity.Entities.ComponentType.ReadWrite<Unity.Entities.RequestSceneLoaded>()}, Any = new Unity.Entities.ComponentType[]{}, None = new Unity.Entities.ComponentType[]{Unity.Entities.ComponentType.ReadOnly<Unity.Scenes.DisableSceneResolveAndLoad>(), Unity.Entities.ComponentType.ReadOnly<Unity.Scenes.ResolvedSectionEntity>()}, Options = Unity.Entities.EntityQueryOptions.Default});
 		EntityQueryDescU5BU5D_tDAC463E207ADB3A0620DEAC74FAE23AB46A1F43B* L_22 = (EntityQueryDescU5BU5D_tDAC463E207ADB3A0620DEAC74FAE23AB46A1F43B*)(EntityQueryDescU5BU5D_tDAC463E207ADB3A0620DEAC74FAE23AB46A1F43B*)SZArrayNew(EntityQueryDescU5BU5D_tDAC463E207ADB3A0620DEAC74FAE23AB46A1F43B_il2cpp_TypeInfo_var, (uint32_t)1);
 		EntityQueryDescU5BU5D_tDAC463E207ADB3A0620DEAC74FAE23AB46A1F43B* L_23 = L_22;
 		EntityQueryDesc_tF763EF854EFC4D825A92A5E4DADFCF5B0750C9A1* L_24 = (EntityQueryDesc_tF763EF854EFC4D825A92A5E4DADFCF5B0750C9A1*)il2cpp_codegen_object_new(EntityQueryDesc_tF763EF854EFC4D825A92A5E4DADFCF5B0750C9A1_il2cpp_TypeInfo_var);
@@ -22710,23 +22677,18 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ResolveSceneReferenceSystem_OnCreateForC
 		EntityQuery_t23B7A11FAA475D860E94409BFD4CF7E4B337CF90 L_45;
 		L_45 = ComponentSystemBase_GetEntityQuery_m2DDDDFD060F9D52C3FF4904D1711C5C4F662CC3B(__this, L_23, NULL);
 		__this->___ResolveSceneReferenceSystem_LambdaJob_1_Query_5 = L_45;
-		// __Unity_Entities_SceneReference_RW_ComponentTypeHandle = GetComponentTypeHandle<Unity.Entities.SceneReference>(false);
 		ComponentTypeHandle_1_tC5944E483D140B7A9AF7F194BCD1578B56A7B321 L_46;
 		L_46 = ComponentSystemBase_GetComponentTypeHandle_TisSceneReference_t2807450F0E3141AA80D97BE5CDC40D70965940B5_m14C1BB8E79286845A67A7C43FE796D911BA4DDB5(__this, (bool)0, ComponentSystemBase_GetComponentTypeHandle_TisSceneReference_t2807450F0E3141AA80D97BE5CDC40D70965940B5_m14C1BB8E79286845A67A7C43FE796D911BA4DDB5_RuntimeMethod_var);
 		__this->_____Unity_Entities_SceneReference_RW_ComponentTypeHandle_6 = L_46;
-		// __Unity_Entities_RequestSceneLoaded_RW_ComponentTypeHandle = GetComponentTypeHandle<Unity.Entities.RequestSceneLoaded>(false);
 		ComponentTypeHandle_1_tFB915DACF0F12E281856E33A8AFECAA845D72E3F L_47;
 		L_47 = ComponentSystemBase_GetComponentTypeHandle_TisRequestSceneLoaded_t84D63EB24CFB758BF46A3B4DDB00140B84E2F9B4_mF5BA5F24D07D92DDFDB45BD3B75EF897CCCF6D14(__this, (bool)0, ComponentSystemBase_GetComponentTypeHandle_TisRequestSceneLoaded_t84D63EB24CFB758BF46A3B4DDB00140B84E2F9B4_mF5BA5F24D07D92DDFDB45BD3B75EF897CCCF6D14_RuntimeMethod_var);
 		__this->_____Unity_Entities_RequestSceneLoaded_RW_ComponentTypeHandle_7 = L_47;
-		// __Unity_Scenes_RequestSceneHeader_RW_ComponentTypeHandle = GetComponentTypeHandle<Unity.Scenes.RequestSceneHeader>(false);
 		ComponentTypeHandle_1_t559A7B76198A54383FF98A95188AA82936623D37 L_48;
 		L_48 = ComponentSystemBase_GetComponentTypeHandle_TisRequestSceneHeader_tFB164D8BD279642D1C1FF039036393F4C8A31AC6_m26728E71DFD39A021820E698A9F6B9A2A581985F(__this, (bool)0, ComponentSystemBase_GetComponentTypeHandle_TisRequestSceneHeader_tFB164D8BD279642D1C1FF039036393F4C8A31AC6_m26728E71DFD39A021820E698A9F6B9A2A581985F_RuntimeMethod_var);
 		__this->_____Unity_Scenes_RequestSceneHeader_RW_ComponentTypeHandle_8 = L_48;
-		// __Unity_Scenes_ResolvedSceneHash_RW_ComponentTypeHandle = GetComponentTypeHandle<Unity.Scenes.ResolvedSceneHash>(false);
 		ComponentTypeHandle_1_t64BFF54A9A9415372851493CED7B0A7D94F62E99 L_49;
 		L_49 = ComponentSystemBase_GetComponentTypeHandle_TisResolvedSceneHash_t5CA34693F082AFC6F60F638176577BDA620C9B20_mA81EA1AD8D154523F530AC3516EC7B2B010CBDA6(__this, (bool)0, ComponentSystemBase_GetComponentTypeHandle_TisResolvedSceneHash_t5CA34693F082AFC6F60F638176577BDA620C9B20_mA81EA1AD8D154523F530AC3516EC7B2B010CBDA6_RuntimeMethod_var);
 		__this->_____Unity_Scenes_ResolvedSceneHash_RW_ComponentTypeHandle_9 = L_49;
-		// }
 		return;
 	}
 }
@@ -23004,7 +22966,6 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ResolveSceneReferenceSystem_LambdaJob_0_
 	memset((&V_12), 0, sizeof(V_12));
 	bool V_13 = false;
 	{
-		// var mask = __this.EntityManager.GetEntityQueryMask(query);
 		ResolveSceneReferenceSystem_tD7A7DFC5A3DE575749C4E9126160223987A5F94C* L_0 = __this->_____this_0;
 		NullCheck(L_0);
 		EntityManager_t245CC8C15DD62AF5BA0B385CF94EA7CD0B3F4C91 L_1;
@@ -23014,14 +22975,11 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ResolveSceneReferenceSystem_LambdaJob_0_
 		EntityQueryMask_tA3298547B0A6701B30F8E223B5346B40E68DDEEF L_3;
 		L_3 = EntityManager_GetEntityQueryMask_m8684727194E90667F6E75E18BE36250E06257861((&V_4), L_2, NULL);
 		V_0 = L_3;
-		// Unity.Entities.InternalCompilerInterface.UnsafeCreateGatherEntitiesResult(ref query, out var gatherEntitiesResult);
 		InternalCompilerInterface_UnsafeCreateGatherEntitiesResult_mACE3055D9D7B519119682165555C728C812023AA((&___query0), (&V_1), NULL);
-		// var sceneTypeIndex = Unity.Entities.TypeManager.GetTypeIndex<Unity.Entities.SceneReference>();
 		il2cpp_codegen_runtime_class_init_inline(TypeManager_t1CD355B61F0A783824533CABA3B27CAD1CE5C725_il2cpp_TypeInfo_var);
 		int32_t L_4;
 		L_4 = TypeManager_GetTypeIndex_TisSceneReference_t2807450F0E3141AA80D97BE5CDC40D70965940B5_m16E9D217FF7DEF58685CD941493F0DD6FF062841(TypeManager_GetTypeIndex_TisSceneReference_t2807450F0E3141AA80D97BE5CDC40D70965940B5_m16E9D217FF7DEF58685CD941493F0DD6FF062841_RuntimeMethod_var);
 		V_2 = L_4;
-		// var requestSceneLoadedTypeIndex = Unity.Entities.TypeManager.GetTypeIndex<Unity.Entities.RequestSceneLoaded>();
 		int32_t L_5;
 		L_5 = TypeManager_GetTypeIndex_TisRequestSceneLoaded_t84D63EB24CFB758BF46A3B4DDB00140B84E2F9B4_m7557014AB2CE33A55D9C9FD5492E7F963150AB51(TypeManager_GetTypeIndex_TisRequestSceneLoaded_t84D63EB24CFB758BF46A3B4DDB00140B84E2F9B4_m7557014AB2CE33A55D9C9FD5492E7F963150AB51_RuntimeMethod_var);
 		V_3 = L_5;
@@ -23032,7 +22990,6 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ResolveSceneReferenceSystem_LambdaJob_0_
 
 FINALLY_00e7:
 			{// begin finally (depth: 1)
-				// Unity.Entities.InternalCompilerInterface.UnsafeReleaseGatheredEntities(ref query, ref gatherEntitiesResult);
 				InternalCompilerInterface_UnsafeReleaseGatheredEntities_m3FECB40955DAD1CA6FC9DE899B2C409DEA594B4F((&___query0), (&V_1), NULL);
 				return;
 			}// end finally (depth: 1)
@@ -23040,23 +22997,19 @@ FINALLY_00e7:
 		try
 		{// begin try (depth: 1)
 			{
-				// int entityCount = gatherEntitiesResult.EntityCount;
 				GatherEntitiesResult_t6B5ADB8C14276BC07FC1467699EDC78E6F372A71 L_6 = V_1;
 				int32_t L_7 = L_6.___EntityCount_1;
 				V_5 = L_7;
-				// for (int entityIndex = 0; entityIndex != entityCount; entityIndex++)
 				V_6 = 0;
 				goto IL_00d2_1;
 			}
 
 IL_003e_1:
 			{
-				// var entity = Unity.Entities.InternalCompilerInterface.UnsafeGetEntityFromGatheredEntities(ref gatherEntitiesResult, entityIndex);
 				int32_t L_8 = V_6;
 				Entity_t56176FC78C475061A82383D9E0CEE352C6C52ABD L_9;
 				L_9 = InternalCompilerInterface_UnsafeGetEntityFromGatheredEntities_mBD3BFD33B03365AFB0100D62B6724A5CB2018C07((&V_1), L_8, NULL);
 				V_7 = L_9;
-				// if (mask.Matches(entity))
 				Entity_t56176FC78C475061A82383D9E0CEE352C6C52ABD L_10 = V_7;
 				bool L_11;
 				L_11 = EntityQueryMask_Matches_mEBA825285137E95230824E1B25EED6F7FDAFA0B7((&V_0), L_10, NULL);
@@ -23068,7 +23021,6 @@ IL_003e_1:
 				}
 			}
 			{
-				// var scene = Unity.Entities.InternalCompilerInterface.GetComponentData<Unity.Entities.SceneReference>(__this.EntityManager, entity, sceneTypeIndex, out var originalscene);
 				ResolveSceneReferenceSystem_tD7A7DFC5A3DE575749C4E9126160223987A5F94C* L_13 = __this->_____this_0;
 				NullCheck(L_13);
 				EntityManager_t245CC8C15DD62AF5BA0B385CF94EA7CD0B3F4C91 L_14;
@@ -23078,7 +23030,6 @@ IL_003e_1:
 				SceneReference_t2807450F0E3141AA80D97BE5CDC40D70965940B5 L_17;
 				L_17 = InternalCompilerInterface_GetComponentData_TisSceneReference_t2807450F0E3141AA80D97BE5CDC40D70965940B5_mEA90B98C3C9172F431C49E89359A5B822E3734D4(L_14, L_15, L_16, (&V_10), InternalCompilerInterface_GetComponentData_TisSceneReference_t2807450F0E3141AA80D97BE5CDC40D70965940B5_mEA90B98C3C9172F431C49E89359A5B822E3734D4_RuntimeMethod_var);
 				V_9 = L_17;
-				// var requestSceneLoaded = Unity.Entities.InternalCompilerInterface.GetComponentData<Unity.Entities.RequestSceneLoaded>(__this.EntityManager, entity, requestSceneLoadedTypeIndex, out var originalrequestSceneLoaded);
 				ResolveSceneReferenceSystem_tD7A7DFC5A3DE575749C4E9126160223987A5F94C* L_18 = __this->_____this_0;
 				NullCheck(L_18);
 				EntityManager_t245CC8C15DD62AF5BA0B385CF94EA7CD0B3F4C91 L_19;
@@ -23088,12 +23039,10 @@ IL_003e_1:
 				RequestSceneLoaded_t84D63EB24CFB758BF46A3B4DDB00140B84E2F9B4 L_22;
 				L_22 = InternalCompilerInterface_GetComponentData_TisRequestSceneLoaded_t84D63EB24CFB758BF46A3B4DDB00140B84E2F9B4_mD7E3EB0CFF7E0C0632332661B31A746EB4709C2F(L_19, L_20, L_21, (&V_12), InternalCompilerInterface_GetComponentData_TisRequestSceneLoaded_t84D63EB24CFB758BF46A3B4DDB00140B84E2F9B4_mD7E3EB0CFF7E0C0632332661B31A746EB4709C2F_RuntimeMethod_var);
 				V_11 = L_22;
-				// __this.ResolveSceneReferenceSystem_LambdaJob_0_LambdaBody(entity, ref scene, ref requestSceneLoaded);
 				ResolveSceneReferenceSystem_tD7A7DFC5A3DE575749C4E9126160223987A5F94C* L_23 = __this->_____this_0;
 				Entity_t56176FC78C475061A82383D9E0CEE352C6C52ABD L_24 = V_7;
 				NullCheck(L_23);
 				ResolveSceneReferenceSystem_ResolveSceneReferenceSystem_LambdaJob_0_LambdaBody_m5621521E980165B5970CE5CC9F44BB92B707A8E9(L_23, L_24, (&V_9), (&V_11), NULL);
-				// Unity.Entities.InternalCompilerInterface.WriteComponentData<Unity.Entities.SceneReference>(__this.EntityManager, entity, sceneTypeIndex, ref scene, ref originalscene);
 				ResolveSceneReferenceSystem_tD7A7DFC5A3DE575749C4E9126160223987A5F94C* L_25 = __this->_____this_0;
 				NullCheck(L_25);
 				EntityManager_t245CC8C15DD62AF5BA0B385CF94EA7CD0B3F4C91 L_26;
@@ -23101,7 +23050,6 @@ IL_003e_1:
 				Entity_t56176FC78C475061A82383D9E0CEE352C6C52ABD L_27 = V_7;
 				int32_t L_28 = V_2;
 				InternalCompilerInterface_WriteComponentData_TisSceneReference_t2807450F0E3141AA80D97BE5CDC40D70965940B5_mAE3B6CE143C582FF865681FCB67D08E1052D26E4(L_26, L_27, L_28, (&V_9), (&V_10), InternalCompilerInterface_WriteComponentData_TisSceneReference_t2807450F0E3141AA80D97BE5CDC40D70965940B5_mAE3B6CE143C582FF865681FCB67D08E1052D26E4_RuntimeMethod_var);
-				// Unity.Entities.InternalCompilerInterface.WriteComponentData<Unity.Entities.RequestSceneLoaded>(__this.EntityManager, entity, requestSceneLoadedTypeIndex, ref requestSceneLoaded, ref originalrequestSceneLoaded);
 				ResolveSceneReferenceSystem_tD7A7DFC5A3DE575749C4E9126160223987A5F94C* L_29 = __this->_____this_0;
 				NullCheck(L_29);
 				EntityManager_t245CC8C15DD62AF5BA0B385CF94EA7CD0B3F4C91 L_30;
@@ -23113,14 +23061,12 @@ IL_003e_1:
 
 IL_00cb_1:
 			{
-				// for (int entityIndex = 0; entityIndex != entityCount; entityIndex++)
 				int32_t L_33 = V_6;
 				V_6 = ((int32_t)il2cpp_codegen_add(L_33, 1));
 			}
 
 IL_00d2_1:
 			{
-				// for (int entityIndex = 0; entityIndex != entityCount; entityIndex++)
 				int32_t L_34 = V_6;
 				int32_t L_35 = V_5;
 				V_13 = (bool)((((int32_t)((((int32_t)L_34) == ((int32_t)L_35))? 1 : 0)) == ((int32_t)0))? 1 : 0);
@@ -23142,7 +23088,6 @@ IL_00d2_1:
 
 IL_00f4:
 	{
-		// }
 		return;
 	}
 }
@@ -23245,7 +23190,6 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ResolveSceneReferenceSystem_LambdaJob_1_
 	memset((&V_18), 0, sizeof(V_18));
 	bool V_19 = false;
 	{
-		// var mask = __this.EntityManager.GetEntityQueryMask(query);
 		ResolveSceneReferenceSystem_tD7A7DFC5A3DE575749C4E9126160223987A5F94C* L_0 = __this->_____this_0;
 		NullCheck(L_0);
 		EntityManager_t245CC8C15DD62AF5BA0B385CF94EA7CD0B3F4C91 L_1;
@@ -23255,22 +23199,17 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ResolveSceneReferenceSystem_LambdaJob_1_
 		EntityQueryMask_tA3298547B0A6701B30F8E223B5346B40E68DDEEF L_3;
 		L_3 = EntityManager_GetEntityQueryMask_m8684727194E90667F6E75E18BE36250E06257861((&V_6), L_2, NULL);
 		V_0 = L_3;
-		// Unity.Entities.InternalCompilerInterface.UnsafeCreateGatherEntitiesResult(ref query, out var gatherEntitiesResult);
 		InternalCompilerInterface_UnsafeCreateGatherEntitiesResult_mACE3055D9D7B519119682165555C728C812023AA((&___query0), (&V_1), NULL);
-		// var requestHeaderTypeIndex = Unity.Entities.TypeManager.GetTypeIndex<Unity.Scenes.RequestSceneHeader>();
 		il2cpp_codegen_runtime_class_init_inline(TypeManager_t1CD355B61F0A783824533CABA3B27CAD1CE5C725_il2cpp_TypeInfo_var);
 		int32_t L_4;
 		L_4 = TypeManager_GetTypeIndex_TisRequestSceneHeader_tFB164D8BD279642D1C1FF039036393F4C8A31AC6_m4B1E0E227D81F7208B2AE8A218A0317D5BA283C9(TypeManager_GetTypeIndex_TisRequestSceneHeader_tFB164D8BD279642D1C1FF039036393F4C8A31AC6_m4B1E0E227D81F7208B2AE8A218A0317D5BA283C9_RuntimeMethod_var);
 		V_2 = L_4;
-		// var sceneTypeIndex = Unity.Entities.TypeManager.GetTypeIndex<Unity.Entities.SceneReference>();
 		int32_t L_5;
 		L_5 = TypeManager_GetTypeIndex_TisSceneReference_t2807450F0E3141AA80D97BE5CDC40D70965940B5_m16E9D217FF7DEF58685CD941493F0DD6FF062841(TypeManager_GetTypeIndex_TisSceneReference_t2807450F0E3141AA80D97BE5CDC40D70965940B5_m16E9D217FF7DEF58685CD941493F0DD6FF062841_RuntimeMethod_var);
 		V_3 = L_5;
-		// var resolvedSceneHashTypeIndex = Unity.Entities.TypeManager.GetTypeIndex<Unity.Scenes.ResolvedSceneHash>();
 		int32_t L_6;
 		L_6 = TypeManager_GetTypeIndex_TisResolvedSceneHash_t5CA34693F082AFC6F60F638176577BDA620C9B20_m936F5E516B9B025AF22F250A513842B0298BD09A(TypeManager_GetTypeIndex_TisResolvedSceneHash_t5CA34693F082AFC6F60F638176577BDA620C9B20_m936F5E516B9B025AF22F250A513842B0298BD09A_RuntimeMethod_var);
 		V_4 = L_6;
-		// var requestSceneLoadedTypeIndex = Unity.Entities.TypeManager.GetTypeIndex<Unity.Entities.RequestSceneLoaded>();
 		int32_t L_7;
 		L_7 = TypeManager_GetTypeIndex_TisRequestSceneLoaded_t84D63EB24CFB758BF46A3B4DDB00140B84E2F9B4_m7557014AB2CE33A55D9C9FD5492E7F963150AB51(TypeManager_GetTypeIndex_TisRequestSceneLoaded_t84D63EB24CFB758BF46A3B4DDB00140B84E2F9B4_m7557014AB2CE33A55D9C9FD5492E7F963150AB51_RuntimeMethod_var);
 		V_5 = L_7;
@@ -23281,7 +23220,6 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ResolveSceneReferenceSystem_LambdaJob_1_
 
 FINALLY_015e:
 			{// begin finally (depth: 1)
-				// Unity.Entities.InternalCompilerInterface.UnsafeReleaseGatheredEntities(ref query, ref gatherEntitiesResult);
 				InternalCompilerInterface_UnsafeReleaseGatheredEntities_m3FECB40955DAD1CA6FC9DE899B2C409DEA594B4F((&___query0), (&V_1), NULL);
 				return;
 			}// end finally (depth: 1)
@@ -23289,23 +23227,19 @@ FINALLY_015e:
 		try
 		{// begin try (depth: 1)
 			{
-				// int entityCount = gatherEntitiesResult.EntityCount;
 				GatherEntitiesResult_t6B5ADB8C14276BC07FC1467699EDC78E6F372A71 L_8 = V_1;
 				int32_t L_9 = L_8.___EntityCount_1;
 				V_7 = L_9;
-				// for (int entityIndex = 0; entityIndex != entityCount; entityIndex++)
 				V_8 = 0;
 				goto IL_0149_1;
 			}
 
 IL_004c_1:
 			{
-				// var entity = Unity.Entities.InternalCompilerInterface.UnsafeGetEntityFromGatheredEntities(ref gatherEntitiesResult, entityIndex);
 				int32_t L_10 = V_8;
 				Entity_t56176FC78C475061A82383D9E0CEE352C6C52ABD L_11;
 				L_11 = InternalCompilerInterface_UnsafeGetEntityFromGatheredEntities_mBD3BFD33B03365AFB0100D62B6724A5CB2018C07((&V_1), L_10, NULL);
 				V_9 = L_11;
-				// if (mask.Matches(entity))
 				Entity_t56176FC78C475061A82383D9E0CEE352C6C52ABD L_12 = V_9;
 				bool L_13;
 				L_13 = EntityQueryMask_Matches_mEBA825285137E95230824E1B25EED6F7FDAFA0B7((&V_0), L_12, NULL);
@@ -23317,7 +23251,6 @@ IL_004c_1:
 				}
 			}
 			{
-				// var requestHeader = Unity.Entities.InternalCompilerInterface.GetComponentData<Unity.Scenes.RequestSceneHeader>(__this.EntityManager, entity, requestHeaderTypeIndex, out var originalrequestHeader);
 				ResolveSceneReferenceSystem_tD7A7DFC5A3DE575749C4E9126160223987A5F94C* L_15 = __this->_____this_0;
 				NullCheck(L_15);
 				EntityManager_t245CC8C15DD62AF5BA0B385CF94EA7CD0B3F4C91 L_16;
@@ -23327,7 +23260,6 @@ IL_004c_1:
 				RequestSceneHeader_tFB164D8BD279642D1C1FF039036393F4C8A31AC6 L_19;
 				L_19 = InternalCompilerInterface_GetComponentData_TisRequestSceneHeader_tFB164D8BD279642D1C1FF039036393F4C8A31AC6_m89A4A5E1D9503846D9B723948EC0184863721393(L_16, L_17, L_18, (&V_12), InternalCompilerInterface_GetComponentData_TisRequestSceneHeader_tFB164D8BD279642D1C1FF039036393F4C8A31AC6_m89A4A5E1D9503846D9B723948EC0184863721393_RuntimeMethod_var);
 				V_11 = L_19;
-				// var scene = Unity.Entities.InternalCompilerInterface.GetComponentData<Unity.Entities.SceneReference>(__this.EntityManager, entity, sceneTypeIndex, out var originalscene);
 				ResolveSceneReferenceSystem_tD7A7DFC5A3DE575749C4E9126160223987A5F94C* L_20 = __this->_____this_0;
 				NullCheck(L_20);
 				EntityManager_t245CC8C15DD62AF5BA0B385CF94EA7CD0B3F4C91 L_21;
@@ -23337,7 +23269,6 @@ IL_004c_1:
 				SceneReference_t2807450F0E3141AA80D97BE5CDC40D70965940B5 L_24;
 				L_24 = InternalCompilerInterface_GetComponentData_TisSceneReference_t2807450F0E3141AA80D97BE5CDC40D70965940B5_mEA90B98C3C9172F431C49E89359A5B822E3734D4(L_21, L_22, L_23, (&V_14), InternalCompilerInterface_GetComponentData_TisSceneReference_t2807450F0E3141AA80D97BE5CDC40D70965940B5_mEA90B98C3C9172F431C49E89359A5B822E3734D4_RuntimeMethod_var);
 				V_13 = L_24;
-				// var resolvedSceneHash = Unity.Entities.InternalCompilerInterface.GetComponentData<Unity.Scenes.ResolvedSceneHash>(__this.EntityManager, entity, resolvedSceneHashTypeIndex, out var originalresolvedSceneHash);
 				ResolveSceneReferenceSystem_tD7A7DFC5A3DE575749C4E9126160223987A5F94C* L_25 = __this->_____this_0;
 				NullCheck(L_25);
 				EntityManager_t245CC8C15DD62AF5BA0B385CF94EA7CD0B3F4C91 L_26;
@@ -23347,7 +23278,6 @@ IL_004c_1:
 				ResolvedSceneHash_t5CA34693F082AFC6F60F638176577BDA620C9B20 L_29;
 				L_29 = InternalCompilerInterface_GetComponentData_TisResolvedSceneHash_t5CA34693F082AFC6F60F638176577BDA620C9B20_mC744B66C308E3624EAD9683732FB693780E2ED00(L_26, L_27, L_28, (&V_16), InternalCompilerInterface_GetComponentData_TisResolvedSceneHash_t5CA34693F082AFC6F60F638176577BDA620C9B20_mC744B66C308E3624EAD9683732FB693780E2ED00_RuntimeMethod_var);
 				V_15 = L_29;
-				// var requestSceneLoaded = Unity.Entities.InternalCompilerInterface.GetComponentData<Unity.Entities.RequestSceneLoaded>(__this.EntityManager, entity, requestSceneLoadedTypeIndex, out var originalrequestSceneLoaded);
 				ResolveSceneReferenceSystem_tD7A7DFC5A3DE575749C4E9126160223987A5F94C* L_30 = __this->_____this_0;
 				NullCheck(L_30);
 				EntityManager_t245CC8C15DD62AF5BA0B385CF94EA7CD0B3F4C91 L_31;
@@ -23357,12 +23287,10 @@ IL_004c_1:
 				RequestSceneLoaded_t84D63EB24CFB758BF46A3B4DDB00140B84E2F9B4 L_34;
 				L_34 = InternalCompilerInterface_GetComponentData_TisRequestSceneLoaded_t84D63EB24CFB758BF46A3B4DDB00140B84E2F9B4_mD7E3EB0CFF7E0C0632332661B31A746EB4709C2F(L_31, L_32, L_33, (&V_18), InternalCompilerInterface_GetComponentData_TisRequestSceneLoaded_t84D63EB24CFB758BF46A3B4DDB00140B84E2F9B4_mD7E3EB0CFF7E0C0632332661B31A746EB4709C2F_RuntimeMethod_var);
 				V_17 = L_34;
-				// __this.ResolveSceneReferenceSystem_LambdaJob_1_LambdaBody(entity, ref requestHeader, ref scene, ref resolvedSceneHash, ref requestSceneLoaded);
 				ResolveSceneReferenceSystem_tD7A7DFC5A3DE575749C4E9126160223987A5F94C* L_35 = __this->_____this_0;
 				Entity_t56176FC78C475061A82383D9E0CEE352C6C52ABD L_36 = V_9;
 				NullCheck(L_35);
 				ResolveSceneReferenceSystem_ResolveSceneReferenceSystem_LambdaJob_1_LambdaBody_m5239F5A79EE387A5D5162E225126F085DCC48E5D(L_35, L_36, (&V_11), (&V_13), (&V_15), (&V_17), NULL);
-				// Unity.Entities.InternalCompilerInterface.WriteComponentData<Unity.Scenes.RequestSceneHeader>(__this.EntityManager, entity, requestHeaderTypeIndex, ref requestHeader, ref originalrequestHeader);
 				ResolveSceneReferenceSystem_tD7A7DFC5A3DE575749C4E9126160223987A5F94C* L_37 = __this->_____this_0;
 				NullCheck(L_37);
 				EntityManager_t245CC8C15DD62AF5BA0B385CF94EA7CD0B3F4C91 L_38;
@@ -23370,7 +23298,6 @@ IL_004c_1:
 				Entity_t56176FC78C475061A82383D9E0CEE352C6C52ABD L_39 = V_9;
 				int32_t L_40 = V_2;
 				InternalCompilerInterface_WriteComponentData_TisRequestSceneHeader_tFB164D8BD279642D1C1FF039036393F4C8A31AC6_mC14593701F9043768CDCD11A38A78017F7BD4D79(L_38, L_39, L_40, (&V_11), (&V_12), InternalCompilerInterface_WriteComponentData_TisRequestSceneHeader_tFB164D8BD279642D1C1FF039036393F4C8A31AC6_mC14593701F9043768CDCD11A38A78017F7BD4D79_RuntimeMethod_var);
-				// Unity.Entities.InternalCompilerInterface.WriteComponentData<Unity.Entities.SceneReference>(__this.EntityManager, entity, sceneTypeIndex, ref scene, ref originalscene);
 				ResolveSceneReferenceSystem_tD7A7DFC5A3DE575749C4E9126160223987A5F94C* L_41 = __this->_____this_0;
 				NullCheck(L_41);
 				EntityManager_t245CC8C15DD62AF5BA0B385CF94EA7CD0B3F4C91 L_42;
@@ -23378,7 +23305,6 @@ IL_004c_1:
 				Entity_t56176FC78C475061A82383D9E0CEE352C6C52ABD L_43 = V_9;
 				int32_t L_44 = V_3;
 				InternalCompilerInterface_WriteComponentData_TisSceneReference_t2807450F0E3141AA80D97BE5CDC40D70965940B5_mAE3B6CE143C582FF865681FCB67D08E1052D26E4(L_42, L_43, L_44, (&V_13), (&V_14), InternalCompilerInterface_WriteComponentData_TisSceneReference_t2807450F0E3141AA80D97BE5CDC40D70965940B5_mAE3B6CE143C582FF865681FCB67D08E1052D26E4_RuntimeMethod_var);
-				// Unity.Entities.InternalCompilerInterface.WriteComponentData<Unity.Scenes.ResolvedSceneHash>(__this.EntityManager, entity, resolvedSceneHashTypeIndex, ref resolvedSceneHash, ref originalresolvedSceneHash);
 				ResolveSceneReferenceSystem_tD7A7DFC5A3DE575749C4E9126160223987A5F94C* L_45 = __this->_____this_0;
 				NullCheck(L_45);
 				EntityManager_t245CC8C15DD62AF5BA0B385CF94EA7CD0B3F4C91 L_46;
@@ -23386,7 +23312,6 @@ IL_004c_1:
 				Entity_t56176FC78C475061A82383D9E0CEE352C6C52ABD L_47 = V_9;
 				int32_t L_48 = V_4;
 				InternalCompilerInterface_WriteComponentData_TisResolvedSceneHash_t5CA34693F082AFC6F60F638176577BDA620C9B20_m7AA973A37E51897AE13D0491CD149EA3EF69D3AD(L_46, L_47, L_48, (&V_15), (&V_16), InternalCompilerInterface_WriteComponentData_TisResolvedSceneHash_t5CA34693F082AFC6F60F638176577BDA620C9B20_m7AA973A37E51897AE13D0491CD149EA3EF69D3AD_RuntimeMethod_var);
-				// Unity.Entities.InternalCompilerInterface.WriteComponentData<Unity.Entities.RequestSceneLoaded>(__this.EntityManager, entity, requestSceneLoadedTypeIndex, ref requestSceneLoaded, ref originalrequestSceneLoaded);
 				ResolveSceneReferenceSystem_tD7A7DFC5A3DE575749C4E9126160223987A5F94C* L_49 = __this->_____this_0;
 				NullCheck(L_49);
 				EntityManager_t245CC8C15DD62AF5BA0B385CF94EA7CD0B3F4C91 L_50;
@@ -23398,14 +23323,12 @@ IL_004c_1:
 
 IL_0142_1:
 			{
-				// for (int entityIndex = 0; entityIndex != entityCount; entityIndex++)
 				int32_t L_53 = V_8;
 				V_8 = ((int32_t)il2cpp_codegen_add(L_53, 1));
 			}
 
 IL_0149_1:
 			{
-				// for (int entityIndex = 0; entityIndex != entityCount; entityIndex++)
 				int32_t L_54 = V_8;
 				int32_t L_55 = V_7;
 				V_19 = (bool)((((int32_t)((((int32_t)L_54) == ((int32_t)L_55))? 1 : 0)) == ((int32_t)0))? 1 : 0);
@@ -23427,7 +23350,6 @@ IL_0149_1:
 
 IL_016b:
 	{
-		// }
 		return;
 	}
 }
@@ -30256,10 +30178,8 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SceneSectionStreamingSystem_SceneSection
 	memset((&V_2), 0, sizeof(V_2));
 	JobEntityBatchRunWithoutJobSystemDelegate_t7772B36B6B2DB9B6493E0C366BE1D0109AF5DC27* G_B3_0 = NULL;
 	{
-		// __Unity_Scenes_ExternalEntityRefInfo_RW_ComponentTypeHandle.Update(this);
 		ComponentTypeHandle_1_t777C4C85A5681E22E4A57452620B33EE622FD0D4* L_0 = (&__this->_____Unity_Scenes_ExternalEntityRefInfo_RW_ComponentTypeHandle_16);
 		ComponentTypeHandle_1_Update_mED5113CCAB942CE3240E49BD2798D55E988258F8(L_0, __this, ComponentTypeHandle_1_Update_mED5113CCAB942CE3240E49BD2798D55E988258F8_RuntimeMethod_var);
-		// var __job = new SceneSectionStreamingSystem_LambdaJob_0_Job{__worldSequenceNumber = this.World.SequenceNumber, __executingSystem = this.SystemHandleUntyped, sceneEntity = sceneEntity, __sceneRefTypeHandle = __Unity_Scenes_ExternalEntityRefInfo_RW_ComponentTypeHandle};
 		il2cpp_codegen_initobj((&V_2), sizeof(SceneSectionStreamingSystem_LambdaJob_0_Job_tF63EF98C34C3AAA13321DFF3E526B08AD1231116));
 		World_t55FCE40A4C47400A27AE7BF5A0FED66B34C8726A* L_1;
 		L_1 = ComponentSystemBase_get_World_mCA361EABE4397A5D3573AC569E53A2BF80AE6CDD(__this, NULL);
@@ -30277,13 +30197,10 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SceneSectionStreamingSystem_SceneSection
 		(&V_2)->_____sceneRefTypeHandle_5 = L_6;
 		SceneSectionStreamingSystem_LambdaJob_0_Job_tF63EF98C34C3AAA13321DFF3E526B08AD1231116 L_7 = V_2;
 		V_0 = L_7;
-		// SceneSectionStreamingSystem_LambdaJob_0_Query.SetSharedComponentFilter(sharedComponentFilter);
 		EntityQuery_t23B7A11FAA475D860E94409BFD4CF7E4B337CF90* L_8 = (&__this->___SceneSectionStreamingSystem_LambdaJob_0_Query_15);
 		SceneTag_tB221EEA403DB2442BE5A335F4D6CF932E44A6265 L_9 = ___sharedComponentFilter1;
 		EntityQuery_SetSharedComponentFilter_TisSceneTag_tB221EEA403DB2442BE5A335F4D6CF932E44A6265_mFB58DA18270B6EDFE6AF9003FF2AC03ED848F819(L_8, L_9, EntityQuery_SetSharedComponentFilter_TisSceneTag_tB221EEA403DB2442BE5A335F4D6CF932E44A6265_mFB58DA18270B6EDFE6AF9003FF2AC03ED848F819_RuntimeMethod_var);
-		// CompleteDependency();
 		SystemBase_CompleteDependency_m6A50401D4D48AA0F64ABC1F99A8ABA0F34EB7BB6(__this, NULL);
-		// var __functionPointer = Unity.Jobs.LowLevel.Unsafe.JobsUtility.JobCompilerEnabled ? SceneSectionStreamingSystem_LambdaJob_0_Job.FunctionPtrFieldBurst : SceneSectionStreamingSystem_LambdaJob_0_Job.FunctionPtrFieldNoBurst;
 		bool L_10;
 		L_10 = JobsUtility_get_JobCompilerEnabled_m7E1FB99677AD373C40882D407D9E7C4E079A51CA(NULL);
 		if (L_10)
@@ -30306,16 +30223,13 @@ IL_0073:
 IL_0078:
 	{
 		V_1 = G_B3_0;
-		// Unity.Entities.InternalCompilerInterface.UnsafeRunJobEntityBatch(ref __job, SceneSectionStreamingSystem_LambdaJob_0_Query, __functionPointer);
 		EntityQuery_t23B7A11FAA475D860E94409BFD4CF7E4B337CF90 L_13 = __this->___SceneSectionStreamingSystem_LambdaJob_0_Query_15;
 		JobEntityBatchRunWithoutJobSystemDelegate_t7772B36B6B2DB9B6493E0C366BE1D0109AF5DC27* L_14 = V_1;
 		InternalCompilerInterface_UnsafeRunJobEntityBatch_TisSceneSectionStreamingSystem_LambdaJob_0_Job_tF63EF98C34C3AAA13321DFF3E526B08AD1231116_m2D5C5FEB795A48F1C9AAEE9EE84717B756B780C4((&V_0), L_13, L_14, InternalCompilerInterface_UnsafeRunJobEntityBatch_TisSceneSectionStreamingSystem_LambdaJob_0_Job_tF63EF98C34C3AAA13321DFF3E526B08AD1231116_m2D5C5FEB795A48F1C9AAEE9EE84717B756B780C4_RuntimeMethod_var);
-		// sceneEntity = __job.sceneEntity;
 		Entity_t56176FC78C475061A82383D9E0CEE352C6C52ABD* L_15 = ___sceneEntity0;
 		SceneSectionStreamingSystem_LambdaJob_0_Job_tF63EF98C34C3AAA13321DFF3E526B08AD1231116 L_16 = V_0;
 		Entity_t56176FC78C475061A82383D9E0CEE352C6C52ABD L_17 = L_16.___sceneEntity_4;
 		*(Entity_t56176FC78C475061A82383D9E0CEE352C6C52ABD*)L_15 = L_17;
-		// }
 		return;
 	}
 }
@@ -30338,9 +30252,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SceneSectionStreamingSystem_OnCreateForC
 	}
 	EntityQueryDesc_tF763EF854EFC4D825A92A5E4DADFCF5B0750C9A1* V_0 = NULL;
 	{
-		// base.OnCreateForCompiler();
 		ComponentSystemBase_OnCreateForCompiler_mE0B70EDF4B717B5AB04C77DC20ED957C2D69D089(__this, NULL);
-		// SceneSectionStreamingSystem_LambdaJob_0_Query = GetEntityQuery(new Unity.Entities.EntityQueryDesc{All = new Unity.Entities.ComponentType[]{ComponentType.ReadOnly<Unity.Entities.SceneTag>(), Unity.Entities.ComponentType.ReadWrite<Unity.Scenes.ExternalEntityRefInfo>()}, Any = new Unity.Entities.ComponentType[]{}, None = new Unity.Entities.ComponentType[]{}, Options = Unity.Entities.EntityQueryOptions.Default});
 		EntityQueryDescU5BU5D_tDAC463E207ADB3A0620DEAC74FAE23AB46A1F43B* L_0 = (EntityQueryDescU5BU5D_tDAC463E207ADB3A0620DEAC74FAE23AB46A1F43B*)(EntityQueryDescU5BU5D_tDAC463E207ADB3A0620DEAC74FAE23AB46A1F43B*)SZArrayNew(EntityQueryDescU5BU5D_tDAC463E207ADB3A0620DEAC74FAE23AB46A1F43B_il2cpp_TypeInfo_var, (uint32_t)1);
 		EntityQueryDescU5BU5D_tDAC463E207ADB3A0620DEAC74FAE23AB46A1F43B* L_1 = L_0;
 		EntityQueryDesc_tF763EF854EFC4D825A92A5E4DADFCF5B0750C9A1* L_2 = (EntityQueryDesc_tF763EF854EFC4D825A92A5E4DADFCF5B0750C9A1*)il2cpp_codegen_object_new(EntityQueryDesc_tF763EF854EFC4D825A92A5E4DADFCF5B0750C9A1_il2cpp_TypeInfo_var);
@@ -30382,23 +30294,19 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SceneSectionStreamingSystem_OnCreateForC
 		EntityQuery_t23B7A11FAA475D860E94409BFD4CF7E4B337CF90 L_15;
 		L_15 = ComponentSystemBase_GetEntityQuery_m2DDDDFD060F9D52C3FF4904D1711C5C4F662CC3B(__this, L_1, NULL);
 		__this->___SceneSectionStreamingSystem_LambdaJob_0_Query_15 = L_15;
-		// __Unity_Scenes_ExternalEntityRefInfo_RW_ComponentTypeHandle = GetComponentTypeHandle<Unity.Scenes.ExternalEntityRefInfo>(false);
 		ComponentTypeHandle_1_t777C4C85A5681E22E4A57452620B33EE622FD0D4 L_16;
 		L_16 = ComponentSystemBase_GetComponentTypeHandle_TisExternalEntityRefInfo_tA85923491D54C748650558AE85DDEC1278BE4783_m55F6CBB2AFDCD722D9A232B9A9E1339B87FEA90E(__this, (bool)0, ComponentSystemBase_GetComponentTypeHandle_TisExternalEntityRefInfo_tA85923491D54C748650558AE85DDEC1278BE4783_m55F6CBB2AFDCD722D9A232B9A9E1339B87FEA90E_RuntimeMethod_var);
 		__this->_____Unity_Scenes_ExternalEntityRefInfo_RW_ComponentTypeHandle_16 = L_16;
-		// SceneSectionStreamingSystem_LambdaJob_0_Job.FunctionPtrFieldNoBurst = SceneSectionStreamingSystem_LambdaJob_0_Job.RunWithoutJobSystem;
 		JobEntityBatchRunWithoutJobSystemDelegate_t7772B36B6B2DB9B6493E0C366BE1D0109AF5DC27* L_17 = (JobEntityBatchRunWithoutJobSystemDelegate_t7772B36B6B2DB9B6493E0C366BE1D0109AF5DC27*)il2cpp_codegen_object_new(JobEntityBatchRunWithoutJobSystemDelegate_t7772B36B6B2DB9B6493E0C366BE1D0109AF5DC27_il2cpp_TypeInfo_var);
 		NullCheck(L_17);
 		JobEntityBatchRunWithoutJobSystemDelegate__ctor_m80E0134B9DC3EEF7CFE3375B41ED6F42C778DE04(L_17, NULL, (intptr_t)((void*)SceneSectionStreamingSystem_LambdaJob_0_Job_RunWithoutJobSystem_mA378194362ADE1704C1A5BA43C10AD155C91637C_RuntimeMethod_var), NULL);
 		((SceneSectionStreamingSystem_LambdaJob_0_Job_tF63EF98C34C3AAA13321DFF3E526B08AD1231116_StaticFields*)il2cpp_codegen_static_fields_for(SceneSectionStreamingSystem_LambdaJob_0_Job_tF63EF98C34C3AAA13321DFF3E526B08AD1231116_il2cpp_TypeInfo_var))->___FunctionPtrFieldNoBurst_0 = L_17;
 		Il2CppCodeGenWriteBarrier((void**)(&((SceneSectionStreamingSystem_LambdaJob_0_Job_tF63EF98C34C3AAA13321DFF3E526B08AD1231116_StaticFields*)il2cpp_codegen_static_fields_for(SceneSectionStreamingSystem_LambdaJob_0_Job_tF63EF98C34C3AAA13321DFF3E526B08AD1231116_il2cpp_TypeInfo_var))->___FunctionPtrFieldNoBurst_0), (void*)L_17);
-		// SceneSectionStreamingSystem_LambdaJob_0_Job.FunctionPtrFieldBurst = Unity.Entities.InternalCompilerInterface.BurstCompile(SceneSectionStreamingSystem_LambdaJob_0_Job.FunctionPtrFieldNoBurst);
 		JobEntityBatchRunWithoutJobSystemDelegate_t7772B36B6B2DB9B6493E0C366BE1D0109AF5DC27* L_18 = ((SceneSectionStreamingSystem_LambdaJob_0_Job_tF63EF98C34C3AAA13321DFF3E526B08AD1231116_StaticFields*)il2cpp_codegen_static_fields_for(SceneSectionStreamingSystem_LambdaJob_0_Job_tF63EF98C34C3AAA13321DFF3E526B08AD1231116_il2cpp_TypeInfo_var))->___FunctionPtrFieldNoBurst_0;
 		JobEntityBatchRunWithoutJobSystemDelegate_t7772B36B6B2DB9B6493E0C366BE1D0109AF5DC27* L_19;
 		L_19 = InternalCompilerInterface_BurstCompile_m9B2BD3DA0350F7C68BAB7682D0DB13A167784153(L_18, NULL);
 		((SceneSectionStreamingSystem_LambdaJob_0_Job_tF63EF98C34C3AAA13321DFF3E526B08AD1231116_StaticFields*)il2cpp_codegen_static_fields_for(SceneSectionStreamingSystem_LambdaJob_0_Job_tF63EF98C34C3AAA13321DFF3E526B08AD1231116_il2cpp_TypeInfo_var))->___FunctionPtrFieldBurst_1 = L_19;
 		Il2CppCodeGenWriteBarrier((void**)(&((SceneSectionStreamingSystem_LambdaJob_0_Job_tF63EF98C34C3AAA13321DFF3E526B08AD1231116_StaticFields*)il2cpp_codegen_static_fields_for(SceneSectionStreamingSystem_LambdaJob_0_Job_tF63EF98C34C3AAA13321DFF3E526B08AD1231116_il2cpp_TypeInfo_var))->___FunctionPtrFieldBurst_1), (void*)L_19);
-		// }
 		return;
 	}
 }
@@ -30631,37 +30539,31 @@ IL2CPP_EXTERN_C IL2CPP_NO_INLINE IL2CPP_METHOD_ATTR void SceneSectionStreamingSy
 	bool V_3 = false;
 	bool V_4 = false;
 	{
-		// var sceneRefArrayPtr = Unity.Entities.InternalCompilerInterface.UnsafeGetChunkNativeArrayIntPtr<Unity.Scenes.ExternalEntityRefInfo>(chunk, __sceneRefTypeHandle);
 		ArchetypeChunk_tF9C2266ECFAB3A9C58EADE74121F80C845F0CCC5 L_0 = ___chunk0;
 		ComponentTypeHandle_1_t777C4C85A5681E22E4A57452620B33EE622FD0D4 L_1 = __this->_____sceneRefTypeHandle_5;
 		intptr_t L_2;
 		L_2 = InternalCompilerInterface_UnsafeGetChunkNativeArrayIntPtr_TisExternalEntityRefInfo_tA85923491D54C748650558AE85DDEC1278BE4783_m48A18CAA9937BBCE44562C81F31A6903ABB43ACD(L_0, L_1, InternalCompilerInterface_UnsafeGetChunkNativeArrayIntPtr_TisExternalEntityRefInfo_tA85923491D54C748650558AE85DDEC1278BE4783_m48A18CAA9937BBCE44562C81F31A6903ABB43ACD_RuntimeMethod_var);
 		V_0 = L_2;
-		// int count = chunk.Count;
 		int32_t L_3;
 		L_3 = ArchetypeChunk_get_Count_m26812679ADC029977B8D5C629B26551716EC7C6A((&___chunk0), NULL);
 		V_1 = L_3;
-		// for (int entityIndex = 0; entityIndex != count; entityIndex++)
 		V_2 = 0;
 		goto IL_002e;
 	}
 
 IL_001a:
 	{
-		// OriginalLambdaBody(ref Unity.Entities.InternalCompilerInterface.UnsafeGetRefToNativeArrayPtrElement<Unity.Scenes.ExternalEntityRefInfo>(sceneRefArrayPtr, entityIndex));
 		intptr_t L_4 = V_0;
 		int32_t L_5 = V_2;
 		ExternalEntityRefInfo_tA85923491D54C748650558AE85DDEC1278BE4783* L_6;
 		L_6 = InternalCompilerInterface_UnsafeGetRefToNativeArrayPtrElement_TisExternalEntityRefInfo_tA85923491D54C748650558AE85DDEC1278BE4783_m0476307BFA55831625D6748D68928B5C9887C0C2(L_4, L_5, InternalCompilerInterface_UnsafeGetRefToNativeArrayPtrElement_TisExternalEntityRefInfo_tA85923491D54C748650558AE85DDEC1278BE4783_m0476307BFA55831625D6748D68928B5C9887C0C2_RuntimeMethod_var);
 		SceneSectionStreamingSystem_LambdaJob_0_Job_OriginalLambdaBody_m28299B5C61CB3040E1A0E94AF95E0263E6DAD6F6_inline(__this, L_6, NULL);
-		// for (int entityIndex = 0; entityIndex != count; entityIndex++)
 		int32_t L_7 = V_2;
 		V_2 = ((int32_t)il2cpp_codegen_add(L_7, 1));
 	}
 
 IL_002e:
 	{
-		// for (int entityIndex = 0; entityIndex != count; entityIndex++)
 		int32_t L_8 = V_2;
 		int32_t L_9 = V_1;
 		V_3 = (bool)((((int32_t)((((int32_t)L_8) == ((int32_t)L_9))? 1 : 0)) == ((int32_t)0))? 1 : 0);
@@ -30672,7 +30574,6 @@ IL_002e:
 		}
 	}
 	{
-		// if (Unity.Entities.EntitiesJournaling.Enabled)
 		bool L_11;
 		L_11 = EntitiesJournaling_get_Enabled_mD34DA0DC05C04BAFC8C849DE66D8A1E548E4DF76(NULL);
 		V_4 = L_11;
@@ -30683,7 +30584,6 @@ IL_002e:
 		}
 	}
 	{
-		// EntitiesJournaling_RecordChunk(in chunk, in __sceneRefTypeHandle, sceneRefArrayPtr);
 		ComponentTypeHandle_1_t777C4C85A5681E22E4A57452620B33EE622FD0D4* L_13 = (&__this->_____sceneRefTypeHandle_5);
 		intptr_t L_14 = V_0;
 		SceneSectionStreamingSystem_LambdaJob_0_Job_EntitiesJournaling_RecordChunk_mDF79CFAF8B15D7D2A648E3AA36B71F53DFFDEB99(__this, (&___chunk0), L_13, L_14, NULL);
@@ -30691,7 +30591,6 @@ IL_002e:
 
 IL_0054:
 	{
-		// }
 		return;
 	}
 }
@@ -30712,11 +30611,8 @@ IL2CPP_EXTERN_C IL2CPP_NO_INLINE IL2CPP_METHOD_ATTR void SceneSectionStreamingSy
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		// {
 		ArchetypeChunkIterator_tF12F77BF7EDC14CB4CC602C7C1EB8A4A9AC0D62A* L_0 = ___archetypeChunkIterator0;
-		// {
 		intptr_t L_1 = ___jobPtr1;
-		// Unity.Entities.JobEntityBatchExtensions.RunWithoutJobsInternal(ref Unity.Entities.InternalCompilerInterface.UnsafeAsRef<SceneSectionStreamingSystem_LambdaJob_0_Job>(jobPtr), ref archetypeChunkIterator);
 		il2cpp_codegen_runtime_class_init_inline(RunWithoutJobSystem_000000E5U24BurstDirectCall_t759C275D709FF7538EF2C501A0132573A08C4435_il2cpp_TypeInfo_var);
 		RunWithoutJobSystem_000000E5U24BurstDirectCall_Invoke_m3BE7005673501ADCD972587DB0AB846114DB5769(L_0, L_1, NULL);
 		return;
@@ -30732,7 +30628,6 @@ IL2CPP_EXTERN_C IL2CPP_NO_INLINE IL2CPP_METHOD_ATTR void SceneSectionStreamingSy
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		// Unity.Entities.InternalCompilerInterface.EntitiesJournaling_RecordSetComponentData(__worldSequenceNumber, in __executingSystem, chunk, sceneRefTypeHandle, sceneRefArrayPtr);
 		uint64_t L_0 = __this->_____worldSequenceNumber_2;
 		SystemHandleUntyped_tBAD0B60C6C5C844C4F755E8D4C06369262C99697* L_1 = (&__this->_____executingSystem_3);
 		ArchetypeChunk_tF9C2266ECFAB3A9C58EADE74121F80C845F0CCC5* L_2 = ___chunk0;
@@ -30741,7 +30636,6 @@ IL2CPP_EXTERN_C IL2CPP_NO_INLINE IL2CPP_METHOD_ATTR void SceneSectionStreamingSy
 		ComponentTypeHandle_1_t777C4C85A5681E22E4A57452620B33EE622FD0D4 L_5 = (*(ComponentTypeHandle_1_t777C4C85A5681E22E4A57452620B33EE622FD0D4*)L_4);
 		intptr_t L_6 = ___sceneRefArrayPtr2;
 		InternalCompilerInterface_EntitiesJournaling_RecordSetComponentData_TisExternalEntityRefInfo_tA85923491D54C748650558AE85DDEC1278BE4783_mE2FF62BB85709A602850C8F02B6480AC49DE0636(L_0, L_1, L_3, L_5, L_6, InternalCompilerInterface_EntitiesJournaling_RecordSetComponentData_TisExternalEntityRefInfo_tA85923491D54C748650558AE85DDEC1278BE4783_mE2FF62BB85709A602850C8F02B6480AC49DE0636_RuntimeMethod_var);
-		// }
 		return;
 	}
 }
@@ -30775,7 +30669,6 @@ FINALLY_0012:
 		});
 		try
 		{// begin try (depth: 1)
-			// Unity.Entities.JobEntityBatchExtensions.RunWithoutJobsInternal(ref Unity.Entities.InternalCompilerInterface.UnsafeAsRef<SceneSectionStreamingSystem_LambdaJob_0_Job>(jobPtr), ref archetypeChunkIterator);
 			intptr_t L_0 = ___jobPtr1;
 			SceneSectionStreamingSystem_LambdaJob_0_Job_tF63EF98C34C3AAA13321DFF3E526B08AD1231116* L_1;
 			L_1 = InternalCompilerInterface_UnsafeAsRef_TisSceneSectionStreamingSystem_LambdaJob_0_Job_tF63EF98C34C3AAA13321DFF3E526B08AD1231116_m4A859572F34EEBF2AEF7EB0FDF30DAF8218C5C93(L_0, InternalCompilerInterface_UnsafeAsRef_TisSceneSectionStreamingSystem_LambdaJob_0_Job_tF63EF98C34C3AAA13321DFF3E526B08AD1231116_m4A859572F34EEBF2AEF7EB0FDF30DAF8218C5C93_RuntimeMethod_var);
@@ -30791,7 +30684,6 @@ FINALLY_0012:
 
 IL_0015:
 	{
-		// }
 		return;
 	}
 }
@@ -33716,7 +33608,6 @@ FINALLY_0012:
 		});
 		try
 		{// begin try (depth: 1)
-			// Unity.Entities.JobEntityBatchExtensions.RunWithoutJobsInternal(ref Unity.Entities.InternalCompilerInterface.UnsafeAsRef<SceneSectionStreamingSystem_LambdaJob_0_Job>(jobPtr), ref archetypeChunkIterator);
 			intptr_t L_0 = ___jobPtr1;
 			SceneSectionStreamingSystem_LambdaJob_0_Job_tF63EF98C34C3AAA13321DFF3E526B08AD1231116* L_1;
 			L_1 = InternalCompilerInterface_UnsafeAsRef_TisSceneSectionStreamingSystem_LambdaJob_0_Job_tF63EF98C34C3AAA13321DFF3E526B08AD1231116_m4A859572F34EEBF2AEF7EB0FDF30DAF8218C5C93(L_0, InternalCompilerInterface_UnsafeAsRef_TisSceneSectionStreamingSystem_LambdaJob_0_Job_tF63EF98C34C3AAA13321DFF3E526B08AD1231116_m4A859572F34EEBF2AEF7EB0FDF30DAF8218C5C93_RuntimeMethod_var);
@@ -33732,7 +33623,6 @@ FINALLY_0012:
 
 IL_0015:
 	{
-		// }
 		return;
 	}
 }

@@ -521,6 +521,7 @@ MonoBehaviour:
   btnHolder: {fileID: 942354434}
   canvas: {fileID: 0}
   canDragDelay: 0.7
+  fixedIndex: 4
 --- !u!65 &1594281640
 BoxCollider:
   m_ObjectHideFlags: 0

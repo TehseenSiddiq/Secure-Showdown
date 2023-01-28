@@ -32,17 +32,6 @@ struct InterfaceActionInvoker0
 		((Action)invokeData.methodPtr)(obj, invokeData.method);
 	}
 };
-template <typename T1>
-struct InterfaceActionInvoker1
-{
-	typedef void (*Action)(void*, T1, const RuntimeMethod*);
-
-	static inline void Invoke (Il2CppMethodSlot slot, RuntimeClass* declaringInterface, RuntimeObject* obj, T1 p1)
-	{
-		const VirtualInvokeData& invokeData = il2cpp_codegen_get_interface_invoke_data(slot, obj, declaringInterface);
-		((Action)invokeData.methodPtr)(obj, p1, invokeData.method);
-	}
-};
 template <typename T1, typename T2>
 struct InterfaceActionInvoker2
 {
@@ -101,8 +90,6 @@ struct HashSet_1_t2F33BEB06EEA4A872E2FAF464382422AA39AE885;
 struct IDictionaryPropertyBag_3_tC62B5080F00127E7E89DEA1B362C7F64FA2BDE36;
 // System.Collections.Generic.IEnumerator`1<Unity.Serialization.Json.Unsafe.UnsafeValueView>
 struct IEnumerator_1_t0446516FA0D1DFD2F1F94D278140B73488297FA7;
-// Unity.Properties.Internal.IListPropertyBag`2<System.Object,UnityEngine.Keyframe>
-struct IListPropertyBag_2_tA08E3A7974EBB7BE41B08B3E157CE42E65DCCBF2;
 // Unity.Properties.IProperty`1<System.Collections.Generic.KeyValuePair`2<System.Object,System.Object>>
 struct IProperty_1_tD579F76E06369C699D497CBBE6357242DAAA329A;
 // Unity.Properties.IProperty`1<Unity.Properties.Internal.PropertyWrapper`1<System.Object>>
@@ -258,6 +245,7 @@ IL2CPP_EXTERN_C String_t* _stringLiteralC5B2022F50F868894692162C4E9D94C36C41AA2A
 IL2CPP_EXTERN_C String_t* _stringLiteralD60C95D35235DF5D72870F14994C45B97EDA0434;
 IL2CPP_EXTERN_C const RuntimeMethod* IProperty_GetAttributes_TisFormerNameAttribute_t9E82C3F6D46BB53F78EEEC24DCD210AD2FA2BF55_m9009AE97D78D8DA3D8F569722FB2FE63FA9C9EEC_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* IProperty_GetAttributes_TisFormerlySerializedAsAttribute_t3962B42E10E2E369F71542567E784A8CBAC80343_m3FCE358938CA562EAB2C9EE16D6BD826C9D5D5AD_RuntimeMethod_var;
+IL2CPP_EXTERN_C const RuntimeMethod* JsonMigrationCollection_TryMigrate_TisKeyframe_tB9C67DCBFE10C0AE9C52CB5C66E944255C9254F0_mB7658BDD224A010C381EB2C9DC7627A324066A01_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* JsonMigrationCollection_TryMigrate_TisRectInt_t1744D10E1063135DA9D574F95205B98DAC600CB8_m6D5A66A021376D6B0E42374268CB436558C27045_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* JsonMigrationCollection_TryMigrate_TisRect_tA04E0F8A1830E767F40FB27ECD8D309303571F0D_m890706A84D3364CEDDD7D2646949C3FB292B4FBB_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* JsonMigrationCollection_TryMigrate_TisRuntimeObject_mB25C6A861408FC53BC615A019F62C4083E49E994_RuntimeMethod_var;
@@ -286,7 +274,6 @@ IL2CPP_EXTERN_C const RuntimeMethod* JsonPropertyReader_ReadValue_TisUInt64_t8F1
 IL2CPP_EXTERN_C const RuntimeMethod* JsonPropertyReader_ReadValue_TisVector3Int_t65CB06F557251D18A37BD71F3655BA836A357376_m3117E3ED3DEE89EC7E00682CC657EFD2E631A2E9_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* JsonPropertyReader_ReadValue_TisVector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2_m131649C7DE1E3304387CA21EC798CA90E06CBC76_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* JsonPropertyReader_ReadValue_Tisuint4_t6C69CBFAE9BF0F727D52B68779D4A3F0DBA8D5C9_m8C58E1FF25E29BA88D7AFA400C4A85F52614B924_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* JsonPropertyReader_Unity_Properties_Internal_IListPropertyBagVisitor_Visit_TisRuntimeObject_TisKeyframe_tB9C67DCBFE10C0AE9C52CB5C66E944255C9254F0_mD01305BBFDD77540C20E5C5724E0A2511E76B565_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* List_1_Add_m9F4108E5934BFB244CD36C7D2FAE5969BB4B8098_RuntimeMethod_var;
 struct Exception_t_marshaled_com;
 struct Exception_t_marshaled_pinvoke;
@@ -2283,10 +2270,14 @@ struct DeserializationEventU5BU5D_t5D58FE40B1E6427FEA9A62C3608047757FF27FC4  : p
 };
 
 
-// Unity.Serialization.Json.Adapters.IJsonMigration Unity.Serialization.Json.Adapters.JsonMigrationCollection::GetMigrationForType<System.Object>(System.Int32&)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* JsonMigrationCollection_GetMigrationForType_TisRuntimeObject_mC2EF31DB1D981BD69E4DDA570B7C46AC278F0135_gshared (JsonMigrationCollection_t8434FE4B610875B830B594EE7CD88C19B1F6279A* __this, int32_t* ___version0, const RuntimeMethod* method) ;
+// Unity.Serialization.Json.Adapters.IJsonMigration Unity.Serialization.Json.Adapters.JsonMigrationCollection::GetMigrationForType<UnityEngine.Keyframe>(System.Int32&)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* JsonMigrationCollection_GetMigrationForType_TisKeyframe_tB9C67DCBFE10C0AE9C52CB5C66E944255C9254F0_m9390F43F2BE85620BC11E0C676DAB861D1993A8D_gshared (JsonMigrationCollection_t8434FE4B610875B830B594EE7CD88C19B1F6279A* __this, int32_t* ___version0, const RuntimeMethod* method) ;
 // System.Void System.Collections.Generic.List`1<Unity.Serialization.Json.DeserializationEvent>::Add(T)
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void List_1_Add_m9F4108E5934BFB244CD36C7D2FAE5969BB4B8098_gshared_inline (List_1_tF6569F82810E13CBD9F2E55455C088EC63B69967* __this, DeserializationEvent_t2239A02D0C2B02D1E2F8FB330FCC1C42051F62AE ___item0, const RuntimeMethod* method) ;
+// System.Boolean Unity.Serialization.Json.Adapters.JsonMigrationCollection::TryMigrate<UnityEngine.Keyframe>(Unity.Serialization.Json.Unsafe.UnsafeObjectView,TValue&,Unity.Serialization.Json.JsonPropertyReader,System.Collections.Generic.List`1<Unity.Serialization.Json.DeserializationEvent>)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool JsonMigrationCollection_TryMigrate_TisKeyframe_tB9C67DCBFE10C0AE9C52CB5C66E944255C9254F0_mB7658BDD224A010C381EB2C9DC7627A324066A01_gshared (JsonMigrationCollection_t8434FE4B610875B830B594EE7CD88C19B1F6279A* __this, UnsafeObjectView_tDD17C91E065E37B8955F18CB553A17F82EE76254 ___view0, Keyframe_tB9C67DCBFE10C0AE9C52CB5C66E944255C9254F0* ___value1, JsonPropertyReader_t8B4B535106EE2E4B7BE370CDA741E56D4CA1CF0B* ___reader2, List_1_tF6569F82810E13CBD9F2E55455C088EC63B69967* ___events3, const RuntimeMethod* method) ;
+// Unity.Serialization.Json.Adapters.IJsonMigration Unity.Serialization.Json.Adapters.JsonMigrationCollection::GetMigrationForType<System.Object>(System.Int32&)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* JsonMigrationCollection_GetMigrationForType_TisRuntimeObject_mC2EF31DB1D981BD69E4DDA570B7C46AC278F0135_gshared (JsonMigrationCollection_t8434FE4B610875B830B594EE7CD88C19B1F6279A* __this, int32_t* ___version0, const RuntimeMethod* method) ;
 // System.Boolean Unity.Serialization.Json.Adapters.JsonMigrationCollection::TryMigrate<System.Object>(Unity.Serialization.Json.Unsafe.UnsafeObjectView,TValue&,Unity.Serialization.Json.JsonPropertyReader,System.Collections.Generic.List`1<Unity.Serialization.Json.DeserializationEvent>)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool JsonMigrationCollection_TryMigrate_TisRuntimeObject_mB25C6A861408FC53BC615A019F62C4083E49E994_gshared (JsonMigrationCollection_t8434FE4B610875B830B594EE7CD88C19B1F6279A* __this, UnsafeObjectView_tDD17C91E065E37B8955F18CB553A17F82EE76254 ___view0, RuntimeObject** ___value1, JsonPropertyReader_t8B4B535106EE2E4B7BE370CDA741E56D4CA1CF0B* ___reader2, List_1_tF6569F82810E13CBD9F2E55455C088EC63B69967* ___events3, const RuntimeMethod* method) ;
 // Unity.Serialization.Json.Adapters.IJsonMigration Unity.Serialization.Json.Adapters.JsonMigrationCollection::GetMigrationForType<UnityEngine.Rect>(System.Int32&)
@@ -2378,10 +2369,10 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool JsonAdapterCollection_TryDeserialize_Tis
 // System.Boolean Unity.Serialization.Json.Adapters.JsonAdapterCollection::TryDeserialize<Unity.Mathematics.uint4>(Unity.Serialization.Json.Unsafe.UnsafeValueView,TValue&,System.Collections.Generic.List`1<Unity.Serialization.Json.DeserializationEvent>)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool JsonAdapterCollection_TryDeserialize_Tisuint4_t6C69CBFAE9BF0F727D52B68779D4A3F0DBA8D5C9_m20C38CFEC47DB0B1B41A101392D85A3EB8F6A926_gshared (JsonAdapterCollection_t38A89014E09C42CB56FAAE1BCE5A3309175EA334* __this, UnsafeValueView_tCD606B53AEB275B5AC69CB248B949E3EE5A5BB6A ___view0, uint4_t6C69CBFAE9BF0F727D52B68779D4A3F0DBA8D5C9* ___value1, List_1_tF6569F82810E13CBD9F2E55455C088EC63B69967* ___events2, const RuntimeMethod* method) ;
 
-// Unity.Serialization.Json.Adapters.IJsonMigration Unity.Serialization.Json.Adapters.JsonMigrationCollection::GetMigrationForType<System.Object>(System.Int32&)
-inline RuntimeObject* JsonMigrationCollection_GetMigrationForType_TisRuntimeObject_mC2EF31DB1D981BD69E4DDA570B7C46AC278F0135 (JsonMigrationCollection_t8434FE4B610875B830B594EE7CD88C19B1F6279A* __this, int32_t* ___version0, const RuntimeMethod* method)
+// Unity.Serialization.Json.Adapters.IJsonMigration Unity.Serialization.Json.Adapters.JsonMigrationCollection::GetMigrationForType<UnityEngine.Keyframe>(System.Int32&)
+inline RuntimeObject* JsonMigrationCollection_GetMigrationForType_TisKeyframe_tB9C67DCBFE10C0AE9C52CB5C66E944255C9254F0_m9390F43F2BE85620BC11E0C676DAB861D1993A8D (JsonMigrationCollection_t8434FE4B610875B830B594EE7CD88C19B1F6279A* __this, int32_t* ___version0, const RuntimeMethod* method)
 {
-	return ((  RuntimeObject* (*) (JsonMigrationCollection_t8434FE4B610875B830B594EE7CD88C19B1F6279A*, int32_t*, const RuntimeMethod*))JsonMigrationCollection_GetMigrationForType_TisRuntimeObject_mC2EF31DB1D981BD69E4DDA570B7C46AC278F0135_gshared)(__this, ___version0, method);
+	return ((  RuntimeObject* (*) (JsonMigrationCollection_t8434FE4B610875B830B594EE7CD88C19B1F6279A*, int32_t*, const RuntimeMethod*))JsonMigrationCollection_GetMigrationForType_TisKeyframe_tB9C67DCBFE10C0AE9C52CB5C66E944255C9254F0_m9390F43F2BE85620BC11E0C676DAB861D1993A8D_gshared)(__this, ___version0, method);
 }
 // System.Boolean Unity.Serialization.Json.Unsafe.UnsafeObjectView::TryGetValue(System.String,Unity.Serialization.Json.Unsafe.UnsafeValueView&)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool UnsafeObjectView_TryGetValue_m796B68ED5649AEDB696E6CE081E73C67B26BC8A2 (UnsafeObjectView_tDD17C91E065E37B8955F18CB553A17F82EE76254* __this, String_t* ___name0, UnsafeValueView_tCD606B53AEB275B5AC69CB248B949E3EE5A5BB6A* ___value1, const RuntimeMethod* method) ;
@@ -2406,6 +2397,16 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t UnsafeValueView_AsInt32_mC3274DF2736D
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR SerializedObjectView_t3371CA1D296BF0161DBD7A002673B96D76927561 UnsafeObjectView_AsSafe_mC9C07559823A565AB9B231447DDDC2638D6428D4 (UnsafeObjectView_tDD17C91E065E37B8955F18CB553A17F82EE76254* __this, const RuntimeMethod* method) ;
 // System.Void Unity.Serialization.Json.Adapters.JsonMigrationContext::.ctor(System.Int32,Unity.Serialization.Json.SerializedObjectView,System.Type,System.Object,Unity.Serialization.Json.JsonPropertyReader)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void JsonMigrationContext__ctor_m8D3DB4056BD13FCC93550459548B9C0285423C27 (JsonMigrationContext_tE4D4BF64FD371E85EB8AB9CB06B6574F9F178260* __this, int32_t ___serializedVersion0, SerializedObjectView_t3371CA1D296BF0161DBD7A002673B96D76927561 ___serializedObject1, Type_t* ___serializedType2, RuntimeObject* ___userData3, JsonPropertyReader_t8B4B535106EE2E4B7BE370CDA741E56D4CA1CF0B* ___visitor4, const RuntimeMethod* method) ;
+// System.Boolean Unity.Serialization.Json.Adapters.JsonMigrationCollection::TryMigrate<UnityEngine.Keyframe>(Unity.Serialization.Json.Unsafe.UnsafeObjectView,TValue&,Unity.Serialization.Json.JsonPropertyReader,System.Collections.Generic.List`1<Unity.Serialization.Json.DeserializationEvent>)
+inline bool JsonMigrationCollection_TryMigrate_TisKeyframe_tB9C67DCBFE10C0AE9C52CB5C66E944255C9254F0_mB7658BDD224A010C381EB2C9DC7627A324066A01 (JsonMigrationCollection_t8434FE4B610875B830B594EE7CD88C19B1F6279A* __this, UnsafeObjectView_tDD17C91E065E37B8955F18CB553A17F82EE76254 ___view0, Keyframe_tB9C67DCBFE10C0AE9C52CB5C66E944255C9254F0* ___value1, JsonPropertyReader_t8B4B535106EE2E4B7BE370CDA741E56D4CA1CF0B* ___reader2, List_1_tF6569F82810E13CBD9F2E55455C088EC63B69967* ___events3, const RuntimeMethod* method)
+{
+	return ((  bool (*) (JsonMigrationCollection_t8434FE4B610875B830B594EE7CD88C19B1F6279A*, UnsafeObjectView_tDD17C91E065E37B8955F18CB553A17F82EE76254, Keyframe_tB9C67DCBFE10C0AE9C52CB5C66E944255C9254F0*, JsonPropertyReader_t8B4B535106EE2E4B7BE370CDA741E56D4CA1CF0B*, List_1_tF6569F82810E13CBD9F2E55455C088EC63B69967*, const RuntimeMethod*))JsonMigrationCollection_TryMigrate_TisKeyframe_tB9C67DCBFE10C0AE9C52CB5C66E944255C9254F0_mB7658BDD224A010C381EB2C9DC7627A324066A01_gshared)(__this, ___view0, ___value1, ___reader2, ___events3, method);
+}
+// Unity.Serialization.Json.Adapters.IJsonMigration Unity.Serialization.Json.Adapters.JsonMigrationCollection::GetMigrationForType<System.Object>(System.Int32&)
+inline RuntimeObject* JsonMigrationCollection_GetMigrationForType_TisRuntimeObject_mC2EF31DB1D981BD69E4DDA570B7C46AC278F0135 (JsonMigrationCollection_t8434FE4B610875B830B594EE7CD88C19B1F6279A* __this, int32_t* ___version0, const RuntimeMethod* method)
+{
+	return ((  RuntimeObject* (*) (JsonMigrationCollection_t8434FE4B610875B830B594EE7CD88C19B1F6279A*, int32_t*, const RuntimeMethod*))JsonMigrationCollection_GetMigrationForType_TisRuntimeObject_mC2EF31DB1D981BD69E4DDA570B7C46AC278F0135_gshared)(__this, ___version0, method);
+}
 // System.Boolean Unity.Serialization.Json.Adapters.JsonMigrationCollection::TryMigrate<System.Object>(Unity.Serialization.Json.Unsafe.UnsafeObjectView,TValue&,Unity.Serialization.Json.JsonPropertyReader,System.Collections.Generic.List`1<Unity.Serialization.Json.DeserializationEvent>)
 inline bool JsonMigrationCollection_TryMigrate_TisRuntimeObject_mB25C6A861408FC53BC615A019F62C4083E49E994 (JsonMigrationCollection_t8434FE4B610875B830B594EE7CD88C19B1F6279A* __this, UnsafeObjectView_tDD17C91E065E37B8955F18CB553A17F82EE76254 ___view0, RuntimeObject** ___value1, JsonPropertyReader_t8B4B535106EE2E4B7BE370CDA741E56D4CA1CF0B* ___reader2, List_1_tF6569F82810E13CBD9F2E55455C088EC63B69967* ___events3, const RuntimeMethod* method)
 {
@@ -2757,10 +2758,246 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR UnsafeValueView_tCD606B53AEB275B5AC69CB248B94
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR UnsafeValueView_tCD606B53AEB275B5AC69CB248B949E3EE5A5BB6A UnsafeMemberView_Value_m65890C53DD02B5D41B01607631D6753C436D7B49 (UnsafeMemberView_tFFB3BF737556A609B52E9502473CF88375760BBD* __this, const RuntimeMethod* method) ;
 // System.Boolean Unity.Serialization.Json.Unsafe.UnsafeObjectView/Enumerator::MoveNext()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool Enumerator_MoveNext_m10588E6D009862AC2D073FDD351A411B2B051424 (Enumerator_t905A84BD5B34155438825D5C900905C497B54A6E* __this, const RuntimeMethod* method) ;
-// System.Void System.ArgumentException::.ctor()
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ArgumentException__ctor_m34A925BA55EC4CE4253404E363B5F6A53EB51CA3 (ArgumentException_tAD90411542A20A9C72D5CDA3A84181D8B947A263* __this, const RuntimeMethod* method) ;
-// System.Boolean System.Type::get_IsArray()
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool Type_get_IsArray_mB9B8CA713B2AA9D6AFECC24E05AF78D22532B673 (Type_t* __this, const RuntimeMethod* method) ;
+// System.Boolean Unity.Serialization.Json.Adapters.JsonMigrationCollection::TryMigrate<UnityEngine.Keyframe>(Unity.Serialization.Json.Unsafe.UnsafeObjectView,TValue&,Unity.Serialization.Json.JsonPropertyReader,System.Collections.Generic.List`1<Unity.Serialization.Json.DeserializationEvent>)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool JsonMigrationCollection_TryMigrate_TisKeyframe_tB9C67DCBFE10C0AE9C52CB5C66E944255C9254F0_mB7658BDD224A010C381EB2C9DC7627A324066A01_gshared (JsonMigrationCollection_t8434FE4B610875B830B594EE7CD88C19B1F6279A* __this, UnsafeObjectView_tDD17C91E065E37B8955F18CB553A17F82EE76254 ___view0, Keyframe_tB9C67DCBFE10C0AE9C52CB5C66E944255C9254F0* ___value1, JsonPropertyReader_t8B4B535106EE2E4B7BE370CDA741E56D4CA1CF0B* ___reader2, List_1_tF6569F82810E13CBD9F2E55455C088EC63B69967* ___events3, const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Exception_t_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&List_1_Add_m9F4108E5934BFB244CD36C7D2FAE5969BB4B8098_RuntimeMethod_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Type_t_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteral07E15CE902B2DDDF6C7C264F0B8E38178EA51C38);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteral905C19B06B73ED521816E0DF60DCCC59B36B47F5);
+		s_Il2CppMethodInitialized = true;
+	}
+	RuntimeObject* V_0 = NULL;
+	int32_t V_1 = 0;
+	int32_t V_2 = 0;
+	UnsafeValueView_tCD606B53AEB275B5AC69CB248B949E3EE5A5BB6A V_3;
+	memset((&V_3), 0, sizeof(V_3));
+	JsonMigrationContext_tE4D4BF64FD371E85EB8AB9CB06B6574F9F178260 V_4;
+	memset((&V_4), 0, sizeof(V_4));
+	bool V_5 = false;
+	bool V_6 = false;
+	bool V_7 = false;
+	bool V_8 = false;
+	bool V_9 = false;
+	RuntimeObject* V_10 = NULL;
+	RuntimeObject* V_11 = NULL;
+	RuntimeObject* V_12 = NULL;
+	RuntimeObject* V_13 = NULL;
+	{
+		// var migration = GetMigrationForType<TValue>(out var version);
+		RuntimeObject* L_0;
+		L_0 = JsonMigrationCollection_GetMigrationForType_TisKeyframe_tB9C67DCBFE10C0AE9C52CB5C66E944255C9254F0_m9390F43F2BE85620BC11E0C676DAB861D1993A8D(__this, (&V_1), il2cpp_rgctx_method(method->rgctx_data, 0));
+		V_0 = L_0;
+		// if (null == migration)
+		RuntimeObject* L_1 = V_0;
+		V_5 = (bool)((((RuntimeObject*)(RuntimeObject*)L_1) == ((RuntimeObject*)(RuntimeObject*)NULL))? 1 : 0);
+		bool L_2 = V_5;
+		if (!L_2)
+		{
+			goto IL_0024;
+		}
+	}
+	{
+		// value = default;
+		Keyframe_tB9C67DCBFE10C0AE9C52CB5C66E944255C9254F0* L_3 = ___value1;
+		il2cpp_codegen_initobj(L_3, sizeof(Keyframe_tB9C67DCBFE10C0AE9C52CB5C66E944255C9254F0));
+		// return false;
+		V_6 = (bool)0;
+		goto IL_0128;
+	}
+
+IL_0024:
+	{
+		// var serializedVersion = 0;
+		V_2 = 0;
+		// if (view.TryGetValue(JsonPropertyVisitor.k_SerializedVersionKey, out var serializedVersionView))
+		bool L_4;
+		L_4 = UnsafeObjectView_TryGetValue_m796B68ED5649AEDB696E6CE081E73C67B26BC8A2((&___view0), _stringLiteral905C19B06B73ED521816E0DF60DCCC59B36B47F5, (&V_3), NULL);
+		V_7 = L_4;
+		bool L_5 = V_7;
+		if (!L_5)
+		{
+			goto IL_00aa;
+		}
+	}
+	{
+		// if (serializedVersionView.Type != TokenType.Primitive)
+		int32_t L_6;
+		L_6 = UnsafeValueView_get_Type_m6522F37423D33F14BE68F64C4729FC1C6ABF5B2B((&V_3), NULL);
+		V_8 = (bool)((((int32_t)((((int32_t)L_6) == ((int32_t)4))? 1 : 0)) == ((int32_t)0))? 1 : 0);
+		bool L_7 = V_8;
+		if (!L_7)
+		{
+			goto IL_008a;
+		}
+	}
+	{
+		// events.Add(new DeserializationEvent(EventType.Exception, new Exception($"An error occured while deserializing Type=[{typeof(TValue)}]. Property=[{JsonPropertyVisitor.k_SerializedVersionKey}] is expected to be an int value.")));
+		List_1_tF6569F82810E13CBD9F2E55455C088EC63B69967* L_8 = ___events3;
+		RuntimeTypeHandle_t332A452B8B6179E4469B69525D0FE82A88030F7B L_9 = { reinterpret_cast<intptr_t> (il2cpp_rgctx_type(method->rgctx_data, 1)) };
+		il2cpp_codegen_runtime_class_init_inline(Type_t_il2cpp_TypeInfo_var);
+		Type_t* L_10;
+		L_10 = Type_GetTypeFromHandle_m6062B81682F79A4D6DF2640692EE6D9987858C57(L_9, NULL);
+		String_t* L_11;
+		L_11 = String_Format_mFB7DA489BD99F4670881FF50EC017BFB0A5C0987(_stringLiteral07E15CE902B2DDDF6C7C264F0B8E38178EA51C38, (RuntimeObject*)L_10, (RuntimeObject*)_stringLiteral905C19B06B73ED521816E0DF60DCCC59B36B47F5, NULL);
+		Exception_t* L_12 = (Exception_t*)il2cpp_codegen_object_new(Exception_t_il2cpp_TypeInfo_var);
+		NullCheck(L_12);
+		Exception__ctor_m9B2BD92CD68916245A75109105D9071C9D430E7F(L_12, L_11, NULL);
+		DeserializationEvent_t2239A02D0C2B02D1E2F8FB330FCC1C42051F62AE L_13;
+		memset((&L_13), 0, sizeof(L_13));
+		DeserializationEvent__ctor_m73603EEC03C91814E6B7929394257D88BD77C0E7((&L_13), (int32_t)4, (RuntimeObject*)L_12, /*hidden argument*/NULL);
+		NullCheck(L_8);
+		List_1_Add_m9F4108E5934BFB244CD36C7D2FAE5969BB4B8098_inline(L_8, L_13, List_1_Add_m9F4108E5934BFB244CD36C7D2FAE5969BB4B8098_RuntimeMethod_var);
+		// value = default;
+		Keyframe_tB9C67DCBFE10C0AE9C52CB5C66E944255C9254F0* L_14 = ___value1;
+		il2cpp_codegen_initobj(L_14, sizeof(Keyframe_tB9C67DCBFE10C0AE9C52CB5C66E944255C9254F0));
+		// return false;
+		V_6 = (bool)0;
+		goto IL_0128;
+	}
+
+IL_008a:
+	{
+		// serializedVersion = serializedVersionView.AsInt32();
+		int32_t L_15;
+		L_15 = UnsafeValueView_AsInt32_mC3274DF2736D47C3FA89971C61309AA4B421C7A1((&V_3), NULL);
+		V_2 = L_15;
+		// if (version == serializedVersion)
+		int32_t L_16 = V_1;
+		int32_t L_17 = V_2;
+		V_9 = (bool)((((int32_t)L_16) == ((int32_t)L_17))? 1 : 0);
+		bool L_18 = V_9;
+		if (!L_18)
+		{
+			goto IL_00a9;
+		}
+	}
+	{
+		// value = default;
+		Keyframe_tB9C67DCBFE10C0AE9C52CB5C66E944255C9254F0* L_19 = ___value1;
+		il2cpp_codegen_initobj(L_19, sizeof(Keyframe_tB9C67DCBFE10C0AE9C52CB5C66E944255C9254F0));
+		// return false;
+		V_6 = (bool)0;
+		goto IL_0128;
+	}
+
+IL_00a9:
+	{
+	}
+
+IL_00aa:
+	{
+		// var context = new JsonMigrationContext(serializedVersion, view.AsSafe(), typeof(TValue), UserData, reader);
+		int32_t L_20 = V_2;
+		SerializedObjectView_t3371CA1D296BF0161DBD7A002673B96D76927561 L_21;
+		L_21 = UnsafeObjectView_AsSafe_mC9C07559823A565AB9B231447DDDC2638D6428D4((&___view0), NULL);
+		RuntimeTypeHandle_t332A452B8B6179E4469B69525D0FE82A88030F7B L_22 = { reinterpret_cast<intptr_t> (il2cpp_rgctx_type(method->rgctx_data, 1)) };
+		il2cpp_codegen_runtime_class_init_inline(Type_t_il2cpp_TypeInfo_var);
+		Type_t* L_23;
+		L_23 = Type_GetTypeFromHandle_m6062B81682F79A4D6DF2640692EE6D9987858C57(L_22, NULL);
+		RuntimeObject* L_24 = (RuntimeObject*)__this->___UserData_2;
+		JsonPropertyReader_t8B4B535106EE2E4B7BE370CDA741E56D4CA1CF0B* L_25 = ___reader2;
+		JsonMigrationContext__ctor_m8D3DB4056BD13FCC93550459548B9C0285423C27((&V_4), L_20, L_21, L_23, L_24, L_25, NULL);
+		// switch (migration)
+		RuntimeObject* L_26 = V_0;
+		V_13 = L_26;
+		RuntimeObject* L_27 = V_13;
+		V_12 = L_27;
+		RuntimeObject* L_28 = V_12;
+		V_10 = ((RuntimeObject*)IsInst((RuntimeObject*)L_28, il2cpp_rgctx_data(method->rgctx_data, 2)));
+		RuntimeObject* L_29 = V_10;
+		if (L_29)
+		{
+			goto IL_00ed;
+		}
+	}
+	{
+		RuntimeObject* L_30 = V_12;
+		V_11 = ((RuntimeObject*)IsInst((RuntimeObject*)L_30, il2cpp_rgctx_data(method->rgctx_data, 3)));
+		RuntimeObject* L_31 = V_11;
+		if (L_31)
+		{
+			goto IL_0100;
+		}
+	}
+	{
+		goto IL_0118;
+	}
+
+IL_00ed:
+	{
+		goto IL_00ef;
+	}
+
+IL_00ef:
+	{
+		// value = typed.Migrate(context);
+		Keyframe_tB9C67DCBFE10C0AE9C52CB5C66E944255C9254F0* L_32 = ___value1;
+		RuntimeObject* L_33 = V_10;
+		JsonMigrationContext_tE4D4BF64FD371E85EB8AB9CB06B6574F9F178260 L_34 = V_4;
+		NullCheck(L_33);
+		Keyframe_tB9C67DCBFE10C0AE9C52CB5C66E944255C9254F0 L_35;
+		L_35 = InterfaceFuncInvoker1< Keyframe_tB9C67DCBFE10C0AE9C52CB5C66E944255C9254F0, JsonMigrationContext_tE4D4BF64FD371E85EB8AB9CB06B6574F9F178260 >::Invoke(1 /* TValue Unity.Serialization.Json.Adapters.IJsonMigration`1<UnityEngine.Keyframe>::Migrate(Unity.Serialization.Json.Adapters.JsonMigrationContext) */, il2cpp_rgctx_data(method->rgctx_data, 2), L_33, L_34);
+		*(Keyframe_tB9C67DCBFE10C0AE9C52CB5C66E944255C9254F0*)L_32 = L_35;
+		// break;
+		goto IL_0123;
+	}
+
+IL_0100:
+	{
+		goto IL_0102;
+	}
+
+IL_0102:
+	{
+		// value = (TValue) typedContravariant.Migrate(context);
+		Keyframe_tB9C67DCBFE10C0AE9C52CB5C66E944255C9254F0* L_36 = ___value1;
+		RuntimeObject* L_37 = V_11;
+		JsonMigrationContext_tE4D4BF64FD371E85EB8AB9CB06B6574F9F178260 L_38 = V_4;
+		NullCheck(L_37);
+		RuntimeObject* L_39;
+		L_39 = InterfaceFuncInvoker1< RuntimeObject*, JsonMigrationContext_tE4D4BF64FD371E85EB8AB9CB06B6574F9F178260 >::Invoke(1 /* System.Object Unity.Serialization.Json.Adapters.Contravariant.IJsonMigration`1<UnityEngine.Keyframe>::Migrate(Unity.Serialization.Json.Adapters.JsonMigrationContext) */, il2cpp_rgctx_data(method->rgctx_data, 3), L_37, L_38);
+		*(Keyframe_tB9C67DCBFE10C0AE9C52CB5C66E944255C9254F0*)L_36 = ((*(Keyframe_tB9C67DCBFE10C0AE9C52CB5C66E944255C9254F0*)((Keyframe_tB9C67DCBFE10C0AE9C52CB5C66E944255C9254F0*)(Keyframe_tB9C67DCBFE10C0AE9C52CB5C66E944255C9254F0*)UnBox(L_39, il2cpp_rgctx_data(method->rgctx_data, 6)))));
+		// break;
+		goto IL_0123;
+	}
+
+IL_0118:
+	{
+		// throw new Exception("An internal error has occured.");
+		Exception_t* L_40 = (Exception_t*)il2cpp_codegen_object_new(((RuntimeClass*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&Exception_t_il2cpp_TypeInfo_var)));
+		NullCheck(L_40);
+		Exception__ctor_m9B2BD92CD68916245A75109105D9071C9D430E7F(L_40, ((String_t*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&_stringLiteralD60C95D35235DF5D72870F14994C45B97EDA0434)), NULL);
+		IL2CPP_RAISE_MANAGED_EXCEPTION(L_40, ((RuntimeMethod*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&JsonMigrationCollection_TryMigrate_TisKeyframe_tB9C67DCBFE10C0AE9C52CB5C66E944255C9254F0_mB7658BDD224A010C381EB2C9DC7627A324066A01_RuntimeMethod_var)));
+	}
+
+IL_0123:
+	{
+		// return true;
+		V_6 = (bool)1;
+		goto IL_0128;
+	}
+
+IL_0128:
+	{
+		// }
+		bool L_41 = V_6;
+		return L_41;
+	}
+}
+IL2CPP_EXTERN_C  bool JsonMigrationCollection_TryMigrate_TisKeyframe_tB9C67DCBFE10C0AE9C52CB5C66E944255C9254F0_mB7658BDD224A010C381EB2C9DC7627A324066A01_AdjustorThunk (RuntimeObject* __this, UnsafeObjectView_tDD17C91E065E37B8955F18CB553A17F82EE76254 ___view0, Keyframe_tB9C67DCBFE10C0AE9C52CB5C66E944255C9254F0* ___value1, JsonPropertyReader_t8B4B535106EE2E4B7BE370CDA741E56D4CA1CF0B* ___reader2, List_1_tF6569F82810E13CBD9F2E55455C088EC63B69967* ___events3, const RuntimeMethod* method)
+{
+	JsonMigrationCollection_t8434FE4B610875B830B594EE7CD88C19B1F6279A* _thisAdjusted;
+	int32_t _offset = 1;
+	_thisAdjusted = reinterpret_cast<JsonMigrationCollection_t8434FE4B610875B830B594EE7CD88C19B1F6279A*>(__this + _offset);
+	bool _returnValue;
+	_returnValue = JsonMigrationCollection_TryMigrate_TisKeyframe_tB9C67DCBFE10C0AE9C52CB5C66E944255C9254F0_mB7658BDD224A010C381EB2C9DC7627A324066A01(_thisAdjusted, ___view0, ___value1, ___reader2, ___events3, method);
+	return _returnValue;
+}
 // System.Boolean Unity.Serialization.Json.Adapters.JsonMigrationCollection::TryMigrate<System.Object>(Unity.Serialization.Json.Unsafe.UnsafeObjectView,TValue&,Unity.Serialization.Json.JsonPropertyReader,System.Collections.Generic.List`1<Unity.Serialization.Json.DeserializationEvent>)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool JsonMigrationCollection_TryMigrate_TisRuntimeObject_mB25C6A861408FC53BC615A019F62C4083E49E994_gshared (JsonMigrationCollection_t8434FE4B610875B830B594EE7CD88C19B1F6279A* __this, UnsafeObjectView_tDD17C91E065E37B8955F18CB553A17F82EE76254 ___view0, RuntimeObject** ___value1, JsonPropertyReader_t8B4B535106EE2E4B7BE370CDA741E56D4CA1CF0B* ___reader2, List_1_tF6569F82810E13CBD9F2E55455C088EC63B69967* ___events3, const RuntimeMethod* method) 
 {
@@ -27927,291 +28164,6 @@ IL_019b:
 	}
 
 IL_019d:
-	{
-		// }
-		return;
-	}
-}
-// System.Void Unity.Serialization.Json.JsonPropertyReader::Unity.Properties.Internal.IListPropertyBagVisitor.Visit<System.Object,UnityEngine.Keyframe>(Unity.Properties.Internal.IListPropertyBag`2<TList,TElement>,TList&)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void JsonPropertyReader_Unity_Properties_Internal_IListPropertyBagVisitor_Visit_TisRuntimeObject_TisKeyframe_tB9C67DCBFE10C0AE9C52CB5C66E944255C9254F0_mD01305BBFDD77540C20E5C5724E0A2511E76B565_gshared (JsonPropertyReader_t8B4B535106EE2E4B7BE370CDA741E56D4CA1CF0B* __this, RuntimeObject* ___properties0, RuntimeObject** ___container1, const RuntimeMethod* method) 
-{
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
-	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&IDisposable_t030E0496B4E0E4E4F086825007979AF51F7248C5_il2cpp_TypeInfo_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&IEnumerator_1_t0446516FA0D1DFD2F1F94D278140B73488297FA7_il2cpp_TypeInfo_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&IEnumerator_t7B609C2FFA6EB5167D9C62A0C32A21DE2F666DAA_il2cpp_TypeInfo_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Type_t_il2cpp_TypeInfo_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteral75CE75F6E407D5671F53AFAEA8DEACB462872043);
-		s_Il2CppMethodInitialized = true;
-	}
-	UnsafeValueView_tCD606B53AEB275B5AC69CB248B949E3EE5A5BB6A V_0;
-	memset((&V_0), 0, sizeof(V_0));
-	UnsafeArrayView_t64641D362D82B5FE45F8D72D5673B092F659FF30 V_1;
-	memset((&V_1), 0, sizeof(V_1));
-	UnsafeObjectView_tDD17C91E065E37B8955F18CB553A17F82EE76254 V_2;
-	memset((&V_2), 0, sizeof(V_2));
-	bool V_3 = false;
-	bool V_4 = false;
-	int32_t V_5 = 0;
-	RuntimeObject* V_6 = NULL;
-	UnsafeValueView_tCD606B53AEB275B5AC69CB248B949E3EE5A5BB6A V_7;
-	memset((&V_7), 0, sizeof(V_7));
-	Keyframe_tB9C67DCBFE10C0AE9C52CB5C66E944255C9254F0 V_8;
-	memset((&V_8), 0, sizeof(V_8));
-	RuntimeObject* V_9 = NULL;
-	UnsafeValueView_tCD606B53AEB275B5AC69CB248B949E3EE5A5BB6A V_10;
-	memset((&V_10), 0, sizeof(V_10));
-	Keyframe_tB9C67DCBFE10C0AE9C52CB5C66E944255C9254F0 V_11;
-	memset((&V_11), 0, sizeof(V_11));
-	UnsafeValueView_tCD606B53AEB275B5AC69CB248B949E3EE5A5BB6A G_B3_0;
-	memset((&G_B3_0), 0, sizeof(G_B3_0));
-	{
-		// var elements = m_Metadata.HasElements ? m_View.AsObjectView()[k_SerializedElementsKey] : m_View;
-		SerializedContainerMetadata_t5CCD2AD33CE2755161834EBD4EDE623397786E0E* L_0 = (SerializedContainerMetadata_t5CCD2AD33CE2755161834EBD4EDE623397786E0E*)(&__this->___m_Metadata_14);
-		bool L_1 = (bool)L_0->___HasElements_3;
-		if (L_1)
-		{
-			goto IL_0016;
-		}
-	}
-	{
-		UnsafeValueView_tCD606B53AEB275B5AC69CB248B949E3EE5A5BB6A L_2 = (UnsafeValueView_tCD606B53AEB275B5AC69CB248B949E3EE5A5BB6A)__this->___m_View_7;
-		G_B3_0 = L_2;
-		goto IL_002e;
-	}
-
-IL_0016:
-	{
-		UnsafeValueView_tCD606B53AEB275B5AC69CB248B949E3EE5A5BB6A* L_3 = (UnsafeValueView_tCD606B53AEB275B5AC69CB248B949E3EE5A5BB6A*)(&__this->___m_View_7);
-		UnsafeObjectView_tDD17C91E065E37B8955F18CB553A17F82EE76254 L_4;
-		L_4 = UnsafeValueView_AsObjectView_m08E3A3C5DDFEC0E3462138B028185EEDC28C390B(L_3, NULL);
-		V_2 = L_4;
-		UnsafeValueView_tCD606B53AEB275B5AC69CB248B949E3EE5A5BB6A L_5;
-		L_5 = UnsafeObjectView_get_Item_m0F1F89D36CEE9F9A34C430C614A0BA42A68057FA((&V_2), _stringLiteral75CE75F6E407D5671F53AFAEA8DEACB462872043, NULL);
-		G_B3_0 = L_5;
-	}
-
-IL_002e:
-	{
-		V_0 = G_B3_0;
-		// if (elements.Type != TokenType.Array)
-		int32_t L_6;
-		L_6 = UnsafeValueView_get_Type_m6522F37423D33F14BE68F64C4729FC1C6ABF5B2B((&V_0), NULL);
-		V_3 = (bool)((((int32_t)((((int32_t)L_6) == ((int32_t)2))? 1 : 0)) == ((int32_t)0))? 1 : 0);
-		bool L_7 = V_3;
-		if (!L_7)
-		{
-			goto IL_0047;
-		}
-	}
-	{
-		// throw new ArgumentException();
-		ArgumentException_tAD90411542A20A9C72D5CDA3A84181D8B947A263* L_8 = (ArgumentException_tAD90411542A20A9C72D5CDA3A84181D8B947A263*)il2cpp_codegen_object_new(((RuntimeClass*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&ArgumentException_tAD90411542A20A9C72D5CDA3A84181D8B947A263_il2cpp_TypeInfo_var)));
-		NullCheck(L_8);
-		ArgumentException__ctor_m34A925BA55EC4CE4253404E363B5F6A53EB51CA3(L_8, NULL);
-		IL2CPP_RAISE_MANAGED_EXCEPTION(L_8, ((RuntimeMethod*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&JsonPropertyReader_Unity_Properties_Internal_IListPropertyBagVisitor_Visit_TisRuntimeObject_TisKeyframe_tB9C67DCBFE10C0AE9C52CB5C66E944255C9254F0_mD01305BBFDD77540C20E5C5724E0A2511E76B565_RuntimeMethod_var)));
-	}
-
-IL_0047:
-	{
-		// var arr = elements.AsArrayView();
-		UnsafeArrayView_t64641D362D82B5FE45F8D72D5673B092F659FF30 L_9;
-		L_9 = UnsafeValueView_AsArrayView_mCEA38E5AEEA79963F7D5D1BAC5D7E05625D9740A((&V_0), NULL);
-		V_1 = L_9;
-		// if (typeof(TList).IsArray)
-		RuntimeTypeHandle_t332A452B8B6179E4469B69525D0FE82A88030F7B L_10 = { reinterpret_cast<intptr_t> (il2cpp_rgctx_type(method->rgctx_data, 0)) };
-		il2cpp_codegen_runtime_class_init_inline(Type_t_il2cpp_TypeInfo_var);
-		Type_t* L_11;
-		L_11 = Type_GetTypeFromHandle_m6062B81682F79A4D6DF2640692EE6D9987858C57(L_10, NULL);
-		NullCheck(L_11);
-		bool L_12;
-		L_12 = Type_get_IsArray_mB9B8CA713B2AA9D6AFECC24E05AF78D22532B673(L_11, NULL);
-		V_4 = L_12;
-		bool L_13 = V_4;
-		if (!L_13)
-		{
-			goto IL_00c4;
-		}
-	}
-	{
-		// var index = 0;
-		V_5 = 0;
-		// foreach (var element in arr)
-		RuntimeObject* L_14;
-		L_14 = UnsafeArrayView_GetEnumerator_mF7FD01990E7F298935472FAF50DD0ACCC438A191((&V_1), NULL);
-		V_6 = L_14;
-	}
-	{
-		auto __finallyBlock = il2cpp::utils::Finally([&]
-		{
-
-FINALLY_00b4:
-			{// begin finally (depth: 1)
-				{
-					RuntimeObject* L_15 = V_6;
-					if (!L_15)
-					{
-						goto IL_00c0;
-					}
-				}
-				{
-					RuntimeObject* L_16 = V_6;
-					NullCheck((RuntimeObject*)L_16);
-					InterfaceActionInvoker0::Invoke(0 /* System.Void System.IDisposable::Dispose() */, IDisposable_t030E0496B4E0E4E4F086825007979AF51F7248C5_il2cpp_TypeInfo_var, (RuntimeObject*)L_16);
-				}
-
-IL_00c0:
-				{
-					return;
-				}
-			}// end finally (depth: 1)
-		});
-		try
-		{// begin try (depth: 1)
-			{
-				goto IL_00a9_1;
-			}
-
-IL_0074_1:
-			{
-				// foreach (var element in arr)
-				RuntimeObject* L_17 = V_6;
-				NullCheck(L_17);
-				UnsafeValueView_tCD606B53AEB275B5AC69CB248B949E3EE5A5BB6A L_18;
-				L_18 = InterfaceFuncInvoker0< UnsafeValueView_tCD606B53AEB275B5AC69CB248B949E3EE5A5BB6A >::Invoke(0 /* T System.Collections.Generic.IEnumerator`1<Unity.Serialization.Json.Unsafe.UnsafeValueView>::get_Current() */, IEnumerator_1_t0446516FA0D1DFD2F1F94D278140B73488297FA7_il2cpp_TypeInfo_var, L_17);
-				V_7 = L_18;
-				// var value = default(TElement);
-				il2cpp_codegen_initobj((&V_8), sizeof(Keyframe_tB9C67DCBFE10C0AE9C52CB5C66E944255C9254F0));
-				// ReadValue(ref value, element);
-				UnsafeValueView_tCD606B53AEB275B5AC69CB248B949E3EE5A5BB6A L_19 = V_7;
-				((  void (*) (JsonPropertyReader_t8B4B535106EE2E4B7BE370CDA741E56D4CA1CF0B*, Keyframe_tB9C67DCBFE10C0AE9C52CB5C66E944255C9254F0*, UnsafeValueView_tCD606B53AEB275B5AC69CB248B949E3EE5A5BB6A, bool, const RuntimeMethod*))il2cpp_codegen_get_method_pointer(il2cpp_rgctx_method(method->rgctx_data, 1)))(__this, (&V_8), L_19, (bool)0, il2cpp_rgctx_method(method->rgctx_data, 1));
-				// container[index++] = value;
-				RuntimeObject** L_20 = ___container1;
-				int32_t L_21 = V_5;
-				int32_t L_22 = L_21;
-				V_5 = ((int32_t)il2cpp_codegen_add(L_22, 1));
-				Keyframe_tB9C67DCBFE10C0AE9C52CB5C66E944255C9254F0 L_23 = V_8;
-				NullCheck((RuntimeObject*)(*L_20));
-				InterfaceActionInvoker2< int32_t, Keyframe_tB9C67DCBFE10C0AE9C52CB5C66E944255C9254F0 >::Invoke(1 /* System.Void System.Collections.Generic.IList`1<UnityEngine.Keyframe>::set_Item(System.Int32,T) */, il2cpp_rgctx_data(method->rgctx_data, 3), (RuntimeObject*)(*L_20), L_22, L_23);
-			}
-
-IL_00a9_1:
-			{
-				// foreach (var element in arr)
-				RuntimeObject* L_24 = V_6;
-				NullCheck((RuntimeObject*)L_24);
-				bool L_25;
-				L_25 = InterfaceFuncInvoker0< bool >::Invoke(0 /* System.Boolean System.Collections.IEnumerator::MoveNext() */, IEnumerator_t7B609C2FFA6EB5167D9C62A0C32A21DE2F666DAA_il2cpp_TypeInfo_var, (RuntimeObject*)L_24);
-				if (L_25)
-				{
-					goto IL_0074_1;
-				}
-			}
-			{
-				goto IL_00c1;
-			}
-		}// end try (depth: 1)
-		catch(Il2CppExceptionWrapper& e)
-		{
-			__finallyBlock.StoreException(e.ex);
-		}
-	}
-
-IL_00c1:
-	{
-		goto IL_0125;
-	}
-
-IL_00c4:
-	{
-		// container.Clear();
-		RuntimeObject** L_26 = ___container1;
-		NullCheck((RuntimeObject*)(*L_26));
-		InterfaceActionInvoker0::Invoke(3 /* System.Void System.Collections.Generic.ICollection`1<UnityEngine.Keyframe>::Clear() */, il2cpp_rgctx_data(method->rgctx_data, 5), (RuntimeObject*)(*L_26));
-		// foreach (var element in arr)
-		RuntimeObject* L_27;
-		L_27 = UnsafeArrayView_GetEnumerator_mF7FD01990E7F298935472FAF50DD0ACCC438A191((&V_1), NULL);
-		V_9 = L_27;
-	}
-	{
-		auto __finallyBlock = il2cpp::utils::Finally([&]
-		{
-
-FINALLY_0117:
-			{// begin finally (depth: 1)
-				{
-					RuntimeObject* L_28 = V_9;
-					if (!L_28)
-					{
-						goto IL_0123;
-					}
-				}
-				{
-					RuntimeObject* L_29 = V_9;
-					NullCheck((RuntimeObject*)L_29);
-					InterfaceActionInvoker0::Invoke(0 /* System.Void System.IDisposable::Dispose() */, IDisposable_t030E0496B4E0E4E4F086825007979AF51F7248C5_il2cpp_TypeInfo_var, (RuntimeObject*)L_29);
-				}
-
-IL_0123:
-				{
-					return;
-				}
-			}// end finally (depth: 1)
-		});
-		try
-		{// begin try (depth: 1)
-			{
-				goto IL_010c_1;
-			}
-
-IL_00de_1:
-			{
-				// foreach (var element in arr)
-				RuntimeObject* L_30 = V_9;
-				NullCheck(L_30);
-				UnsafeValueView_tCD606B53AEB275B5AC69CB248B949E3EE5A5BB6A L_31;
-				L_31 = InterfaceFuncInvoker0< UnsafeValueView_tCD606B53AEB275B5AC69CB248B949E3EE5A5BB6A >::Invoke(0 /* T System.Collections.Generic.IEnumerator`1<Unity.Serialization.Json.Unsafe.UnsafeValueView>::get_Current() */, IEnumerator_1_t0446516FA0D1DFD2F1F94D278140B73488297FA7_il2cpp_TypeInfo_var, L_30);
-				V_10 = L_31;
-				// var value = default(TElement);
-				il2cpp_codegen_initobj((&V_11), sizeof(Keyframe_tB9C67DCBFE10C0AE9C52CB5C66E944255C9254F0));
-				// ReadValue(ref value, element);
-				UnsafeValueView_tCD606B53AEB275B5AC69CB248B949E3EE5A5BB6A L_32 = V_10;
-				((  void (*) (JsonPropertyReader_t8B4B535106EE2E4B7BE370CDA741E56D4CA1CF0B*, Keyframe_tB9C67DCBFE10C0AE9C52CB5C66E944255C9254F0*, UnsafeValueView_tCD606B53AEB275B5AC69CB248B949E3EE5A5BB6A, bool, const RuntimeMethod*))il2cpp_codegen_get_method_pointer(il2cpp_rgctx_method(method->rgctx_data, 1)))(__this, (&V_11), L_32, (bool)0, il2cpp_rgctx_method(method->rgctx_data, 1));
-				// container.Add(value);
-				RuntimeObject** L_33 = ___container1;
-				Keyframe_tB9C67DCBFE10C0AE9C52CB5C66E944255C9254F0 L_34 = V_11;
-				NullCheck((RuntimeObject*)(*L_33));
-				InterfaceActionInvoker1< Keyframe_tB9C67DCBFE10C0AE9C52CB5C66E944255C9254F0 >::Invoke(2 /* System.Void System.Collections.Generic.ICollection`1<UnityEngine.Keyframe>::Add(T) */, il2cpp_rgctx_data(method->rgctx_data, 5), (RuntimeObject*)(*L_33), L_34);
-			}
-
-IL_010c_1:
-			{
-				// foreach (var element in arr)
-				RuntimeObject* L_35 = V_9;
-				NullCheck((RuntimeObject*)L_35);
-				bool L_36;
-				L_36 = InterfaceFuncInvoker0< bool >::Invoke(0 /* System.Boolean System.Collections.IEnumerator::MoveNext() */, IEnumerator_t7B609C2FFA6EB5167D9C62A0C32A21DE2F666DAA_il2cpp_TypeInfo_var, (RuntimeObject*)L_35);
-				if (L_36)
-				{
-					goto IL_00de_1;
-				}
-			}
-			{
-				goto IL_0124;
-			}
-		}// end try (depth: 1)
-		catch(Il2CppExceptionWrapper& e)
-		{
-			__finallyBlock.StoreException(e.ex);
-		}
-	}
-
-IL_0124:
-	{
-	}
-
-IL_0125:
 	{
 		// }
 		return;

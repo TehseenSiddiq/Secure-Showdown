@@ -7,7 +7,7 @@ public class Lock : MonoBehaviour
     public Camera cam;
     public RectTransform canvas;
 
-    public float range = 5;
+    public float delay = 5;
 
     Vector3 mouse;
     GameObject camraObject;
@@ -17,15 +17,16 @@ public class Lock : MonoBehaviour
     public GameObject btnHolder;
     float canDragDelay = 0.3f;
     [SerializeField]private List<Transform> doors;
-
+    [SerializeField]
+    private int fixedIndex;
+    public float energy;
     private void Start()
     {
         Door[] doorsScript = FindObjectsOfType<Door>();
         foreach (Door door in doorsScript)
         {
             doors.Add(door.transform);
-        }
-        
+        }    
     }
     private void OnEnable()
     {
@@ -44,10 +45,9 @@ public class Lock : MonoBehaviour
                     if (canDragDelay > 0)
                     {
                         canDragDelay -= Time.deltaTime;
-                        snaped = true;
+                        canDrag = true;
                     }
-                      
-
+                   
         if (canDrag)
             this.gameObject.transform.position = new Vector3(Camera.main.ScreenToWorldPoint(Input.mousePosition).x, Camera.main.ScreenToWorldPoint(Input.mousePosition).y, 0);
 
@@ -58,18 +58,15 @@ public class Lock : MonoBehaviour
     }
     private void Update()
     {
-        btnHolder.transform.rotation = Quaternion.Euler(0, 0, 0);
-      //  btnHolder.transform.position = Vector3.zero;
+        if (canDrag)
+            snaped = false;
+        if(canDrag)
+          btnHolder.transform.rotation = Quaternion.Euler(0, 0, 0);
 
         canDrag = canDragDelay <= 0 ? true : false;
-        //StateManager.instance.GS = canDrag ? GameState.Planning : GameState.PlayMode;
-        if (canDrag)
-            StateManager.instance.GS = GameState.Planning;
-        else
-            StateManager.instance.GS = GameState.PlayMode;
+        StateManager.instance.GS = canDrag ? GameState.Planning : GameState.PlayMode;
 
-
-       btnHolder.SetActive(snaped);
+        btnHolder.SetActive(!snaped);
 
         foreach (Transform pos in doors)
         {
@@ -78,11 +75,9 @@ public class Lock : MonoBehaviour
                 setBtn.interactable = true;
                 break;
             }          
-
             else
                 setBtn.interactable = false;
         }
-
         if (canvas.gameObject.activeSelf)
             canvas.anchoredPosition = transform.position;
     }
@@ -93,10 +88,16 @@ public class Lock : MonoBehaviour
            {
                transform.position = pos.position;
                pos.GetComponent<Door>().waypoint.isLocked = true;
-               pos.GetComponent<Door>().waypoint.lockDelay =  range;
+               pos.GetComponent<Door>().waypoint.lockDelay =  delay;
                snaped = true;
+               GameManager.instance.SetEnergy(GetComponent<Lock>().energy);
            }
     }
-    public void Cancel() => Destroy(gameObject);
+    public void Cancel()
+    {
+        GameManager.instance.SetEnergy(-GetComponent<Lock>().energy);
+        GameManager.instance.cameras[fixedIndex].quntity++;
+        Destroy(gameObject);
+    }
     public void Rotate() => transform.eulerAngles = new Vector3(0, 0, transform.eulerAngles.z + 45);
 }

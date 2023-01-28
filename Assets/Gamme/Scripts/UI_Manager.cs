@@ -14,6 +14,8 @@ public class UI_Manager : MonoBehaviour
     public GameObject victoryScreen;
     public GameObject lostScreen;
 
+    public Image energySlider;
+
     private void Awake()
     {
         if (instance != null && instance != this)
@@ -26,6 +28,10 @@ public class UI_Manager : MonoBehaviour
         }
     }
 
+    public void UpdateEnergySlider(float min, float max)
+    {
+        energySlider.fillAmount = min / max;
+    }
     public void CreateShop()
     {
         Shop shop = new Shop();

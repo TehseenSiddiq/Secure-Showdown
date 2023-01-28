@@ -220,6 +220,7 @@ MonoBehaviour:
   cancelBtn: {fileID: 6688937263670203328}
   btnHolder: {fileID: 6688937263702563971}
   doors: []
+  fixedIndex: 3
 --- !u!1 &6688937263670203356
 GameObject:
   m_ObjectHideFlags: 0

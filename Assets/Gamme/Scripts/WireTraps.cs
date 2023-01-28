@@ -11,6 +11,9 @@ public class WireTraps : MonoBehaviour
     public bool isSetable = true;
     private FreeDrag freeDrag;
     public AudioSource alertSound;
+    public float energy;
+    public bool isWorking = false;
+
     private void Start()
     {
         freeDrag = GetComponent<FreeDrag>();
@@ -39,7 +42,6 @@ public class WireTraps : MonoBehaviour
         }
         if (hit.collider == null)
         {
-
             lr.colorGradient = caughtColor;
             Debug.DrawLine(points[0].position, hit.point, Color.magenta);
             Debug.DrawRay(points[1].position, -dir, Color.red);
@@ -47,15 +49,17 @@ public class WireTraps : MonoBehaviour
         }
         else
         {
-            lr.colorGradient = workingColor;
-            hit.collider.GetComponent<LootController>().StressManage(50);
-            if (temp)
+            if (isWorking)
             {
-                alertSound.Play();
-                temp = false;
-                Destroy(gameObject, 0.1f);
+                lr.colorGradient = workingColor;
+                hit.collider.GetComponent<LootController>().StressManage(50);
+                if (temp)
+                {
+                    alertSound.Play();
+                    temp = false;
+                    Destroy(gameObject, 0.3f);
+                }
             }
-         
         }
       
     }

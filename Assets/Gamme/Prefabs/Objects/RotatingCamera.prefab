@@ -1093,6 +1093,7 @@ MonoBehaviour:
   btnHolder: {fileID: 942354434}
   canvas: {fileID: 0}
   canDragDelay: 0.7
+  fixedIndex: 1
 --- !u!65 &1594281640
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1132,7 +1133,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: a9fad7eb7998d9c4a800c64298cb7b72, type: 3}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 0

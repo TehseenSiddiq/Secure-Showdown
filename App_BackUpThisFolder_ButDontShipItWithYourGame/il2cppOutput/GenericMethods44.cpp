@@ -497,6 +497,7 @@ IL2CPP_EXTERN_C String_t* _stringLiteral75CE75F6E407D5671F53AFAEA8DEACB462872043
 IL2CPP_EXTERN_C String_t* _stringLiteralC0BC162C7FC5CDA150BAAA5EF19FB89DD3F292E3;
 IL2CPP_EXTERN_C const RuntimeMethod* IProperty_HasAttribute_TisDontSerializeAttribute_t3AEC292F19FA6B75F6CF1E310D4A2BB3C72C550F_m9DB82F52E402DD2F1D9D7CFE775017A9B635AE28_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* IProperty_HasAttribute_TisNonSerializedAttribute_t3E57D1A7E7F31DE192694AB4C8927BAE7D1BE177_m1BC2CCE5A3EEF198B4E87371D70BD44F2B6CF642_RuntimeMethod_var;
+IL2CPP_EXTERN_C const RuntimeMethod* JsonPropertyReader_Unity_Properties_Internal_IListPropertyBagVisitor_Visit_TisRuntimeObject_TisKeyframe_tB9C67DCBFE10C0AE9C52CB5C66E944255C9254F0_mD01305BBFDD77540C20E5C5724E0A2511E76B565_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* JsonPropertyReader_Unity_Properties_Internal_IListPropertyBagVisitor_Visit_TisRuntimeObject_TisRuntimeObject_m8B52E287904B3B5F02EF032A51C40052235F5C2B_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* JsonPropertyReader_Unity_Properties_Internal_IPropertyBagVisitor_Visit_TisBlobAssetOwner_t48F662D0AF49A5BBFD013EF59C8BD9C335A854AD_mBFC5302A7D88431D32CAB38D7C9D67B89A1CF726_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* JsonPropertyReader_Unity_Properties_Internal_IPropertyBagVisitor_Visit_TisBoundsInt_t4E757DE5EFF9FCB42000F173360DDC63B5585485_m887104CFB5E2E212AF8AACA9152326D6E4E5AC13_RuntimeMethod_var;
@@ -4698,6 +4699,291 @@ inline RuntimeObject* Enumerator_get_Current_mC15C28E1B0B0319C028981D9B815424D7E
 inline bool Enumerator_MoveNext_mE930D5B0DE52D929F4AC5EBE7682C163C58553E0 (Enumerator_tDFCD490765F0153CC1063D0DC52786280D3B1C73* __this, const RuntimeMethod* method)
 {
 	return ((  bool (*) (Enumerator_tDFCD490765F0153CC1063D0DC52786280D3B1C73*, const RuntimeMethod*))Enumerator_MoveNext_mE930D5B0DE52D929F4AC5EBE7682C163C58553E0_gshared)(__this, method);
+}
+// System.Void Unity.Serialization.Json.JsonPropertyReader::Unity.Properties.Internal.IListPropertyBagVisitor.Visit<System.Object,UnityEngine.Keyframe>(Unity.Properties.Internal.IListPropertyBag`2<TList,TElement>,TList&)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void JsonPropertyReader_Unity_Properties_Internal_IListPropertyBagVisitor_Visit_TisRuntimeObject_TisKeyframe_tB9C67DCBFE10C0AE9C52CB5C66E944255C9254F0_mD01305BBFDD77540C20E5C5724E0A2511E76B565_gshared (JsonPropertyReader_t8B4B535106EE2E4B7BE370CDA741E56D4CA1CF0B* __this, RuntimeObject* ___properties0, RuntimeObject** ___container1, const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&IDisposable_t030E0496B4E0E4E4F086825007979AF51F7248C5_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&IEnumerator_1_t0446516FA0D1DFD2F1F94D278140B73488297FA7_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&IEnumerator_t7B609C2FFA6EB5167D9C62A0C32A21DE2F666DAA_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Type_t_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteral75CE75F6E407D5671F53AFAEA8DEACB462872043);
+		s_Il2CppMethodInitialized = true;
+	}
+	UnsafeValueView_tCD606B53AEB275B5AC69CB248B949E3EE5A5BB6A V_0;
+	memset((&V_0), 0, sizeof(V_0));
+	UnsafeArrayView_t64641D362D82B5FE45F8D72D5673B092F659FF30 V_1;
+	memset((&V_1), 0, sizeof(V_1));
+	UnsafeObjectView_tDD17C91E065E37B8955F18CB553A17F82EE76254 V_2;
+	memset((&V_2), 0, sizeof(V_2));
+	bool V_3 = false;
+	bool V_4 = false;
+	int32_t V_5 = 0;
+	RuntimeObject* V_6 = NULL;
+	UnsafeValueView_tCD606B53AEB275B5AC69CB248B949E3EE5A5BB6A V_7;
+	memset((&V_7), 0, sizeof(V_7));
+	Keyframe_tB9C67DCBFE10C0AE9C52CB5C66E944255C9254F0 V_8;
+	memset((&V_8), 0, sizeof(V_8));
+	RuntimeObject* V_9 = NULL;
+	UnsafeValueView_tCD606B53AEB275B5AC69CB248B949E3EE5A5BB6A V_10;
+	memset((&V_10), 0, sizeof(V_10));
+	Keyframe_tB9C67DCBFE10C0AE9C52CB5C66E944255C9254F0 V_11;
+	memset((&V_11), 0, sizeof(V_11));
+	UnsafeValueView_tCD606B53AEB275B5AC69CB248B949E3EE5A5BB6A G_B3_0;
+	memset((&G_B3_0), 0, sizeof(G_B3_0));
+	{
+		// var elements = m_Metadata.HasElements ? m_View.AsObjectView()[k_SerializedElementsKey] : m_View;
+		SerializedContainerMetadata_t5CCD2AD33CE2755161834EBD4EDE623397786E0E* L_0 = (SerializedContainerMetadata_t5CCD2AD33CE2755161834EBD4EDE623397786E0E*)(&__this->___m_Metadata_14);
+		bool L_1 = (bool)L_0->___HasElements_3;
+		if (L_1)
+		{
+			goto IL_0016;
+		}
+	}
+	{
+		UnsafeValueView_tCD606B53AEB275B5AC69CB248B949E3EE5A5BB6A L_2 = (UnsafeValueView_tCD606B53AEB275B5AC69CB248B949E3EE5A5BB6A)__this->___m_View_7;
+		G_B3_0 = L_2;
+		goto IL_002e;
+	}
+
+IL_0016:
+	{
+		UnsafeValueView_tCD606B53AEB275B5AC69CB248B949E3EE5A5BB6A* L_3 = (UnsafeValueView_tCD606B53AEB275B5AC69CB248B949E3EE5A5BB6A*)(&__this->___m_View_7);
+		UnsafeObjectView_tDD17C91E065E37B8955F18CB553A17F82EE76254 L_4;
+		L_4 = UnsafeValueView_AsObjectView_m08E3A3C5DDFEC0E3462138B028185EEDC28C390B(L_3, NULL);
+		V_2 = L_4;
+		UnsafeValueView_tCD606B53AEB275B5AC69CB248B949E3EE5A5BB6A L_5;
+		L_5 = UnsafeObjectView_get_Item_m0F1F89D36CEE9F9A34C430C614A0BA42A68057FA((&V_2), _stringLiteral75CE75F6E407D5671F53AFAEA8DEACB462872043, NULL);
+		G_B3_0 = L_5;
+	}
+
+IL_002e:
+	{
+		V_0 = G_B3_0;
+		// if (elements.Type != TokenType.Array)
+		int32_t L_6;
+		L_6 = UnsafeValueView_get_Type_m6522F37423D33F14BE68F64C4729FC1C6ABF5B2B((&V_0), NULL);
+		V_3 = (bool)((((int32_t)((((int32_t)L_6) == ((int32_t)2))? 1 : 0)) == ((int32_t)0))? 1 : 0);
+		bool L_7 = V_3;
+		if (!L_7)
+		{
+			goto IL_0047;
+		}
+	}
+	{
+		// throw new ArgumentException();
+		ArgumentException_tAD90411542A20A9C72D5CDA3A84181D8B947A263* L_8 = (ArgumentException_tAD90411542A20A9C72D5CDA3A84181D8B947A263*)il2cpp_codegen_object_new(((RuntimeClass*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&ArgumentException_tAD90411542A20A9C72D5CDA3A84181D8B947A263_il2cpp_TypeInfo_var)));
+		NullCheck(L_8);
+		ArgumentException__ctor_m34A925BA55EC4CE4253404E363B5F6A53EB51CA3(L_8, NULL);
+		IL2CPP_RAISE_MANAGED_EXCEPTION(L_8, ((RuntimeMethod*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&JsonPropertyReader_Unity_Properties_Internal_IListPropertyBagVisitor_Visit_TisRuntimeObject_TisKeyframe_tB9C67DCBFE10C0AE9C52CB5C66E944255C9254F0_mD01305BBFDD77540C20E5C5724E0A2511E76B565_RuntimeMethod_var)));
+	}
+
+IL_0047:
+	{
+		// var arr = elements.AsArrayView();
+		UnsafeArrayView_t64641D362D82B5FE45F8D72D5673B092F659FF30 L_9;
+		L_9 = UnsafeValueView_AsArrayView_mCEA38E5AEEA79963F7D5D1BAC5D7E05625D9740A((&V_0), NULL);
+		V_1 = L_9;
+		// if (typeof(TList).IsArray)
+		RuntimeTypeHandle_t332A452B8B6179E4469B69525D0FE82A88030F7B L_10 = { reinterpret_cast<intptr_t> (il2cpp_rgctx_type(method->rgctx_data, 0)) };
+		il2cpp_codegen_runtime_class_init_inline(Type_t_il2cpp_TypeInfo_var);
+		Type_t* L_11;
+		L_11 = Type_GetTypeFromHandle_m6062B81682F79A4D6DF2640692EE6D9987858C57(L_10, NULL);
+		NullCheck(L_11);
+		bool L_12;
+		L_12 = Type_get_IsArray_mB9B8CA713B2AA9D6AFECC24E05AF78D22532B673(L_11, NULL);
+		V_4 = L_12;
+		bool L_13 = V_4;
+		if (!L_13)
+		{
+			goto IL_00c4;
+		}
+	}
+	{
+		// var index = 0;
+		V_5 = 0;
+		// foreach (var element in arr)
+		RuntimeObject* L_14;
+		L_14 = UnsafeArrayView_GetEnumerator_mF7FD01990E7F298935472FAF50DD0ACCC438A191((&V_1), NULL);
+		V_6 = L_14;
+	}
+	{
+		auto __finallyBlock = il2cpp::utils::Finally([&]
+		{
+
+FINALLY_00b4:
+			{// begin finally (depth: 1)
+				{
+					RuntimeObject* L_15 = V_6;
+					if (!L_15)
+					{
+						goto IL_00c0;
+					}
+				}
+				{
+					RuntimeObject* L_16 = V_6;
+					NullCheck((RuntimeObject*)L_16);
+					InterfaceActionInvoker0::Invoke(0 /* System.Void System.IDisposable::Dispose() */, IDisposable_t030E0496B4E0E4E4F086825007979AF51F7248C5_il2cpp_TypeInfo_var, (RuntimeObject*)L_16);
+				}
+
+IL_00c0:
+				{
+					return;
+				}
+			}// end finally (depth: 1)
+		});
+		try
+		{// begin try (depth: 1)
+			{
+				goto IL_00a9_1;
+			}
+
+IL_0074_1:
+			{
+				// foreach (var element in arr)
+				RuntimeObject* L_17 = V_6;
+				NullCheck(L_17);
+				UnsafeValueView_tCD606B53AEB275B5AC69CB248B949E3EE5A5BB6A L_18;
+				L_18 = InterfaceFuncInvoker0< UnsafeValueView_tCD606B53AEB275B5AC69CB248B949E3EE5A5BB6A >::Invoke(0 /* T System.Collections.Generic.IEnumerator`1<Unity.Serialization.Json.Unsafe.UnsafeValueView>::get_Current() */, IEnumerator_1_t0446516FA0D1DFD2F1F94D278140B73488297FA7_il2cpp_TypeInfo_var, L_17);
+				V_7 = L_18;
+				// var value = default(TElement);
+				il2cpp_codegen_initobj((&V_8), sizeof(Keyframe_tB9C67DCBFE10C0AE9C52CB5C66E944255C9254F0));
+				// ReadValue(ref value, element);
+				UnsafeValueView_tCD606B53AEB275B5AC69CB248B949E3EE5A5BB6A L_19 = V_7;
+				((  void (*) (JsonPropertyReader_t8B4B535106EE2E4B7BE370CDA741E56D4CA1CF0B*, Keyframe_tB9C67DCBFE10C0AE9C52CB5C66E944255C9254F0*, UnsafeValueView_tCD606B53AEB275B5AC69CB248B949E3EE5A5BB6A, bool, const RuntimeMethod*))il2cpp_codegen_get_method_pointer(il2cpp_rgctx_method(method->rgctx_data, 1)))(__this, (&V_8), L_19, (bool)0, il2cpp_rgctx_method(method->rgctx_data, 1));
+				// container[index++] = value;
+				RuntimeObject** L_20 = ___container1;
+				int32_t L_21 = V_5;
+				int32_t L_22 = L_21;
+				V_5 = ((int32_t)il2cpp_codegen_add(L_22, 1));
+				Keyframe_tB9C67DCBFE10C0AE9C52CB5C66E944255C9254F0 L_23 = V_8;
+				NullCheck((RuntimeObject*)(*L_20));
+				InterfaceActionInvoker2< int32_t, Keyframe_tB9C67DCBFE10C0AE9C52CB5C66E944255C9254F0 >::Invoke(1 /* System.Void System.Collections.Generic.IList`1<UnityEngine.Keyframe>::set_Item(System.Int32,T) */, il2cpp_rgctx_data(method->rgctx_data, 3), (RuntimeObject*)(*L_20), L_22, L_23);
+			}
+
+IL_00a9_1:
+			{
+				// foreach (var element in arr)
+				RuntimeObject* L_24 = V_6;
+				NullCheck((RuntimeObject*)L_24);
+				bool L_25;
+				L_25 = InterfaceFuncInvoker0< bool >::Invoke(0 /* System.Boolean System.Collections.IEnumerator::MoveNext() */, IEnumerator_t7B609C2FFA6EB5167D9C62A0C32A21DE2F666DAA_il2cpp_TypeInfo_var, (RuntimeObject*)L_24);
+				if (L_25)
+				{
+					goto IL_0074_1;
+				}
+			}
+			{
+				goto IL_00c1;
+			}
+		}// end try (depth: 1)
+		catch(Il2CppExceptionWrapper& e)
+		{
+			__finallyBlock.StoreException(e.ex);
+		}
+	}
+
+IL_00c1:
+	{
+		goto IL_0125;
+	}
+
+IL_00c4:
+	{
+		// container.Clear();
+		RuntimeObject** L_26 = ___container1;
+		NullCheck((RuntimeObject*)(*L_26));
+		InterfaceActionInvoker0::Invoke(3 /* System.Void System.Collections.Generic.ICollection`1<UnityEngine.Keyframe>::Clear() */, il2cpp_rgctx_data(method->rgctx_data, 5), (RuntimeObject*)(*L_26));
+		// foreach (var element in arr)
+		RuntimeObject* L_27;
+		L_27 = UnsafeArrayView_GetEnumerator_mF7FD01990E7F298935472FAF50DD0ACCC438A191((&V_1), NULL);
+		V_9 = L_27;
+	}
+	{
+		auto __finallyBlock = il2cpp::utils::Finally([&]
+		{
+
+FINALLY_0117:
+			{// begin finally (depth: 1)
+				{
+					RuntimeObject* L_28 = V_9;
+					if (!L_28)
+					{
+						goto IL_0123;
+					}
+				}
+				{
+					RuntimeObject* L_29 = V_9;
+					NullCheck((RuntimeObject*)L_29);
+					InterfaceActionInvoker0::Invoke(0 /* System.Void System.IDisposable::Dispose() */, IDisposable_t030E0496B4E0E4E4F086825007979AF51F7248C5_il2cpp_TypeInfo_var, (RuntimeObject*)L_29);
+				}
+
+IL_0123:
+				{
+					return;
+				}
+			}// end finally (depth: 1)
+		});
+		try
+		{// begin try (depth: 1)
+			{
+				goto IL_010c_1;
+			}
+
+IL_00de_1:
+			{
+				// foreach (var element in arr)
+				RuntimeObject* L_30 = V_9;
+				NullCheck(L_30);
+				UnsafeValueView_tCD606B53AEB275B5AC69CB248B949E3EE5A5BB6A L_31;
+				L_31 = InterfaceFuncInvoker0< UnsafeValueView_tCD606B53AEB275B5AC69CB248B949E3EE5A5BB6A >::Invoke(0 /* T System.Collections.Generic.IEnumerator`1<Unity.Serialization.Json.Unsafe.UnsafeValueView>::get_Current() */, IEnumerator_1_t0446516FA0D1DFD2F1F94D278140B73488297FA7_il2cpp_TypeInfo_var, L_30);
+				V_10 = L_31;
+				// var value = default(TElement);
+				il2cpp_codegen_initobj((&V_11), sizeof(Keyframe_tB9C67DCBFE10C0AE9C52CB5C66E944255C9254F0));
+				// ReadValue(ref value, element);
+				UnsafeValueView_tCD606B53AEB275B5AC69CB248B949E3EE5A5BB6A L_32 = V_10;
+				((  void (*) (JsonPropertyReader_t8B4B535106EE2E4B7BE370CDA741E56D4CA1CF0B*, Keyframe_tB9C67DCBFE10C0AE9C52CB5C66E944255C9254F0*, UnsafeValueView_tCD606B53AEB275B5AC69CB248B949E3EE5A5BB6A, bool, const RuntimeMethod*))il2cpp_codegen_get_method_pointer(il2cpp_rgctx_method(method->rgctx_data, 1)))(__this, (&V_11), L_32, (bool)0, il2cpp_rgctx_method(method->rgctx_data, 1));
+				// container.Add(value);
+				RuntimeObject** L_33 = ___container1;
+				Keyframe_tB9C67DCBFE10C0AE9C52CB5C66E944255C9254F0 L_34 = V_11;
+				NullCheck((RuntimeObject*)(*L_33));
+				InterfaceActionInvoker1< Keyframe_tB9C67DCBFE10C0AE9C52CB5C66E944255C9254F0 >::Invoke(2 /* System.Void System.Collections.Generic.ICollection`1<UnityEngine.Keyframe>::Add(T) */, il2cpp_rgctx_data(method->rgctx_data, 5), (RuntimeObject*)(*L_33), L_34);
+			}
+
+IL_010c_1:
+			{
+				// foreach (var element in arr)
+				RuntimeObject* L_35 = V_9;
+				NullCheck((RuntimeObject*)L_35);
+				bool L_36;
+				L_36 = InterfaceFuncInvoker0< bool >::Invoke(0 /* System.Boolean System.Collections.IEnumerator::MoveNext() */, IEnumerator_t7B609C2FFA6EB5167D9C62A0C32A21DE2F666DAA_il2cpp_TypeInfo_var, (RuntimeObject*)L_35);
+				if (L_36)
+				{
+					goto IL_00de_1;
+				}
+			}
+			{
+				goto IL_0124;
+			}
+		}// end try (depth: 1)
+		catch(Il2CppExceptionWrapper& e)
+		{
+			__finallyBlock.StoreException(e.ex);
+		}
+	}
+
+IL_0124:
+	{
+	}
+
+IL_0125:
+	{
+		// }
+		return;
+	}
 }
 // System.Void Unity.Serialization.Json.JsonPropertyReader::Unity.Properties.Internal.IListPropertyBagVisitor.Visit<System.Object,System.Object>(Unity.Properties.Internal.IListPropertyBag`2<TList,TElement>,TList&)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void JsonPropertyReader_Unity_Properties_Internal_IListPropertyBagVisitor_Visit_TisRuntimeObject_TisRuntimeObject_m8B52E287904B3B5F02EF032A51C40052235F5C2B_gshared (JsonPropertyReader_t8B4B535106EE2E4B7BE370CDA741E56D4CA1CF0B* __this, RuntimeObject* ___properties0, RuntimeObject** ___container1, const RuntimeMethod* method) 
@@ -28323,417 +28609,6 @@ FINALLY_013c_1:
 					Bounds_t367E830C64BBF235ED8C3B2F8CF6254FDCAD39C3* L_47 = ___container1;
 					NullCheck(((RuntimeObject*)Castclass((RuntimeObject*)L_46, il2cpp_rgctx_data(method->rgctx_data, 7))));
 					InterfaceActionInvoker2< RuntimeObject*, Bounds_t367E830C64BBF235ED8C3B2F8CF6254FDCAD39C3* >::Invoke(0 /* System.Void Unity.Properties.Internal.IPropertyAccept`1<UnityEngine.Bounds>::Accept(Unity.Properties.Internal.IPropertyVisitor,TContainer&) */, il2cpp_rgctx_data(method->rgctx_data, 7), ((RuntimeObject*)Castclass((RuntimeObject*)L_46, il2cpp_rgctx_data(method->rgctx_data, 7))), (RuntimeObject*)__this, L_47);
-					goto IL_014b_1;
-				}// end try (depth: 2)
-				catch(Il2CppExceptionWrapper& e)
-				{
-					__finallyBlock.StoreException(e.ex);
-				}
-			}
-
-IL_014b_1:
-			{
-			}
-
-IL_014c_1:
-			{
-				// foreach (var property in properties.GetProperties(ref container))
-				RuntimeObject* L_48 = V_11;
-				NullCheck((RuntimeObject*)L_48);
-				bool L_49;
-				L_49 = InterfaceFuncInvoker0< bool >::Invoke(0 /* System.Boolean System.Collections.IEnumerator::MoveNext() */, IEnumerator_t7B609C2FFA6EB5167D9C62A0C32A21DE2F666DAA_il2cpp_TypeInfo_var, (RuntimeObject*)L_48);
-				if (L_49)
-				{
-					goto IL_00fc_1;
-				}
-			}
-			{
-				goto IL_0164;
-			}
-		}// end try (depth: 1)
-		catch(Il2CppExceptionWrapper& e)
-		{
-			__finallyBlock.StoreException(e.ex);
-		}
-	}
-
-IL_0164:
-	{
-	}
-
-IL_0165:
-	{
-		// if (!isRootContainer)
-		bool L_50 = V_0;
-		V_15 = (bool)((((int32_t)L_50) == ((int32_t)0))? 1 : 0);
-		bool L_51 = V_15;
-		if (!L_51)
-		{
-			goto IL_017d;
-		}
-	}
-	{
-		// m_Writer.WriteEndObject();
-		JsonWriter_tAD644F358C50E0CEBFACDF027D775880AD3A7016* L_52 = (JsonWriter_tAD644F358C50E0CEBFACDF027D775880AD3A7016*)(&__this->___m_Writer_11);
-		JsonWriter_WriteEndObject_m084626E4272203EDB9B703EACFB53C51AFB12535(L_52, NULL);
-	}
-
-IL_017d:
-	{
-		// }
-		return;
-	}
-}
-// System.Void Unity.Serialization.Json.JsonPropertyWriter::Unity.Properties.Internal.IPropertyBagVisitor.Visit<UnityEngine.BoundsInt>(Unity.Properties.Internal.IPropertyBag`1<TContainer>,TContainer&)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void JsonPropertyWriter_Unity_Properties_Internal_IPropertyBagVisitor_Visit_TisBoundsInt_t4E757DE5EFF9FCB42000F173360DDC63B5585485_m7A6A55E5D29942C63EAC3D91B1A85F1B9EC75BC3_gshared (JsonPropertyWriter_tFED1C71C52277580C474F94D836B1AD23BCF2FD6* __this, RuntimeObject* ___properties0, BoundsInt_t4E757DE5EFF9FCB42000F173360DDC63B5585485* ___container1, const RuntimeMethod* method) 
-{
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
-	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&IDisposable_t030E0496B4E0E4E4F086825007979AF51F7248C5_il2cpp_TypeInfo_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&IEnumerator_t7B609C2FFA6EB5167D9C62A0C32A21DE2F666DAA_il2cpp_TypeInfo_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&IPropertyWrapper_t330EE0EBAD73E676BF0EC677A9386E7A7DAAE02B_il2cpp_TypeInfo_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&IProperty_HasAttribute_TisDontSerializeAttribute_t3AEC292F19FA6B75F6CF1E310D4A2BB3C72C550F_m9DB82F52E402DD2F1D9D7CFE775017A9B635AE28_RuntimeMethod_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&IProperty_HasAttribute_TisNonSerializedAttribute_t3E57D1A7E7F31DE192694AB4C8927BAE7D1BE177_m1BC2CCE5A3EEF198B4E87371D70BD44F2B6CF642_RuntimeMethod_var);
-		s_Il2CppMethodInitialized = true;
-	}
-	bool V_0 = false;
-	int32_t V_1 = 0;
-	RuntimeObject* V_2 = NULL;
-	bool V_3 = false;
-	SerializedContainerMetadata_t445401F6955E68F2CB81308B99884CE43F94A540 V_4;
-	memset((&V_4), 0, sizeof(V_4));
-	bool V_5 = false;
-	bool V_6 = false;
-	Enumerator_tB9CE05BD19CFC6BE4D01913E34A6A6D9145023C3 V_7;
-	memset((&V_7), 0, sizeof(V_7));
-	RuntimeObject* V_8 = NULL;
-	bool V_9 = false;
-	PropertyScope_tF6150DA20D978D740A099254DA12F4676A6DF0D2 V_10;
-	memset((&V_10), 0, sizeof(V_10));
-	RuntimeObject* V_11 = NULL;
-	RuntimeObject* V_12 = NULL;
-	bool V_13 = false;
-	PropertyScope_tF6150DA20D978D740A099254DA12F4676A6DF0D2 V_14;
-	memset((&V_14), 0, sizeof(V_14));
-	bool V_15 = false;
-	int32_t G_B10_0 = 0;
-	int32_t G_B25_0 = 0;
-	{
-		// var isRootContainer = properties is IPropertyWrapper;
-		RuntimeObject* L_0 = ___properties0;
-		V_0 = (bool)((!(((RuntimeObject*)(RuntimeObject*)((RuntimeObject*)IsInst((RuntimeObject*)L_0, IPropertyWrapper_t330EE0EBAD73E676BF0EC677A9386E7A7DAAE02B_il2cpp_TypeInfo_var))) <= ((RuntimeObject*)(RuntimeObject*)NULL)))? 1 : 0);
-		// var count = 0;
-		V_1 = 0;
-		// if (!isRootContainer)
-		bool L_1 = V_0;
-		V_3 = (bool)((((int32_t)L_1) == ((int32_t)0))? 1 : 0);
-		bool L_2 = V_3;
-		if (!L_2)
-		{
-			goto IL_005a;
-		}
-	}
-	{
-		// var metadata = GetSerializedContainerMetadata(ref container);
-		BoundsInt_t4E757DE5EFF9FCB42000F173360DDC63B5585485* L_3 = ___container1;
-		SerializedContainerMetadata_t445401F6955E68F2CB81308B99884CE43F94A540 L_4;
-		L_4 = ((  SerializedContainerMetadata_t445401F6955E68F2CB81308B99884CE43F94A540 (*) (JsonPropertyWriter_tFED1C71C52277580C474F94D836B1AD23BCF2FD6*, BoundsInt_t4E757DE5EFF9FCB42000F173360DDC63B5585485*, const RuntimeMethod*))il2cpp_codegen_get_method_pointer(il2cpp_rgctx_method(method->rgctx_data, 0)))(__this, L_3, il2cpp_rgctx_method(method->rgctx_data, 0));
-		V_4 = L_4;
-		// if (metadata.IsSerializedReference)
-		SerializedContainerMetadata_t445401F6955E68F2CB81308B99884CE43F94A540 L_5 = V_4;
-		bool L_6 = (bool)L_5.___IsSerializedReference_0;
-		V_5 = L_6;
-		bool L_7 = V_5;
-		if (!L_7)
-		{
-			goto IL_0040;
-		}
-	}
-	{
-		// WriteSerializedReference(metadata.SerializedId);
-		SerializedContainerMetadata_t445401F6955E68F2CB81308B99884CE43F94A540 L_8 = V_4;
-		int32_t L_9 = (int32_t)L_8.___SerializedId_4;
-		JsonPropertyWriter_WriteSerializedReference_m33EFA0E69A76F1A6BF39B9A28CEC3D54974640DC(__this, L_9, NULL);
-		// return;
-		goto IL_017d;
-	}
-
-IL_0040:
-	{
-		// m_Writer.WriteBeginObject();
-		JsonWriter_tAD644F358C50E0CEBFACDF027D775880AD3A7016* L_10 = (JsonWriter_tAD644F358C50E0CEBFACDF027D775880AD3A7016*)(&__this->___m_Writer_11);
-		JsonWriter_WriteBeginObject_m8379389AB41EF98EE7B795684B70E894514B0338(L_10, (String_t*)NULL, NULL);
-		// WriteSerializedContainerMetadata(ref container, metadata, ref count);
-		BoundsInt_t4E757DE5EFF9FCB42000F173360DDC63B5585485* L_11 = ___container1;
-		SerializedContainerMetadata_t445401F6955E68F2CB81308B99884CE43F94A540 L_12 = V_4;
-		((  void (*) (JsonPropertyWriter_tFED1C71C52277580C474F94D836B1AD23BCF2FD6*, BoundsInt_t4E757DE5EFF9FCB42000F173360DDC63B5585485*, SerializedContainerMetadata_t445401F6955E68F2CB81308B99884CE43F94A540, int32_t*, const RuntimeMethod*))il2cpp_codegen_get_method_pointer(il2cpp_rgctx_method(method->rgctx_data, 1)))(__this, L_11, L_12, (&V_1), il2cpp_rgctx_method(method->rgctx_data, 1));
-	}
-
-IL_005a:
-	{
-		// if (properties is IPropertyList<TContainer> propertyList)
-		RuntimeObject* L_13 = ___properties0;
-		V_2 = ((RuntimeObject*)IsInst((RuntimeObject*)L_13, il2cpp_rgctx_data(method->rgctx_data, 2)));
-		RuntimeObject* L_14 = V_2;
-		V_6 = (bool)((!(((RuntimeObject*)(RuntimeObject*)L_14) <= ((RuntimeObject*)(RuntimeObject*)NULL)))? 1 : 0);
-		bool L_15 = V_6;
-		if (!L_15)
-		{
-			goto IL_00ea;
-		}
-	}
-	{
-		// foreach (var property in propertyList.GetProperties(ref container))
-		RuntimeObject* L_16 = V_2;
-		BoundsInt_t4E757DE5EFF9FCB42000F173360DDC63B5585485* L_17 = ___container1;
-		NullCheck(L_16);
-		List_1_t1FA584745767EA2B63468779C82DA5C81C4F6E5A* L_18;
-		L_18 = InterfaceFuncInvoker1< List_1_t1FA584745767EA2B63468779C82DA5C81C4F6E5A*, BoundsInt_t4E757DE5EFF9FCB42000F173360DDC63B5585485* >::Invoke(0 /* System.Collections.Generic.List`1<Unity.Properties.IProperty`1<TContainer>> Unity.Properties.Internal.IPropertyList`1<UnityEngine.BoundsInt>::GetProperties(TContainer&) */, il2cpp_rgctx_data(method->rgctx_data, 2), L_16, L_17);
-		NullCheck(L_18);
-		Enumerator_tB9CE05BD19CFC6BE4D01913E34A6A6D9145023C3 L_19;
-		L_19 = ((  Enumerator_tB9CE05BD19CFC6BE4D01913E34A6A6D9145023C3 (*) (List_1_t1FA584745767EA2B63468779C82DA5C81C4F6E5A*, const RuntimeMethod*))il2cpp_codegen_get_method_pointer(il2cpp_rgctx_method(method->rgctx_data, 5)))(L_18, il2cpp_rgctx_method(method->rgctx_data, 5));
-		V_7 = L_19;
-	}
-	{
-		auto __finallyBlock = il2cpp::utils::Finally([&]
-		{
-
-FINALLY_00d8:
-			{// begin finally (depth: 1)
-				Enumerator_Dispose_m26F72BD6E21C9C189A0D12E06D39973A0818526E((&V_7), il2cpp_rgctx_method(method->rgctx_data, 11));
-				return;
-			}// end finally (depth: 1)
-		});
-		try
-		{// begin try (depth: 1)
-			{
-				goto IL_00cd_1;
-			}
-
-IL_007d_1:
-			{
-				// foreach (var property in propertyList.GetProperties(ref container))
-				RuntimeObject* L_20;
-				L_20 = Enumerator_get_Current_m10F9938E0D0E229E9FBCCD106F72169B9D970A58_inline((&V_7), il2cpp_rgctx_method(method->rgctx_data, 6));
-				V_8 = L_20;
-				// if (property.HasAttribute<NonSerializedAttribute>() || property.HasAttribute<DontSerializeAttribute>())
-				RuntimeObject* L_21 = V_8;
-				NullCheck((RuntimeObject*)L_21);
-				bool L_22;
-				L_22 = GenericInterfaceFuncInvoker0< bool >::Invoke(IProperty_HasAttribute_TisNonSerializedAttribute_t3E57D1A7E7F31DE192694AB4C8927BAE7D1BE177_m1BC2CCE5A3EEF198B4E87371D70BD44F2B6CF642_RuntimeMethod_var, (RuntimeObject*)L_21);
-				if (L_22)
-				{
-					goto IL_0099_1;
-				}
-			}
-			{
-				RuntimeObject* L_23 = V_8;
-				NullCheck((RuntimeObject*)L_23);
-				bool L_24;
-				L_24 = GenericInterfaceFuncInvoker0< bool >::Invoke(IProperty_HasAttribute_TisDontSerializeAttribute_t3AEC292F19FA6B75F6CF1E310D4A2BB3C72C550F_m9DB82F52E402DD2F1D9D7CFE775017A9B635AE28_RuntimeMethod_var, (RuntimeObject*)L_23);
-				G_B10_0 = ((int32_t)(L_24));
-				goto IL_009a_1;
-			}
-
-IL_0099_1:
-			{
-				G_B10_0 = 1;
-			}
-
-IL_009a_1:
-			{
-				V_9 = (bool)G_B10_0;
-				bool L_25 = V_9;
-				if (!L_25)
-				{
-					goto IL_00a2_1;
-				}
-			}
-			{
-				// continue;
-				goto IL_00cd_1;
-			}
-
-IL_00a2_1:
-			{
-				// using (CreatePropertyScope(property))
-				RuntimeObject* L_26 = V_8;
-				NullCheck((JsonPropertyVisitor_tAE7B9582005DD7C04E633BF702AB5A36E73E7CED*)__this);
-				PropertyScope_tF6150DA20D978D740A099254DA12F4676A6DF0D2 L_27;
-				L_27 = JsonPropertyVisitor_CreatePropertyScope_m2FCB1BA90EBE66A6288C4A33ABB5D0FF6924EC36((JsonPropertyVisitor_tAE7B9582005DD7C04E633BF702AB5A36E73E7CED*)__this, (RuntimeObject*)L_26, NULL);
-				V_10 = L_27;
-			}
-			{
-				auto __finallyBlock = il2cpp::utils::Finally([&]
-				{
-
-FINALLY_00bd_1:
-					{// begin finally (depth: 2)
-						PropertyScope_Dispose_mE3BA6399113D4B83461A803E0F31C5071750F460((&V_10), NULL);
-						return;
-					}// end finally (depth: 2)
-				});
-				try
-				{// begin try (depth: 2)
-					// ((IPropertyAccept<TContainer>) property).Accept(this, ref container);
-					RuntimeObject* L_28 = V_8;
-					BoundsInt_t4E757DE5EFF9FCB42000F173360DDC63B5585485* L_29 = ___container1;
-					NullCheck(((RuntimeObject*)Castclass((RuntimeObject*)L_28, il2cpp_rgctx_data(method->rgctx_data, 7))));
-					InterfaceActionInvoker2< RuntimeObject*, BoundsInt_t4E757DE5EFF9FCB42000F173360DDC63B5585485* >::Invoke(0 /* System.Void Unity.Properties.Internal.IPropertyAccept`1<UnityEngine.BoundsInt>::Accept(Unity.Properties.Internal.IPropertyVisitor,TContainer&) */, il2cpp_rgctx_data(method->rgctx_data, 7), ((RuntimeObject*)Castclass((RuntimeObject*)L_28, il2cpp_rgctx_data(method->rgctx_data, 7))), (RuntimeObject*)__this, L_29);
-					goto IL_00cc_1;
-				}// end try (depth: 2)
-				catch(Il2CppExceptionWrapper& e)
-				{
-					__finallyBlock.StoreException(e.ex);
-				}
-			}
-
-IL_00cc_1:
-			{
-			}
-
-IL_00cd_1:
-			{
-				// foreach (var property in propertyList.GetProperties(ref container))
-				bool L_30;
-				L_30 = Enumerator_MoveNext_mE1D251F6149AA08EA097144C09C6CE6418AA48EF((&V_7), il2cpp_rgctx_method(method->rgctx_data, 9));
-				if (L_30)
-				{
-					goto IL_007d_1;
-				}
-			}
-			{
-				goto IL_00e7;
-			}
-		}// end try (depth: 1)
-		catch(Il2CppExceptionWrapper& e)
-		{
-			__finallyBlock.StoreException(e.ex);
-		}
-	}
-
-IL_00e7:
-	{
-		goto IL_0165;
-	}
-
-IL_00ea:
-	{
-		// foreach (var property in properties.GetProperties(ref container))
-		RuntimeObject* L_31 = ___properties0;
-		BoundsInt_t4E757DE5EFF9FCB42000F173360DDC63B5585485* L_32 = ___container1;
-		NullCheck((RuntimeObject*)L_31);
-		RuntimeObject* L_33;
-		L_33 = InterfaceFuncInvoker1< RuntimeObject*, BoundsInt_t4E757DE5EFF9FCB42000F173360DDC63B5585485* >::Invoke(0 /* System.Collections.Generic.IEnumerable`1<Unity.Properties.IProperty`1<TContainer>> Unity.Properties.Internal.IPropertyEnumerable`1<UnityEngine.BoundsInt>::GetProperties(TContainer&) */, il2cpp_rgctx_data(method->rgctx_data, 12), (RuntimeObject*)L_31, L_32);
-		NullCheck(L_33);
-		RuntimeObject* L_34;
-		L_34 = InterfaceFuncInvoker0< RuntimeObject* >::Invoke(0 /* System.Collections.Generic.IEnumerator`1<T> System.Collections.Generic.IEnumerable`1<Unity.Properties.IProperty`1<UnityEngine.BoundsInt>>::GetEnumerator() */, il2cpp_rgctx_data(method->rgctx_data, 14), L_33);
-		V_11 = L_34;
-	}
-	{
-		auto __finallyBlock = il2cpp::utils::Finally([&]
-		{
-
-FINALLY_0157:
-			{// begin finally (depth: 1)
-				{
-					RuntimeObject* L_35 = V_11;
-					if (!L_35)
-					{
-						goto IL_0163;
-					}
-				}
-				{
-					RuntimeObject* L_36 = V_11;
-					NullCheck((RuntimeObject*)L_36);
-					InterfaceActionInvoker0::Invoke(0 /* System.Void System.IDisposable::Dispose() */, IDisposable_t030E0496B4E0E4E4F086825007979AF51F7248C5_il2cpp_TypeInfo_var, (RuntimeObject*)L_36);
-				}
-
-IL_0163:
-				{
-					return;
-				}
-			}// end finally (depth: 1)
-		});
-		try
-		{// begin try (depth: 1)
-			{
-				goto IL_014c_1;
-			}
-
-IL_00fc_1:
-			{
-				// foreach (var property in properties.GetProperties(ref container))
-				RuntimeObject* L_37 = V_11;
-				NullCheck(L_37);
-				RuntimeObject* L_38;
-				L_38 = InterfaceFuncInvoker0< RuntimeObject* >::Invoke(0 /* T System.Collections.Generic.IEnumerator`1<Unity.Properties.IProperty`1<UnityEngine.BoundsInt>>::get_Current() */, il2cpp_rgctx_data(method->rgctx_data, 16), L_37);
-				V_12 = L_38;
-				// if (property.HasAttribute<NonSerializedAttribute>() || property.HasAttribute<DontSerializeAttribute>())
-				RuntimeObject* L_39 = V_12;
-				NullCheck((RuntimeObject*)L_39);
-				bool L_40;
-				L_40 = GenericInterfaceFuncInvoker0< bool >::Invoke(IProperty_HasAttribute_TisNonSerializedAttribute_t3E57D1A7E7F31DE192694AB4C8927BAE7D1BE177_m1BC2CCE5A3EEF198B4E87371D70BD44F2B6CF642_RuntimeMethod_var, (RuntimeObject*)L_39);
-				if (L_40)
-				{
-					goto IL_0118_1;
-				}
-			}
-			{
-				RuntimeObject* L_41 = V_12;
-				NullCheck((RuntimeObject*)L_41);
-				bool L_42;
-				L_42 = GenericInterfaceFuncInvoker0< bool >::Invoke(IProperty_HasAttribute_TisDontSerializeAttribute_t3AEC292F19FA6B75F6CF1E310D4A2BB3C72C550F_m9DB82F52E402DD2F1D9D7CFE775017A9B635AE28_RuntimeMethod_var, (RuntimeObject*)L_41);
-				G_B25_0 = ((int32_t)(L_42));
-				goto IL_0119_1;
-			}
-
-IL_0118_1:
-			{
-				G_B25_0 = 1;
-			}
-
-IL_0119_1:
-			{
-				V_13 = (bool)G_B25_0;
-				bool L_43 = V_13;
-				if (!L_43)
-				{
-					goto IL_0121_1;
-				}
-			}
-			{
-				// continue;
-				goto IL_014c_1;
-			}
-
-IL_0121_1:
-			{
-				// using (CreatePropertyScope(property))
-				RuntimeObject* L_44 = V_12;
-				NullCheck((JsonPropertyVisitor_tAE7B9582005DD7C04E633BF702AB5A36E73E7CED*)__this);
-				PropertyScope_tF6150DA20D978D740A099254DA12F4676A6DF0D2 L_45;
-				L_45 = JsonPropertyVisitor_CreatePropertyScope_m2FCB1BA90EBE66A6288C4A33ABB5D0FF6924EC36((JsonPropertyVisitor_tAE7B9582005DD7C04E633BF702AB5A36E73E7CED*)__this, (RuntimeObject*)L_44, NULL);
-				V_14 = L_45;
-			}
-			{
-				auto __finallyBlock = il2cpp::utils::Finally([&]
-				{
-
-FINALLY_013c_1:
-					{// begin finally (depth: 2)
-						PropertyScope_Dispose_mE3BA6399113D4B83461A803E0F31C5071750F460((&V_14), NULL);
-						return;
-					}// end finally (depth: 2)
-				});
-				try
-				{// begin try (depth: 2)
-					// ((IPropertyAccept<TContainer>) property).Accept(this, ref container);
-					RuntimeObject* L_46 = V_12;
-					BoundsInt_t4E757DE5EFF9FCB42000F173360DDC63B5585485* L_47 = ___container1;
-					NullCheck(((RuntimeObject*)Castclass((RuntimeObject*)L_46, il2cpp_rgctx_data(method->rgctx_data, 7))));
-					InterfaceActionInvoker2< RuntimeObject*, BoundsInt_t4E757DE5EFF9FCB42000F173360DDC63B5585485* >::Invoke(0 /* System.Void Unity.Properties.Internal.IPropertyAccept`1<UnityEngine.BoundsInt>::Accept(Unity.Properties.Internal.IPropertyVisitor,TContainer&) */, il2cpp_rgctx_data(method->rgctx_data, 7), ((RuntimeObject*)Castclass((RuntimeObject*)L_46, il2cpp_rgctx_data(method->rgctx_data, 7))), (RuntimeObject*)__this, L_47);
 					goto IL_014b_1;
 				}// end try (depth: 2)
 				catch(Il2CppExceptionWrapper& e)

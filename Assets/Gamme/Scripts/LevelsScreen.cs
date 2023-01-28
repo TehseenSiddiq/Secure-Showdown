@@ -23,6 +23,7 @@ public class LevelsScreen : MonoBehaviour
         {
             levelBtns[i].levelText.text = (i + 1).ToString();
             levelBtns[i].SetListener(i+1);
+            levelBtns[i].index = i;
             if (i + 1 > levelAt)
                 levelBtns[i].SetLevel(true);
         }

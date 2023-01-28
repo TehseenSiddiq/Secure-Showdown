@@ -18,6 +18,8 @@ public class FieldOfView360 : MonoBehaviour
 	public Color[] colors;
 	public float clearness;
 	public AudioSource alertSound;
+	public bool isWorking = false;
+	public float energy;
 	public bool CanSeelPlayer { get; private set; }
 
 	void Start()
@@ -30,6 +32,7 @@ public class FieldOfView360 : MonoBehaviour
 	public void Setter(float _radius, float _energy = 8, float _clearness = 2)
 	{
 		radius = _radius;
+		energy = _energy;
 		clearness = _clearness;
 	}
 	IEnumerator FindTargetsWithDelay(float delay)

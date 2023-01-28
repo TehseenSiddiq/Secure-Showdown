@@ -33,6 +33,7 @@ public class Shop : MonoBehaviour
         }
         else
         {
+            MainMenuManager.instance.NoCashAnimation();
             Debug.Log("No Enough Energy");
         }
     }
@@ -52,9 +53,6 @@ public class Shop : MonoBehaviour
             a.GetComponent<ButtonProperty>().text.text = itemSlots[i].price.ToString();
         }
     }
-    private void LateUpdate()
-    {
-      
-    }
+
   
 }

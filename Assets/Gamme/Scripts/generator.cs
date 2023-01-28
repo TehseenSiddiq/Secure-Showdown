@@ -4,15 +4,18 @@ using UnityEngine;
 
 public class generator : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    [SerializeField]
+    float Energy = 100;
 
-    // Update is called once per frame
-    void Update()
+    private void Awake()
     {
-        
+       /* ES3.DeleteKey("Energy");
+        if (ES3.KeyExists("Energy"))
+        {
+            Energy = ES3.Load("Energy", Energy);
+        }
+        else
+            ES3.Save("Energy", 100);*/
+        GameManager.instance.MaxEnergy = Energy;
     }
 }

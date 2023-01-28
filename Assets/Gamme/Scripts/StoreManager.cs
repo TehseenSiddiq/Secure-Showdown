@@ -6,21 +6,14 @@ using UnityEngine.UI;
 
 public class StoreManager : MonoBehaviour
 {
-    public CameraProperties[] cameras;
     public List<GameObject> items;
     public GameObject prefab;
     public Transform content;
 
-    private void Start()
+    private void Awake()
     {
         SetShop();
-        if (ES3.KeyExists("Cameras"))
-        {
-            cameras = ES3.Load("Cameras", cameras);
-        }
-        else
-            ES3.Save("Cameras", cameras);
-       // SetStats(0);
+        // SetStats(0);
     }
 
     public void SetShop()
@@ -29,7 +22,7 @@ public class StoreManager : MonoBehaviour
         {
             GameObject.Destroy(child.gameObject);
         }
-        foreach (CameraProperties camera in cameras)
+        foreach (CameraProperties camera in GameManager.instance.cameras)
         {
             GameObject obj = Instantiate(prefab, content);
 
@@ -40,18 +33,15 @@ public class StoreManager : MonoBehaviour
     }
     public void SetStats(int index)
     {
-       if(Game.instance.GetCash() >= cameras[index].price)
+       if(Game.instance.GetCash() >= GameManager.instance.cameras[index].price)
        {
-            Game.instance.SetCash(Game.instance.GetCash() - cameras[index].price);
-            cameras[index].unlocked = true;
-            cameras = FindObjectOfType<StoreManager>().cameras;
-            Debug.Log("Camera " + cameras[index].name + " Purchased.");
+            Game.instance.SetCash(Game.instance.GetCash() - GameManager.instance.cameras[index].price);
+            GameManager.instance.cameras[index].unlocked = true;
+            GameManager.instance.cameras[index].quntity++;
+            Debug.Log("Camera " + GameManager.instance.cameras[index].name + " Purchased.");
        }
 
     }
-    private void OnApplicationQuit()
-    {
-        ES3.Save("Cameras", cameras);
-    }
+ 
 
 }

@@ -514,7 +514,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 933f27ed8a5cf43359d7caf0a5f5e732, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  radius: 5
+  radius: 5.81
   viewAngle: 45
   targetMask:
     serializedVersion: 2
@@ -529,6 +529,8 @@ MonoBehaviour:
   - {r: 0.7264151, g: 0, b: 0, a: 0.7294118}
   - {r: 0.43247163, g: 1, b: 0, a: 0.53333336}
   alertSound: {fileID: -6666901243233027201}
+  energy: 0
+  isWorking: 0
   targetsInViewRadius: []
 --- !u!114 &2133973543
 MonoBehaviour:
@@ -549,6 +551,9 @@ MonoBehaviour:
   btnHolder: {fileID: 942354434}
   canvas: {fileID: 942354435}
   canDragDelay: 0.7
+  enegy: 0
+  maxEnergy: 0
+  fixedIndex: 0
 --- !u!65 &1594281640
 BoxCollider:
   m_ObjectHideFlags: 0

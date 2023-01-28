@@ -9,8 +9,10 @@ public class CameraButton : MonoBehaviour
     [SerializeField]
     private Image image;
     [SerializeField]
-    private TMP_Text text;
-    int index = 0;
+    private TMP_Text text; 
+    [SerializeField]
+    private TMP_Text countText;
+    public int index = 0;
 
     public void SetButton(Sprite image,string text,int index)
     {
@@ -18,9 +20,13 @@ public class CameraButton : MonoBehaviour
         this.text.text = text;
         this.index = index;
     }
+    private void LateUpdate()
+    {
+        countText.text = GarageManager.instance.cameras[index].quntity.ToString();
+    }
     public void AddListener()
     {
-        this.GetComponent<Button>().onClick.AddListener(()=> FindObjectOfType<GarageManager>().SetStats(index));
+        this.GetComponent<Button>().onClick.AddListener(()=> GarageManager.instance.SetStats(index));
     }
   
 }

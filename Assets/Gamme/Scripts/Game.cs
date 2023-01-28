@@ -8,7 +8,7 @@ public class Game : MonoBehaviour
 
     private int cash = 10000;
     private int level = 1;
-
+    public float[] starPresentage = new float[50];
     private void Awake()
     {
         DontDestroyOnLoad(gameObject);
@@ -42,16 +42,29 @@ public class Game : MonoBehaviour
     {
         return this.level;
     }
+    public void SetLevelStar(float data,int index)
+    {
+        starPresentage[index] = data;
+    }
+    public float GetLevelStar(int index)
+    {
+        return starPresentage[index];
+    }
     #endregion
-
+    private void OnApplicationQuit()
+    {
+        SaveGame();
+    }
     public void SaveGame()
     {
         ES3.Save("Level", GetLevel());
         ES3.Save("Cash", GetCash());
+        ES3.Save("LevelStar", starPresentage);
     }
     public void LoadGame()
     {
         cash = ES3.Load("Cash",GetCash());
         level = ES3.Load("Level", GetLevel());
+        starPresentage = ES3.Load("LevelStar", starPresentage);
     }
 }

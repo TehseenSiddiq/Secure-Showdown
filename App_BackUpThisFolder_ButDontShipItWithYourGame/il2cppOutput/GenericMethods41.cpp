@@ -5149,24 +5149,6 @@ struct JobEntityBatchIndexProducer_1_t017838E2D8104CB7EB71C513B54EBD2B92F80D1B_S
 	SharedStatic_1_t0A9894CA2483CA9491C550F8D66FBA5213718E9F ___reflectionData_0;
 };
 
-// Unity.Entities.JobEntityBatchIndexExtensions/JobEntityBatchIndexProducer`1<Unity.Transforms.CopyTransformFromGameObjectSystem/CopyTransforms>
-struct JobEntityBatchIndexProducer_1_t005A1661D632E19AF445F625B27F3E140B04BF0E 
-{
-	union
-	{
-		struct
-		{
-		};
-		uint8_t JobEntityBatchIndexProducer_1_t88261EE58D812AE1B34991B7A7649ADB6F1DD585__padding[1];
-	};
-};
-
-struct JobEntityBatchIndexProducer_1_t005A1661D632E19AF445F625B27F3E140B04BF0E_StaticFields
-{
-	// Unity.Burst.SharedStatic`1<System.IntPtr> Unity.Entities.JobEntityBatchIndexExtensions/JobEntityBatchIndexProducer`1::reflectionData
-	SharedStatic_1_t0A9894CA2483CA9491C550F8D66FBA5213718E9F ___reflectionData_0;
-};
-
 // Unity.Entities.JobEntityBatchIndexExtensions/JobEntityBatchIndexWrapper`1<Unity.Entities.GatherComponentDataJob>
 struct JobEntityBatchIndexWrapper_1_t5796F37F1A916CDEC61992355FC59419FCFADA22 
 {
@@ -13719,17 +13701,6 @@ struct JobEntityBatchIndexWrapper_1_tE551D7FA29775D317E3AF5FAD1358114C245368D
 	int32_t ___IsParallel_2;
 };
 
-// Unity.Entities.JobEntityBatchIndexExtensions/JobEntityBatchIndexWrapper`1<Unity.Transforms.CopyTransformFromGameObjectSystem/CopyTransforms>
-struct JobEntityBatchIndexWrapper_1_t24BB1FE17A999CA7170E7F15C19D28EEDE54354E 
-{
-	// T Unity.Entities.JobEntityBatchIndexExtensions/JobEntityBatchIndexWrapper`1::JobData
-	CopyTransforms_t8B0E6095FF30CAC5E663F7A42028E304909C447F ___JobData_0;
-	// System.Void* Unity.Entities.JobEntityBatchIndexExtensions/JobEntityBatchIndexWrapper`1::PrefilterData
-	void* ___PrefilterData_1;
-	// System.Int32 Unity.Entities.JobEntityBatchIndexExtensions/JobEntityBatchIndexWrapper`1::IsParallel
-	int32_t ___IsParallel_2;
-};
-
 // Unity.Entities.Conversion.MultiList`2<Unity.Entities.Entity,Unity.Entities.Conversion.MultiListNativeArrayData`1<Unity.Entities.Entity>>
 struct MultiList_2_t518A033F315CB6B60F4BAE430594ADFAAA5E7FA3 
 {
@@ -17460,6 +17431,405 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void JobEntityBatchIndexExtensions_FinalizeSc
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR JobHandle_t5DF5F99902FED3C801A81C05205CEA6CE039EF08 JobEntityBatchIndexExtensions_FinalizeScheduleNoExceptions_m2CDE527010D77B826B0BA2A00BDAE1B72E3F1166 (bool ___isParallel0, void* ___prefilterData1, JobScheduleParameters_tBA5415DA68E52ABC80373CD13D66C9AFAF8F542B* ___scheduleParams2, const RuntimeMethod* method) ;
 // System.Int32 Unity.Mathematics.math::tzcnt(System.UInt32)
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR int32_t math_tzcnt_m07FD7550AAB5D94312E99571B112D652E8230360_inline (uint32_t ___x0, const RuntimeMethod* method) ;
+// System.Int32 Unity.Collections.FixedList::Capacity<Unity.Collections.FixedBytes126,System.Byte>()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t FixedList_Capacity_TisFixedBytes126_tC223222E11A3E93A15FE1C62C3429FC169DBC989_TisByte_t94D9231AC217BE4D2E004C4CD32DF6D099EA41A3_mE8E7EC568A5EA16FCA16102B272427712D4D8BCF_gshared (const RuntimeMethod* method) 
+{
+	int32_t V_0 = 0;
+	{
+		// return StorageBytes<BUFFER,T>() / UnsafeUtility.SizeOf<T>();
+		int32_t L_0;
+		L_0 = ((  int32_t (*) (const RuntimeMethod*))il2cpp_codegen_get_method_pointer(il2cpp_rgctx_method(method->rgctx_data, 0)))(il2cpp_rgctx_method(method->rgctx_data, 0));
+		int32_t L_1;
+		L_1 = ((  int32_t (*) (const RuntimeMethod*))il2cpp_codegen_get_method_pointer(il2cpp_rgctx_method(method->rgctx_data, 1)))(il2cpp_rgctx_method(method->rgctx_data, 1));
+		V_0 = ((int32_t)(L_0/L_1));
+		goto IL_000f;
+	}
+
+IL_000f:
+	{
+		// }
+		int32_t L_2 = V_0;
+		return L_2;
+	}
+}
+// System.Int32 Unity.Collections.FixedList::Capacity<Unity.Collections.FixedBytes126,Unity.Entities.ComponentType>()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t FixedList_Capacity_TisFixedBytes126_tC223222E11A3E93A15FE1C62C3429FC169DBC989_TisComponentType_t0CB4E9723924AAC17CE8F38A0080018ED412DBDA_m1BA754C7DD96F48309AEC4A51402DE06B6554B4D_gshared (const RuntimeMethod* method) 
+{
+	int32_t V_0 = 0;
+	{
+		// return StorageBytes<BUFFER,T>() / UnsafeUtility.SizeOf<T>();
+		int32_t L_0;
+		L_0 = ((  int32_t (*) (const RuntimeMethod*))il2cpp_codegen_get_method_pointer(il2cpp_rgctx_method(method->rgctx_data, 0)))(il2cpp_rgctx_method(method->rgctx_data, 0));
+		int32_t L_1;
+		L_1 = ((  int32_t (*) (const RuntimeMethod*))il2cpp_codegen_get_method_pointer(il2cpp_rgctx_method(method->rgctx_data, 1)))(il2cpp_rgctx_method(method->rgctx_data, 1));
+		V_0 = ((int32_t)(L_0/L_1));
+		goto IL_000f;
+	}
+
+IL_000f:
+	{
+		// }
+		int32_t L_2 = V_0;
+		return L_2;
+	}
+}
+// System.Int32 Unity.Collections.FixedList::Capacity<Unity.Collections.FixedBytes126,System.Int32>()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t FixedList_Capacity_TisFixedBytes126_tC223222E11A3E93A15FE1C62C3429FC169DBC989_TisInt32_t680FF22E76F6EFAD4375103CBBFFA0421349384C_m825E8D6E0A415E38F08412DB6E75B554D739EC05_gshared (const RuntimeMethod* method) 
+{
+	int32_t V_0 = 0;
+	{
+		// return StorageBytes<BUFFER,T>() / UnsafeUtility.SizeOf<T>();
+		int32_t L_0;
+		L_0 = ((  int32_t (*) (const RuntimeMethod*))il2cpp_codegen_get_method_pointer(il2cpp_rgctx_method(method->rgctx_data, 0)))(il2cpp_rgctx_method(method->rgctx_data, 0));
+		int32_t L_1;
+		L_1 = ((  int32_t (*) (const RuntimeMethod*))il2cpp_codegen_get_method_pointer(il2cpp_rgctx_method(method->rgctx_data, 1)))(il2cpp_rgctx_method(method->rgctx_data, 1));
+		V_0 = ((int32_t)(L_0/L_1));
+		goto IL_000f;
+	}
+
+IL_000f:
+	{
+		// }
+		int32_t L_2 = V_0;
+		return L_2;
+	}
+}
+// System.Int32 Unity.Collections.FixedList::Capacity<Unity.Collections.FixedBytes126,System.Single>()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t FixedList_Capacity_TisFixedBytes126_tC223222E11A3E93A15FE1C62C3429FC169DBC989_TisSingle_t4530F2FF86FCB0DC29F35385CA1BD21BE294761C_m237A916C582550036412D3FC6DCE209618489DE3_gshared (const RuntimeMethod* method) 
+{
+	int32_t V_0 = 0;
+	{
+		// return StorageBytes<BUFFER,T>() / UnsafeUtility.SizeOf<T>();
+		int32_t L_0;
+		L_0 = ((  int32_t (*) (const RuntimeMethod*))il2cpp_codegen_get_method_pointer(il2cpp_rgctx_method(method->rgctx_data, 0)))(il2cpp_rgctx_method(method->rgctx_data, 0));
+		int32_t L_1;
+		L_1 = ((  int32_t (*) (const RuntimeMethod*))il2cpp_codegen_get_method_pointer(il2cpp_rgctx_method(method->rgctx_data, 1)))(il2cpp_rgctx_method(method->rgctx_data, 1));
+		V_0 = ((int32_t)(L_0/L_1));
+		goto IL_000f;
+	}
+
+IL_000f:
+	{
+		// }
+		int32_t L_2 = V_0;
+		return L_2;
+	}
+}
+// System.Int32 Unity.Collections.FixedList::Capacity<Unity.Collections.FixedBytes30,System.Byte>()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t FixedList_Capacity_TisFixedBytes30_t7721F11929A3AC08287DF5E6D7AEF85CCEE04AD2_TisByte_t94D9231AC217BE4D2E004C4CD32DF6D099EA41A3_m0383DD96750EFD908710CE6E5A3BEDC643541CA9_gshared (const RuntimeMethod* method) 
+{
+	int32_t V_0 = 0;
+	{
+		// return StorageBytes<BUFFER,T>() / UnsafeUtility.SizeOf<T>();
+		int32_t L_0;
+		L_0 = ((  int32_t (*) (const RuntimeMethod*))il2cpp_codegen_get_method_pointer(il2cpp_rgctx_method(method->rgctx_data, 0)))(il2cpp_rgctx_method(method->rgctx_data, 0));
+		int32_t L_1;
+		L_1 = ((  int32_t (*) (const RuntimeMethod*))il2cpp_codegen_get_method_pointer(il2cpp_rgctx_method(method->rgctx_data, 1)))(il2cpp_rgctx_method(method->rgctx_data, 1));
+		V_0 = ((int32_t)(L_0/L_1));
+		goto IL_000f;
+	}
+
+IL_000f:
+	{
+		// }
+		int32_t L_2 = V_0;
+		return L_2;
+	}
+}
+// System.Int32 Unity.Collections.FixedList::Capacity<Unity.Collections.FixedBytes30,Unity.Entities.ComponentType>()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t FixedList_Capacity_TisFixedBytes30_t7721F11929A3AC08287DF5E6D7AEF85CCEE04AD2_TisComponentType_t0CB4E9723924AAC17CE8F38A0080018ED412DBDA_mB7C47C10398907EBF227845E32364EA691729F3E_gshared (const RuntimeMethod* method) 
+{
+	int32_t V_0 = 0;
+	{
+		// return StorageBytes<BUFFER,T>() / UnsafeUtility.SizeOf<T>();
+		int32_t L_0;
+		L_0 = ((  int32_t (*) (const RuntimeMethod*))il2cpp_codegen_get_method_pointer(il2cpp_rgctx_method(method->rgctx_data, 0)))(il2cpp_rgctx_method(method->rgctx_data, 0));
+		int32_t L_1;
+		L_1 = ((  int32_t (*) (const RuntimeMethod*))il2cpp_codegen_get_method_pointer(il2cpp_rgctx_method(method->rgctx_data, 1)))(il2cpp_rgctx_method(method->rgctx_data, 1));
+		V_0 = ((int32_t)(L_0/L_1));
+		goto IL_000f;
+	}
+
+IL_000f:
+	{
+		// }
+		int32_t L_2 = V_0;
+		return L_2;
+	}
+}
+// System.Int32 Unity.Collections.FixedList::Capacity<Unity.Collections.FixedBytes30,System.Int32>()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t FixedList_Capacity_TisFixedBytes30_t7721F11929A3AC08287DF5E6D7AEF85CCEE04AD2_TisInt32_t680FF22E76F6EFAD4375103CBBFFA0421349384C_mABF2A643F8711F97CFB87799D6C08D85F04604DD_gshared (const RuntimeMethod* method) 
+{
+	int32_t V_0 = 0;
+	{
+		// return StorageBytes<BUFFER,T>() / UnsafeUtility.SizeOf<T>();
+		int32_t L_0;
+		L_0 = ((  int32_t (*) (const RuntimeMethod*))il2cpp_codegen_get_method_pointer(il2cpp_rgctx_method(method->rgctx_data, 0)))(il2cpp_rgctx_method(method->rgctx_data, 0));
+		int32_t L_1;
+		L_1 = ((  int32_t (*) (const RuntimeMethod*))il2cpp_codegen_get_method_pointer(il2cpp_rgctx_method(method->rgctx_data, 1)))(il2cpp_rgctx_method(method->rgctx_data, 1));
+		V_0 = ((int32_t)(L_0/L_1));
+		goto IL_000f;
+	}
+
+IL_000f:
+	{
+		// }
+		int32_t L_2 = V_0;
+		return L_2;
+	}
+}
+// System.Int32 Unity.Collections.FixedList::Capacity<Unity.Collections.FixedBytes30,System.Single>()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t FixedList_Capacity_TisFixedBytes30_t7721F11929A3AC08287DF5E6D7AEF85CCEE04AD2_TisSingle_t4530F2FF86FCB0DC29F35385CA1BD21BE294761C_m7FCFD74576A4EF4E37AE32745BE4B3F9FB169246_gshared (const RuntimeMethod* method) 
+{
+	int32_t V_0 = 0;
+	{
+		// return StorageBytes<BUFFER,T>() / UnsafeUtility.SizeOf<T>();
+		int32_t L_0;
+		L_0 = ((  int32_t (*) (const RuntimeMethod*))il2cpp_codegen_get_method_pointer(il2cpp_rgctx_method(method->rgctx_data, 0)))(il2cpp_rgctx_method(method->rgctx_data, 0));
+		int32_t L_1;
+		L_1 = ((  int32_t (*) (const RuntimeMethod*))il2cpp_codegen_get_method_pointer(il2cpp_rgctx_method(method->rgctx_data, 1)))(il2cpp_rgctx_method(method->rgctx_data, 1));
+		V_0 = ((int32_t)(L_0/L_1));
+		goto IL_000f;
+	}
+
+IL_000f:
+	{
+		// }
+		int32_t L_2 = V_0;
+		return L_2;
+	}
+}
+// System.Int32 Unity.Collections.FixedList::Capacity<Unity.Collections.FixedBytes4094,System.Byte>()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t FixedList_Capacity_TisFixedBytes4094_t8611441D8BDC6A677C2D9E551086F59EFBFCBBE5_TisByte_t94D9231AC217BE4D2E004C4CD32DF6D099EA41A3_mF271C010952A202AB425ECEC74DB8509D1F0D368_gshared (const RuntimeMethod* method) 
+{
+	int32_t V_0 = 0;
+	{
+		// return StorageBytes<BUFFER,T>() / UnsafeUtility.SizeOf<T>();
+		int32_t L_0;
+		L_0 = ((  int32_t (*) (const RuntimeMethod*))il2cpp_codegen_get_method_pointer(il2cpp_rgctx_method(method->rgctx_data, 0)))(il2cpp_rgctx_method(method->rgctx_data, 0));
+		int32_t L_1;
+		L_1 = ((  int32_t (*) (const RuntimeMethod*))il2cpp_codegen_get_method_pointer(il2cpp_rgctx_method(method->rgctx_data, 1)))(il2cpp_rgctx_method(method->rgctx_data, 1));
+		V_0 = ((int32_t)(L_0/L_1));
+		goto IL_000f;
+	}
+
+IL_000f:
+	{
+		// }
+		int32_t L_2 = V_0;
+		return L_2;
+	}
+}
+// System.Int32 Unity.Collections.FixedList::Capacity<Unity.Collections.FixedBytes4094,Unity.Entities.ComponentType>()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t FixedList_Capacity_TisFixedBytes4094_t8611441D8BDC6A677C2D9E551086F59EFBFCBBE5_TisComponentType_t0CB4E9723924AAC17CE8F38A0080018ED412DBDA_mB29012FA09D5C522626CF0D3E69CD06FEB14078A_gshared (const RuntimeMethod* method) 
+{
+	int32_t V_0 = 0;
+	{
+		// return StorageBytes<BUFFER,T>() / UnsafeUtility.SizeOf<T>();
+		int32_t L_0;
+		L_0 = ((  int32_t (*) (const RuntimeMethod*))il2cpp_codegen_get_method_pointer(il2cpp_rgctx_method(method->rgctx_data, 0)))(il2cpp_rgctx_method(method->rgctx_data, 0));
+		int32_t L_1;
+		L_1 = ((  int32_t (*) (const RuntimeMethod*))il2cpp_codegen_get_method_pointer(il2cpp_rgctx_method(method->rgctx_data, 1)))(il2cpp_rgctx_method(method->rgctx_data, 1));
+		V_0 = ((int32_t)(L_0/L_1));
+		goto IL_000f;
+	}
+
+IL_000f:
+	{
+		// }
+		int32_t L_2 = V_0;
+		return L_2;
+	}
+}
+// System.Int32 Unity.Collections.FixedList::Capacity<Unity.Collections.FixedBytes4094,System.Int32>()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t FixedList_Capacity_TisFixedBytes4094_t8611441D8BDC6A677C2D9E551086F59EFBFCBBE5_TisInt32_t680FF22E76F6EFAD4375103CBBFFA0421349384C_m5A32982288EB2F13608178FE62B1AB8C2F190E1A_gshared (const RuntimeMethod* method) 
+{
+	int32_t V_0 = 0;
+	{
+		// return StorageBytes<BUFFER,T>() / UnsafeUtility.SizeOf<T>();
+		int32_t L_0;
+		L_0 = ((  int32_t (*) (const RuntimeMethod*))il2cpp_codegen_get_method_pointer(il2cpp_rgctx_method(method->rgctx_data, 0)))(il2cpp_rgctx_method(method->rgctx_data, 0));
+		int32_t L_1;
+		L_1 = ((  int32_t (*) (const RuntimeMethod*))il2cpp_codegen_get_method_pointer(il2cpp_rgctx_method(method->rgctx_data, 1)))(il2cpp_rgctx_method(method->rgctx_data, 1));
+		V_0 = ((int32_t)(L_0/L_1));
+		goto IL_000f;
+	}
+
+IL_000f:
+	{
+		// }
+		int32_t L_2 = V_0;
+		return L_2;
+	}
+}
+// System.Int32 Unity.Collections.FixedList::Capacity<Unity.Collections.FixedBytes4094,System.Single>()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t FixedList_Capacity_TisFixedBytes4094_t8611441D8BDC6A677C2D9E551086F59EFBFCBBE5_TisSingle_t4530F2FF86FCB0DC29F35385CA1BD21BE294761C_mF917E5719FA55438C07F0D18DB88B821FF31CE9C_gshared (const RuntimeMethod* method) 
+{
+	int32_t V_0 = 0;
+	{
+		// return StorageBytes<BUFFER,T>() / UnsafeUtility.SizeOf<T>();
+		int32_t L_0;
+		L_0 = ((  int32_t (*) (const RuntimeMethod*))il2cpp_codegen_get_method_pointer(il2cpp_rgctx_method(method->rgctx_data, 0)))(il2cpp_rgctx_method(method->rgctx_data, 0));
+		int32_t L_1;
+		L_1 = ((  int32_t (*) (const RuntimeMethod*))il2cpp_codegen_get_method_pointer(il2cpp_rgctx_method(method->rgctx_data, 1)))(il2cpp_rgctx_method(method->rgctx_data, 1));
+		V_0 = ((int32_t)(L_0/L_1));
+		goto IL_000f;
+	}
+
+IL_000f:
+	{
+		// }
+		int32_t L_2 = V_0;
+		return L_2;
+	}
+}
+// System.Int32 Unity.Collections.FixedList::Capacity<Unity.Collections.FixedBytes510,System.Byte>()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t FixedList_Capacity_TisFixedBytes510_t95B284C3FF966246998B23701C3F0F55C6BD7973_TisByte_t94D9231AC217BE4D2E004C4CD32DF6D099EA41A3_m988BE451DE536869C5D2C276672108E6313E55A2_gshared (const RuntimeMethod* method) 
+{
+	int32_t V_0 = 0;
+	{
+		// return StorageBytes<BUFFER,T>() / UnsafeUtility.SizeOf<T>();
+		int32_t L_0;
+		L_0 = ((  int32_t (*) (const RuntimeMethod*))il2cpp_codegen_get_method_pointer(il2cpp_rgctx_method(method->rgctx_data, 0)))(il2cpp_rgctx_method(method->rgctx_data, 0));
+		int32_t L_1;
+		L_1 = ((  int32_t (*) (const RuntimeMethod*))il2cpp_codegen_get_method_pointer(il2cpp_rgctx_method(method->rgctx_data, 1)))(il2cpp_rgctx_method(method->rgctx_data, 1));
+		V_0 = ((int32_t)(L_0/L_1));
+		goto IL_000f;
+	}
+
+IL_000f:
+	{
+		// }
+		int32_t L_2 = V_0;
+		return L_2;
+	}
+}
+// System.Int32 Unity.Collections.FixedList::Capacity<Unity.Collections.FixedBytes510,Unity.Entities.ComponentType>()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t FixedList_Capacity_TisFixedBytes510_t95B284C3FF966246998B23701C3F0F55C6BD7973_TisComponentType_t0CB4E9723924AAC17CE8F38A0080018ED412DBDA_mB5ABBA32DF6A1BBE90AE18185BFAAD92975A1651_gshared (const RuntimeMethod* method) 
+{
+	int32_t V_0 = 0;
+	{
+		// return StorageBytes<BUFFER,T>() / UnsafeUtility.SizeOf<T>();
+		int32_t L_0;
+		L_0 = ((  int32_t (*) (const RuntimeMethod*))il2cpp_codegen_get_method_pointer(il2cpp_rgctx_method(method->rgctx_data, 0)))(il2cpp_rgctx_method(method->rgctx_data, 0));
+		int32_t L_1;
+		L_1 = ((  int32_t (*) (const RuntimeMethod*))il2cpp_codegen_get_method_pointer(il2cpp_rgctx_method(method->rgctx_data, 1)))(il2cpp_rgctx_method(method->rgctx_data, 1));
+		V_0 = ((int32_t)(L_0/L_1));
+		goto IL_000f;
+	}
+
+IL_000f:
+	{
+		// }
+		int32_t L_2 = V_0;
+		return L_2;
+	}
+}
+// System.Int32 Unity.Collections.FixedList::Capacity<Unity.Collections.FixedBytes510,System.Int32>()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t FixedList_Capacity_TisFixedBytes510_t95B284C3FF966246998B23701C3F0F55C6BD7973_TisInt32_t680FF22E76F6EFAD4375103CBBFFA0421349384C_m73E042F6E13BC0B42307F8B283509B4AAD720AD9_gshared (const RuntimeMethod* method) 
+{
+	int32_t V_0 = 0;
+	{
+		// return StorageBytes<BUFFER,T>() / UnsafeUtility.SizeOf<T>();
+		int32_t L_0;
+		L_0 = ((  int32_t (*) (const RuntimeMethod*))il2cpp_codegen_get_method_pointer(il2cpp_rgctx_method(method->rgctx_data, 0)))(il2cpp_rgctx_method(method->rgctx_data, 0));
+		int32_t L_1;
+		L_1 = ((  int32_t (*) (const RuntimeMethod*))il2cpp_codegen_get_method_pointer(il2cpp_rgctx_method(method->rgctx_data, 1)))(il2cpp_rgctx_method(method->rgctx_data, 1));
+		V_0 = ((int32_t)(L_0/L_1));
+		goto IL_000f;
+	}
+
+IL_000f:
+	{
+		// }
+		int32_t L_2 = V_0;
+		return L_2;
+	}
+}
+// System.Int32 Unity.Collections.FixedList::Capacity<Unity.Collections.FixedBytes510,System.Single>()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t FixedList_Capacity_TisFixedBytes510_t95B284C3FF966246998B23701C3F0F55C6BD7973_TisSingle_t4530F2FF86FCB0DC29F35385CA1BD21BE294761C_mD6F1F3886AD1C6C9745693824254582376B93474_gshared (const RuntimeMethod* method) 
+{
+	int32_t V_0 = 0;
+	{
+		// return StorageBytes<BUFFER,T>() / UnsafeUtility.SizeOf<T>();
+		int32_t L_0;
+		L_0 = ((  int32_t (*) (const RuntimeMethod*))il2cpp_codegen_get_method_pointer(il2cpp_rgctx_method(method->rgctx_data, 0)))(il2cpp_rgctx_method(method->rgctx_data, 0));
+		int32_t L_1;
+		L_1 = ((  int32_t (*) (const RuntimeMethod*))il2cpp_codegen_get_method_pointer(il2cpp_rgctx_method(method->rgctx_data, 1)))(il2cpp_rgctx_method(method->rgctx_data, 1));
+		V_0 = ((int32_t)(L_0/L_1));
+		goto IL_000f;
+	}
+
+IL_000f:
+	{
+		// }
+		int32_t L_2 = V_0;
+		return L_2;
+	}
+}
+// System.Int32 Unity.Collections.FixedList::Capacity<Unity.Collections.FixedBytes62,System.Byte>()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t FixedList_Capacity_TisFixedBytes62_t25CC23B7A3CF922DF0D1F0BFD5F801864D4FFD2A_TisByte_t94D9231AC217BE4D2E004C4CD32DF6D099EA41A3_m7B34CC68F82AC83EB9CE843B2630CC1806C79148_gshared (const RuntimeMethod* method) 
+{
+	int32_t V_0 = 0;
+	{
+		// return StorageBytes<BUFFER,T>() / UnsafeUtility.SizeOf<T>();
+		int32_t L_0;
+		L_0 = ((  int32_t (*) (const RuntimeMethod*))il2cpp_codegen_get_method_pointer(il2cpp_rgctx_method(method->rgctx_data, 0)))(il2cpp_rgctx_method(method->rgctx_data, 0));
+		int32_t L_1;
+		L_1 = ((  int32_t (*) (const RuntimeMethod*))il2cpp_codegen_get_method_pointer(il2cpp_rgctx_method(method->rgctx_data, 1)))(il2cpp_rgctx_method(method->rgctx_data, 1));
+		V_0 = ((int32_t)(L_0/L_1));
+		goto IL_000f;
+	}
+
+IL_000f:
+	{
+		// }
+		int32_t L_2 = V_0;
+		return L_2;
+	}
+}
+// System.Int32 Unity.Collections.FixedList::Capacity<Unity.Collections.FixedBytes62,Unity.Entities.ComponentType>()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t FixedList_Capacity_TisFixedBytes62_t25CC23B7A3CF922DF0D1F0BFD5F801864D4FFD2A_TisComponentType_t0CB4E9723924AAC17CE8F38A0080018ED412DBDA_m1E174101A51A50D14C16DDFA25FFBCA44B6F5AEB_gshared (const RuntimeMethod* method) 
+{
+	int32_t V_0 = 0;
+	{
+		// return StorageBytes<BUFFER,T>() / UnsafeUtility.SizeOf<T>();
+		int32_t L_0;
+		L_0 = ((  int32_t (*) (const RuntimeMethod*))il2cpp_codegen_get_method_pointer(il2cpp_rgctx_method(method->rgctx_data, 0)))(il2cpp_rgctx_method(method->rgctx_data, 0));
+		int32_t L_1;
+		L_1 = ((  int32_t (*) (const RuntimeMethod*))il2cpp_codegen_get_method_pointer(il2cpp_rgctx_method(method->rgctx_data, 1)))(il2cpp_rgctx_method(method->rgctx_data, 1));
+		V_0 = ((int32_t)(L_0/L_1));
+		goto IL_000f;
+	}
+
+IL_000f:
+	{
+		// }
+		int32_t L_2 = V_0;
+		return L_2;
+	}
+}
+// System.Int32 Unity.Collections.FixedList::Capacity<Unity.Collections.FixedBytes62,System.Int32>()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t FixedList_Capacity_TisFixedBytes62_t25CC23B7A3CF922DF0D1F0BFD5F801864D4FFD2A_TisInt32_t680FF22E76F6EFAD4375103CBBFFA0421349384C_m582B79794CC497D297EB788E4BE2DCC8EBE5A19B_gshared (const RuntimeMethod* method) 
+{
+	int32_t V_0 = 0;
+	{
+		// return StorageBytes<BUFFER,T>() / UnsafeUtility.SizeOf<T>();
+		int32_t L_0;
+		L_0 = ((  int32_t (*) (const RuntimeMethod*))il2cpp_codegen_get_method_pointer(il2cpp_rgctx_method(method->rgctx_data, 0)))(il2cpp_rgctx_method(method->rgctx_data, 0));
+		int32_t L_1;
+		L_1 = ((  int32_t (*) (const RuntimeMethod*))il2cpp_codegen_get_method_pointer(il2cpp_rgctx_method(method->rgctx_data, 1)))(il2cpp_rgctx_method(method->rgctx_data, 1));
+		V_0 = ((int32_t)(L_0/L_1));
+		goto IL_000f;
+	}
+
+IL_000f:
+	{
+		// }
+		int32_t L_2 = V_0;
+		return L_2;
+	}
+}
 // System.Int32 Unity.Collections.FixedList::Capacity<Unity.Collections.FixedBytes62,System.Single>()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t FixedList_Capacity_TisFixedBytes62_t25CC23B7A3CF922DF0D1F0BFD5F801864D4FFD2A_TisSingle_t4530F2FF86FCB0DC29F35385CA1BD21BE294761C_m15C910B7BB274D90DA96325F31B5501CCE1725C0_gshared (const RuntimeMethod* method) 
 {
@@ -39935,293 +40305,6 @@ IL_0100:
 		il2cpp_codegen_runtime_class_init_inline(il2cpp_rgctx_data(method->rgctx_data, 0));
 		intptr_t* L_41;
 		L_41 = SharedStatic_1_get_Data_m6B971FC25FA15EF3646DC3DE9FFA1D910AE67EA1((&((JobEntityBatchIndexProducer_1_t017838E2D8104CB7EB71C513B54EBD2B92F80D1B_StaticFields*)il2cpp_codegen_static_fields_for(il2cpp_rgctx_data(method->rgctx_data, 0)))->___reflectionData_0), SharedStatic_1_get_Data_m6B971FC25FA15EF3646DC3DE9FFA1D910AE67EA1_RuntimeMethod_var);
-		V_11 = ((*(L_41)));
-		// var scheduleParams = new JobsUtility.JobScheduleParameters(UnsafeUtility.AddressOf(ref jobEntityBatchIndexWrapper),
-		//     reflectionData, prefilterHandle, mode);
-		void* L_42;
-		L_42 = il2cpp_codegen_unsafe_cast((&V_10));
-		intptr_t L_43 = V_11;
-		JobHandle_t5DF5F99902FED3C801A81C05205CEA6CE039EF08 L_44 = V_8;
-		int32_t L_45 = ___mode3;
-		JobScheduleParameters__ctor_m5FFED3B28A1FA2C3EC7D1C50A7D7E788C411CE04((&V_12), L_42, L_43, L_44, L_45, NULL);
-		// bool executedManaged = false;
-		V_13 = (bool)0;
-		// JobHandle result = default;
-		il2cpp_codegen_initobj((&V_14), sizeof(JobHandle_t5DF5F99902FED3C801A81C05205CEA6CE039EF08));
-		// FinalizeScheduleChecked(isParallel, prefilterHandle, prefilterDataPtr, ref scheduleParams, ref executedManaged, ref result);
-		bool L_46 = ___isParallel4;
-		JobHandle_t5DF5F99902FED3C801A81C05205CEA6CE039EF08 L_47 = V_8;
-		void* L_48 = V_5;
-		JobEntityBatchIndexExtensions_FinalizeScheduleChecked_m371643F6D9419CFFBBCF93A193AF3C34D4BBC9F3(L_46, L_47, L_48, (&V_12), (&V_13), (&V_14), NULL);
-		// if (executedManaged)
-		bool L_49 = V_13;
-		V_18 = L_49;
-		bool L_50 = V_18;
-		if (!L_50)
-		{
-			goto IL_0154;
-		}
-	}
-	{
-		// return result;
-		JobHandle_t5DF5F99902FED3C801A81C05205CEA6CE039EF08 L_51 = V_14;
-		V_19 = L_51;
-		goto IL_0163;
-	}
-
-IL_0154:
-	{
-		// return FinalizeScheduleNoExceptions(isParallel, prefilterDataPtr, ref scheduleParams);
-		bool L_52 = ___isParallel4;
-		void* L_53 = V_5;
-		JobHandle_t5DF5F99902FED3C801A81C05205CEA6CE039EF08 L_54;
-		L_54 = JobEntityBatchIndexExtensions_FinalizeScheduleNoExceptions_m2CDE527010D77B826B0BA2A00BDAE1B72E3F1166(L_52, L_53, (&V_12), NULL);
-		V_19 = L_54;
-		goto IL_0163;
-	}
-
-IL_0163:
-	{
-		// }
-		JobHandle_t5DF5F99902FED3C801A81C05205CEA6CE039EF08 L_55 = V_19;
-		return L_55;
-	}
-}
-// Unity.Jobs.JobHandle Unity.Entities.JobEntityBatchIndexExtensions::ScheduleInternal<Unity.Transforms.CopyTransformFromGameObjectSystem/CopyTransforms>(T&,Unity.Entities.EntityQuery,Unity.Jobs.JobHandle,Unity.Jobs.LowLevel.Unsafe.ScheduleMode,System.Boolean)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR JobHandle_t5DF5F99902FED3C801A81C05205CEA6CE039EF08 JobEntityBatchIndexExtensions_ScheduleInternal_TisCopyTransforms_t8B0E6095FF30CAC5E663F7A42028E304909C447F_m3C154EC5A3A52C65182D27CA202BDCE67C26CB83_gshared (CopyTransforms_t8B0E6095FF30CAC5E663F7A42028E304909C447F* ___jobData0, EntityQuery_t23B7A11FAA475D860E94409BFD4CF7E4B337CF90 ___query1, JobHandle_t5DF5F99902FED3C801A81C05205CEA6CE039EF08 ___dependsOn2, int32_t ___mode3, bool ___isParallel4, const RuntimeMethod* method) 
-{
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
-	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&IJobBurstSchedulableExtensions_Run_TisPrefilterForJobEntityBatchWithIndex_tE030BB096AD0E53B43B7D5E98E3C05E3AC26CCAB_m4BA645F349CDEEBD58CC8D16C9AC3B2BD51F16DB_RuntimeMethod_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&IJobBurstSchedulableExtensions_Schedule_TisPrefilterForJobEntityBatchWithIndex_tE030BB096AD0E53B43B7D5E98E3C05E3AC26CCAB_m66D73EEFE570A4424ADCA368251111B4D918C2C1_RuntimeMethod_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&SharedStatic_1_get_Data_m6B971FC25FA15EF3646DC3DE9FFA1D910AE67EA1_RuntimeMethod_var);
-		s_Il2CppMethodInitialized = true;
-	}
-	EntityQueryImpl_t3E7DD11B3ECD6D708BF02ACF2C07B42A913F7574* V_0 = NULL;
-	EntityQueryData_t20DB32E7BB3F8732C371E45E8A8CEBCE62B61C26* V_1 = NULL;
-	int32_t V_2 = 0;
-	int32_t V_3 = 0;
-	int32_t V_4 = 0;
-	void* V_5 = NULL;
-	UnsafeList_1_tD72E86D22D12AC8243BAACBB2C3D1894438DB165* V_6 = NULL;
-	UnsafeList_1_t6C5E84D303190B625F3759C244502E1735453718* V_7 = NULL;
-	JobHandle_t5DF5F99902FED3C801A81C05205CEA6CE039EF08 V_8;
-	memset((&V_8), 0, sizeof(V_8));
-	PrefilterForJobEntityBatchWithIndex_tE030BB096AD0E53B43B7D5E98E3C05E3AC26CCAB V_9;
-	memset((&V_9), 0, sizeof(V_9));
-	JobEntityBatchIndexWrapper_1_t24BB1FE17A999CA7170E7F15C19D28EEDE54354E V_10;
-	memset((&V_10), 0, sizeof(V_10));
-	intptr_t V_11;
-	memset((&V_11), 0, sizeof(V_11));
-	JobScheduleParameters_tBA5415DA68E52ABC80373CD13D66C9AFAF8F542B V_12;
-	memset((&V_12), 0, sizeof(V_12));
-	bool V_13 = false;
-	JobHandle_t5DF5F99902FED3C801A81C05205CEA6CE039EF08 V_14;
-	memset((&V_14), 0, sizeof(V_14));
-	PrefilterForJobEntityBatchWithIndex_tE030BB096AD0E53B43B7D5E98E3C05E3AC26CCAB V_15;
-	memset((&V_15), 0, sizeof(V_15));
-	bool V_16 = false;
-	JobEntityBatchIndexWrapper_1_t24BB1FE17A999CA7170E7F15C19D28EEDE54354E V_17;
-	memset((&V_17), 0, sizeof(V_17));
-	bool V_18 = false;
-	JobHandle_t5DF5F99902FED3C801A81C05205CEA6CE039EF08 V_19;
-	memset((&V_19), 0, sizeof(V_19));
-	PrefilterForJobEntityBatchWithIndex_tE030BB096AD0E53B43B7D5E98E3C05E3AC26CCAB* G_B2_0 = NULL;
-	PrefilterForJobEntityBatchWithIndex_tE030BB096AD0E53B43B7D5E98E3C05E3AC26CCAB* G_B1_0 = NULL;
-	PrefilterForJobEntityBatchWithIndex_tE030BB096AD0E53B43B7D5E98E3C05E3AC26CCAB* G_B3_0 = NULL;
-	int32_t G_B4_0 = 0;
-	PrefilterForJobEntityBatchWithIndex_tE030BB096AD0E53B43B7D5E98E3C05E3AC26CCAB* G_B4_1 = NULL;
-	JobEntityBatchIndexWrapper_1_t24BB1FE17A999CA7170E7F15C19D28EEDE54354E* G_B9_0 = NULL;
-	JobEntityBatchIndexWrapper_1_t24BB1FE17A999CA7170E7F15C19D28EEDE54354E* G_B8_0 = NULL;
-	int32_t G_B10_0 = 0;
-	JobEntityBatchIndexWrapper_1_t24BB1FE17A999CA7170E7F15C19D28EEDE54354E* G_B10_1 = NULL;
-	{
-		// var queryImpl = query._GetImpl();
-		EntityQueryImpl_t3E7DD11B3ECD6D708BF02ACF2C07B42A913F7574* L_0;
-		L_0 = EntityQuery__GetImpl_m3E1EC62BB22FA905262DB3199F289864B47AA7AE((&___query1), NULL);
-		V_0 = L_0;
-		// var queryData = queryImpl->_QueryData;
-		EntityQueryImpl_t3E7DD11B3ECD6D708BF02ACF2C07B42A913F7574* L_1 = V_0;
-		NullCheck(L_1);
-		EntityQueryData_t20DB32E7BB3F8732C371E45E8A8CEBCE62B61C26* L_2 = (EntityQueryData_t20DB32E7BB3F8732C371E45E8A8CEBCE62B61C26*)L_1->____QueryData_2;
-		V_1 = L_2;
-		// var worldUpdateAllocator = queryImpl->_Access->m_WorldUnmanaged.UpdateAllocator.ToAllocator;
-		EntityQueryImpl_t3E7DD11B3ECD6D708BF02ACF2C07B42A913F7574* L_3 = V_0;
-		NullCheck(L_3);
-		EntityDataAccess_t98E1CF6F73892A92AA3FF870A4BD941364E9CD36* L_4 = (EntityDataAccess_t98E1CF6F73892A92AA3FF870A4BD941364E9CD36*)L_3->____Access_1;
-		NullCheck(L_4);
-		WorldUnmanaged_t7B736084B2D4749A9CE36AD9A7F9D930DAA9F88F* L_5 = (WorldUnmanaged_t7B736084B2D4749A9CE36AD9A7F9D930DAA9F88F*)(&L_4->___m_WorldUnmanaged_11);
-		RewindableAllocator_tB18F8ADC8F2EE36E1F51FCCCFF0AC093108EF254* L_6;
-		L_6 = WorldUnmanaged_get_UpdateAllocator_mB49A943F3083A1EF11FC621080D169CC3E11F7C9(L_5, NULL);
-		int32_t L_7;
-		L_7 = RewindableAllocator_get_ToAllocator_m497B5D16417A19E29F7F3AF43ED92EA8813A2648(L_6, NULL);
-		V_2 = L_7;
-		// var expectedBatchCount = query.CalculateChunkCount();
-		int32_t L_8;
-		L_8 = EntityQuery_CalculateChunkCount_m5B68046396874B5AB7B5919338C9CDD674E86249((&___query1), NULL);
-		V_3 = L_8;
-		// var sizeOfArrayHeaders = sizeof(UnsafeList<int>) * 2;
-		uint32_t L_9 = sizeof(UnsafeList_1_t6C5E84D303190B625F3759C244502E1735453718);
-		V_4 = ((int32_t)il2cpp_codegen_multiply((int32_t)L_9, 2));
-		// var prefilterDataPtr = AllocatePrefilterData(expectedBatchCount, worldUpdateAllocator, out var batchList, out var indexList);
-		int32_t L_10 = V_3;
-		int32_t L_11 = V_2;
-		void* L_12;
-		L_12 = JobEntityBatchIndexExtensions_AllocatePrefilterData_m1EE6E06A594A728C49401138F4806BF47C7B2113(L_10, L_11, (&V_6), (&V_7), NULL);
-		V_5 = L_12;
-		// var prefilterHandle = dependsOn;
-		JobHandle_t5DF5F99902FED3C801A81C05205CEA6CE039EF08 L_13 = ___dependsOn2;
-		V_8 = L_13;
-		// var prefilterJob = new PrefilterForJobEntityBatchWithIndex
-		// {
-		//     ChunkList = queryData->GetMatchingChunkCache(),
-		//     MatchingArchetypes = queryData->MatchingArchetypes,
-		//     Filter = queryImpl->_Filter,
-		//     EntityComponentStore = queryImpl->_Access->EntityComponentStore,
-		//     OutPrefilteredBatches = batchList,
-		//     OutPrefilteredBatchEntityIndices = indexList,
-		//     SkipSubChunkBatching = queryData->EnableableComponentsCountAll == 0 && queryData->EnableableComponentsCountNone == 0 ? 1 : 0
-		// };
-		il2cpp_codegen_initobj((&V_15), sizeof(PrefilterForJobEntityBatchWithIndex_tE030BB096AD0E53B43B7D5E98E3C05E3AC26CCAB));
-		EntityQueryData_t20DB32E7BB3F8732C371E45E8A8CEBCE62B61C26* L_14 = V_1;
-		UnsafeCachedChunkList_t48CE8479B1EEA20F34D6EB59806214668DB204A3 L_15;
-		L_15 = EntityQueryData_GetMatchingChunkCache_mE98F4FC1F9B2C7729C2AA005F3B2BFA5DE77BA95((EntityQueryData_t20DB32E7BB3F8732C371E45E8A8CEBCE62B61C26*)L_14, NULL);
-		(&V_15)->___ChunkList_0 = L_15;
-		EntityQueryData_t20DB32E7BB3F8732C371E45E8A8CEBCE62B61C26* L_16 = V_1;
-		NullCheck(L_16);
-		UnsafeMatchingArchetypePtrList_t7BE58FA0D1C0757782B0CA05207B0E07690ED566 L_17 = (UnsafeMatchingArchetypePtrList_t7BE58FA0D1C0757782B0CA05207B0E07690ED566)L_16->___MatchingArchetypes_11;
-		(&V_15)->___MatchingArchetypes_1 = L_17;
-		EntityQueryImpl_t3E7DD11B3ECD6D708BF02ACF2C07B42A913F7574* L_18 = V_0;
-		NullCheck(L_18);
-		EntityQueryFilter_t4A9651CB7DA59AFE8AAF946C19EC6B0D1ACA2F8B L_19 = (EntityQueryFilter_t4A9651CB7DA59AFE8AAF946C19EC6B0D1ACA2F8B)L_18->____Filter_3;
-		(&V_15)->___Filter_5 = L_19;
-		EntityQueryImpl_t3E7DD11B3ECD6D708BF02ACF2C07B42A913F7574* L_20 = V_0;
-		NullCheck(L_20);
-		EntityDataAccess_t98E1CF6F73892A92AA3FF870A4BD941364E9CD36* L_21 = (EntityDataAccess_t98E1CF6F73892A92AA3FF870A4BD941364E9CD36*)L_20->____Access_1;
-		EntityComponentStore_tA85E100ECD667365B260A68DFD9DF9B7C04D037F* L_22;
-		L_22 = EntityDataAccess_get_EntityComponentStore_m326C3B90484B39F30DF478BCC5C586FDFACB3054((EntityDataAccess_t98E1CF6F73892A92AA3FF870A4BD941364E9CD36*)L_21, NULL);
-		(&V_15)->___EntityComponentStore_2 = L_22;
-		UnsafeList_1_tD72E86D22D12AC8243BAACBB2C3D1894438DB165* L_23 = V_6;
-		(&V_15)->___OutPrefilteredBatches_3 = L_23;
-		UnsafeList_1_t6C5E84D303190B625F3759C244502E1735453718* L_24 = V_7;
-		(&V_15)->___OutPrefilteredBatchEntityIndices_4 = L_24;
-		EntityQueryData_t20DB32E7BB3F8732C371E45E8A8CEBCE62B61C26* L_25 = V_1;
-		NullCheck(L_25);
-		int32_t L_26 = (int32_t)L_25->___EnableableComponentsCountAll_6;
-		G_B1_0 = (&V_15);
-		if (L_26)
-		{
-			G_B2_0 = (&V_15);
-			goto IL_00ad;
-		}
-	}
-	{
-		EntityQueryData_t20DB32E7BB3F8732C371E45E8A8CEBCE62B61C26* L_27 = V_1;
-		NullCheck(L_27);
-		int32_t L_28 = (int32_t)L_27->___EnableableComponentsCountNone_7;
-		G_B2_0 = G_B1_0;
-		if (!L_28)
-		{
-			G_B3_0 = G_B1_0;
-			goto IL_00b0;
-		}
-	}
-
-IL_00ad:
-	{
-		G_B4_0 = 0;
-		G_B4_1 = G_B2_0;
-		goto IL_00b1;
-	}
-
-IL_00b0:
-	{
-		G_B4_0 = 1;
-		G_B4_1 = G_B3_0;
-	}
-
-IL_00b1:
-	{
-		G_B4_1->___SkipSubChunkBatching_6 = G_B4_0;
-		PrefilterForJobEntityBatchWithIndex_tE030BB096AD0E53B43B7D5E98E3C05E3AC26CCAB L_29 = V_15;
-		V_9 = L_29;
-		// if (mode != ScheduleMode.Run)
-		int32_t L_30 = ___mode3;
-		V_16 = (bool)((!(((uint32_t)L_30) <= ((uint32_t)0)))? 1 : 0);
-		bool L_31 = V_16;
-		if (!L_31)
-		{
-			goto IL_00d0;
-		}
-	}
-	{
-		// prefilterHandle = prefilterJob.Schedule(dependsOn);
-		PrefilterForJobEntityBatchWithIndex_tE030BB096AD0E53B43B7D5E98E3C05E3AC26CCAB L_32 = V_9;
-		JobHandle_t5DF5F99902FED3C801A81C05205CEA6CE039EF08 L_33 = ___dependsOn2;
-		JobHandle_t5DF5F99902FED3C801A81C05205CEA6CE039EF08 L_34;
-		L_34 = IJobBurstSchedulableExtensions_Schedule_TisPrefilterForJobEntityBatchWithIndex_tE030BB096AD0E53B43B7D5E98E3C05E3AC26CCAB_m66D73EEFE570A4424ADCA368251111B4D918C2C1(L_32, L_33, IJobBurstSchedulableExtensions_Schedule_TisPrefilterForJobEntityBatchWithIndex_tE030BB096AD0E53B43B7D5E98E3C05E3AC26CCAB_m66D73EEFE570A4424ADCA368251111B4D918C2C1_RuntimeMethod_var);
-		V_8 = L_34;
-		goto IL_00d8;
-	}
-
-IL_00d0:
-	{
-		// prefilterJob.Run();
-		PrefilterForJobEntityBatchWithIndex_tE030BB096AD0E53B43B7D5E98E3C05E3AC26CCAB L_35 = V_9;
-		IJobBurstSchedulableExtensions_Run_TisPrefilterForJobEntityBatchWithIndex_tE030BB096AD0E53B43B7D5E98E3C05E3AC26CCAB_m4BA645F349CDEEBD58CC8D16C9AC3B2BD51F16DB(L_35, IJobBurstSchedulableExtensions_Run_TisPrefilterForJobEntityBatchWithIndex_tE030BB096AD0E53B43B7D5E98E3C05E3AC26CCAB_m4BA645F349CDEEBD58CC8D16C9AC3B2BD51F16DB_RuntimeMethod_var);
-	}
-
-IL_00d8:
-	{
-		//             JobEntityBatchIndexWrapper<T> jobEntityBatchIndexWrapper = new JobEntityBatchIndexWrapper<T>
-		//             {
-		// #if ENABLE_UNITY_COLLECTIONS_CHECKS
-		//                 // All IJobEntityBatchWithIndex jobs have a EntityManager safety handle to ensure that BeforeStructuralChange throws an error if
-		//                 // jobs without any other safety handles are still running (haven't been synced).
-		//                 safety = new EntitySafetyHandle {m_Safety = queryImpl->SafetyHandles->GetEntityManagerSafetyHandle()},
-		// #endif
-		// 
-		//                 JobData = jobData,
-		//                 PrefilterData = prefilterDataPtr,
-		// 
-		//                 IsParallel = isParallel ? 1 : 0
-		//             };
-		il2cpp_codegen_initobj((&V_17), sizeof(JobEntityBatchIndexWrapper_1_t24BB1FE17A999CA7170E7F15C19D28EEDE54354E));
-		CopyTransforms_t8B0E6095FF30CAC5E663F7A42028E304909C447F* L_36 = ___jobData0;
-		CopyTransforms_t8B0E6095FF30CAC5E663F7A42028E304909C447F L_37 = (*(CopyTransforms_t8B0E6095FF30CAC5E663F7A42028E304909C447F*)L_36);
-		(&V_17)->___JobData_0 = L_37;
-		void* L_38 = V_5;
-		(&V_17)->___PrefilterData_1 = L_38;
-		bool L_39 = ___isParallel4;
-		G_B8_0 = (&V_17);
-		if (L_39)
-		{
-			G_B9_0 = (&V_17);
-			goto IL_00ff;
-		}
-	}
-	{
-		G_B10_0 = 0;
-		G_B10_1 = G_B8_0;
-		goto IL_0100;
-	}
-
-IL_00ff:
-	{
-		G_B10_0 = 1;
-		G_B10_1 = G_B9_0;
-	}
-
-IL_0100:
-	{
-		G_B10_1->___IsParallel_2 = G_B10_0;
-		JobEntityBatchIndexWrapper_1_t24BB1FE17A999CA7170E7F15C19D28EEDE54354E L_40 = V_17;
-		V_10 = L_40;
-		// var reflectionData = JobEntityBatchIndexProducer<T>.reflectionData.Data;
-		il2cpp_codegen_runtime_class_init_inline(il2cpp_rgctx_data(method->rgctx_data, 0));
-		intptr_t* L_41;
-		L_41 = SharedStatic_1_get_Data_m6B971FC25FA15EF3646DC3DE9FFA1D910AE67EA1((&((JobEntityBatchIndexProducer_1_t005A1661D632E19AF445F625B27F3E140B04BF0E_StaticFields*)il2cpp_codegen_static_fields_for(il2cpp_rgctx_data(method->rgctx_data, 0)))->___reflectionData_0), SharedStatic_1_get_Data_m6B971FC25FA15EF3646DC3DE9FFA1D910AE67EA1_RuntimeMethod_var);
 		V_11 = ((*(L_41)));
 		// var scheduleParams = new JobsUtility.JobScheduleParameters(UnsafeUtility.AddressOf(ref jobEntityBatchIndexWrapper),
 		//     reflectionData, prefilterHandle, mode);

@@ -10,11 +10,14 @@ public class LevelBtn : MonoBehaviour
     public GameObject block;
     public GameObject[] stars;
     public GameObject starBox;
-    public Button btn;
+    private Button btn;
+    public int index;
 
     private void OnEnable()
     {
         InvokeRepeating("StarNO",0.3f,0.3f);
+        InvokeRepeating("SetStars",0.3f,0.3f);
+
         btn =GetComponent<Button>();
     }
     void StarNO() => starBox.SetActive(!block.activeSelf);
@@ -27,14 +30,30 @@ public class LevelBtn : MonoBehaviour
     {
         btn.onClick.AddListener(() => MainMenuManager.LoadScene(index));
     }
-
-    public void SetStars(int index)
+    void Check()
+    {
+       
+    }
+    public void SetStars()
     {
         foreach (GameObject star in stars)
             star.SetActive(false);
-        for(int i = 0;i < index; i++)
+        if (Game.instance.GetLevelStar(index) <= 30)
+            return;
+        else if (Game.instance.GetLevelStar(index) > 30 && Game.instance.GetLevelStar(index) <= 50)
+            stars[0].SetActive(true);
+        else if (Game.instance.GetLevelStar(index) > 50 && Game.instance.GetLevelStar(index) < 70)
         {
-            stars[i].SetActive(true);
+            stars[1].SetActive(true);
+            stars[0].SetActive(true);
+        }    
+        else if (Game.instance.GetLevelStar(index) >= 70)
+        {
+
+            stars[1].SetActive(true);
+            stars[0].SetActive(true);
+            stars[2].SetActive(true);
         }
+
     }
 }

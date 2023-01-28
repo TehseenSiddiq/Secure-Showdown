@@ -21,6 +21,7 @@ public class FreeDragPoint : MonoBehaviour
         {
             freeDrag.points[freeDrag.act].position = new Vector3(Camera.main.ScreenToWorldPoint(Input.mousePosition).x, Camera.main.ScreenToWorldPoint(Input.mousePosition).y, 0);
             freeDrag.btnHolder.SetActive(true);
+            GetComponent<WireTraps>().isWorking = false;
         }
 
     }

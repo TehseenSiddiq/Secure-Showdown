@@ -1996,12 +1996,10 @@ IL_00f3:
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void WeakAssetReferenceLoadingSystem_WeakAssetReferenceLoadingSystem_LambdaJob_0_LambdaBody_mC6D4BFB6F2F2AC30A237E41096E1650EDAFE793D (WeakAssetReferenceLoadingSystem_t60BB3F017CD2C770A2DDC3C92043C86F40826181* __this, Entity_t56176FC78C475061A82383D9E0CEE352C6C52ABD ___e0, RequestEntityPrefabLoaded_t7619E45BAFEDDF1F5FAD060DFD61BBB7080A8FE7* ___loadRequest1, const RuntimeMethod* method) 
 {
 	{
-		// StartLoadRequest(e, loadRequest.Prefab);
 		Entity_t56176FC78C475061A82383D9E0CEE352C6C52ABD L_0 = ___e0;
 		RequestEntityPrefabLoaded_t7619E45BAFEDDF1F5FAD060DFD61BBB7080A8FE7* L_1 = ___loadRequest1;
 		EntityPrefabReference_tB1CCEB52D81E222455C57723C8942155529D87F4 L_2 = L_1->___Prefab_0;
 		WeakAssetReferenceLoadingSystem_StartLoadRequest_m3E245261F874FA4A048F4BB44669B90DEDDAB69B(__this, L_0, L_2, NULL);
-		// }
 		return;
 	}
 }
@@ -2019,21 +2017,16 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void WeakAssetReferenceLoadingSystem_WeakAsse
 	WeakAssetReferenceLoadingSystem_LambdaJob_0_Job_tD1F1B6BFCD9FDE60E7BE7E0B673FE8266CA23B92 V_1;
 	memset((&V_1), 0, sizeof(V_1));
 	{
-		// __Unity_Scenes_RequestEntityPrefabLoaded_RW_ComponentTypeHandle.Update(this);
 		ComponentTypeHandle_1_tD1DBB4D129456C4BC74C9724890008D6884165BA* L_0 = (&__this->_____Unity_Scenes_RequestEntityPrefabLoaded_RW_ComponentTypeHandle_5);
 		ComponentTypeHandle_1_Update_mF52A9EFE0C326C0C6595C385579B9B1267003799(L_0, __this, ComponentTypeHandle_1_Update_mF52A9EFE0C326C0C6595C385579B9B1267003799_RuntimeMethod_var);
-		// var __job = new WeakAssetReferenceLoadingSystem_LambdaJob_0_Job{__this = this};
 		il2cpp_codegen_initobj((&V_1), sizeof(WeakAssetReferenceLoadingSystem_LambdaJob_0_Job_tD1F1B6BFCD9FDE60E7BE7E0B673FE8266CA23B92));
 		(&V_1)->_____this_0 = __this;
 		Il2CppCodeGenWriteBarrier((void**)(&(&V_1)->_____this_0), (void*)__this);
 		WeakAssetReferenceLoadingSystem_LambdaJob_0_Job_tD1F1B6BFCD9FDE60E7BE7E0B673FE8266CA23B92 L_1 = V_1;
 		V_0 = L_1;
-		// CompleteDependency();
 		SystemBase_CompleteDependency_m6A50401D4D48AA0F64ABC1F99A8ABA0F34EB7BB6(__this, NULL);
-		// __job.RunWithStructuralChange(WeakAssetReferenceLoadingSystem_LambdaJob_0_Query);
 		EntityQuery_t23B7A11FAA475D860E94409BFD4CF7E4B337CF90 L_2 = __this->___WeakAssetReferenceLoadingSystem_LambdaJob_0_Query_3;
 		WeakAssetReferenceLoadingSystem_LambdaJob_0_Job_RunWithStructuralChange_mEC9713B71A2274243DFD6FDEFB162DC6E349BE19((&V_0), L_2, NULL);
-		// }
 		return;
 	}
 }
@@ -2058,7 +2051,6 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void WeakAssetReferenceLoadingSystem_WeakAsse
 	EntityManager_t245CC8C15DD62AF5BA0B385CF94EA7CD0B3F4C91 V_3;
 	memset((&V_3), 0, sizeof(V_3));
 	{
-		// if (LoadedPrefabs.TryGetValue(prefabReference._ReferenceId, out var loadedPrefab))
 		NativeParallelHashMap_2_t02C23F7FECF66B5DE072A2F0A4EF8997C2EC9C62* L_0 = (&__this->___LoadedPrefabs_2);
 		PrefabAssetReference_t5ED5CF37BAB8B0CA45F2B99F97AA5447955E9736* L_1 = ___prefabReference1;
 		EntityPrefabReference_tB1CCEB52D81E222455C57723C8942155529D87F4 L_2 = L_1->____ReferenceId_0;
@@ -2072,13 +2064,11 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void WeakAssetReferenceLoadingSystem_WeakAsse
 		}
 	}
 	{
-		// LoadedPrefabs.Remove(prefabReference._ReferenceId);
 		NativeParallelHashMap_2_t02C23F7FECF66B5DE072A2F0A4EF8997C2EC9C62* L_5 = (&__this->___LoadedPrefabs_2);
 		PrefabAssetReference_t5ED5CF37BAB8B0CA45F2B99F97AA5447955E9736* L_6 = ___prefabReference1;
 		EntityPrefabReference_tB1CCEB52D81E222455C57723C8942155529D87F4 L_7 = L_6->____ReferenceId_0;
 		bool L_8;
 		L_8 = NativeParallelHashMap_2_Remove_mDD42C5E529F61AF147AA5D738E185CDB78B3C0AF(L_5, L_7, NativeParallelHashMap_2_Remove_mDD42C5E529F61AF147AA5D738E185CDB78B3C0AF_RuntimeMethod_var);
-		// if (loadedPrefab.RefCount > 1)
 		LoadedPrefab_t1ABF89D122B2FD622AF42B926AA4E41D2AF7AA98 L_9 = V_0;
 		int32_t L_10 = L_9.___RefCount_0;
 		V_2 = (bool)((((int32_t)L_10) > ((int32_t)1))? 1 : 0);
@@ -2089,12 +2079,10 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void WeakAssetReferenceLoadingSystem_WeakAsse
 		}
 	}
 	{
-		// loadedPrefab.RefCount--;
 		int32_t* L_12 = (&(&V_0)->___RefCount_0);
 		int32_t* L_13 = L_12;
 		int32_t L_14 = *((int32_t*)L_13);
 		*((int32_t*)L_13) = (int32_t)((int32_t)il2cpp_codegen_subtract(L_14, 1));
-		// LoadedPrefabs.Add(prefabReference._ReferenceId, loadedPrefab);
 		NativeParallelHashMap_2_t02C23F7FECF66B5DE072A2F0A4EF8997C2EC9C62* L_15 = (&__this->___LoadedPrefabs_2);
 		PrefabAssetReference_t5ED5CF37BAB8B0CA45F2B99F97AA5447955E9736* L_16 = ___prefabReference1;
 		EntityPrefabReference_tB1CCEB52D81E222455C57723C8942155529D87F4 L_17 = L_16->____ReferenceId_0;
@@ -2105,7 +2093,6 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void WeakAssetReferenceLoadingSystem_WeakAsse
 
 IL_005b:
 	{
-		// World.GetExistingSystem<SceneSystem>().UnloadScene(loadedPrefab.SceneEntity, SceneSystem.UnloadParameters.DestroySceneProxyEntity | SceneSystem.UnloadParameters.DestroySectionProxyEntities);
 		World_t55FCE40A4C47400A27AE7BF5A0FED66B34C8726A* L_19;
 		L_19 = ComponentSystemBase_get_World_mCA361EABE4397A5D3573AC569E53A2BF80AE6CDD(__this, NULL);
 		NullCheck(L_19);
@@ -2124,7 +2111,6 @@ IL_0075:
 
 IL_0078:
 	{
-		// InProgressLoads.Remove(prefabReference._ReferenceId, e);
 		NativeParallelMultiHashMap_2_t0B204AB1465DFA952E8861F25EE33B74B81EEDCE L_23 = __this->___InProgressLoads_1;
 		PrefabAssetReference_t5ED5CF37BAB8B0CA45F2B99F97AA5447955E9736* L_24 = ___prefabReference1;
 		EntityPrefabReference_tB1CCEB52D81E222455C57723C8942155529D87F4 L_25 = L_24->____ReferenceId_0;
@@ -2134,14 +2120,12 @@ IL_0078:
 
 IL_008d:
 	{
-		// EntityManager.RemoveComponent<PrefabAssetReference>(e);
 		EntityManager_t245CC8C15DD62AF5BA0B385CF94EA7CD0B3F4C91 L_27;
 		L_27 = ComponentSystemBase_get_EntityManager_mB0505034AB04061030BABADB8A1F6C3112AFEB3A(__this, NULL);
 		V_3 = L_27;
 		Entity_t56176FC78C475061A82383D9E0CEE352C6C52ABD L_28 = ___e0;
 		bool L_29;
 		L_29 = EntityManager_RemoveComponent_TisPrefabAssetReference_t5ED5CF37BAB8B0CA45F2B99F97AA5447955E9736_mDFE4B5F7CFCC6714EC8A1B86E2E0F23617AE2DDA((&V_3), L_28, EntityManager_RemoveComponent_TisPrefabAssetReference_t5ED5CF37BAB8B0CA45F2B99F97AA5447955E9736_mDFE4B5F7CFCC6714EC8A1B86E2E0F23617AE2DDA_RuntimeMethod_var);
-		// }
 		return;
 	}
 }
@@ -2159,21 +2143,16 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void WeakAssetReferenceLoadingSystem_WeakAsse
 	WeakAssetReferenceLoadingSystem_LambdaJob_1_Job_tEF34CAAF5721B5FF847A4EFC13672B222348E806 V_1;
 	memset((&V_1), 0, sizeof(V_1));
 	{
-		// __Unity_Scenes_PrefabAssetReference_RW_ComponentTypeHandle.Update(this);
 		ComponentTypeHandle_1_t9BBE01D4894E571992CDD7BD3540F22ABB481020* L_0 = (&__this->_____Unity_Scenes_PrefabAssetReference_RW_ComponentTypeHandle_6);
 		ComponentTypeHandle_1_Update_mC47BCB213AA89A475D0DFCB5D163272962D858C8(L_0, __this, ComponentTypeHandle_1_Update_mC47BCB213AA89A475D0DFCB5D163272962D858C8_RuntimeMethod_var);
-		// var __job = new WeakAssetReferenceLoadingSystem_LambdaJob_1_Job{__this = this};
 		il2cpp_codegen_initobj((&V_1), sizeof(WeakAssetReferenceLoadingSystem_LambdaJob_1_Job_tEF34CAAF5721B5FF847A4EFC13672B222348E806));
 		(&V_1)->_____this_0 = __this;
 		Il2CppCodeGenWriteBarrier((void**)(&(&V_1)->_____this_0), (void*)__this);
 		WeakAssetReferenceLoadingSystem_LambdaJob_1_Job_tEF34CAAF5721B5FF847A4EFC13672B222348E806 L_1 = V_1;
 		V_0 = L_1;
-		// CompleteDependency();
 		SystemBase_CompleteDependency_m6A50401D4D48AA0F64ABC1F99A8ABA0F34EB7BB6(__this, NULL);
-		// __job.RunWithStructuralChange(WeakAssetReferenceLoadingSystem_LambdaJob_1_Query);
 		EntityQuery_t23B7A11FAA475D860E94409BFD4CF7E4B337CF90 L_2 = __this->___WeakAssetReferenceLoadingSystem_LambdaJob_1_Query_4;
 		WeakAssetReferenceLoadingSystem_LambdaJob_1_Job_RunWithStructuralChange_mED2AA30B7F7E31AFEE159391798110C6E93F2C3A((&V_0), L_2, NULL);
-		// }
 		return;
 	}
 }
@@ -2196,9 +2175,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void WeakAssetReferenceLoadingSystem_OnCreate
 	}
 	EntityQueryDesc_tF763EF854EFC4D825A92A5E4DADFCF5B0750C9A1* V_0 = NULL;
 	{
-		// base.OnCreateForCompiler();
 		ComponentSystemBase_OnCreateForCompiler_mE0B70EDF4B717B5AB04C77DC20ED957C2D69D089(__this, NULL);
-		// WeakAssetReferenceLoadingSystem_LambdaJob_0_Query = GetEntityQuery(new Unity.Entities.EntityQueryDesc{All = new Unity.Entities.ComponentType[]{Unity.Entities.ComponentType.ReadWrite<Unity.Scenes.RequestEntityPrefabLoaded>()}, Any = new Unity.Entities.ComponentType[]{}, None = new Unity.Entities.ComponentType[]{Unity.Entities.ComponentType.ReadOnly<Unity.Scenes.PrefabAssetReference>()}, Options = Unity.Entities.EntityQueryOptions.Default});
 		EntityQueryDescU5BU5D_tDAC463E207ADB3A0620DEAC74FAE23AB46A1F43B* L_0 = (EntityQueryDescU5BU5D_tDAC463E207ADB3A0620DEAC74FAE23AB46A1F43B*)(EntityQueryDescU5BU5D_tDAC463E207ADB3A0620DEAC74FAE23AB46A1F43B*)SZArrayNew(EntityQueryDescU5BU5D_tDAC463E207ADB3A0620DEAC74FAE23AB46A1F43B_il2cpp_TypeInfo_var, (uint32_t)1);
 		EntityQueryDescU5BU5D_tDAC463E207ADB3A0620DEAC74FAE23AB46A1F43B* L_1 = L_0;
 		EntityQueryDesc_tF763EF854EFC4D825A92A5E4DADFCF5B0750C9A1* L_2 = (EntityQueryDesc_tF763EF854EFC4D825A92A5E4DADFCF5B0750C9A1*)il2cpp_codegen_object_new(EntityQueryDesc_tF763EF854EFC4D825A92A5E4DADFCF5B0750C9A1_il2cpp_TypeInfo_var);
@@ -2240,7 +2217,6 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void WeakAssetReferenceLoadingSystem_OnCreate
 		EntityQuery_t23B7A11FAA475D860E94409BFD4CF7E4B337CF90 L_15;
 		L_15 = ComponentSystemBase_GetEntityQuery_m2DDDDFD060F9D52C3FF4904D1711C5C4F662CC3B(__this, L_1, NULL);
 		__this->___WeakAssetReferenceLoadingSystem_LambdaJob_0_Query_3 = L_15;
-		// WeakAssetReferenceLoadingSystem_LambdaJob_1_Query = GetEntityQuery(new Unity.Entities.EntityQueryDesc{All = new Unity.Entities.ComponentType[]{Unity.Entities.ComponentType.ReadWrite<Unity.Scenes.PrefabAssetReference>()}, Any = new Unity.Entities.ComponentType[]{}, None = new Unity.Entities.ComponentType[]{Unity.Entities.ComponentType.ReadOnly<Unity.Scenes.RequestEntityPrefabLoaded>()}, Options = Unity.Entities.EntityQueryOptions.Default});
 		EntityQueryDescU5BU5D_tDAC463E207ADB3A0620DEAC74FAE23AB46A1F43B* L_16 = (EntityQueryDescU5BU5D_tDAC463E207ADB3A0620DEAC74FAE23AB46A1F43B*)(EntityQueryDescU5BU5D_tDAC463E207ADB3A0620DEAC74FAE23AB46A1F43B*)SZArrayNew(EntityQueryDescU5BU5D_tDAC463E207ADB3A0620DEAC74FAE23AB46A1F43B_il2cpp_TypeInfo_var, (uint32_t)1);
 		EntityQueryDescU5BU5D_tDAC463E207ADB3A0620DEAC74FAE23AB46A1F43B* L_17 = L_16;
 		EntityQueryDesc_tF763EF854EFC4D825A92A5E4DADFCF5B0750C9A1* L_18 = (EntityQueryDesc_tF763EF854EFC4D825A92A5E4DADFCF5B0750C9A1*)il2cpp_codegen_object_new(EntityQueryDesc_tF763EF854EFC4D825A92A5E4DADFCF5B0750C9A1_il2cpp_TypeInfo_var);
@@ -2282,15 +2258,12 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void WeakAssetReferenceLoadingSystem_OnCreate
 		EntityQuery_t23B7A11FAA475D860E94409BFD4CF7E4B337CF90 L_31;
 		L_31 = ComponentSystemBase_GetEntityQuery_m2DDDDFD060F9D52C3FF4904D1711C5C4F662CC3B(__this, L_17, NULL);
 		__this->___WeakAssetReferenceLoadingSystem_LambdaJob_1_Query_4 = L_31;
-		// __Unity_Scenes_RequestEntityPrefabLoaded_RW_ComponentTypeHandle = GetComponentTypeHandle<Unity.Scenes.RequestEntityPrefabLoaded>(false);
 		ComponentTypeHandle_1_tD1DBB4D129456C4BC74C9724890008D6884165BA L_32;
 		L_32 = ComponentSystemBase_GetComponentTypeHandle_TisRequestEntityPrefabLoaded_t7619E45BAFEDDF1F5FAD060DFD61BBB7080A8FE7_m941A0517C5471E82068E5483A805B9ED3EEA82FB(__this, (bool)0, ComponentSystemBase_GetComponentTypeHandle_TisRequestEntityPrefabLoaded_t7619E45BAFEDDF1F5FAD060DFD61BBB7080A8FE7_m941A0517C5471E82068E5483A805B9ED3EEA82FB_RuntimeMethod_var);
 		__this->_____Unity_Scenes_RequestEntityPrefabLoaded_RW_ComponentTypeHandle_5 = L_32;
-		// __Unity_Scenes_PrefabAssetReference_RW_ComponentTypeHandle = GetComponentTypeHandle<Unity.Scenes.PrefabAssetReference>(false);
 		ComponentTypeHandle_1_t9BBE01D4894E571992CDD7BD3540F22ABB481020 L_33;
 		L_33 = ComponentSystemBase_GetComponentTypeHandle_TisPrefabAssetReference_t5ED5CF37BAB8B0CA45F2B99F97AA5447955E9736_m98BB448758FA6F0A72FC0535D38D944E010F2062(__this, (bool)0, ComponentSystemBase_GetComponentTypeHandle_TisPrefabAssetReference_t5ED5CF37BAB8B0CA45F2B99F97AA5447955E9736_m98BB448758FA6F0A72FC0535D38D944E010F2062_RuntimeMethod_var);
 		__this->_____Unity_Scenes_PrefabAssetReference_RW_ComponentTypeHandle_6 = L_33;
-		// }
 		return;
 	}
 }
@@ -2500,7 +2473,6 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void WeakAssetReferenceLoadingSystem_LambdaJo
 	memset((&V_9), 0, sizeof(V_9));
 	bool V_10 = false;
 	{
-		// var mask = __this.EntityManager.GetEntityQueryMask(query);
 		WeakAssetReferenceLoadingSystem_t60BB3F017CD2C770A2DDC3C92043C86F40826181* L_0 = __this->_____this_0;
 		NullCheck(L_0);
 		EntityManager_t245CC8C15DD62AF5BA0B385CF94EA7CD0B3F4C91 L_1;
@@ -2510,9 +2482,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void WeakAssetReferenceLoadingSystem_LambdaJo
 		EntityQueryMask_tA3298547B0A6701B30F8E223B5346B40E68DDEEF L_3;
 		L_3 = EntityManager_GetEntityQueryMask_m8684727194E90667F6E75E18BE36250E06257861((&V_3), L_2, NULL);
 		V_0 = L_3;
-		// Unity.Entities.InternalCompilerInterface.UnsafeCreateGatherEntitiesResult(ref query, out var gatherEntitiesResult);
 		InternalCompilerInterface_UnsafeCreateGatherEntitiesResult_mACE3055D9D7B519119682165555C728C812023AA((&___query0), (&V_1), NULL);
-		// var loadRequestTypeIndex = Unity.Entities.TypeManager.GetTypeIndex<Unity.Scenes.RequestEntityPrefabLoaded>();
 		il2cpp_codegen_runtime_class_init_inline(TypeManager_t1CD355B61F0A783824533CABA3B27CAD1CE5C725_il2cpp_TypeInfo_var);
 		int32_t L_4;
 		L_4 = TypeManager_GetTypeIndex_TisRequestEntityPrefabLoaded_t7619E45BAFEDDF1F5FAD060DFD61BBB7080A8FE7_mAAAAC1FF4692F3A267BB64B0C02CC0B62094CFEF(TypeManager_GetTypeIndex_TisRequestEntityPrefabLoaded_t7619E45BAFEDDF1F5FAD060DFD61BBB7080A8FE7_mAAAAC1FF4692F3A267BB64B0C02CC0B62094CFEF_RuntimeMethod_var);
@@ -2524,7 +2494,6 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void WeakAssetReferenceLoadingSystem_LambdaJo
 
 FINALLY_00a9:
 			{// begin finally (depth: 1)
-				// Unity.Entities.InternalCompilerInterface.UnsafeReleaseGatheredEntities(ref query, ref gatherEntitiesResult);
 				InternalCompilerInterface_UnsafeReleaseGatheredEntities_m3FECB40955DAD1CA6FC9DE899B2C409DEA594B4F((&___query0), (&V_1), NULL);
 				return;
 			}// end finally (depth: 1)
@@ -2532,23 +2501,19 @@ FINALLY_00a9:
 		try
 		{// begin try (depth: 1)
 			{
-				// int entityCount = gatherEntitiesResult.EntityCount;
 				GatherEntitiesResult_t6B5ADB8C14276BC07FC1467699EDC78E6F372A71 L_5 = V_1;
 				int32_t L_6 = L_5.___EntityCount_1;
 				V_4 = L_6;
-				// for (int entityIndex = 0; entityIndex != entityCount; entityIndex++)
 				V_5 = 0;
 				goto IL_0097_1;
 			}
 
 IL_0034_1:
 			{
-				// var entity = Unity.Entities.InternalCompilerInterface.UnsafeGetEntityFromGatheredEntities(ref gatherEntitiesResult, entityIndex);
 				int32_t L_7 = V_5;
 				Entity_t56176FC78C475061A82383D9E0CEE352C6C52ABD L_8;
 				L_8 = InternalCompilerInterface_UnsafeGetEntityFromGatheredEntities_mBD3BFD33B03365AFB0100D62B6724A5CB2018C07((&V_1), L_7, NULL);
 				V_6 = L_8;
-				// if (mask.Matches(entity))
 				Entity_t56176FC78C475061A82383D9E0CEE352C6C52ABD L_9 = V_6;
 				bool L_10;
 				L_10 = EntityQueryMask_Matches_mEBA825285137E95230824E1B25EED6F7FDAFA0B7((&V_0), L_9, NULL);
@@ -2560,7 +2525,6 @@ IL_0034_1:
 				}
 			}
 			{
-				// var loadRequest = Unity.Entities.InternalCompilerInterface.GetComponentData<Unity.Scenes.RequestEntityPrefabLoaded>(__this.EntityManager, entity, loadRequestTypeIndex, out var originalloadRequest);
 				WeakAssetReferenceLoadingSystem_t60BB3F017CD2C770A2DDC3C92043C86F40826181* L_12 = __this->_____this_0;
 				NullCheck(L_12);
 				EntityManager_t245CC8C15DD62AF5BA0B385CF94EA7CD0B3F4C91 L_13;
@@ -2570,12 +2534,10 @@ IL_0034_1:
 				RequestEntityPrefabLoaded_t7619E45BAFEDDF1F5FAD060DFD61BBB7080A8FE7 L_16;
 				L_16 = InternalCompilerInterface_GetComponentData_TisRequestEntityPrefabLoaded_t7619E45BAFEDDF1F5FAD060DFD61BBB7080A8FE7_m4A3416A9BDAFEB7CE7023708E34BCF25CE76D400(L_13, L_14, L_15, (&V_9), InternalCompilerInterface_GetComponentData_TisRequestEntityPrefabLoaded_t7619E45BAFEDDF1F5FAD060DFD61BBB7080A8FE7_m4A3416A9BDAFEB7CE7023708E34BCF25CE76D400_RuntimeMethod_var);
 				V_8 = L_16;
-				// __this.WeakAssetReferenceLoadingSystem_LambdaJob_0_LambdaBody(entity, ref loadRequest);
 				WeakAssetReferenceLoadingSystem_t60BB3F017CD2C770A2DDC3C92043C86F40826181* L_17 = __this->_____this_0;
 				Entity_t56176FC78C475061A82383D9E0CEE352C6C52ABD L_18 = V_6;
 				NullCheck(L_17);
 				WeakAssetReferenceLoadingSystem_WeakAssetReferenceLoadingSystem_LambdaJob_0_LambdaBody_mC6D4BFB6F2F2AC30A237E41096E1650EDAFE793D(L_17, L_18, (&V_8), NULL);
-				// Unity.Entities.InternalCompilerInterface.WriteComponentData<Unity.Scenes.RequestEntityPrefabLoaded>(__this.EntityManager, entity, loadRequestTypeIndex, ref loadRequest, ref originalloadRequest);
 				WeakAssetReferenceLoadingSystem_t60BB3F017CD2C770A2DDC3C92043C86F40826181* L_19 = __this->_____this_0;
 				NullCheck(L_19);
 				EntityManager_t245CC8C15DD62AF5BA0B385CF94EA7CD0B3F4C91 L_20;
@@ -2587,14 +2549,12 @@ IL_0034_1:
 
 IL_0090_1:
 			{
-				// for (int entityIndex = 0; entityIndex != entityCount; entityIndex++)
 				int32_t L_23 = V_5;
 				V_5 = ((int32_t)il2cpp_codegen_add(L_23, 1));
 			}
 
 IL_0097_1:
 			{
-				// for (int entityIndex = 0; entityIndex != entityCount; entityIndex++)
 				int32_t L_24 = V_5;
 				int32_t L_25 = V_4;
 				V_10 = (bool)((((int32_t)((((int32_t)L_24) == ((int32_t)L_25))? 1 : 0)) == ((int32_t)0))? 1 : 0);
@@ -2616,7 +2576,6 @@ IL_0097_1:
 
 IL_00b6:
 	{
-		// }
 		return;
 	}
 }
@@ -2695,7 +2654,6 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void WeakAssetReferenceLoadingSystem_LambdaJo
 	memset((&V_9), 0, sizeof(V_9));
 	bool V_10 = false;
 	{
-		// var mask = __this.EntityManager.GetEntityQueryMask(query);
 		WeakAssetReferenceLoadingSystem_t60BB3F017CD2C770A2DDC3C92043C86F40826181* L_0 = __this->_____this_0;
 		NullCheck(L_0);
 		EntityManager_t245CC8C15DD62AF5BA0B385CF94EA7CD0B3F4C91 L_1;
@@ -2705,9 +2663,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void WeakAssetReferenceLoadingSystem_LambdaJo
 		EntityQueryMask_tA3298547B0A6701B30F8E223B5346B40E68DDEEF L_3;
 		L_3 = EntityManager_GetEntityQueryMask_m8684727194E90667F6E75E18BE36250E06257861((&V_3), L_2, NULL);
 		V_0 = L_3;
-		// Unity.Entities.InternalCompilerInterface.UnsafeCreateGatherEntitiesResult(ref query, out var gatherEntitiesResult);
 		InternalCompilerInterface_UnsafeCreateGatherEntitiesResult_mACE3055D9D7B519119682165555C728C812023AA((&___query0), (&V_1), NULL);
-		// var prefabReferenceTypeIndex = Unity.Entities.TypeManager.GetTypeIndex<Unity.Scenes.PrefabAssetReference>();
 		il2cpp_codegen_runtime_class_init_inline(TypeManager_t1CD355B61F0A783824533CABA3B27CAD1CE5C725_il2cpp_TypeInfo_var);
 		int32_t L_4;
 		L_4 = TypeManager_GetTypeIndex_TisPrefabAssetReference_t5ED5CF37BAB8B0CA45F2B99F97AA5447955E9736_m0F5C42CD05288ABB66874EB7E17B27BB7AD2795C(TypeManager_GetTypeIndex_TisPrefabAssetReference_t5ED5CF37BAB8B0CA45F2B99F97AA5447955E9736_m0F5C42CD05288ABB66874EB7E17B27BB7AD2795C_RuntimeMethod_var);
@@ -2719,7 +2675,6 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void WeakAssetReferenceLoadingSystem_LambdaJo
 
 FINALLY_00a9:
 			{// begin finally (depth: 1)
-				// Unity.Entities.InternalCompilerInterface.UnsafeReleaseGatheredEntities(ref query, ref gatherEntitiesResult);
 				InternalCompilerInterface_UnsafeReleaseGatheredEntities_m3FECB40955DAD1CA6FC9DE899B2C409DEA594B4F((&___query0), (&V_1), NULL);
 				return;
 			}// end finally (depth: 1)
@@ -2727,23 +2682,19 @@ FINALLY_00a9:
 		try
 		{// begin try (depth: 1)
 			{
-				// int entityCount = gatherEntitiesResult.EntityCount;
 				GatherEntitiesResult_t6B5ADB8C14276BC07FC1467699EDC78E6F372A71 L_5 = V_1;
 				int32_t L_6 = L_5.___EntityCount_1;
 				V_4 = L_6;
-				// for (int entityIndex = 0; entityIndex != entityCount; entityIndex++)
 				V_5 = 0;
 				goto IL_0097_1;
 			}
 
 IL_0034_1:
 			{
-				// var entity = Unity.Entities.InternalCompilerInterface.UnsafeGetEntityFromGatheredEntities(ref gatherEntitiesResult, entityIndex);
 				int32_t L_7 = V_5;
 				Entity_t56176FC78C475061A82383D9E0CEE352C6C52ABD L_8;
 				L_8 = InternalCompilerInterface_UnsafeGetEntityFromGatheredEntities_mBD3BFD33B03365AFB0100D62B6724A5CB2018C07((&V_1), L_7, NULL);
 				V_6 = L_8;
-				// if (mask.Matches(entity))
 				Entity_t56176FC78C475061A82383D9E0CEE352C6C52ABD L_9 = V_6;
 				bool L_10;
 				L_10 = EntityQueryMask_Matches_mEBA825285137E95230824E1B25EED6F7FDAFA0B7((&V_0), L_9, NULL);
@@ -2755,7 +2706,6 @@ IL_0034_1:
 				}
 			}
 			{
-				// var prefabReference = Unity.Entities.InternalCompilerInterface.GetComponentData<Unity.Scenes.PrefabAssetReference>(__this.EntityManager, entity, prefabReferenceTypeIndex, out var originalprefabReference);
 				WeakAssetReferenceLoadingSystem_t60BB3F017CD2C770A2DDC3C92043C86F40826181* L_12 = __this->_____this_0;
 				NullCheck(L_12);
 				EntityManager_t245CC8C15DD62AF5BA0B385CF94EA7CD0B3F4C91 L_13;
@@ -2765,12 +2715,10 @@ IL_0034_1:
 				PrefabAssetReference_t5ED5CF37BAB8B0CA45F2B99F97AA5447955E9736 L_16;
 				L_16 = InternalCompilerInterface_GetComponentData_TisPrefabAssetReference_t5ED5CF37BAB8B0CA45F2B99F97AA5447955E9736_m5DDBDAA116B4268452987D81EC97405361186B2C(L_13, L_14, L_15, (&V_9), InternalCompilerInterface_GetComponentData_TisPrefabAssetReference_t5ED5CF37BAB8B0CA45F2B99F97AA5447955E9736_m5DDBDAA116B4268452987D81EC97405361186B2C_RuntimeMethod_var);
 				V_8 = L_16;
-				// __this.WeakAssetReferenceLoadingSystem_LambdaJob_1_LambdaBody(entity, ref prefabReference);
 				WeakAssetReferenceLoadingSystem_t60BB3F017CD2C770A2DDC3C92043C86F40826181* L_17 = __this->_____this_0;
 				Entity_t56176FC78C475061A82383D9E0CEE352C6C52ABD L_18 = V_6;
 				NullCheck(L_17);
 				WeakAssetReferenceLoadingSystem_WeakAssetReferenceLoadingSystem_LambdaJob_1_LambdaBody_mFCF8BA4555184DD6C38357A2795CD14E28725D2D(L_17, L_18, (&V_8), NULL);
-				// Unity.Entities.InternalCompilerInterface.WriteComponentData<Unity.Scenes.PrefabAssetReference>(__this.EntityManager, entity, prefabReferenceTypeIndex, ref prefabReference, ref originalprefabReference);
 				WeakAssetReferenceLoadingSystem_t60BB3F017CD2C770A2DDC3C92043C86F40826181* L_19 = __this->_____this_0;
 				NullCheck(L_19);
 				EntityManager_t245CC8C15DD62AF5BA0B385CF94EA7CD0B3F4C91 L_20;
@@ -2782,14 +2730,12 @@ IL_0034_1:
 
 IL_0090_1:
 			{
-				// for (int entityIndex = 0; entityIndex != entityCount; entityIndex++)
 				int32_t L_23 = V_5;
 				V_5 = ((int32_t)il2cpp_codegen_add(L_23, 1));
 			}
 
 IL_0097_1:
 			{
-				// for (int entityIndex = 0; entityIndex != entityCount; entityIndex++)
 				int32_t L_24 = V_5;
 				int32_t L_25 = V_4;
 				V_10 = (bool)((((int32_t)((((int32_t)L_24) == ((int32_t)L_25))? 1 : 0)) == ((int32_t)0))? 1 : 0);
@@ -2811,7 +2757,6 @@ IL_0097_1:
 
 IL_00b6:
 	{
-		// }
 		return;
 	}
 }

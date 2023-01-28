@@ -14,6 +14,11 @@ public class Drag : MonoBehaviour
     public GameObject btnHolder;
     public RectTransform canvas;
     [SerializeField]float canDragDelay = 1.5f;
+    public float enegy;
+    public float maxEnergy;
+
+    [SerializeField]
+    int fixedIndex = 0;
     private void OnEnable()
     {
         cam = FindObjectOfType<Camera>();
@@ -29,7 +34,11 @@ public class Drag : MonoBehaviour
             if (Input.GetMouseButton(0))
                 if (hit.transform.tag == "Player")// if it is a shape
                     if(canDragDelay> 0)
+                    {
                         canDragDelay -= Time.deltaTime;
+                        GetComponent<FieldOfView>().isWorking = false;
+                    }
+                        
 
         if (canDrag)
             this.gameObject.transform.position = new Vector3(Camera.main.ScreenToWorldPoint(Input.mousePosition).x, Camera.main.ScreenToWorldPoint(Input.mousePosition).y, 0);
@@ -49,8 +58,8 @@ public class Drag : MonoBehaviour
 
         canDrag = canDragDelay <= 0 ? true : false;
         StateManager.instance.GS = canDrag ? GameState.Planning : GameState.PlayMode;
-
-         btnHolder.SetActive(!snaped);
+        
+        btnHolder.SetActive(!snaped);
 
         foreach (Transform pos in SnapManager.instance.points)
         {
@@ -73,6 +82,8 @@ public class Drag : MonoBehaviour
            // Debug.Log(Vector2.Distance(gameObject.transform.position, pos.position));
             if (Vector2.Distance(gameObject.transform.position, pos.position) < 2)
             {
+                GameManager.instance.SetEnergy(GetComponent<FieldOfView>().energy);
+                GetComponent<FieldOfView>().isWorking = true;
                 transform.position = pos.position;
                 snaped = true;
             }
@@ -89,7 +100,12 @@ public class Drag : MonoBehaviour
             transform.eulerAngles = new Vector3(0, 0, transform.eulerAngles.z + 45);
         GetComponent<Rotation>().SetInitPosition();
     }
-    public void Delete() => Destroy(gameObject);
+    public void Delete() 
+    {
+        GameManager.instance.SetEnergy(-GetComponent<FieldOfView>().energy);
+        GameManager.instance.cameras[fixedIndex].quntity++;
+        Destroy(gameObject); 
+    }
 
 
 }
