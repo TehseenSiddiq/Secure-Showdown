@@ -1,0 +1,807 @@
+fileFormatVersion: 2
+guid: 37302e967620224499aabbc2cfa4260c
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: iPhone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: RoyalArcherTunic [ShowEars]_0
+      rect:
+        serializedVersion: 2
+        x: 71
+        y: 397
+        width: 337
+        height: 255
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6483b70bea32b7a46aeeb5eac13a6a03
+      internalID: -1132691374
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RoyalArcherTunic [ShowEars]_1
+      rect:
+        serializedVersion: 2
+        x: 554
+        y: 451
+        width: 333
+        height: 202
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c6773bc5f5117b34497ca1143885c07f
+      internalID: -971185740
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RoyalArcherTunic [ShowEars]_2
+      rect:
+        serializedVersion: 2
+        x: 1034
+        y: 454
+        width: 336
+        height: 199
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 13d7070794fe6f74db892fcd5feebfee
+      internalID: -851001936
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RoyalArcherTunic [ShowEars]_3
+      rect:
+        serializedVersion: 2
+        x: 92
+        y: 186
+        width: 52
+        height: 104
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1bf1079835d3a8f40aef3d30a36b9853
+      internalID: -991085500
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RoyalArcherTunic [ShowEars]_4
+      rect:
+        serializedVersion: 2
+        x: 179
+        y: 176
+        width: 121
+        height: 130
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e00d6c8e6f4bf6040865ec5436e663ae
+      internalID: 1738975651
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RoyalArcherTunic [ShowEars]_5
+      rect:
+        serializedVersion: 2
+        x: 335
+        y: 186
+        width: 50
+        height: 104
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 55110de33f7c6a541856b8393d5eb9c3
+      internalID: 359364780
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RoyalArcherTunic [ShowEars]_6
+      rect:
+        serializedVersion: 2
+        x: 569
+        y: 186
+        width: 58
+        height: 104
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cf92de509299ab94ba5eeeec9a7bab1b
+      internalID: -284116565
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RoyalArcherTunic [ShowEars]_7
+      rect:
+        serializedVersion: 2
+        x: 660
+        y: 176
+        width: 121
+        height: 130
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f19ee81d882e0564ca773bd791239960
+      internalID: 213882574
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RoyalArcherTunic [ShowEars]_8
+      rect:
+        serializedVersion: 2
+        x: 814
+        y: 186
+        width: 58
+        height: 104
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2f443c946ffb8494a868b533e68ff31a
+      internalID: 1349258784
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RoyalArcherTunic [ShowEars]_9
+      rect:
+        serializedVersion: 2
+        x: 1056
+        y: 186
+        width: 59
+        height: 104
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1dafa7f0180cc0544979c5d853c1ba63
+      internalID: -2105373139
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RoyalArcherTunic [ShowEars]_10
+      rect:
+        serializedVersion: 2
+        x: 1156
+        y: 180
+        width: 91
+        height: 124
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7e32dbfbb6a4c5f41bd71cd513eb7b74
+      internalID: -300513892
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RoyalArcherTunic [ShowEars]_11
+      rect:
+        serializedVersion: 2
+        x: 1296
+        y: 186
+        width: 52
+        height: 104
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: acd3e42690e2459499d68b22aa394f4d
+      internalID: -1560836236
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RoyalArcherTunic [ShowEars]_12
+      rect:
+        serializedVersion: 2
+        x: 98
+        y: 98
+        width: 44
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ad20fc8bc32e75b4b9465101eeb0a55a
+      internalID: -451475193
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RoyalArcherTunic [ShowEars]_13
+      rect:
+        serializedVersion: 2
+        x: 168
+        y: 37
+        width: 57
+        height: 87
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c7f36db7d67a1bb40ba835c1ba03cbab
+      internalID: 261946578
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RoyalArcherTunic [ShowEars]_14
+      rect:
+        serializedVersion: 2
+        x: 254
+        y: 36
+        width: 56
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0281fd25aa6eb4341be109310e4a9399
+      internalID: 2062094327
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RoyalArcherTunic [ShowEars]_15
+      rect:
+        serializedVersion: 2
+        x: 337
+        y: 98
+        width: 44
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3bb9bccc622cc634ea097d995d38cde2
+      internalID: 1912046818
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RoyalArcherTunic [ShowEars]_16
+      rect:
+        serializedVersion: 2
+        x: 579
+        y: 98
+        width: 44
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3b09e159a79dfe54287089ab711c0f48
+      internalID: -1142744040
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RoyalArcherTunic [ShowEars]_17
+      rect:
+        serializedVersion: 2
+        x: 650
+        y: 38
+        width: 56
+        height: 85
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7bc0c44678035544bb10da809189d175
+      internalID: -616094558
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RoyalArcherTunic [ShowEars]_18
+      rect:
+        serializedVersion: 2
+        x: 735
+        y: 38
+        width: 56
+        height: 85
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 772a7c29ce19a054a9a95dc48ec71c30
+      internalID: 706462661
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RoyalArcherTunic [ShowEars]_19
+      rect:
+        serializedVersion: 2
+        x: 818
+        y: 98
+        width: 44
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 928335cc17e34c8449c5fa7690e03d48
+      internalID: -1962693623
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RoyalArcherTunic [ShowEars]_20
+      rect:
+        serializedVersion: 2
+        x: 1057
+        y: 98
+        width: 44
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 17536add749df5c46b73dc00479a6ce7
+      internalID: 1770583232
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RoyalArcherTunic [ShowEars]_21
+      rect:
+        serializedVersion: 2
+        x: 1136
+        y: 35
+        width: 50
+        height: 85
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c3f8754fcb2a3b74c88a24bec9dac22f
+      internalID: 1652914128
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RoyalArcherTunic [ShowEars]_22
+      rect:
+        serializedVersion: 2
+        x: 1216
+        y: 35
+        width: 51
+        height: 85
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 91ddf6271d8b2a74e939d26beee81aba
+      internalID: 1279831356
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RoyalArcherTunic [ShowEars]_23
+      rect:
+        serializedVersion: 2
+        x: 1296
+        y: 98
+        width: 44
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ca5d625cb4363bf45be38332835d705c
+      internalID: -90558818
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RoyalArcherTunic [ShowEars]_24
+      rect:
+        serializedVersion: 2
+        x: 87
+        y: 27
+        width: 58
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 43872640bea532847bc591da0d1a73c1
+      internalID: -1335924364
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RoyalArcherTunic [ShowEars]_25
+      rect:
+        serializedVersion: 2
+        x: 334
+        y: 27
+        width: 58
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cee14b239339e5646afbca89b8533938
+      internalID: 169224176
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RoyalArcherTunic [ShowEars]_26
+      rect:
+        serializedVersion: 2
+        x: 578
+        y: 26
+        width: 38
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9bef6373f6b94f649b49f4d089d66d4a
+      internalID: -1123412121
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RoyalArcherTunic [ShowEars]_27
+      rect:
+        serializedVersion: 2
+        x: 825
+        y: 26
+        width: 38
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3eaf18d5998df54498240fe1b09be7c1
+      internalID: 1653864392
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RoyalArcherTunic [ShowEars]_28
+      rect:
+        serializedVersion: 2
+        x: 1064
+        y: 26
+        width: 38
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2a2140ed31dec0045b3addbbdb30d0ab
+      internalID: -1012242915
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RoyalArcherTunic [ShowEars]_29
+      rect:
+        serializedVersion: 2
+        x: 1296
+        y: 27
+        width: 58
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: adf427351a5a4ac458b964db0b1b7a5a
+      internalID: -689090470
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      RoyalArcherTunic [ShowEars]_10: -300513892
+      RoyalArcherTunic [ShowEars]_16: -1142744040
+      RoyalArcherTunic [ShowEars]_17: -616094558
+      RoyalArcherTunic [ShowEars]_29: -689090470
+      RoyalArcherTunic [ShowEars]_13: 261946578
+      RoyalArcherTunic [ShowEars]_22: 1279831356
+      RoyalArcherTunic [ShowEars]_11: -1560836236
+      RoyalArcherTunic [ShowEars]_1: -971185740
+      RoyalArcherTunic [ShowEars]_23: -90558818
+      RoyalArcherTunic [ShowEars]_26: -1123412121
+      RoyalArcherTunic [ShowEars]_18: 706462661
+      RoyalArcherTunic [ShowEars]_24: -1335924364
+      RoyalArcherTunic [ShowEars]_15: 1912046818
+      RoyalArcherTunic [ShowEars]_5: 359364780
+      RoyalArcherTunic [ShowEars]_4: 1738975651
+      RoyalArcherTunic [ShowEars]_9: -2105373139
+      RoyalArcherTunic [ShowEars]_6: -284116565
+      RoyalArcherTunic [ShowEars]_2: -851001936
+      RoyalArcherTunic [ShowEars]_21: 1652914128
+      RoyalArcherTunic [ShowEars]_8: 1349258784
+      RoyalArcherTunic [ShowEars]_28: -1012242915
+      RoyalArcherTunic [ShowEars]_12: -451475193
+      RoyalArcherTunic [ShowEars]_25: 169224176
+      RoyalArcherTunic [ShowEars]_14: 2062094327
+      RoyalArcherTunic [ShowEars]_7: 213882574
+      RoyalArcherTunic [ShowEars]_19: -1962693623
+      RoyalArcherTunic [ShowEars]_27: 1653864392
+      RoyalArcherTunic [ShowEars]_3: -991085500
+      RoyalArcherTunic [ShowEars]_20: 1770583232
+      RoyalArcherTunic [ShowEars]_0: -1132691374
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

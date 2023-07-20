@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   settings:
     _location: 0
-    path: SaveFile2.es3
+    path: SaveFile3.es3
     encryptionType: 0
     compressionType: 0
     encryptionPassword: password
@@ -23,20 +23,22 @@ MonoBehaviour:
     prettyPrint: 1
     bufferSize: 2048
     saveChildren: 1
+    postprocessRawCachedData: 0
     typeChecking: 1
     safeReflection: 1
-    memberReferenceMode: 0
+    memberReferenceMode: 2
     referenceMode: 2
-    serializationDepthLimit: 64
+    serializationDepthLimit: 128
     assemblyNames:
     - Assembly-CSharp
     - Assembly-CSharp-firstpass
-    - PsdPlugin
     - PPv2URPConverters
-    showAdvancedSettings: 0
+    - PsdPlugin
+    - Purchasing.Common
+    showAdvancedSettings: 1
   addMgrToSceneAutomatically: 0
   autoUpdateReferences: 1
   addAllPrefabsToManager: 1
   logDebugInfo: 0
-  logWarnings: 1
-  logErrors: 1
+  logWarnings: 0
+  logErrors: 0

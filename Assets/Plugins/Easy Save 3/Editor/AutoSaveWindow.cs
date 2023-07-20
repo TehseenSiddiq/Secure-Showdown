@@ -184,9 +184,17 @@ namespace ES3Editor
             public void DrawHierarchy(string searchTerm)
             {
                 bool containsSearchTerm = false;
+
                 if (t != null)
                 {
-                    if (containsSearchTerm = t.name.ToLowerInvariant().Contains(searchTerm))
+                    // Filter by tag if it's prefixed by "tag:"
+                    if (searchTerm.StartsWith("tag:") && t.tag.ToLowerInvariant().Contains(searchTerm.Remove(0,4)))
+                        containsSearchTerm = true;
+                    // Else filter by name
+                    else
+                        containsSearchTerm = t.name.ToLowerInvariant().Contains(searchTerm);
+
+                    if (containsSearchTerm)
                     {
                         GUIContent saveIcon;
                         EditorGUIUtility.SetIconSize(new Vector2(16, 16));
@@ -235,23 +243,23 @@ namespace ES3Editor
                     bool toggle;
                     toggle = EditorGUILayout.ToggleLeft("active", autoSave != null ? autoSave.saveActive : false);
                     if ((autoSave = (toggle && autoSave == null) ? t.gameObject.AddComponent<ES3AutoSave>() : autoSave) != null)
-                        autoSave.saveActive = toggle;
+                        ApplyBool("saveActive", toggle);
 
                     toggle = EditorGUILayout.ToggleLeft("hideFlags", autoSave != null ? autoSave.saveHideFlags : false);
                     if ((autoSave = (toggle && autoSave == null) ? t.gameObject.AddComponent<ES3AutoSave>() : autoSave) != null)
-                        autoSave.saveHideFlags = toggle;
+                        ApplyBool("saveHideFlags", toggle);
 
                     toggle = EditorGUILayout.ToggleLeft("layer", autoSave != null ? autoSave.saveLayer : false);
                     if ((autoSave = (toggle && autoSave == null) ? t.gameObject.AddComponent<ES3AutoSave>() : autoSave) != null)
-                        autoSave.saveLayer = toggle;
+                        ApplyBool("saveLayer", toggle);
 
                     toggle = EditorGUILayout.ToggleLeft("name", autoSave != null ? autoSave.saveName : false);
                     if ((autoSave = (toggle && autoSave == null) ? t.gameObject.AddComponent<ES3AutoSave>() : autoSave) != null)
-                        autoSave.saveName = toggle;
+                        ApplyBool("saveName", toggle);
 
                     toggle = EditorGUILayout.ToggleLeft("tag", autoSave != null ? autoSave.saveTag : false);
                     if ((autoSave = (toggle && autoSave == null) ? t.gameObject.AddComponent<ES3AutoSave>() : autoSave) != null)
-                        autoSave.saveTag = toggle;
+                        ApplyBool("saveTag", toggle);
 
                     foreach (var component in components)
                     {
@@ -270,15 +278,29 @@ namespace ES3Editor
                             {
                                 if (autoSave == null)
                                 {
-                                    autoSave = t.gameObject.AddComponent<ES3AutoSave>();
-                                    autoSave.saveChildren = false;
+                                    autoSave = Undo.AddComponent<ES3AutoSave>(t.gameObject);
+                                    var so = new SerializedObject(autoSave);
+                                    so.FindProperty("saveChildren").boolValue = false;
+                                    so.ApplyModifiedProperties();
                                 }
                                 // If we've unchecked the box, remove the Component from the array.
                                 if (newValue == false)
-                                    autoSave.componentsToSave.Remove(component);
+                                {
+                                    var so = new SerializedObject(autoSave);
+                                    var prop = so.FindProperty("componentsToSave");
+                                    var index = autoSave.componentsToSave.IndexOf(component);
+                                    prop.DeleteArrayElementAtIndex(index);
+                                    so.ApplyModifiedProperties();
+                                }
                                 // Else, add it to the array.
                                 else
-                                    autoSave.componentsToSave.Add(component);
+                                {
+                                    var so = new SerializedObject(autoSave);
+                                    var prop = so.FindProperty("componentsToSave");
+                                    prop.arraySize++;
+                                    prop.GetArrayElementAtIndex(prop.arraySize - 1).objectReferenceValue = component;
+                                    so.ApplyModifiedProperties();
+                                }
                             }
                             if (GUILayout.Button(EditorGUIUtility.IconContent("_Popup"), new GUIStyle("Label")))
                                 ES3Window.InitAndShowTypes(component.GetType());
@@ -286,12 +308,26 @@ namespace ES3Editor
                     }
                 }
 
+                /*if(autoSave != null && isDirty)
+                {
+                    EditorUtility.SetDirty(autoSave);
+                    if (PrefabUtility.IsPartOfPrefabInstance(autoSave))
+                        PrefabUtility.RecordPrefabInstancePropertyModifications(autoSave.gameObject);
+                }*/
+
                 if (autoSave != null && (autoSave.componentsToSave == null || autoSave.componentsToSave.Count == 0) && !autoSave.saveActive && !autoSave.saveChildren && !autoSave.saveHideFlags && !autoSave.saveLayer && !autoSave.saveName && !autoSave.saveTag)
                 {
                     Undo.DestroyObjectImmediate(autoSave);
                     autoSave = null;
                 }
                 EditorGUI.indentLevel -= 3;
+            }
+
+            public void ApplyBool(string propertyName, bool value)
+            {
+                var so = new SerializedObject(autoSave);
+                so.FindProperty(propertyName).boolValue = value;
+                so.ApplyModifiedProperties();
             }
 
             public bool HasSelectedComponentsOrFields()

@@ -47,7 +47,20 @@ namespace ES3Internal
 
         public static ES3ReferenceMgrBase GetManagerFromScene(Scene scene)
         {
-            var roots = scene.GetRootGameObjects();
+            // This has been removed as isLoaded is false during the initial Awake().
+            /*if (!scene.isLoaded)
+                return null;*/
+
+            GameObject[] roots;
+            try
+            {
+                roots = scene.GetRootGameObjects();
+            }
+            catch
+            {
+                return null;
+            }
+
             ES3ReferenceMgr mgr = null;
 
             // First, look for Easy Save 3 Manager in the top-level.
@@ -103,6 +116,18 @@ namespace ES3Internal
             }
         }
 
+        // Reset static variables to handle disabled domain reloading.
+        [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.SubsystemRegistration)]
+        private static void Init()
+        {
+            _current = null;
+            mgrs = new HashSet<ES3ReferenceMgrBase>();
+#if UNITY_EDITOR
+            isEnteringPlayMode = false;
+#endif
+            rng = null;
+        }
+
         private void Awake()
         {
             if (_current != null && _current != this)
@@ -113,6 +138,8 @@ namespace ES3Internal
                  * but Current only returns the Manager for the active scene. */
                 if (Current != null)
                 {
+                    RemoveNullValues();
+
                     existing.Merge(this);
                     Destroy(this);
                     _current = existing; // Undo the call to Current, which may have set it to NULL.
@@ -125,6 +152,8 @@ namespace ES3Internal
 
         private void OnDestroy()
         {
+            if (_current == this)
+                _current = null;
             mgrs.Remove(this);
         }
 
@@ -137,6 +166,9 @@ namespace ES3Internal
 
         public long Get(UnityEngine.Object obj)
         {
+            if (!mgrs.Contains(this))
+                mgrs.Add(this);
+
             foreach (var mgr in mgrs)
             {
                 if (mgr == null)
@@ -154,6 +186,9 @@ namespace ES3Internal
 
         internal UnityEngine.Object Get(long id, Type type, bool suppressWarnings=false)
         {
+            if (!mgrs.Contains(this))
+                mgrs.Add(this);
+
             foreach (var mgr in mgrs)
             {
                 if (mgr == null)
@@ -191,6 +226,9 @@ namespace ES3Internal
 
         public ES3Prefab GetPrefab(long id, bool suppressWarnings = false)
         {
+            if (!mgrs.Contains(this))
+                mgrs.Add(this);
+
             foreach (var mgr in mgrs)
             {
                 if (mgr == null)
@@ -207,6 +245,9 @@ namespace ES3Internal
 
         public long GetPrefab(ES3Prefab prefabToFind, bool suppressWarnings = false)
         {
+            if (!mgrs.Contains(this))
+                mgrs.Add(this);
+
             foreach (var mgr in mgrs)
             {
                 if (mgr == null)
@@ -276,9 +317,16 @@ namespace ES3Internal
 
         public void Remove(UnityEngine.Object obj)
         {
+            if (!mgrs.Contains(this))
+                mgrs.Add(this);
+
             foreach (var mgr in mgrs)
             {
                 if (mgr == null)
+                    continue;
+
+                // Only remove from this manager if we're in the Editor.
+                if (!Application.isPlaying && mgr != this)
                     continue;
 
                 lock (mgr._lock)
@@ -308,10 +356,16 @@ namespace ES3Internal
             }
         }
 
+        public void RemoveNullValues()
+        {
+            var nullKeys = idRef.Where(pair => pair.Value == null).Select(pair => pair.Key);
+            foreach (var key in nullKeys)
+                idRef.Remove(key);
+        }
+
         public void RemoveNullOrInvalidValues()
         {
-            var nullKeys = idRef.Where(pair => pair.Value == null || !CanBeSaved(pair.Value))
-                                .Select(pair => pair.Key).ToList();
+            var nullKeys = idRef.Where(pair => pair.Value == null || !CanBeSaved(pair.Value)).Select(pair => pair.Key).ToList();
             foreach (var key in nullKeys)
                 idRef.Remove(key);
 
@@ -340,15 +394,9 @@ namespace ES3Internal
 
         public void ChangeId(long oldId, long newId)
         {
-            foreach (var mgr in mgrs)
-            {
-                if (mgr == null)
-                    continue;
-
-                mgr.idRef.ChangeKey(oldId, newId);
-                // Empty the refId so it has to be refreshed.
-                mgr.refId = null;
-            }
+            idRef.ChangeKey(oldId, newId);
+            // Empty the refId so it has to be refreshed.
+            refId = null;
         }
 
         internal static long GetNewRefID()
@@ -440,8 +488,16 @@ namespace ES3Internal
             {
                 // SerializedObject is expensive, so for known classes we manually gather references.
 
-                if (type == typeof(Animator) || obj is Transform || type == typeof(CanvasRenderer) || type == typeof(Mesh) || type == typeof(AudioClip) || type == typeof(Rigidbody) || obj is Texture || obj is HorizontalOrVerticalLayoutGroup)
+                if (type == typeof(Animator) || obj is Transform || type == typeof(CanvasRenderer) || type == typeof(Mesh) || type == typeof(AudioClip) || type == typeof(Rigidbody) || obj is HorizontalOrVerticalLayoutGroup)
                     return;
+
+                if(obj is Texture)
+                {
+                    // This ensures that Sprites which are children of the Texture are also added. In the Editor you would otherwise need to expand the Texture to add the Sprite.
+                    foreach(var dependency in UnityEditor.AssetDatabase.LoadAllAssetsAtPath(UnityEditor.AssetDatabase.GetAssetPath(obj)))
+                        if (dependency != obj)
+                            dependencies.Add(dependency);
+                }
 
                 if (obj is Graphic)
                 {
@@ -472,7 +528,19 @@ namespace ES3Internal
 
                 if (type == typeof(Material))
                 {
-                    dependencies.Add(((Material)obj).shader);
+                    var material = (Material)obj;
+                    var shader = material.shader;
+                    if (shader != null)
+                    {
+                        dependencies.Add(material.shader);
+
+#if UNITY_2019_3_OR_NEWER
+                        for (int i = 0; i < shader.GetPropertyCount(); i++)
+                            if (shader.GetPropertyType(i) == UnityEngine.Rendering.ShaderPropertyType.Texture)
+                                dependencies.Add(material.GetTexture(shader.GetPropertyName(i)));
+                    }
+#endif
+
                     return;
                 }
 
@@ -507,7 +575,9 @@ namespace ES3Internal
 
                 if (obj is Renderer)
                 {
-                    dependencies.UnionWith(((Renderer)obj).sharedMaterials);
+                    var renderer = (Renderer)obj;
+                    foreach (var material in renderer.sharedMaterials)
+                        CollectDependenciesFromFields(material, dependencies, depth - 1);
                     return;
                 }
             }
