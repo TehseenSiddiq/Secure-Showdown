@@ -6,7 +6,6 @@ using UnityEngine.UI;
 
 public class StoreManager : MonoBehaviour
 {
-    public List<GameObject> items;
     public GameObject prefab;
     public Transform content;
     private GameManager gameManager;
